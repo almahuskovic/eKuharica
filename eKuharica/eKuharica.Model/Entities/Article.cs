@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace eKuharica.Model
+namespace eKuharica.Model.Entities
 {
     [Table("Articles")]
     public class Article

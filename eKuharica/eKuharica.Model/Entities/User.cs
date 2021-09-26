@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace eKuharica.Model
+namespace eKuharica.Model.Entities
 {
     [Table("Users")]
     public class User
@@ -17,7 +17,7 @@ namespace eKuharica.Model
         public bool? Status { get; set; }
         public byte[] Picture { get; set; }
         public byte[] PictureThumb { get; set; }
-        public DateTime CreatedAt{ get; set; }
+        public DateTime CreatedAt { get; set; }
         public bool IsDeleted { get; set; }
 
         public ICollection<UserRole> UserRoles { get; set; }

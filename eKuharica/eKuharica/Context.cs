@@ -1,4 +1,5 @@
 ﻿using eKuharica.Model;
+using eKuharica.Model.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;

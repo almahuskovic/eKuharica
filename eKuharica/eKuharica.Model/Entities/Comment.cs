@@ -1,27 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace eKuharica.Model
+namespace eKuharica.Model.Entities
 {
-    [Table("Feedbacks")]
-    public class Feedback
+    [Table("Comments")]
+    public class Comment
     {
         public int Id { get; set; }
         public string Description { get; set; }
-        public int Rating { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime ModifiedAt { get; set; }
         public bool IsDeleted { get; set; }
 
-        [Required, ForeignKey(nameof(User)), Range(1, int.MaxValue)]
+        [ForeignKey(nameof(User))]
         public int UserId { get; set; }
         public virtual User User { get; set; }
-    }
 
-    public enum Rating
-    {
-
+        [ForeignKey(nameof(Recipe))]
+        public int RecipeId { get; set; }
+        public virtual Recipe Recipe { get; set; }
     }
 }

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using eKuharica.Services;
+using eKuharica.Services.Users;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +31,8 @@ namespace eKuharica
             services.AddControllers();
 
             services.AddSwaggerGen();
+
+            services.AddScoped<IUserService, UserService>();
 
             //services.AddDbContext<eKuharicaContext>(options =>
             //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
