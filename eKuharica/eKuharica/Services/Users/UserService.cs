@@ -1,4 +1,8 @@
-﻿using eKuharica.Model.Entities;
+﻿using AutoMapper;
+using eKuharica.Model.DTO;
+using eKuharica.Model.Entities;
+using eKuharica.Model.Requests;
+using eKuharica.Services.BaseRead;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,16 +10,15 @@ using System.Threading.Tasks;
 
 namespace eKuharica.Services.Users
 {
-    public class UserService : IUserService
+    public class UserService : BaseReadService<UserDto, User, object>, IUserService
     {
-        public Context Context { get; set; }
-        public UserService(Context context)
+        public UserService(Context context, IMapper mapper):base(context,mapper)
         {
-            Context = context;
         }
-        public List<User> Get()
+
+        public User Insert(UserInsertRequest request)
         {
-            return Context.User.ToList();
+            throw new NotImplementedException();
         }
     }
 }

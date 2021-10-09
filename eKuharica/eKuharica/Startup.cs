@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using eKuharica.Filters;
 using eKuharica.Services;
+using eKuharica.Services.Feedbacks;
+using eKuharica.Services.Recipes;
 using eKuharica.Services.Users;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,11 +31,17 @@ namespace eKuharica
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(x=> {
+                x.Filters.Add<ErrorFilter>();
+            });
 
             services.AddSwaggerGen();
 
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IRecipeService, RecipeService>();
+            services.AddScoped<IFeedbackService, FeedbackService>();
 
             //services.AddDbContext<eKuharicaContext>(options =>
             //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
