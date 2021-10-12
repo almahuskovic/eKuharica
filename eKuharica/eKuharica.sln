@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKuharica", "eKuharica\eKuharica.csproj", "{212F6C22-06DC-4A9F-8C8D-9F61DB8E46DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKuharica.Model", "eKuharica.Model\eKuharica.Model.csproj", "{00AA908E-EBD1-4E48-898A-CB72F4A29AEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKuharica.Model", "eKuharica.Model\eKuharica.Model.csproj", "{00AA908E-EBD1-4E48-898A-CB72F4A29AEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKuharica.WinUI", "eKuharica.WinUI\eKuharica.WinUI.csproj", "{06398DF4-310F-4888-86CF-418935F29215}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{00AA908E-EBD1-4E48-898A-CB72F4A29AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00AA908E-EBD1-4E48-898A-CB72F4A29AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00AA908E-EBD1-4E48-898A-CB72F4A29AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06398DF4-310F-4888-86CF-418935F29215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06398DF4-310F-4888-86CF-418935F29215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06398DF4-310F-4888-86CF-418935F29215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06398DF4-310F-4888-86CF-418935F29215}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
