@@ -9,7 +9,7 @@ using eKuharica.Services.BaseRead;
 
 namespace eKuharica.Services.Users
 {
-    public interface IUserService:IBaseReadService<UserDto, object>
+    public interface IUserService:IBaseReadService<UserDto, UserSearchRequest>
     {
         User Insert(UserInsertRequest request);
     }

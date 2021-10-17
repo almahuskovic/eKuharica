@@ -14,7 +14,7 @@ namespace eKuharica.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UserController : BaseReadController<UserDto, object>
+    public class UserController : BaseReadController<UserDto, UserSearchRequest>
     {
         private readonly IUserService _userService;
         public UserController(IUserService userService):base(userService)

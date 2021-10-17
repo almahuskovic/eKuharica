@@ -13,7 +13,7 @@ namespace eKuharica.Mapping
     {
         public eKuharicaProfile()
         {
-            CreateMap<User, UserDto>();
+            CreateMap<User, UserDto>().ReverseMap();
             CreateMap<Recipe, RecipeDto>();
             CreateMap<Feedback, FeedbackDto>();
             CreateMap<RecipeInsertRequest, Recipe>();
