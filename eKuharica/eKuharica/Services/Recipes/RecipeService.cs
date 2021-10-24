@@ -23,7 +23,7 @@ namespace eKuharica.Services.Recipes
 
             if (!string.IsNullOrWhiteSpace(search?.Title))
             {
-                entity = entity.Where(x => x.Title.Contains(search.Title));
+                entity = entity.Where(x => x.Title.ToLower().Contains(search.Title.ToLower()));
             }
             if (search.PreparationTimeCategory.HasValue)
             {
@@ -32,6 +32,10 @@ namespace eKuharica.Services.Recipes
             if (search.WeightOfPreparation.HasValue)
             {
                 entity = entity.Where(x => x.WeightOfPreparation == search.WeightOfPreparation);
+            }
+            if (search.MealType.HasValue)
+            {
+                entity = entity.Where(x => x.MealType == search.MealType);
             }
 
             var list = entity.ToList();

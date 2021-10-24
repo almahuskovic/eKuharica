@@ -28,17 +28,4 @@ namespace eKuharica.Model.Entities
         public DateTime ModifiedAt { get; set; }
         public bool IsDeleted { get; set; }
     }
-
-    public enum MealType
-    {
-
-    }
-    public enum WeightOfPreparation
-    {
-
-    }
-    public enum PreparationTimeCategory
-    {
-
-    }
 }

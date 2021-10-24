@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eKuharica.Enumerations
+namespace eKuharica.Helpers
 {
-    public enum Enumerations
+    public static class Helper
     {
-
+       
     }
-
-   
 }
