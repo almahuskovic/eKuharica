@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static eKuharica.Model.Enumerations.Enumerations;
 
 namespace eKuharica.WinUI.Helpers
 {
@@ -26,5 +27,29 @@ namespace eKuharica.WinUI.Helpers
             }
             return table;
         }
+
+        #region EnumerationSelectLists
+        //TODO:refaktorisanje, napraviti univerzalnu fn za convert enuma u listu
+        public static List<MealType> MealTypeToSelectList()
+        {
+            var mealTypes = Enum.GetValues(typeof(MealType)).Cast<MealType>().ToList();
+            mealTypes.Insert(0, new MealType());
+            return mealTypes;
+        }
+
+        public static List<WeightOfPreparation> WeightOfPreparationToSelectList()
+        {
+            var weightOfPreparation = Enum.GetValues(typeof(WeightOfPreparation)).Cast<WeightOfPreparation>().ToList();
+            weightOfPreparation.Insert(0, new WeightOfPreparation());
+            return weightOfPreparation;
+        }
+
+        public static List<PreparationTimeCategory> PreparationTimeCategoryToSelectList()
+        {
+            var preparationTimeCategory = Enum.GetValues(typeof(PreparationTimeCategory)).Cast<PreparationTimeCategory>().ToList();
+            preparationTimeCategory.Insert(0, new PreparationTimeCategory());
+            return preparationTimeCategory;
+        }
+        #endregion
     }
 }

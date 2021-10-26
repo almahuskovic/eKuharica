@@ -242,6 +242,9 @@
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Helpers\PlaceHolderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Helpers\SuperGrid.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -277,6 +280,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recipes\frmAddRecipes.resx">
+      <DependentUpon>frmAddRecipes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recipes\frmRecipes.resx">
       <DependentUpon>frmRecipes.cs</DependentUpon>
     </EmbeddedResource>

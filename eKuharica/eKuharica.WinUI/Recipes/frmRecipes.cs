@@ -26,17 +26,9 @@ namespace eKuharica.WinUI.Recipes
             sdgvRecipes.AutoGenerateColumns = false;
             gbExtraFilters.Visible = false;
 
-            var mealTypes= Enum.GetValues(typeof(MealType)).Cast<MealType>().ToList();
-            mealTypes.Insert(0, new MealType());
-            cmbMealType.DataSource = mealTypes;
-
-            var preparationTime = Enum.GetValues(typeof(PreparationTimeCategory)).Cast<PreparationTimeCategory>().ToList();
-            preparationTime.Insert(0, new PreparationTimeCategory());
-            cmbPreparationTime.DataSource = preparationTime;
-
-            var weightOfPreparation = Enum.GetValues(typeof(WeightOfPreparation)).Cast<WeightOfPreparation>().ToList();
-            weightOfPreparation.Insert(0, new WeightOfPreparation());
-            cmbWeightOfPreparation.DataSource = weightOfPreparation;
+            cmbMealType.DataSource = Helpers.Helper.MealTypeToSelectList();
+            cmbPreparationTime.DataSource = Helpers.Helper.PreparationTimeCategoryToSelectList();
+            cmbWeightOfPreparation.DataSource = Helpers.Helper.WeightOfPreparationToSelectList();
         }
 
         private void LoadData(List<RecipeDto> data)
