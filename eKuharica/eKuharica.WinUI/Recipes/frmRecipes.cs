@@ -1,4 +1,5 @@
 ﻿using eKuharica.Model.DTO;
+using eKuharica.Model.Entities;
 using eKuharica.Model.Models;
 using eKuharica.Model.Requests;
 using Microsoft.SqlServer.Management.Sdk.Sfc;
@@ -17,7 +18,7 @@ namespace eKuharica.WinUI.Recipes
 {
     public partial class frmRecipes : Form
     {
-        APIService _serviceRecipe = new APIService("Recipe");
+        APIService _recipeService = new APIService("Recipe");
         private int childFormNumber = 0;
        
         public frmRecipes()
@@ -52,13 +53,13 @@ namespace eKuharica.WinUI.Recipes
                 WeightOfPreparation = cmbWeightOfPreparation.SelectedIndex > 0 ? (int?)cmbWeightOfPreparation.SelectedIndex : null
             };
 
-            var data = await _serviceRecipe.Get<List<RecipeDto>>(request);
+            var data = await _recipeService.Get<List<RecipeDto>>(request);
             LoadData(data);
         }
 
         private async void frmRecipes_Load(object sender, EventArgs e)
         {
-            var data = await _serviceRecipe.Get<List<RecipeDto>>();
+            var data = await _recipeService.Get<List<RecipeDto>>();
             LoadData(data);
         }
 
@@ -99,6 +100,39 @@ namespace eKuharica.WinUI.Recipes
         {
             if (gbExtraFilters.Visible)
                 txtSearch_TextChanged(sender, e);
+        }
+
+        private void sdgvRecipes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                var see = sdgvRecipes.SelectedRows[0];
+                var item = see.DataBoundItem as RecipeDto;
+
+                if (e.ColumnIndex == 2)
+                {
+                    //prevod
+                }
+                if (e.ColumnIndex == 3)
+                {
+                    //prikazi
+                }
+                if (e.ColumnIndex == 4)//edit
+                {
+                    frmAddRecipes frmEditRecipe = new frmAddRecipes(item as RecipeDto);
+                    frmEditRecipe.MdiParent = MdiParent;
+                    frmEditRecipe.WindowState = FormWindowState.Maximized;
+                    frmEditRecipe.Show();
+                    Hide();
+                }
+                if (e.ColumnIndex == 5)
+                {
+                    //brisanje
+                }
+            }
         }
     }
 }

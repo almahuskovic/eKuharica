@@ -41,7 +41,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblIngredients = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtPreparation = new System.Windows.Forms.TextBox();
+            this.txtMethod = new System.Windows.Forms.TextBox();
             this.lblPreparation = new System.Windows.Forms.Label();
             this.txtServing = new System.Windows.Forms.TextBox();
             this.lblServing = new System.Windows.Forms.Label();
@@ -52,16 +52,18 @@
             this.lblPreparationTime = new System.Windows.Forms.Label();
             this.lblWeightOfPreparation = new System.Windows.Forms.Label();
             this.lblMealGroup = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.lblMin = new System.Windows.Forms.Label();
             this.cmbWeightOfPreparation = new System.Windows.Forms.ComboBox();
             this.cmbMealType = new System.Windows.Forms.ComboBox();
+            this.nudPreparationTime = new System.Windows.Forms.NumericUpDown();
             this.txtIngridients = new eKuharica.WinUI.Helpers.PlaceHolderTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoverPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRecipePreview
             // 
+            this.btnRecipePreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRecipePreview.Location = new System.Drawing.Point(545, 26);
             this.btnRecipePreview.Name = "btnRecipePreview";
             this.btnRecipePreview.Size = new System.Drawing.Size(135, 33);
@@ -71,12 +73,14 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.Location = new System.Drawing.Point(698, 26);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 33);
             this.btnSubmit.TabIndex = 1;
             this.btnSubmit.Text = "Objavi";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblTitle
             // 
@@ -89,6 +93,8 @@
             // 
             // txtTitle
             // 
+            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTitle.Location = new System.Drawing.Point(29, 99);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
@@ -97,6 +103,8 @@
             // 
             // txtIntroduction
             // 
+            this.txtIntroduction.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIntroduction.Location = new System.Drawing.Point(29, 172);
             this.txtIntroduction.Multiline = true;
             this.txtIntroduction.Name = "txtIntroduction";
@@ -114,6 +122,8 @@
             // 
             // pbCoverPicture
             // 
+            this.pbCoverPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbCoverPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbCoverPicture.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbCoverPicture.InitialImage")));
             this.pbCoverPicture.Location = new System.Drawing.Point(29, 266);
@@ -160,13 +170,15 @@
             this.panel2.Size = new System.Drawing.Size(475, 3);
             this.panel2.TabIndex = 9;
             // 
-            // txtPreparation
+            // txtMethod
             // 
-            this.txtPreparation.Location = new System.Drawing.Point(29, 569);
-            this.txtPreparation.Multiline = true;
-            this.txtPreparation.Name = "txtPreparation";
-            this.txtPreparation.Size = new System.Drawing.Size(744, 50);
-            this.txtPreparation.TabIndex = 12;
+            this.txtMethod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMethod.Location = new System.Drawing.Point(29, 569);
+            this.txtMethod.Multiline = true;
+            this.txtMethod.Name = "txtMethod";
+            this.txtMethod.Size = new System.Drawing.Size(744, 50);
+            this.txtMethod.TabIndex = 12;
             // 
             // lblPreparation
             // 
@@ -179,6 +191,8 @@
             // 
             // txtServing
             // 
+            this.txtServing.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtServing.Location = new System.Drawing.Point(29, 667);
             this.txtServing.Multiline = true;
             this.txtServing.Name = "txtServing";
@@ -196,6 +210,8 @@
             // 
             // txtAdvice
             // 
+            this.txtAdvice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAdvice.Location = new System.Drawing.Point(29, 765);
             this.txtAdvice.Multiline = true;
             this.txtAdvice.Name = "txtAdvice";
@@ -255,13 +271,6 @@
             this.lblMealGroup.TabIndex = 20;
             this.lblMealGroup.Text = "Grupa jela";
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(29, 909);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 21;
-            // 
             // lblMin
             // 
             this.lblMin.AutoSize = true;
@@ -287,8 +296,17 @@
             this.cmbMealType.Size = new System.Drawing.Size(121, 24);
             this.cmbMealType.TabIndex = 24;
             // 
+            // nudPreparationTime
+            // 
+            this.nudPreparationTime.Location = new System.Drawing.Point(29, 909);
+            this.nudPreparationTime.Name = "nudPreparationTime";
+            this.nudPreparationTime.Size = new System.Drawing.Size(100, 22);
+            this.nudPreparationTime.TabIndex = 26;
+            // 
             // txtIngridients
             // 
+            this.txtIngridients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIngridients.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtIngridients.ForeColor = System.Drawing.Color.Gray;
             this.txtIngridients.Location = new System.Drawing.Point(29, 390);
@@ -305,11 +323,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 951);
+            this.ControlBox = false;
+            this.Controls.Add(this.nudPreparationTime);
             this.Controls.Add(this.txtIngridients);
             this.Controls.Add(this.cmbMealType);
             this.Controls.Add(this.cmbWeightOfPreparation);
             this.Controls.Add(this.lblMin);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.lblMealGroup);
             this.Controls.Add(this.lblWeightOfPreparation);
             this.Controls.Add(this.lblPreparationTime);
@@ -319,7 +338,7 @@
             this.Controls.Add(this.lblAdvice);
             this.Controls.Add(this.txtServing);
             this.Controls.Add(this.lblServing);
-            this.Controls.Add(this.txtPreparation);
+            this.Controls.Add(this.txtMethod);
             this.Controls.Add(this.lblPreparation);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblIngredients);
@@ -336,6 +355,7 @@
             this.Text = "frmAddRecipes";
             this.Load += new System.EventHandler(this.frmAddRecipes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCoverPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,7 +375,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblIngredients;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtPreparation;
+        private System.Windows.Forms.TextBox txtMethod;
         private System.Windows.Forms.Label lblPreparation;
         private System.Windows.Forms.TextBox txtServing;
         private System.Windows.Forms.Label lblServing;
@@ -366,10 +386,10 @@
         private System.Windows.Forms.Label lblPreparationTime;
         private System.Windows.Forms.Label lblWeightOfPreparation;
         private System.Windows.Forms.Label lblMealGroup;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label lblMin;
         private System.Windows.Forms.ComboBox cmbWeightOfPreparation;
         private System.Windows.Forms.ComboBox cmbMealType;
         private Helpers.PlaceHolderTextBox txtIngridients;
+        private System.Windows.Forms.NumericUpDown nudPreparationTime;
     }
 }
