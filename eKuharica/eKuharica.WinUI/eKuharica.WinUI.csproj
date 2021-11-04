@@ -262,6 +262,12 @@
     <Compile Include="Recipes\frmRecipes.Designer.cs">
       <DependentUpon>frmRecipes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserRecipes\frmUserRecipes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRecipes\frmUserRecipes.Designer.cs">
+      <DependentUpon>frmUserRecipes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\frmUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     <EmbeddedResource Include="Recipes\frmRecipes.resx">
       <DependentUpon>frmRecipes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserRecipes\frmUserRecipes.resx">
+      <DependentUpon>frmUserRecipes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +318,7 @@
       <Name>eKuharica.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

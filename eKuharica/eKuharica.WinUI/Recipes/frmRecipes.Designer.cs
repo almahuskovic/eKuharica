@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecipes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sdgvRecipes = new eKuharica.WinUI.Helpers.SuperGrid();
+            this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prevod = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Akcije = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Prikazi = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Uredi = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Obrisi = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbExtraFilters = new System.Windows.Forms.GroupBox();
             this.cmbMealType = new System.Windows.Forms.ComboBox();
@@ -50,20 +57,13 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sdgvRecipes = new eKuharica.WinUI.Helpers.SuperGrid();
-            this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prevod = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Akcije = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Prikazi = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Uredi = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Obrisi = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvRecipes)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.gbExtraFilters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvRecipes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -77,6 +77,86 @@
             this.groupBox1.Size = new System.Drawing.Size(864, 249);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // sdgvRecipes
+            // 
+            this.sdgvRecipes.AllowUserToAddRows = false;
+            this.sdgvRecipes.AllowUserToDeleteRows = false;
+            this.sdgvRecipes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sdgvRecipes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.sdgvRecipes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.sdgvRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sdgvRecipes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Naziv,
+            this.Prevod,
+            this.Akcije,
+            this.Prikazi,
+            this.Uredi,
+            this.Obrisi});
+            this.sdgvRecipes.Location = new System.Drawing.Point(3, 18);
+            this.sdgvRecipes.Name = "sdgvRecipes";
+            this.sdgvRecipes.PageSize = 10;
+            this.sdgvRecipes.ReadOnly = true;
+            this.sdgvRecipes.RowHeadersWidth = 51;
+            this.sdgvRecipes.RowTemplate.Height = 24;
+            this.sdgvRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.sdgvRecipes.Size = new System.Drawing.Size(858, 228);
+            this.sdgvRecipes.TabIndex = 7;
+            this.sdgvRecipes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvRecipes_CellContentClick);
+            // 
+            // Naziv
+            // 
+            this.Naziv.DataPropertyName = "Title";
+            this.Naziv.HeaderText = "Naziv";
+            this.Naziv.MinimumWidth = 6;
+            this.Naziv.Name = "Naziv";
+            this.Naziv.ReadOnly = true;
+            // 
+            // Prevod
+            // 
+            this.Prevod.DataPropertyName = "IsTranslated";
+            this.Prevod.HeaderText = "Prevod";
+            this.Prevod.MinimumWidth = 6;
+            this.Prevod.Name = "Prevod";
+            this.Prevod.ReadOnly = true;
+            // 
+            // Akcije
+            // 
+            this.Akcije.HeaderText = "Akcije";
+            this.Akcije.MinimumWidth = 6;
+            this.Akcije.Name = "Akcije";
+            this.Akcije.ReadOnly = true;
+            this.Akcije.Text = "Prevod";
+            this.Akcije.UseColumnTextForButtonValue = true;
+            // 
+            // Prikazi
+            // 
+            this.Prikazi.HeaderText = "";
+            this.Prikazi.MinimumWidth = 6;
+            this.Prikazi.Name = "Prikazi";
+            this.Prikazi.ReadOnly = true;
+            this.Prikazi.Text = "Prikazi";
+            this.Prikazi.UseColumnTextForButtonValue = true;
+            // 
+            // Uredi
+            // 
+            this.Uredi.HeaderText = "";
+            this.Uredi.MinimumWidth = 6;
+            this.Uredi.Name = "Uredi";
+            this.Uredi.ReadOnly = true;
+            this.Uredi.Text = "Uredi";
+            this.Uredi.UseColumnTextForButtonValue = true;
+            // 
+            // Obrisi
+            // 
+            this.Obrisi.HeaderText = "";
+            this.Obrisi.MinimumWidth = 6;
+            this.Obrisi.Name = "Obrisi";
+            this.Obrisi.ReadOnly = true;
+            this.Obrisi.Text = "Obrisi";
+            this.Obrisi.UseColumnTextForButtonValue = true;
             // 
             // groupBox2
             // 
@@ -223,6 +303,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -256,86 +337,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
-            // sdgvRecipes
-            // 
-            this.sdgvRecipes.AllowUserToAddRows = false;
-            this.sdgvRecipes.AllowUserToDeleteRows = false;
-            this.sdgvRecipes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sdgvRecipes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.sdgvRecipes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.sdgvRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sdgvRecipes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Naziv,
-            this.Prevod,
-            this.Akcije,
-            this.Prikazi,
-            this.Uredi,
-            this.Obrisi});
-            this.sdgvRecipes.Location = new System.Drawing.Point(3, 18);
-            this.sdgvRecipes.Name = "sdgvRecipes";
-            this.sdgvRecipes.PageSize = 10;
-            this.sdgvRecipes.ReadOnly = true;
-            this.sdgvRecipes.RowHeadersWidth = 51;
-            this.sdgvRecipes.RowTemplate.Height = 24;
-            this.sdgvRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.sdgvRecipes.Size = new System.Drawing.Size(858, 228);
-            this.sdgvRecipes.TabIndex = 7;
-            this.sdgvRecipes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvRecipes_CellContentClick);
-            // 
-            // Naziv
-            // 
-            this.Naziv.DataPropertyName = "Title";
-            this.Naziv.HeaderText = "Naziv";
-            this.Naziv.MinimumWidth = 6;
-            this.Naziv.Name = "Naziv";
-            this.Naziv.ReadOnly = true;
-            // 
-            // Prevod
-            // 
-            this.Prevod.DataPropertyName = "IsTranslated";
-            this.Prevod.HeaderText = "Prevod";
-            this.Prevod.MinimumWidth = 6;
-            this.Prevod.Name = "Prevod";
-            this.Prevod.ReadOnly = true;
-            // 
-            // Akcije
-            // 
-            this.Akcije.HeaderText = "Akcije";
-            this.Akcije.MinimumWidth = 6;
-            this.Akcije.Name = "Akcije";
-            this.Akcije.ReadOnly = true;
-            this.Akcije.Text = "Prevod";
-            this.Akcije.UseColumnTextForButtonValue = true;
-            // 
-            // Prikazi
-            // 
-            this.Prikazi.HeaderText = "";
-            this.Prikazi.MinimumWidth = 6;
-            this.Prikazi.Name = "Prikazi";
-            this.Prikazi.ReadOnly = true;
-            this.Prikazi.Text = "Prikazi";
-            this.Prikazi.UseColumnTextForButtonValue = true;
-            // 
-            // Uredi
-            // 
-            this.Uredi.HeaderText = "";
-            this.Uredi.MinimumWidth = 6;
-            this.Uredi.Name = "Uredi";
-            this.Uredi.ReadOnly = true;
-            this.Uredi.Text = "Uredi";
-            this.Uredi.UseColumnTextForButtonValue = true;
-            // 
-            // Obrisi
-            // 
-            this.Obrisi.HeaderText = "";
-            this.Obrisi.MinimumWidth = 6;
-            this.Obrisi.Name = "Obrisi";
-            this.Obrisi.ReadOnly = true;
-            this.Obrisi.Text = "Obrisi";
-            this.Obrisi.UseColumnTextForButtonValue = true;
-            // 
             // frmRecipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -353,6 +354,7 @@
             this.Text = "frmRecipes";
             this.Load += new System.EventHandler(this.frmRecipes_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvRecipes)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.gbExtraFilters.ResumeLayout(false);
@@ -360,7 +362,6 @@
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvRecipes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

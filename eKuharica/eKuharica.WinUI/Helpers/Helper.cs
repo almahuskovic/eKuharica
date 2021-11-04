@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eKuharica.Model.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +28,19 @@ namespace eKuharica.WinUI.Helpers
             }
             return table;
         }
+        public static List<RecipeDto> ToRecipeDto(DataTable dt)
+        {
+            var convertedList = (from rw in dt.AsEnumerable()
+                                    select new RecipeDto()
+                                    {
+                                        Title = Convert.ToString(rw["Title"]),
+                                        Advice = Convert.ToString(rw["Advice"]),
+                                        Content = Convert.ToString(rw["Content"]),
+                                        
+                                    }).ToList();
 
+            return convertedList;
+        }
         #region EnumerationSelectLists
         //TODO:refaktorisanje, napraviti univerzalnu fn za convert enuma u listu
         public static List<MealType> MealTypeToSelectList()

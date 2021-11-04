@@ -38,6 +38,7 @@ namespace eKuharica.WinUI.Recipes
                 sdgvRecipes.DataSource = null;
             else
             {
+                sdgvRecipes.DataSource = data;
                 sdgvRecipes.PageSize = 10;
                 DataTable dt = Helpers.Helper.ToDataTable(data);
                 sdgvRecipes.SetPagedDataSource(dt, bindingNavigator1);
@@ -109,6 +110,9 @@ namespace eKuharica.WinUI.Recipes
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
+               // var recipeList = Helpers.Helper.ToRecipeDto((DataTable)bindingNavigator1.BindingSource);
+                var obj = sdgvRecipes.Rows[e.RowIndex].Selected;
+                var obj1 = (RecipeDto)bindingSource1.Current;
                 var see = sdgvRecipes.SelectedRows[0];
                 var item = see.DataBoundItem as RecipeDto;
 
@@ -134,5 +138,6 @@ namespace eKuharica.WinUI.Recipes
                 }
             }
         }
+
     }
 }

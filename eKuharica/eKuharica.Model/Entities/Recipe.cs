@@ -24,8 +24,13 @@ namespace eKuharica.Model.Entities
         public byte[] PictureThumb { get; set; }
         public bool IsTranslated { get; set; }
         public bool IsRead { get; set; }
+        public bool IsSent { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public bool IsDeleted { get; set; }
+
+        [ForeignKey(nameof(User))]
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
     }
 }
