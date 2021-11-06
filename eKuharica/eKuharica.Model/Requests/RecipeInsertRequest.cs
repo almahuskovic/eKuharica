@@ -19,5 +19,7 @@ namespace eKuharica.Model.Requests
         public int WeightOfPreparation { get; set; } //enum
         public byte[] Picture { get; set; }
         public byte[] PictureThumb { get; set; }
+        public int UserId { get; set; }
+        public bool IsTranslated { get; set; }
     }
 }

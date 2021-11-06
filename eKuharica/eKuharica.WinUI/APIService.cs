@@ -47,5 +47,11 @@ namespace eKuharica.WinUI
             var result = await url.PutJsonAsync(request).ReceiveJson<T>();
             return result;
         }
+        public async Task<bool> Delete<T>(object id)
+        {
+            var url = $"{Properties.Settings.Default.ApiURL}/{_route}/{id}";
+            var result = await url.DeleteAsync();
+            return result.StatusCode==200;
+        }
     }
 }

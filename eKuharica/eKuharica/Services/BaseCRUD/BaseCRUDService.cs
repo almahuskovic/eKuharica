@@ -35,5 +35,14 @@ namespace eKuharica.Services.BaseCRUD
 
             return _mapper.Map<T>(entity);
         }
+        public virtual T Delete(int id)
+        {
+            var entity = Context.Set<TDb>().Find(id);
+
+            Context.Set<TDb>().Remove(entity);
+            Context.SaveChanges();
+
+            return _mapper.Map<T>(entity);
+        }
     }
 }

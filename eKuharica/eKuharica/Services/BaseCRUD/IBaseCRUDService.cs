@@ -11,5 +11,6 @@ namespace eKuharica.Services.BaseCRUD
     {
         T Insert(TInsert request);
         T Update(int id, TUpdate request);
+        T Delete(int id);
     }
 }

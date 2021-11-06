@@ -4,7 +4,7 @@ using System.Text;
 
 namespace eKuharica.Model.DTO
 {
-    public class RecipeDto
+    public class RecipeTranslationDto
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -14,17 +14,9 @@ namespace eKuharica.Model.DTO
         public string Serving { get; set; }
         public string Advice { get; set; }
         public string Content { get; set; }
-        public DateTime PreparationTime { get; set; }
-        public int PreparationTimeCategory { get; set; } //enum
-        public int MealType { get; set; } //enum
-        public int WeightOfPreparation { get; set; } //enum
-        public byte[] Picture { get; set; }
-        public byte[] PictureThumb { get; set; }
-        public bool IsTranslated { get; set; }
-        public bool IsRead { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public bool IsDeleted { get; set; }
-        public int UserId { get; set; } 
+        public int RecipeId { get; set; }
     }
 }

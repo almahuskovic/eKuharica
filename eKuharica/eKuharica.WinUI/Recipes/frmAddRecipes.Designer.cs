@@ -56,9 +56,11 @@
             this.cmbWeightOfPreparation = new System.Windows.Forms.ComboBox();
             this.cmbMealType = new System.Windows.Forms.ComboBox();
             this.nudPreparationTime = new System.Windows.Forms.NumericUpDown();
-            this.txtIngridients = new eKuharica.WinUI.Helpers.PlaceHolderTextBox();
+            this.txtIngridients = new System.Windows.Forms.TextBox();
+            this.gbTags = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoverPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).BeginInit();
+            this.gbTags.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRecipePreview
@@ -78,7 +80,7 @@
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 33);
             this.btnSubmit.TabIndex = 1;
-            this.btnSubmit.Text = "Objavi";
+            this.btnSubmit.Text = "Spremi";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
@@ -238,7 +240,7 @@
             // lblTags
             // 
             this.lblTags.AutoSize = true;
-            this.lblTags.Location = new System.Drawing.Point(26, 848);
+            this.lblTags.Location = new System.Drawing.Point(6, 25);
             this.lblTags.Name = "lblTags";
             this.lblTags.Size = new System.Drawing.Size(57, 17);
             this.lblTags.TabIndex = 17;
@@ -247,7 +249,7 @@
             // lblPreparationTime
             // 
             this.lblPreparationTime.AutoSize = true;
-            this.lblPreparationTime.Location = new System.Drawing.Point(26, 889);
+            this.lblPreparationTime.Location = new System.Drawing.Point(6, 66);
             this.lblPreparationTime.Name = "lblPreparationTime";
             this.lblPreparationTime.Size = new System.Drawing.Size(115, 17);
             this.lblPreparationTime.TabIndex = 18;
@@ -256,7 +258,7 @@
             // lblWeightOfPreparation
             // 
             this.lblWeightOfPreparation.AutoSize = true;
-            this.lblWeightOfPreparation.Location = new System.Drawing.Point(274, 889);
+            this.lblWeightOfPreparation.Location = new System.Drawing.Point(245, 66);
             this.lblWeightOfPreparation.Name = "lblWeightOfPreparation";
             this.lblWeightOfPreparation.Size = new System.Drawing.Size(111, 17);
             this.lblWeightOfPreparation.TabIndex = 19;
@@ -265,7 +267,7 @@
             // lblMealGroup
             // 
             this.lblMealGroup.AutoSize = true;
-            this.lblMealGroup.Location = new System.Drawing.Point(481, 889);
+            this.lblMealGroup.Location = new System.Drawing.Point(464, 66);
             this.lblMealGroup.Name = "lblMealGroup";
             this.lblMealGroup.Size = new System.Drawing.Size(74, 17);
             this.lblMealGroup.TabIndex = 20;
@@ -274,7 +276,7 @@
             // lblMin
             // 
             this.lblMin.AutoSize = true;
-            this.lblMin.Location = new System.Drawing.Point(135, 909);
+            this.lblMin.Location = new System.Drawing.Point(115, 86);
             this.lblMin.Name = "lblMin";
             this.lblMin.Size = new System.Drawing.Size(30, 17);
             this.lblMin.TabIndex = 22;
@@ -283,7 +285,7 @@
             // cmbWeightOfPreparation
             // 
             this.cmbWeightOfPreparation.FormattingEnabled = true;
-            this.cmbWeightOfPreparation.Location = new System.Drawing.Point(277, 909);
+            this.cmbWeightOfPreparation.Location = new System.Drawing.Point(248, 86);
             this.cmbWeightOfPreparation.Name = "cmbWeightOfPreparation";
             this.cmbWeightOfPreparation.Size = new System.Drawing.Size(121, 24);
             this.cmbWeightOfPreparation.TabIndex = 23;
@@ -291,14 +293,14 @@
             // cmbMealType
             // 
             this.cmbMealType.FormattingEnabled = true;
-            this.cmbMealType.Location = new System.Drawing.Point(484, 909);
+            this.cmbMealType.Location = new System.Drawing.Point(467, 86);
             this.cmbMealType.Name = "cmbMealType";
             this.cmbMealType.Size = new System.Drawing.Size(121, 24);
             this.cmbMealType.TabIndex = 24;
             // 
             // nudPreparationTime
             // 
-            this.nudPreparationTime.Location = new System.Drawing.Point(29, 909);
+            this.nudPreparationTime.Location = new System.Drawing.Point(9, 86);
             this.nudPreparationTime.Name = "nudPreparationTime";
             this.nudPreparationTime.Size = new System.Drawing.Size(100, 22);
             this.nudPreparationTime.TabIndex = 26;
@@ -307,32 +309,37 @@
             // 
             this.txtIngridients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIngridients.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
-            this.txtIngridients.ForeColor = System.Drawing.Color.Gray;
-            this.txtIngridients.Location = new System.Drawing.Point(29, 390);
+            this.txtIngridients.Location = new System.Drawing.Point(28, 375);
             this.txtIngridients.Multiline = true;
             this.txtIngridients.Name = "txtIngridients";
-            this.txtIngridients.PlaceHolderText = null;
-            this.txtIngridients.Size = new System.Drawing.Size(744, 99);
-            this.txtIngridients.TabIndex = 25;
-            this.txtIngridients.Text = "Kora:\r\n500g brašna";
+            this.txtIngridients.Size = new System.Drawing.Size(744, 125);
+            this.txtIngridients.TabIndex = 27;
+            // 
+            // gbTags
+            // 
+            this.gbTags.Controls.Add(this.lblPreparationTime);
+            this.gbTags.Controls.Add(this.lblTags);
+            this.gbTags.Controls.Add(this.cmbMealType);
+            this.gbTags.Controls.Add(this.nudPreparationTime);
+            this.gbTags.Controls.Add(this.lblMealGroup);
+            this.gbTags.Controls.Add(this.cmbWeightOfPreparation);
+            this.gbTags.Controls.Add(this.lblMin);
+            this.gbTags.Controls.Add(this.lblWeightOfPreparation);
+            this.gbTags.Location = new System.Drawing.Point(29, 835);
+            this.gbTags.Name = "gbTags";
+            this.gbTags.Size = new System.Drawing.Size(743, 128);
+            this.gbTags.TabIndex = 28;
+            this.gbTags.TabStop = false;
             // 
             // frmAddRecipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 951);
+            this.ClientSize = new System.Drawing.Size(800, 977);
             this.ControlBox = false;
-            this.Controls.Add(this.nudPreparationTime);
+            this.Controls.Add(this.gbTags);
             this.Controls.Add(this.txtIngridients);
-            this.Controls.Add(this.cmbMealType);
-            this.Controls.Add(this.cmbWeightOfPreparation);
-            this.Controls.Add(this.lblMin);
-            this.Controls.Add(this.lblMealGroup);
-            this.Controls.Add(this.lblWeightOfPreparation);
-            this.Controls.Add(this.lblPreparationTime);
-            this.Controls.Add(this.lblTags);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtAdvice);
             this.Controls.Add(this.lblAdvice);
@@ -356,6 +363,8 @@
             this.Load += new System.EventHandler(this.frmAddRecipes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCoverPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).EndInit();
+            this.gbTags.ResumeLayout(false);
+            this.gbTags.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,7 +398,8 @@
         private System.Windows.Forms.Label lblMin;
         private System.Windows.Forms.ComboBox cmbWeightOfPreparation;
         private System.Windows.Forms.ComboBox cmbMealType;
-        private Helpers.PlaceHolderTextBox txtIngridients;
         private System.Windows.Forms.NumericUpDown nudPreparationTime;
+        private System.Windows.Forms.TextBox txtIngridients;
+        private System.Windows.Forms.GroupBox gbTags;
     }
 }

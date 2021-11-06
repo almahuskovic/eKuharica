@@ -19,7 +19,7 @@ namespace eKuharica.WinUI.Recipes
     public partial class frmRecipes : Form
     {
         APIService _recipeService = new APIService("Recipe");
-        private int childFormNumber = 0;
+        APIService _recipeTranslationService = new APIService("RecipeTranslation");
        
         public frmRecipes()
         {
@@ -81,7 +81,6 @@ namespace eKuharica.WinUI.Recipes
             frmAddRecipes frmAddRecipes = new frmAddRecipes();
             frmAddRecipes.MdiParent = MdiParent;
             frmAddRecipes.WindowState = FormWindowState.Maximized;
-            frmAddRecipes.Text = "Window " + childFormNumber++;
             frmAddRecipes.Show();
         }
 
@@ -103,22 +102,26 @@ namespace eKuharica.WinUI.Recipes
                 txtSearch_TextChanged(sender, e);
         }
 
-        private void sdgvRecipes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void sdgvRecipes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
-               // var recipeList = Helpers.Helper.ToRecipeDto((DataTable)bindingNavigator1.BindingSource);
-                var obj = sdgvRecipes.Rows[e.RowIndex].Selected;
-                var obj1 = (RecipeDto)bindingSource1.Current;
-                var see = sdgvRecipes.SelectedRows[0];
-                var item = see.DataBoundItem as RecipeDto;
+                //radi ali fali tacna pozicija u listi
+                //var dataTable = Helpers.Helper.BindingListToDataTable(bindingNavigator1.BindingSource.DataSource as BindingList<DataTable>);
+                //var selectedRow = Helpers.Helper.CreateItemFromRow<RecipeDto>(dataTable.Rows[e.RowIndex]);
 
-                if (e.ColumnIndex == 2)
+                var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
+                var selectedRow = Helpers.Helper.CreateItemFromRow<RecipeDto>(currentRow.Rows[0]);
+
+                if (e.ColumnIndex == 2)//prevod
                 {
-                    //prevod
+                    var searchR = new RecipeTranslationSearchRequest() { RecipeId = selectedRow.Id };
+                    var recipeTranslation = await _recipeTranslationService.Get<List<RecipeTranslationDto>>(searchR);
+                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, recipeTranslation.First(), true);
+                    frmEditRecipe.MdiParent = MdiParent;
+                    frmEditRecipe.WindowState = FormWindowState.Maximized;
+                    frmEditRecipe.Show();
+                    Hide();
                 }
                 if (e.ColumnIndex == 3)
                 {
@@ -126,15 +129,16 @@ namespace eKuharica.WinUI.Recipes
                 }
                 if (e.ColumnIndex == 4)//edit
                 {
-                    frmAddRecipes frmEditRecipe = new frmAddRecipes(item as RecipeDto);
+                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow);
                     frmEditRecipe.MdiParent = MdiParent;
                     frmEditRecipe.WindowState = FormWindowState.Maximized;
                     frmEditRecipe.Show();
                     Hide();
                 }
-                if (e.ColumnIndex == 5)
+                if (e.ColumnIndex == 5)//brisanje
                 {
-                    //brisanje
+                    if (await _recipeService.Delete<RecipeDto>(selectedRow.Id))
+                        txtSearch_TextChanged(sender,e);
                 }
             }
         }
