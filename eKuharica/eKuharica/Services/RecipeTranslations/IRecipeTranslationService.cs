@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace eKuharica.Services.RecipeTranslations
 {
-    public interface IRecipeTranslationService : IBaseCRUDService<RecipeTranslationDto, RecipeTranslationSearchRequest, RecipeInsertRequest, RecipeUpdateRequest>
+    public interface IRecipeTranslationService : IBaseCRUDService<RecipeTranslationDto, RecipeTranslationSearchRequest, RecipeTranslationUpsertRequest, RecipeTranslationUpsertRequest>
     {
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace eKuharica.Services.Recipes
 {
-    public interface IRecipeService:IBaseCRUDService<RecipeDto, RecipeSearchObject,RecipeInsertRequest,RecipeUpdateRequest>
+    public interface IRecipeService:IBaseCRUDService<RecipeDto, RecipeSearchObject, RecipeUpsertRequest, RecipeUpsertRequest>
     {
     }
 }

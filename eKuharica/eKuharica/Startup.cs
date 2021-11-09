@@ -6,6 +6,7 @@ using eKuharica.Filters;
 using eKuharica.Services;
 using eKuharica.Services.Feedbacks;
 using eKuharica.Services.Recipes;
+using eKuharica.Services.RecipeTranslations;
 using eKuharica.Services.Users;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -42,6 +43,7 @@ namespace eKuharica
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IRecipeService, RecipeService>();
             services.AddScoped<IFeedbackService, FeedbackService>();
+            services.AddScoped<IRecipeTranslationService, RecipeTranslationService>();
 
             //services.AddDbContext<eKuharicaContext>(options =>
             //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

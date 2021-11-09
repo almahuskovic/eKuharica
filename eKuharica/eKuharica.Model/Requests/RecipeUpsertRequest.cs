@@ -4,7 +4,7 @@ using System.Text;
 
 namespace eKuharica.Model.Requests
 {
-    public class RecipeInsertRequest
+    public class RecipeUpsertRequest
     {
         public string Title { get; set; }
         public string Introduction { get; set; }
@@ -19,7 +19,7 @@ namespace eKuharica.Model.Requests
         public int WeightOfPreparation { get; set; } //enum
         public byte[] Picture { get; set; }
         public byte[] PictureThumb { get; set; }
-        public int UserId { get; set; }
         public bool IsTranslated { get; set; }
+        public int UserId { get; set; }
     }
 }

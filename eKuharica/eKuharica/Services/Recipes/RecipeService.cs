@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace eKuharica.Services.Recipes
 {
-    public class RecipeService : BaseCRUDService<RecipeDto,Recipe,RecipeSearchObject,RecipeInsertRequest,RecipeUpdateRequest>, IRecipeService
+    public class RecipeService : BaseCRUDService<RecipeDto,Recipe,RecipeSearchObject, RecipeUpsertRequest, RecipeUpsertRequest>, IRecipeService
     {
         public RecipeService(Context context, IMapper mapper):base(context,mapper)
         {

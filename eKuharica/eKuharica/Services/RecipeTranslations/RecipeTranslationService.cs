@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace eKuharica.Services.RecipeTranslations
 {
-    public class RecipeTranslationService : BaseCRUDService<RecipeTranslationDto, RecipeTranslation, RecipeTranslationSearchRequest, RecipeInsertRequest, RecipeUpdateRequest>, IRecipeTranslationService
+    public class RecipeTranslationService : BaseCRUDService<RecipeTranslationDto, RecipeTranslation, RecipeTranslationSearchRequest, RecipeTranslationUpsertRequest, RecipeTranslationUpsertRequest>, IRecipeTranslationService
     {
         public RecipeTranslationService(Context context, IMapper mapper) : base(context, mapper)
         {
@@ -28,5 +28,6 @@ namespace eKuharica.Services.RecipeTranslations
             var list = entity.ToList();
             return _mapper.Map<List<RecipeTranslationDto>>(list);
         }
+
     }
 }

@@ -12,7 +12,7 @@ namespace eKuharica.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RecipeController : BaseCRUDController<RecipeDto,RecipeSearchObject,RecipeInsertRequest,RecipeUpdateRequest>
+    public class RecipeController : BaseCRUDController<RecipeDto, RecipeSearchObject, RecipeUpsertRequest, RecipeUpsertRequest>
     {
         public RecipeController(IRecipeService recipeService)
             :base(recipeService)

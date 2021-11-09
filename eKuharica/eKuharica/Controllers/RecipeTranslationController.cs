@@ -11,9 +11,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace eKuharica.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
-    public class RecipeTranslationController : BaseCRUDController<RecipeTranslationDto, RecipeTranslationSearchRequest, RecipeInsertRequest, RecipeUpdateRequest>
+    [Route("[controller]")]
+    public class RecipeTranslationController : BaseCRUDController<RecipeTranslationDto, RecipeTranslationSearchRequest, RecipeTranslationUpsertRequest, RecipeTranslationUpsertRequest>
     {
         public RecipeTranslationController(IRecipeTranslationService recipeTranslationService)
             : base(recipeTranslationService)
