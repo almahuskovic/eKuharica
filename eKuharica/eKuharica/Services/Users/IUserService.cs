@@ -12,5 +12,6 @@ namespace eKuharica.Services.Users
     public interface IUserService:IBaseReadService<UserDto, UserSearchRequest>
     {
         User Insert(UserInsertRequest request);
+        Task<UserDto> Login(string username, string password);
     }
 }

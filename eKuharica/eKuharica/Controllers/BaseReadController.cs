@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using eKuharica.Services.BaseRead;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eKuharica.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class BaseReadController<T,TSearch> : ControllerBase where T:class where TSearch: class
     {
         protected readonly IBaseReadService<T,TSearch> _service;

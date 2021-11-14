@@ -8,12 +8,14 @@ using eKuharica.Model.Entities;
 using eKuharica.Model.Requests;
 using eKuharica.Services;
 using eKuharica.Services.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eKuharica.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    //[Authorize]
     public class UserController : BaseReadController<UserDto, UserSearchRequest>
     {
         private readonly IUserService _userService;
@@ -21,7 +23,8 @@ namespace eKuharica.Controllers
         {
             _userService = userService;
         }
-       
+
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public User Insert([FromBody] UserInsertRequest request)
         {

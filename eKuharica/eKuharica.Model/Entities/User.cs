@@ -14,6 +14,8 @@ namespace eKuharica.Model.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string Username { get; set; }
+        public string PasswordHash { get; set; }
+        public string PasswordSalt { get; set; }
         public bool? Status { get; set; }
         public byte[] Picture { get; set; }
         public byte[] PictureThumb { get; set; }

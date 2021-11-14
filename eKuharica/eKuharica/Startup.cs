@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using eKuharica.Filters;
+using eKuharica.Security;
 using eKuharica.Services;
 using eKuharica.Services.Feedbacks;
 using eKuharica.Services.Recipes;
 using eKuharica.Services.RecipeTranslations;
 using eKuharica.Services.Users;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -17,6 +19,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace eKuharica
 {
@@ -36,7 +39,27 @@ namespace eKuharica
                 x.Filters.Add<ErrorFilter>();
             });
 
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "eKuharica API", Version = "v1" });
+
+                c.AddSecurityDefinition("basicAuth", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "basic"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "basicAuth" }
+                        },
+                        new string[]{}
+                    }
+                });
+            });
 
             services.AddAutoMapper(typeof(Startup));
 
@@ -44,6 +67,10 @@ namespace eKuharica
             services.AddScoped<IRecipeService, RecipeService>();
             services.AddScoped<IFeedbackService, FeedbackService>();
             services.AddScoped<IRecipeTranslationService, RecipeTranslationService>();
+
+
+            services.AddAuthentication("BasicAuthentication")
+                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
 
             //services.AddDbContext<eKuharicaContext>(options =>
             //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -70,6 +97,8 @@ namespace eKuharica
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
