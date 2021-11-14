@@ -16,19 +16,32 @@ namespace eKuharica.Controllers
     [ApiController]
     [Route("[controller]")]
     //[Authorize]
-    public class UserController : BaseReadController<UserDto, UserSearchRequest>
+    public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        public UserController(IUserService userService):base(userService)
+        public UserController(IUserService userService)
         {
             _userService = userService;
         }
 
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         [HttpPost]
-        public User Insert([FromBody] UserInsertRequest request)
+        public UserDto Insert([FromBody] UserInsertRequest request)
         {
             return _userService.Insert(request);
+        }
+
+        [Authorize(Roles = "Administrator")]
+        [HttpPut("{id}")]
+        public UserDto Update(int id, [FromBody] UserUpdateRequest request)
+        {
+            return _userService.Update(id, request);
+        }
+
+        [HttpGet]
+        public IList<UserDto> Get([FromQuery] UserSearchRequest request)
+        {
+            return _userService.Get(request);
         }
     }
 }

@@ -14,13 +14,17 @@ using System.Text;
 
 namespace eKuharica.Services.Users
 {
-    public class UserService : BaseReadService<UserDto, User, UserSearchRequest>, IUserService
+    public class UserService :  IUserService
     {
-        public UserService(Context context, IMapper mapper):base(context,mapper)
+        public Context Context { get; set; }
+        protected readonly IMapper _mapper;
+        public UserService(Context context, IMapper mapper)
         {
+            Context = context;
+            _mapper = mapper;
         }
 
-        public override IEnumerable<UserDto> Get(UserSearchRequest request)
+        public IList<UserDto> Get(UserSearchRequest request)
         {
             var query = Context.User.AsQueryable();
             if (!string.IsNullOrWhiteSpace(request.FirstName))
@@ -29,10 +33,45 @@ namespace eKuharica.Services.Users
             var list = query.ToList();
             return _mapper.Map<List<UserDto>>(list);
         }
-        public User Insert(UserInsertRequest request)
+        public UserDto Insert(UserInsertRequest request)
         {
-            throw new NotImplementedException();
+            var entity = _mapper.Map<User>(request);
+            Context.Add(entity);
+            if (request.Password != request.PasswordConfirm)
+            {
+                //throw new NotImplementedException();
+                throw new UserException("Lozinka nije ispravna");
+            }
+
+            entity.PasswordSalt = GenerateSalt();
+            entity.PasswordHash = GenerateHash(entity.PasswordSalt, request.Password);
+
+            Context.SaveChanges();
+
+            foreach (var role in request.Roles)
+            {
+                UserRole userRole = new UserRole();
+                userRole.UserId = entity.Id;
+                userRole.RoleId = role;
+                userRole.ModifiedAt = DateTime.Now;
+
+                Context.UserRole.Add(userRole);
+            }
+
+            Context.SaveChanges();
+
+            return _mapper.Map<UserDto>(entity);
         }
+
+        public UserDto Update(int id, UserUpdateRequest request)
+        {
+            var entity = Context.User.Find(id);
+            _mapper.Map(request, entity);
+
+            Context.SaveChanges();
+            return _mapper.Map<UserDto>(entity);
+        }
+
 
         public static string GenerateSalt()
         {
@@ -69,6 +108,13 @@ namespace eKuharica.Services.Users
             {
                 throw new UserException("Pogrešan username ili password");
             }
+
+            return _mapper.Map<UserDto>(entity);
+        }
+
+        public UserDto GetById(int id)
+        {
+            var entity = Context.User.Find(id);
 
             return _mapper.Map<UserDto>(entity);
         }

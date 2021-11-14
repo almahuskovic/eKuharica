@@ -274,6 +274,9 @@
     <Compile Include="Users\frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmWelcome.resx">
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>

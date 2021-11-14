@@ -9,9 +9,12 @@ using eKuharica.Services.BaseRead;
 
 namespace eKuharica.Services.Users
 {
-    public interface IUserService:IBaseReadService<UserDto, UserSearchRequest>
+    public interface IUserService
     {
-        User Insert(UserInsertRequest request);
+        IList<UserDto> Get(UserSearchRequest search);
+        UserDto GetById(int id);
+        UserDto Insert(UserInsertRequest request);
+        UserDto Update(int id, UserUpdateRequest user);
         Task<UserDto> Login(string username, string password);
     }
 }

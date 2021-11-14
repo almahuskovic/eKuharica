@@ -14,6 +14,8 @@ namespace eKuharica.Mapping
         public eKuharicaProfile()
         {
             CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<User, UserInsertRequest>().ReverseMap();
+            CreateMap<User, UserUpdateRequest>().ReverseMap();
             CreateMap<UserRole, UserRoleDto>().ReverseMap();
             
             CreateMap<Recipe, RecipeDto>().ReverseMap();

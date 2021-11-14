@@ -30,7 +30,8 @@ namespace eKuharica.Model.Requests
         [MinLength(3)]
         //TODO:Regex
         public string Password { get; set; }
+        public string PasswordConfirm { get; set; }
 
-
+        public List<int> Roles { get; set; } = new List<int>();
     }
 }

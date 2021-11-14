@@ -1,4 +1,6 @@
-﻿using System;
+﻿using eKuharica.Model.DTO;
+using eKuharica.Model.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,28 @@ namespace eKuharica.WinUI
 {
     public partial class frmLogin : Form
     {
+        private readonly APIService _aPIService = new APIService("User");
         public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private async void btnLogin_Click(object sender, EventArgs e)
+        {
+            APIService.Username = txtUsername.Text;
+            APIService.Password = txtPassword.Text;
+
+            try
+            {
+                var result = await _aPIService.Get<List<UserDto>>();
+
+                frmWelcome frm = new frmWelcome();
+                frm.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Pogrešan username ili password");
+            }
         }
     }
 }
