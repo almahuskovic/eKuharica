@@ -20,17 +20,19 @@ namespace eKuharica.WinUI
             InitializeComponent();
         }
 
-        private async void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             APIService.Username = txtUsername.Text;
             APIService.Password = txtPassword.Text;
 
             try
             {
-                var result = await _aPIService.Get<List<UserDto>>();
+                //nemam pojma cemu bi ovo trebalo da sluzi
+                //var result = await _aPIService.Get<List<UserDto>>();
 
                 frmWelcome frm = new frmWelcome();
                 frm.Show();
+                Hide();
             }
             catch
             {

@@ -1,4 +1,5 @@
-﻿using eKuharica.Model.DTO;
+﻿using Azure.Core;
+using eKuharica.Model.DTO;
 using eKuharica.Model.Entities;
 using eKuharica.Model.Requests;
 using eKuharica.WinUI.Properties;
@@ -8,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +19,7 @@ namespace eKuharica.WinUI.Recipes
     public partial class frmAddRecipes : Form
     {
         APIService _recipeService = new APIService("Recipe");
+        APIService _userService = new APIService("User");
         APIService _recipeTranslationService = new APIService("RecipeTranslation");
 
         private RecipeDto _recipe;
@@ -68,7 +71,10 @@ namespace eKuharica.WinUI.Recipes
         }
 
         private async void btnSubmit_Click(object sender, EventArgs e)
-        {
+        { 
+            //var loggedUser = (await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = APIService.Username }));
+            //var userId = loggedUser.FirstOrDefault().Id;
+
             RecipeTranslationUpsertRequest recipeTranslationRequest = new RecipeTranslationUpsertRequest();
             RecipeUpsertRequest recipeRequest = new RecipeUpsertRequest();
 
@@ -78,7 +84,7 @@ namespace eKuharica.WinUI.Recipes
             recipeTranslationRequest.Method = recipeRequest.Method = txtMethod.Text;
             recipeTranslationRequest.Advice = recipeRequest.Advice = txtAdvice.Text;
             recipeTranslationRequest.Serving = recipeRequest.Serving = txtServing.Text;
-            recipeRequest.UserId = 4;//logovanog uzimati
+            recipeRequest.UserId = 0;//logovanog uzimati
             recipeRequest.IsTranslated = _translate;
             recipeTranslationRequest.RecipeId = _recipe.Id;
 

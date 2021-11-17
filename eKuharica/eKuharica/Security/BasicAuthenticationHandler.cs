@@ -47,7 +47,7 @@ namespace eKuharica.Security
 
                 user = await _userService.Login(username, password);
             }
-            catch (Exception e)
+            catch
             {
                 return AuthenticateResult.Fail("Incorrect username or password");
             }

@@ -24,15 +24,20 @@ namespace eKuharica.Services.Users
             _mapper = mapper;
         }
 
-        public IList<UserDto> Get(UserSearchRequest request)
+        public List<UserDto> Get(UserSearchRequest request)
         {
             var query = Context.User.AsQueryable();
+
             if (!string.IsNullOrWhiteSpace(request.FirstName))
                 query = query.Where(x => x.FirstName.Contains(request.FirstName));
+
+            if (!string.IsNullOrWhiteSpace(request.UserName))
+                query = query.Where(x => x.Username == request.UserName);
 
             var list = query.ToList();
             return _mapper.Map<List<UserDto>>(list);
         }
+
         public UserDto Insert(UserInsertRequest request)
         {
             var entity = _mapper.Map<User>(request);

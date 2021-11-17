@@ -15,7 +15,7 @@ namespace eKuharica.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    //[Authorize]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -39,7 +39,7 @@ namespace eKuharica.Controllers
         }
 
         [HttpGet]
-        public IList<UserDto> Get([FromQuery] UserSearchRequest request)
+        public List<UserDto> Get([FromQuery] UserSearchRequest request)
         {
             return _userService.Get(request);
         }
