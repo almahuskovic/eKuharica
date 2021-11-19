@@ -39,7 +39,7 @@ namespace eKuharica.Controllers
         }
 
         [HttpGet]
-        public List<UserDto> Get([FromQuery] UserSearchRequest request)
+        public IEnumerable<UserDto> Get([FromQuery] UserSearchRequest request)
         {
             return _userService.Get(request);
         }

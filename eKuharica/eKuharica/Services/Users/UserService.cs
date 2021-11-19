@@ -24,9 +24,9 @@ namespace eKuharica.Services.Users
             _mapper = mapper;
         }
 
-        public List<UserDto> Get(UserSearchRequest request)
+        public IEnumerable<UserDto> Get(UserSearchRequest request=null)
         {
-            var query = Context.User.AsQueryable();
+            var query = Context.User.Include("UserRoles.Role").AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(request.FirstName))
                 query = query.Where(x => x.FirstName.Contains(request.FirstName));
@@ -35,6 +35,7 @@ namespace eKuharica.Services.Users
                 query = query.Where(x => x.Username == request.UserName);
 
             var list = query.ToList();
+
             return _mapper.Map<List<UserDto>>(list);
         }
 

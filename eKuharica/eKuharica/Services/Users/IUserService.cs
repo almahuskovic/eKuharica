@@ -11,7 +11,7 @@ namespace eKuharica.Services.Users
 {
     public interface IUserService
     {
-        List<UserDto> Get(UserSearchRequest search);
+        IEnumerable<UserDto> Get(UserSearchRequest search);
         UserDto GetById(int id);
         UserDto Insert(UserInsertRequest request);
         UserDto Update(int id, UserUpdateRequest user);

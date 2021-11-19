@@ -72,8 +72,8 @@ namespace eKuharica.WinUI.Recipes
 
         private async void btnSubmit_Click(object sender, EventArgs e)
         { 
-            //var loggedUser = (await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = APIService.Username }));
-            //var userId = loggedUser.FirstOrDefault().Id;
+            var loggedUser = (await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = APIService.Username }));
+            var userId = loggedUser.FirstOrDefault().Id;
 
             RecipeTranslationUpsertRequest recipeTranslationRequest = new RecipeTranslationUpsertRequest();
             RecipeUpsertRequest recipeRequest = new RecipeUpsertRequest();
@@ -84,7 +84,7 @@ namespace eKuharica.WinUI.Recipes
             recipeTranslationRequest.Method = recipeRequest.Method = txtMethod.Text;
             recipeTranslationRequest.Advice = recipeRequest.Advice = txtAdvice.Text;
             recipeTranslationRequest.Serving = recipeRequest.Serving = txtServing.Text;
-            recipeRequest.UserId = 0;//logovanog uzimati
+            recipeRequest.UserId = userId;//logovanog uzimati
             recipeRequest.IsTranslated = _translate;
             recipeTranslationRequest.RecipeId = _recipe.Id;
 
@@ -92,7 +92,7 @@ namespace eKuharica.WinUI.Recipes
             {
                 recipeRequest.MealType = cmbMealType.SelectedIndex;
                 recipeRequest.WeightOfPreparation = cmbWeightOfPreparation.SelectedIndex;
-                recipeRequest.PreparationTime = new DateTime((int)nudPreparationTime.Value / 60, (int)nudPreparationTime.Value % 60, 0);
+                recipeRequest.PreparationTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, (int)nudPreparationTime.Value / 60, (int)nudPreparationTime.Value % 60, 0);
             }
 
             if (_recipe == null || _recipeTranslation == null)//add
