@@ -65,83 +65,48 @@
             // 
             // btnRecipePreview
             // 
-            this.btnRecipePreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRecipePreview.Location = new System.Drawing.Point(545, 26);
+            resources.ApplyResources(this.btnRecipePreview, "btnRecipePreview");
             this.btnRecipePreview.Name = "btnRecipePreview";
-            this.btnRecipePreview.Size = new System.Drawing.Size(135, 33);
-            this.btnRecipePreview.TabIndex = 0;
-            this.btnRecipePreview.Text = "Pregledaj recept";
             this.btnRecipePreview.UseVisualStyleBackColor = true;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmit.Location = new System.Drawing.Point(698, 26);
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 33);
-            this.btnSubmit.TabIndex = 1;
-            this.btnSubmit.Text = "Spremi";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(26, 65);
+            resources.ApplyResources(this.lblTitle, "lblTitle");
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(51, 17);
-            this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Naslov";
             // 
             // txtTitle
             // 
-            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTitle.Location = new System.Drawing.Point(29, 99);
-            this.txtTitle.Multiline = true;
+            resources.ApplyResources(this.txtTitle, "txtTitle");
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(744, 22);
-            this.txtTitle.TabIndex = 3;
             // 
             // txtIntroduction
             // 
-            this.txtIntroduction.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIntroduction.Location = new System.Drawing.Point(29, 172);
-            this.txtIntroduction.Multiline = true;
+            resources.ApplyResources(this.txtIntroduction, "txtIntroduction");
             this.txtIntroduction.Name = "txtIntroduction";
-            this.txtIntroduction.Size = new System.Drawing.Size(744, 50);
-            this.txtIntroduction.TabIndex = 5;
             // 
             // lblIntroduction
             // 
-            this.lblIntroduction.AutoSize = true;
-            this.lblIntroduction.Location = new System.Drawing.Point(26, 138);
+            resources.ApplyResources(this.lblIntroduction, "lblIntroduction");
             this.lblIntroduction.Name = "lblIntroduction";
-            this.lblIntroduction.Size = new System.Drawing.Size(41, 17);
-            this.lblIntroduction.TabIndex = 4;
-            this.lblIntroduction.Text = "Uvod";
             // 
             // pbCoverPicture
             // 
-            this.pbCoverPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.pbCoverPicture, "pbCoverPicture");
             this.pbCoverPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbCoverPicture.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbCoverPicture.InitialImage")));
-            this.pbCoverPicture.Location = new System.Drawing.Point(29, 266);
             this.pbCoverPicture.Name = "pbCoverPicture";
-            this.pbCoverPicture.Size = new System.Drawing.Size(744, 50);
-            this.pbCoverPicture.TabIndex = 6;
             this.pbCoverPicture.TabStop = false;
             // 
             // lblCoverPicture
             // 
-            this.lblCoverPicture.AutoSize = true;
-            this.lblCoverPicture.Location = new System.Drawing.Point(26, 246);
+            resources.ApplyResources(this.lblCoverPicture, "lblCoverPicture");
             this.lblCoverPicture.Name = "lblCoverPicture";
-            this.lblCoverPicture.Size = new System.Drawing.Size(142, 17);
-            this.lblCoverPicture.TabIndex = 7;
-            this.lblCoverPicture.Text = "Naslovana fotografija";
             // 
             // openFileDialog1
             // 
@@ -150,170 +115,102 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel1.Location = new System.Drawing.Point(29, 334);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 3);
-            this.panel1.TabIndex = 8;
             // 
             // lblIngredients
             // 
-            this.lblIngredients.AutoSize = true;
-            this.lblIngredients.Location = new System.Drawing.Point(26, 355);
+            resources.ApplyResources(this.lblIngredients, "lblIngredients");
             this.lblIngredients.Name = "lblIngredients";
-            this.lblIngredients.Size = new System.Drawing.Size(57, 17);
-            this.lblIngredients.TabIndex = 9;
-            this.lblIngredients.Text = "Sastojci";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel2.Location = new System.Drawing.Point(29, 512);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(475, 3);
-            this.panel2.TabIndex = 9;
             // 
             // txtMethod
             // 
-            this.txtMethod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMethod.Location = new System.Drawing.Point(29, 569);
-            this.txtMethod.Multiline = true;
+            resources.ApplyResources(this.txtMethod, "txtMethod");
             this.txtMethod.Name = "txtMethod";
-            this.txtMethod.Size = new System.Drawing.Size(744, 50);
-            this.txtMethod.TabIndex = 12;
             // 
             // lblPreparation
             // 
-            this.lblPreparation.AutoSize = true;
-            this.lblPreparation.Location = new System.Drawing.Point(26, 535);
+            resources.ApplyResources(this.lblPreparation, "lblPreparation");
             this.lblPreparation.Name = "lblPreparation";
-            this.lblPreparation.Size = new System.Drawing.Size(65, 17);
-            this.lblPreparation.TabIndex = 11;
-            this.lblPreparation.Text = "Priprema";
             // 
             // txtServing
             // 
-            this.txtServing.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtServing.Location = new System.Drawing.Point(29, 667);
-            this.txtServing.Multiline = true;
+            resources.ApplyResources(this.txtServing, "txtServing");
             this.txtServing.Name = "txtServing";
-            this.txtServing.Size = new System.Drawing.Size(744, 50);
-            this.txtServing.TabIndex = 14;
             // 
             // lblServing
             // 
-            this.lblServing.AutoSize = true;
-            this.lblServing.Location = new System.Drawing.Point(26, 638);
+            resources.ApplyResources(this.lblServing, "lblServing");
             this.lblServing.Name = "lblServing";
-            this.lblServing.Size = new System.Drawing.Size(87, 17);
-            this.lblServing.TabIndex = 13;
-            this.lblServing.Text = "Posluživanje";
             // 
             // txtAdvice
             // 
-            this.txtAdvice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAdvice.Location = new System.Drawing.Point(29, 765);
-            this.txtAdvice.Multiline = true;
+            resources.ApplyResources(this.txtAdvice, "txtAdvice");
             this.txtAdvice.Name = "txtAdvice";
-            this.txtAdvice.Size = new System.Drawing.Size(744, 50);
-            this.txtAdvice.TabIndex = 16;
             // 
             // lblAdvice
             // 
-            this.lblAdvice.AutoSize = true;
-            this.lblAdvice.Location = new System.Drawing.Point(26, 731);
+            resources.ApplyResources(this.lblAdvice, "lblAdvice");
             this.lblAdvice.Name = "lblAdvice";
-            this.lblAdvice.Size = new System.Drawing.Size(47, 17);
-            this.lblAdvice.TabIndex = 15;
-            this.lblAdvice.Text = "Savjet";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel3.Location = new System.Drawing.Point(29, 832);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(475, 3);
-            this.panel3.TabIndex = 10;
             // 
             // lblTags
             // 
-            this.lblTags.AutoSize = true;
-            this.lblTags.Location = new System.Drawing.Point(6, 25);
+            resources.ApplyResources(this.lblTags, "lblTags");
             this.lblTags.Name = "lblTags";
-            this.lblTags.Size = new System.Drawing.Size(57, 17);
-            this.lblTags.TabIndex = 17;
-            this.lblTags.Text = "Oznake";
             // 
             // lblPreparationTime
             // 
-            this.lblPreparationTime.AutoSize = true;
-            this.lblPreparationTime.Location = new System.Drawing.Point(6, 66);
+            resources.ApplyResources(this.lblPreparationTime, "lblPreparationTime");
             this.lblPreparationTime.Name = "lblPreparationTime";
-            this.lblPreparationTime.Size = new System.Drawing.Size(115, 17);
-            this.lblPreparationTime.TabIndex = 18;
-            this.lblPreparationTime.Text = "Vrijeme pripreme";
             // 
             // lblWeightOfPreparation
             // 
-            this.lblWeightOfPreparation.AutoSize = true;
-            this.lblWeightOfPreparation.Location = new System.Drawing.Point(245, 66);
+            resources.ApplyResources(this.lblWeightOfPreparation, "lblWeightOfPreparation");
             this.lblWeightOfPreparation.Name = "lblWeightOfPreparation";
-            this.lblWeightOfPreparation.Size = new System.Drawing.Size(111, 17);
-            this.lblWeightOfPreparation.TabIndex = 19;
-            this.lblWeightOfPreparation.Text = "Težina pripreme";
             // 
             // lblMealGroup
             // 
-            this.lblMealGroup.AutoSize = true;
-            this.lblMealGroup.Location = new System.Drawing.Point(464, 66);
+            resources.ApplyResources(this.lblMealGroup, "lblMealGroup");
             this.lblMealGroup.Name = "lblMealGroup";
-            this.lblMealGroup.Size = new System.Drawing.Size(74, 17);
-            this.lblMealGroup.TabIndex = 20;
-            this.lblMealGroup.Text = "Grupa jela";
             // 
             // lblMin
             // 
-            this.lblMin.AutoSize = true;
-            this.lblMin.Location = new System.Drawing.Point(115, 86);
+            resources.ApplyResources(this.lblMin, "lblMin");
             this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(30, 17);
-            this.lblMin.TabIndex = 22;
-            this.lblMin.Text = "min";
             // 
             // cmbWeightOfPreparation
             // 
             this.cmbWeightOfPreparation.FormattingEnabled = true;
-            this.cmbWeightOfPreparation.Location = new System.Drawing.Point(248, 86);
+            resources.ApplyResources(this.cmbWeightOfPreparation, "cmbWeightOfPreparation");
             this.cmbWeightOfPreparation.Name = "cmbWeightOfPreparation";
-            this.cmbWeightOfPreparation.Size = new System.Drawing.Size(121, 24);
-            this.cmbWeightOfPreparation.TabIndex = 23;
             // 
             // cmbMealType
             // 
             this.cmbMealType.FormattingEnabled = true;
-            this.cmbMealType.Location = new System.Drawing.Point(467, 86);
+            resources.ApplyResources(this.cmbMealType, "cmbMealType");
             this.cmbMealType.Name = "cmbMealType";
-            this.cmbMealType.Size = new System.Drawing.Size(121, 24);
-            this.cmbMealType.TabIndex = 24;
             // 
             // nudPreparationTime
             // 
-            this.nudPreparationTime.Location = new System.Drawing.Point(9, 86);
+            resources.ApplyResources(this.nudPreparationTime, "nudPreparationTime");
             this.nudPreparationTime.Name = "nudPreparationTime";
-            this.nudPreparationTime.Size = new System.Drawing.Size(100, 22);
-            this.nudPreparationTime.TabIndex = 26;
             // 
             // txtIngridients
             // 
-            this.txtIngridients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIngridients.Location = new System.Drawing.Point(28, 375);
-            this.txtIngridients.Multiline = true;
+            resources.ApplyResources(this.txtIngridients, "txtIngridients");
             this.txtIngridients.Name = "txtIngridients";
-            this.txtIngridients.Size = new System.Drawing.Size(744, 125);
-            this.txtIngridients.TabIndex = 27;
             // 
             // gbTags
             // 
@@ -325,18 +222,14 @@
             this.gbTags.Controls.Add(this.cmbWeightOfPreparation);
             this.gbTags.Controls.Add(this.lblMin);
             this.gbTags.Controls.Add(this.lblWeightOfPreparation);
-            this.gbTags.Location = new System.Drawing.Point(29, 835);
+            resources.ApplyResources(this.gbTags, "gbTags");
             this.gbTags.Name = "gbTags";
-            this.gbTags.Size = new System.Drawing.Size(743, 128);
-            this.gbTags.TabIndex = 28;
             this.gbTags.TabStop = false;
             // 
             // frmAddRecipes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 977);
             this.ControlBox = false;
             this.Controls.Add(this.gbTags);
             this.Controls.Add(this.txtIngridients);
@@ -359,7 +252,6 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnRecipePreview);
             this.Name = "frmAddRecipes";
-            this.Text = "frmAddRecipes";
             this.Load += new System.EventHandler(this.frmAddRecipes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCoverPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).EndInit();

@@ -318,6 +318,12 @@
     <Compile Include="Recipes\frmRecipes.Designer.cs">
       <DependentUpon>frmRecipes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recipes\frmShowRecipes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recipes\frmShowRecipes.Designer.cs">
+      <DependentUpon>frmShowRecipes.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserRecipes\frmUserRecipes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +339,12 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmWelcome.bs.resx">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWelcome.en-GB.resx">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmWelcome.resx">
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,12 +356,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Recipes\frmAddRecipes.resx">
       <DependentUpon>frmAddRecipes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recipes\frmRecipes.resx">
       <DependentUpon>frmRecipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipes\frmShowRecipes.resx">
+      <DependentUpon>frmShowRecipes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserRecipes\frmUserRecipes.resx">
       <DependentUpon>frmUserRecipes.cs</DependentUpon>

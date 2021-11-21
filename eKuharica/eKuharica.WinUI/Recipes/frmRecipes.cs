@@ -106,20 +106,17 @@ namespace eKuharica.WinUI.Recipes
         {
             if (e.RowIndex >= 0)
             {
-                //radi ali fali tacna pozicija u listi
-                //var dataTable = Helpers.Helper.BindingListToDataTable(bindingNavigator1.BindingSource.DataSource as BindingList<DataTable>);
-                //var selectedRow = Helpers.Helper.CreateItemFromRow<RecipeDto>(dataTable.Rows[e.RowIndex]);
-
                 var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
                 //TODO:mozda ce trebati dodati 1 na index
                 var elementIndex = (currentRow.Rows.Count / 10) < 0 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
                 var selectedRow = Helpers.Helper.CreateItemFromRow<RecipeDto>(currentRow.Rows[elementIndex]);
 
+                var searchR = new RecipeTranslationSearchRequest() { RecipeId = selectedRow.Id };
+                var recipeTranslation = await _recipeTranslationService.Get<List<RecipeTranslationDto>>(searchR);
+                var _recipeTranslation = recipeTranslation.Any() ? recipeTranslation.First() : null;
+
                 if (e.ColumnIndex == 2)//prevod
                 {
-                    var searchR = new RecipeTranslationSearchRequest() { RecipeId = selectedRow.Id };
-                    var recipeTranslation = await _recipeTranslationService.Get<List<RecipeTranslationDto>>(searchR);
-                    var _recipeTranslation = recipeTranslation.Any() ? recipeTranslation.First() : null;
                     frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, _recipeTranslation, true);
                     frmEditRecipe.MdiParent = MdiParent;
                     frmEditRecipe.WindowState = FormWindowState.Maximized;
@@ -132,7 +129,7 @@ namespace eKuharica.WinUI.Recipes
                 }
                 if (e.ColumnIndex == 4)//edit
                 {
-                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow);
+                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, _recipeTranslation);
                     frmEditRecipe.MdiParent = MdiParent;
                     frmEditRecipe.WindowState = FormWindowState.Maximized;
                     frmEditRecipe.Show();

@@ -51,7 +51,7 @@ namespace eKuharica.WinUI.Recipes
                 cmbWeightOfPreparation.SelectedIndex = _recipe.WeightOfPreparation;
                 nudPreparationTime.Value = int.Parse((_recipe.PreparationTime.Hour * 60 + _recipe.PreparationTime.Minute).ToString());
             }
-            if (_recipeTranslation != null)
+            else if (_recipeTranslation != null)
             {
                 txtTitle.Text = _recipeTranslation.Title;
                 txtIntroduction.Text = _recipeTranslation.Introduction;
@@ -85,10 +85,10 @@ namespace eKuharica.WinUI.Recipes
             recipeTranslationRequest.Advice = recipeRequest.Advice = txtAdvice.Text;
             recipeTranslationRequest.Serving = recipeRequest.Serving = txtServing.Text;
             recipeRequest.UserId = userId;//logovanog uzimati
-            recipeRequest.IsTranslated = _translate;
+            recipeRequest.IsTranslated = _recipeTranslation != null ? true : false;
             recipeTranslationRequest.RecipeId = _recipe.Id;
 
-            if (!_translate)
+            if (!_translate) //dodijeli parametre ako je otvoren recept
             {
                 recipeRequest.MealType = cmbMealType.SelectedIndex;
                 recipeRequest.WeightOfPreparation = cmbWeightOfPreparation.SelectedIndex;

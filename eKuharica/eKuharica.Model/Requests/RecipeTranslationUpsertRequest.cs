@@ -6,7 +6,6 @@ namespace eKuharica.Model.Requests
 {
     public class RecipeTranslationUpsertRequest
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         public string Introduction { get; set; }
         public string Ingredients { get; set; }

@@ -1,5 +1,5 @@
-﻿using eKuharica.WinUI.Users;
-using System;
+﻿using System;
+using eKuharica.WinUI.Users;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,6 +15,9 @@ namespace eKuharica.WinUI
         [STAThread]
         static void Main()
         {
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+            System.Globalization.CultureInfo.GetCultureInfo("bs");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
