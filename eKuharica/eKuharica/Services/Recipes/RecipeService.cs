@@ -21,21 +21,30 @@ namespace eKuharica.Services.Recipes
         {
             var entity = Context.Set<Recipe>().AsQueryable();
 
-            if (!string.IsNullOrWhiteSpace(search?.Title))
+            if (!search.ByUsers)
             {
-                entity = entity.Where(x => x.Title.ToLower().Contains(search.Title.ToLower()));
+                if (!string.IsNullOrWhiteSpace(search?.Title))
+                {
+                    entity = entity.Where(x => x.Title.ToLower().Contains(search.Title.ToLower()));
+                }
+                if (search.PreparationTimeCategory.HasValue)
+                {
+                    entity = entity.Where(x => x.PreparationTimeCategory == search.PreparationTimeCategory);
+                }
+                if (search.WeightOfPreparation.HasValue)
+                {
+                    entity = entity.Where(x => x.WeightOfPreparation == search.WeightOfPreparation);
+                }
+                if (search.MealType.HasValue)
+                {
+                    entity = entity.Where(x => x.MealType == search.MealType);
+                }
+
+                entity = entity.Where(x => x.IsApproved);
             }
-            if (search.PreparationTimeCategory.HasValue)
+            else
             {
-                entity = entity.Where(x => x.PreparationTimeCategory == search.PreparationTimeCategory);
-            }
-            if (search.WeightOfPreparation.HasValue)
-            {
-                entity = entity.Where(x => x.WeightOfPreparation == search.WeightOfPreparation);
-            }
-            if (search.MealType.HasValue)
-            {
-                entity = entity.Where(x => x.MealType == search.MealType);
+                entity = entity.Where(x => !x.IsApproved && x.IsSent);
             }
 
             var list = entity.ToList();

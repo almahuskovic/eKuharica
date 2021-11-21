@@ -70,6 +70,9 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOuttoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageBatoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageENtoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.tsbRecipes = new System.Windows.Forms.ToolStripButton();
             this.tsbUserRecipes = new System.Windows.Forms.ToolStripButton();
@@ -81,9 +84,6 @@
             this.tsbReports = new System.Windows.Forms.ToolStripButton();
             this.tsbSettings = new System.Windows.Forms.ToolStripButton();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.logOuttoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.languageBatoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.languageENtoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -354,6 +354,28 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             // 
+            // logOuttoolStripMenuItem1
+            // 
+            this.logOuttoolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.logOuttoolStripMenuItem1, "logOuttoolStripMenuItem1");
+            this.logOuttoolStripMenuItem1.Name = "logOuttoolStripMenuItem1";
+            // 
+            // languageBatoolStripMenuItem2
+            // 
+            this.languageBatoolStripMenuItem2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.languageBatoolStripMenuItem2, "languageBatoolStripMenuItem2");
+            this.languageBatoolStripMenuItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.languageBatoolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.languageENtoolStripMenuItem3});
+            this.languageBatoolStripMenuItem2.Name = "languageBatoolStripMenuItem2";
+            this.languageBatoolStripMenuItem2.Padding = new System.Windows.Forms.Padding(0);
+            // 
+            // languageENtoolStripMenuItem3
+            // 
+            this.languageENtoolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.languageENtoolStripMenuItem3, "languageENtoolStripMenuItem3");
+            this.languageENtoolStripMenuItem3.Name = "languageENtoolStripMenuItem3";
+            // 
             // toolStrip
             // 
             resources.ApplyResources(this.toolStrip, "toolStrip");
@@ -380,6 +402,7 @@
             // 
             resources.ApplyResources(this.tsbUserRecipes, "tsbUserRecipes");
             this.tsbUserRecipes.Name = "tsbUserRecipes";
+            this.tsbUserRecipes.Click += new System.EventHandler(this.tsbUserRecipes_Click);
             // 
             // tsbUsers
             // 
@@ -415,28 +438,6 @@
             // 
             resources.ApplyResources(this.tsbSettings, "tsbSettings");
             this.tsbSettings.Name = "tsbSettings";
-            // 
-            // logOuttoolStripMenuItem1
-            // 
-            this.logOuttoolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.logOuttoolStripMenuItem1, "logOuttoolStripMenuItem1");
-            this.logOuttoolStripMenuItem1.Name = "logOuttoolStripMenuItem1";
-            // 
-            // languageBatoolStripMenuItem2
-            // 
-            this.languageBatoolStripMenuItem2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.languageBatoolStripMenuItem2, "languageBatoolStripMenuItem2");
-            this.languageBatoolStripMenuItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.languageBatoolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.languageENtoolStripMenuItem3});
-            this.languageBatoolStripMenuItem2.Name = "languageBatoolStripMenuItem2";
-            this.languageBatoolStripMenuItem2.Padding = new System.Windows.Forms.Padding(0);
-            // 
-            // languageENtoolStripMenuItem3
-            // 
-            this.languageENtoolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.languageENtoolStripMenuItem3, "languageENtoolStripMenuItem3");
-            this.languageENtoolStripMenuItem3.Name = "languageENtoolStripMenuItem3";
             // 
             // frmWelcome
             // 

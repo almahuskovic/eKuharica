@@ -11,6 +11,7 @@ namespace eKuharica.Model.Models
         public int? MealType { get; set; }
         public int? WeightOfPreparation { get; set; }
 
-       
+        public bool ByUsers { get; set; }
+
     }
 }

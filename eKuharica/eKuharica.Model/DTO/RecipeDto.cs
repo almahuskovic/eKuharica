@@ -22,6 +22,8 @@ namespace eKuharica.Model.DTO
         public byte[] PictureThumb { get; set; }
         public bool IsTranslated { get; set; }
         public bool IsRead { get; set; }
+        public bool IsSent { get; set; }
+        public bool IsApproved { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public bool IsDeleted { get; set; }

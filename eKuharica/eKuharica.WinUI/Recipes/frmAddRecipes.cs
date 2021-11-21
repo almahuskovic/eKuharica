@@ -3,6 +3,7 @@ using eKuharica.Model.DTO;
 using eKuharica.Model.Entities;
 using eKuharica.Model.Requests;
 using eKuharica.WinUI.Properties;
+using eKuharica.WinUI.UserRecipes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,6 +88,9 @@ namespace eKuharica.WinUI.Recipes
             recipeRequest.UserId = userId;//logovanog uzimati
             recipeRequest.IsTranslated = _recipeTranslation != null ? true : false;
             recipeTranslationRequest.RecipeId = _recipe.Id;
+            recipeRequest.IsRead = true;
+            recipeRequest.IsSent = _recipe.IsSent;
+            recipeRequest.IsApproved = _recipe.IsApproved;
 
             if (!_translate) //dodijeli parametre ako je otvoren recept
             {
@@ -95,7 +99,7 @@ namespace eKuharica.WinUI.Recipes
                 recipeRequest.PreparationTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, (int)nudPreparationTime.Value / 60, (int)nudPreparationTime.Value % 60, 0);
             }
 
-            if (_recipe == null || _recipeTranslation == null)//add
+            if (_recipe == null || (_recipeTranslation == null && _translate))//add
             {
                 if (_translate)
                 {
@@ -106,6 +110,7 @@ namespace eKuharica.WinUI.Recipes
                 }
                 else
                 {
+                    recipeRequest.IsApproved = true;
                     await _recipeService.Insert<RecipeDto>(recipeRequest);
                 }
             }
@@ -118,14 +123,27 @@ namespace eKuharica.WinUI.Recipes
                     await _recipeTranslationService.Update<RecipeTranslationDto>(_recipeTranslation.Id, recipeTranslationRequest);
                 }
                 else
+                {
                     await _recipeService.Update<RecipeDto>(_recipe.Id, recipeRequest);
+                }
             }
 
-            frmRecipes frmRecipes = new frmRecipes();
-            frmRecipes.MdiParent = MdiParent;
-            frmRecipes.WindowState = FormWindowState.Maximized;
-            frmRecipes.Show();
-            Hide();
+            if (!_recipe.IsSent)
+            {
+                frmRecipes frmRecipes = new frmRecipes();
+                frmRecipes.MdiParent = MdiParent;
+                frmRecipes.WindowState = FormWindowState.Maximized;
+                frmRecipes.Show();
+                Hide();
+            }
+            else
+            {
+                frmUserRecipes frmRecipes = new frmUserRecipes();
+                frmRecipes.MdiParent = MdiParent;
+                frmRecipes.WindowState = FormWindowState.Maximized;
+                frmRecipes.Show();
+                Hide();
+            } 
         }
 
     }

@@ -20,6 +20,9 @@ namespace eKuharica.Model.Requests
         public byte[] Picture { get; set; }
         public byte[] PictureThumb { get; set; }
         public bool IsTranslated { get; set; }
+        public bool IsSent { get; set; }
+        public bool IsApproved { get; set; }
+        public bool IsRead { get; set; }
         public int UserId { get; set; }
     }
 }

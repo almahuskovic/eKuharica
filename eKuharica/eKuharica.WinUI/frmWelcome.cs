@@ -1,6 +1,7 @@
 ﻿using System;
 using eKuharica.WinUI.Recipes;
 using System.Windows.Forms;
+using eKuharica.WinUI.UserRecipes;
 
 namespace eKuharica.WinUI
 {
@@ -70,6 +71,15 @@ namespace eKuharica.WinUI
         private void tsbRecipes_Click(object sender, EventArgs e)
         {
             frmRecipes frmRecipes = new frmRecipes();
+            frmRecipes.MdiParent = this;
+            frmRecipes.WindowState = FormWindowState.Maximized;
+            frmRecipes.Text = "eKuharica";
+            frmRecipes.Show();
+        }
+
+        private void tsbUserRecipes_Click(object sender, EventArgs e)
+        {
+            frmUserRecipes frmRecipes = new frmUserRecipes();
             frmRecipes.MdiParent = this;
             frmRecipes.WindowState = FormWindowState.Maximized;
             frmRecipes.Text = "eKuharica";
