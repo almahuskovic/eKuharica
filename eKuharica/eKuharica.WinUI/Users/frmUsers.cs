@@ -19,20 +19,33 @@ namespace eKuharica.WinUI.Users
         public frmUsers()
         {
             InitializeComponent();
-        }
-
-        private async void btnSearch_Click(object sender, EventArgs e)
-        {
-            UserSearchRequest request = new UserSearchRequest()
-            {
-                FirstName = txtFirstName.Text
-            };
-            dgvUsers.DataSource = await _serviceUsers.Get<List<UserDto>>(request);
+            sdgvUsers.AutoGenerateColumns = false;
         }
 
         private async void frmUsers_Load(object sender, EventArgs e)
         {
-            dgvUsers.DataSource = await _serviceUsers.Get<List<UserDto>>();
+            var data= await _serviceUsers.Get<List<UserDto>>();
+            sdgvUsers.DataSource = data;//data.Where(x=>x.UserRoles.Contains())- hocu da displaya sve osim admina
+        }
+
+        private async void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            UserSearchRequest request = new UserSearchRequest()
+            {
+                FirstName = txtSearch.Text,
+                LastName = txtSearch.Text,
+            };
+
+            sdgvUsers.DataSource = await _serviceUsers.Get<List<UserDto>>(request);
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            frmAddUsers frmAddUsers = new frmAddUsers();
+            frmAddUsers.MdiParent = MdiParent;
+            frmAddUsers.WindowState = FormWindowState.Maximized;
+            frmAddUsers.Show();
+            Hide();
         }
     }
 }

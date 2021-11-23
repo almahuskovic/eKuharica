@@ -408,6 +408,7 @@
             // 
             resources.ApplyResources(this.tsbUsers, "tsbUsers");
             this.tsbUsers.Name = "tsbUsers";
+            this.tsbUsers.Click += new System.EventHandler(this.tsbUsers_Click);
             // 
             // toolStripSeparator1
             // 

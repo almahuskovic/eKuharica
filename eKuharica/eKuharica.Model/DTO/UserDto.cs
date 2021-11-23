@@ -15,5 +15,7 @@ namespace eKuharica.Model.DTO
 
         public ICollection<UserRoleDto> UserRoles { get; set; }
 
+
+        public string FullName => FirstName + " " + LastName;
     }
 }

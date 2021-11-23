@@ -29,10 +29,10 @@ namespace eKuharica.Services.Users
             var query = Context.User.Include("UserRoles.Role").AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(request.FirstName))
-                query = query.Where(x => x.FirstName.Contains(request.FirstName));
+                query = query.Where(x => x.FirstName.ToLower().Contains(request.FirstName.ToLower()));
 
-            if (!string.IsNullOrWhiteSpace(request.UserName))
-                query = query.Where(x => x.Username == request.UserName);
+            if (!string.IsNullOrWhiteSpace(request.LastName))
+                query = query.Where(x => x.LastName.ToLower().Contains(request.LastName.ToLower()));
 
             var list = query.ToList();
 
