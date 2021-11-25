@@ -21,6 +21,9 @@ namespace eKuharica.Mapping
             CreateMap<Recipe, RecipeDto>().ReverseMap();
             CreateMap<RecipeUpsertRequest, Recipe>();
 
+            CreateMap<Follow, FollowDto>().ReverseMap();
+            CreateMap<FollowUpsertRequest, Follow>();
+
             CreateMap<RecipeTranslationDto, RecipeTranslation>().ReverseMap();
             CreateMap<RecipeTranslationUpsertRequest, RecipeTranslation>();
 

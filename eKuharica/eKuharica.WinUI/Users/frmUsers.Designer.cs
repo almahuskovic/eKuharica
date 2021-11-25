@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsers));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.sdgvUsers = new eKuharica.WinUI.Helpers.SuperGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -45,15 +45,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sdgvUsers = new eKuharica.WinUI.Helpers.SuperGrid();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Akcija = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -68,24 +68,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // sdgvUsers
-            // 
-            this.sdgvUsers.AllowUserToAddRows = false;
-            this.sdgvUsers.AllowUserToDeleteRows = false;
-            this.sdgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sdgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.User,
-            this.Akcija});
-            this.sdgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sdgvUsers.Location = new System.Drawing.Point(3, 18);
-            this.sdgvUsers.Name = "sdgvUsers";
-            this.sdgvUsers.PageSize = 10;
-            this.sdgvUsers.ReadOnly = true;
-            this.sdgvUsers.RowHeadersWidth = 51;
-            this.sdgvUsers.RowTemplate.Height = 24;
-            this.sdgvUsers.Size = new System.Drawing.Size(770, 279);
-            this.sdgvUsers.TabIndex = 0;
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -97,6 +79,17 @@
             this.groupBox2.Size = new System.Drawing.Size(770, 104);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddUser.Location = new System.Drawing.Point(608, 45);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(122, 23);
+            this.btnAddUser.TabIndex = 1;
+            this.btnAddUser.Text = "Novi korisnik";
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // txtSearch
             // 
@@ -168,6 +161,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -201,6 +195,26 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
+            // sdgvUsers
+            // 
+            this.sdgvUsers.AllowUserToAddRows = false;
+            this.sdgvUsers.AllowUserToDeleteRows = false;
+            this.sdgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sdgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.User,
+            this.Akcija});
+            this.sdgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sdgvUsers.Location = new System.Drawing.Point(3, 18);
+            this.sdgvUsers.Name = "sdgvUsers";
+            this.sdgvUsers.PageSize = 10;
+            this.sdgvUsers.ReadOnly = true;
+            this.sdgvUsers.RowHeadersWidth = 51;
+            this.sdgvUsers.RowTemplate.Height = 24;
+            this.sdgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.sdgvUsers.Size = new System.Drawing.Size(770, 279);
+            this.sdgvUsers.TabIndex = 0;
+            this.sdgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUsers_CellContentClick);
+            // 
             // User
             // 
             this.User.DataPropertyName = "FullName";
@@ -220,17 +234,6 @@
             this.Akcija.UseColumnTextForButtonValue = true;
             this.Akcija.Width = 125;
             // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddUser.Location = new System.Drawing.Point(608, 45);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(122, 23);
-            this.btnAddUser.TabIndex = 1;
-            this.btnAddUser.Text = "Novi korisnik";
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -243,13 +246,13 @@
             this.Text = "frmUsers";
             this.Load += new System.EventHandler(this.frmUsers_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

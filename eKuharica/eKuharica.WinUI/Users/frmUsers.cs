@@ -24,8 +24,12 @@ namespace eKuharica.WinUI.Users
 
         private async void frmUsers_Load(object sender, EventArgs e)
         {
-            var data= await _serviceUsers.Get<List<UserDto>>();
+            var data = await _serviceUsers.Get<List<UserDto>>();
             sdgvUsers.DataSource = data;//data.Where(x=>x.UserRoles.Contains())- hocu da displaya sve osim admina
+
+            sdgvUsers.PageSize = 10;
+            DataTable dt = Helpers.Helper.ToDataTable(data);
+            sdgvUsers.SetPagedDataSource(dt, bindingNavigator1);
         }
 
         private async void txtSearch_TextChanged(object sender, EventArgs e)
@@ -46,6 +50,24 @@ namespace eKuharica.WinUI.Users
             frmAddUsers.WindowState = FormWindowState.Maximized;
             frmAddUsers.Show();
             Hide();
+        }
+
+        private void sdgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                //TODO:mozda ce trebati dodati 1 na index
+                var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
+                var elementIndex = (currentRow.Rows.Count / 10) < 0 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
+                //ne moze pretvoriti fullname u properti jer nije properti nego konkretno polje 
+                var selectedRow = Helpers.Helper.CreateItemFromRow<UserDto>(currentRow.Rows[elementIndex]);
+
+                if (e.ColumnIndex == 1)
+                {
+                    frmUserDetails frmUserDetails = new frmUserDetails(selectedRow);
+                    frmUserDetails.Show();
+                }
+            }
         }
     }
 }
