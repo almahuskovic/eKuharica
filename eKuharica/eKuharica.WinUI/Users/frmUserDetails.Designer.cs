@@ -35,8 +35,8 @@
             this.lblFollowersValue = new System.Windows.Forms.Label();
             this.lblFollowingValue = new System.Windows.Forms.Label();
             this.lblCreatedAtValue = new System.Windows.Forms.Label();
-            this.lblUserName = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblUserName = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,15 +103,6 @@
             this.lblCreatedAtValue.TabIndex = 6;
             this.lblCreatedAtValue.Text = "label6";
             // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(96, 230);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(46, 17);
-            this.lblUserName.TabIndex = 8;
-            this.lblUserName.Text = "label7";
-            // 
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(486, 274);
@@ -122,14 +113,24 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(90, 229);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(72, 17);
+            this.lblUserName.TabIndex = 10;
+            this.lblUserName.TabStop = true;
+            this.lblUserName.Text = "linkLabel1";
+            // 
             // frmUserDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 320);
             this.ControlBox = false;
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblCreatedAtValue);
             this.Controls.Add(this.lblFollowingValue);
             this.Controls.Add(this.lblFollowersValue);
@@ -156,7 +157,7 @@
         private System.Windows.Forms.Label lblFollowersValue;
         private System.Windows.Forms.Label lblFollowingValue;
         private System.Windows.Forms.Label lblCreatedAtValue;
-        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.LinkLabel lblUserName;
     }
 }

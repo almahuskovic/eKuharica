@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserRecipes));
             this.gbUserRecipes = new System.Windows.Forms.GroupBox();
+            this.sdgvUserRecipes = new eKuharica.WinUI.Helpers.SuperGrid();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Publish = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -42,16 +47,11 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.sdgvUserRecipes = new eKuharica.WinUI.Helpers.SuperGrid();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Publish = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbUserRecipes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbUserRecipes
@@ -65,6 +65,67 @@
             this.gbUserRecipes.Size = new System.Drawing.Size(776, 305);
             this.gbUserRecipes.TabIndex = 1;
             this.gbUserRecipes.TabStop = false;
+            // 
+            // sdgvUserRecipes
+            // 
+            this.sdgvUserRecipes.AllowUserToAddRows = false;
+            this.sdgvUserRecipes.AllowUserToDeleteRows = false;
+            this.sdgvUserRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sdgvUserRecipes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Title,
+            this.Publish,
+            this.Edit,
+            this.Delete});
+            this.sdgvUserRecipes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sdgvUserRecipes.Location = new System.Drawing.Point(3, 18);
+            this.sdgvUserRecipes.Name = "sdgvUserRecipes";
+            this.sdgvUserRecipes.PageSize = 10;
+            this.sdgvUserRecipes.ReadOnly = true;
+            this.sdgvUserRecipes.RowHeadersWidth = 51;
+            this.sdgvUserRecipes.RowTemplate.Height = 24;
+            this.sdgvUserRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.sdgvUserRecipes.Size = new System.Drawing.Size(770, 284);
+            this.sdgvUserRecipes.TabIndex = 0;
+            this.sdgvUserRecipes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUserRecipes_CellContentClick);
+            // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "Title";
+            this.Title.HeaderText = "Title";
+            this.Title.MinimumWidth = 6;
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            this.Title.Width = 125;
+            // 
+            // Publish
+            // 
+            this.Publish.HeaderText = "Akcija";
+            this.Publish.MinimumWidth = 6;
+            this.Publish.Name = "Publish";
+            this.Publish.ReadOnly = true;
+            this.Publish.Text = "Odobri";
+            this.Publish.UseColumnTextForButtonValue = true;
+            this.Publish.Width = 125;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Text = "Uredi";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 125;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Obrisi";
+            this.Delete.UseColumnTextForButtonValue = true;
+            this.Delete.Width = 125;
             // 
             // bindingNavigator1
             // 
@@ -128,6 +189,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -161,67 +223,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
-            // sdgvUserRecipes
-            // 
-            this.sdgvUserRecipes.AllowUserToAddRows = false;
-            this.sdgvUserRecipes.AllowUserToDeleteRows = false;
-            this.sdgvUserRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sdgvUserRecipes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Title,
-            this.Publish,
-            this.Edit,
-            this.Delete});
-            this.sdgvUserRecipes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sdgvUserRecipes.Location = new System.Drawing.Point(3, 18);
-            this.sdgvUserRecipes.Name = "sdgvUserRecipes";
-            this.sdgvUserRecipes.PageSize = 10;
-            this.sdgvUserRecipes.ReadOnly = true;
-            this.sdgvUserRecipes.RowHeadersWidth = 51;
-            this.sdgvUserRecipes.RowTemplate.Height = 24;
-            this.sdgvUserRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.sdgvUserRecipes.Size = new System.Drawing.Size(770, 284);
-            this.sdgvUserRecipes.TabIndex = 0;
-            this.sdgvUserRecipes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUserRecipes_CellContentClick);
-            // 
-            // Title
-            // 
-            this.Title.DataPropertyName = "Title";
-            this.Title.HeaderText = "Title";
-            this.Title.MinimumWidth = 6;
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            this.Title.Width = 125;
-            // 
-            // Publish
-            // 
-            this.Publish.HeaderText = "Akcija";
-            this.Publish.MinimumWidth = 6;
-            this.Publish.Name = "Publish";
-            this.Publish.ReadOnly = true;
-            this.Publish.Text = "Odobri";
-            this.Publish.UseColumnTextForButtonValue = true;
-            this.Publish.Width = 125;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Text = "Uredi";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 125;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Obrisi";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 125;
-            // 
             // frmUserRecipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,11 +235,11 @@
             this.Text = "frmUserRecipes";
             this.Load += new System.EventHandler(this.frmUserRecipes_Load);
             this.gbUserRecipes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -37,7 +37,7 @@
             this.lblIntroduction = new System.Windows.Forms.Label();
             this.pbCoverPicture = new System.Windows.Forms.PictureBox();
             this.lblCoverPicture = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ofdPicture = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblIngredients = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,9 +58,11 @@
             this.nudPreparationTime = new System.Windows.Forms.NumericUpDown();
             this.txtIngridients = new System.Windows.Forms.TextBox();
             this.gbTags = new System.Windows.Forms.GroupBox();
+            this.pbBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoverPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).BeginInit();
             this.gbTags.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRecipePreview
@@ -102,15 +104,16 @@
             this.pbCoverPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbCoverPicture.Name = "pbCoverPicture";
             this.pbCoverPicture.TabStop = false;
+            this.pbCoverPicture.Click += new System.EventHandler(this.pbCoverPicture_Click);
             // 
             // lblCoverPicture
             // 
             resources.ApplyResources(this.lblCoverPicture, "lblCoverPicture");
             this.lblCoverPicture.Name = "lblCoverPicture";
             // 
-            // openFileDialog1
+            // ofdPicture
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.ofdPicture.FileName = "ofdPicture";
             // 
             // panel1
             // 
@@ -226,11 +229,19 @@
             this.gbTags.Name = "gbTags";
             this.gbTags.TabStop = false;
             // 
+            // pbBack
+            // 
+            resources.ApplyResources(this.pbBack, "pbBack");
+            this.pbBack.Name = "pbBack";
+            this.pbBack.TabStop = false;
+            this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
+            // 
             // frmAddRecipes
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
+            this.Controls.Add(this.pbBack);
             this.Controls.Add(this.gbTags);
             this.Controls.Add(this.txtIngridients);
             this.Controls.Add(this.panel3);
@@ -257,6 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).EndInit();
             this.gbTags.ResumeLayout(false);
             this.gbTags.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +284,7 @@
         private System.Windows.Forms.Label lblIntroduction;
         private System.Windows.Forms.PictureBox pbCoverPicture;
         private System.Windows.Forms.Label lblCoverPicture;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog ofdPicture;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblIngredients;
         private System.Windows.Forms.Panel panel2;
@@ -293,5 +305,6 @@
         private System.Windows.Forms.NumericUpDown nudPreparationTime;
         private System.Windows.Forms.TextBox txtIngridients;
         private System.Windows.Forms.GroupBox gbTags;
+        private System.Windows.Forms.PictureBox pbBack;
     }
 }

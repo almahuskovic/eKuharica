@@ -25,6 +25,7 @@ namespace eKuharica.WinUI.Users
         private async void frmUsers_Load(object sender, EventArgs e)
         {
             var data = await _serviceUsers.Get<List<UserDto>>();
+            data.ForEach(x => x.FullName = x.FirstName + " " + x.LastName);
             sdgvUsers.DataSource = data;//data.Where(x=>x.UserRoles.Contains())- hocu da displaya sve osim admina
 
             sdgvUsers.PageSize = 10;

@@ -38,7 +38,13 @@ namespace eKuharica.WinUI.Users
                 lblFollowingValue.Text = follows.Count().ToString();
                 lblCreatedAtValue.Text = _user.CreatedAt.ToShortDateString();
                 lblUserName.Text = _user.FullName;
+                pbUserProfilePicture.Image = Helpers.Helper.ByteArrayToImage(_user.Picture);
             }
+        }
+
+        private void lblUserName_Click(object sender, EventArgs e)
+        {
+            //napraviti da ide na profil korisnika
         }
     }
 }

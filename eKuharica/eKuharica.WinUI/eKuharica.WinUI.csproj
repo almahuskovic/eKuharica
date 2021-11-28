@@ -382,6 +382,9 @@
     <EmbeddedResource Include="UserRecipes\frmUserRecipes.resx">
       <DependentUpon>frmUserRecipes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddUsers.resx">
+      <DependentUpon>frmAddUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUserDetails.resx">
       <DependentUpon>frmUserDetails.cs</DependentUpon>
     </EmbeddedResource>

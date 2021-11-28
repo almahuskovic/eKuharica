@@ -10,6 +10,7 @@ using eKuharica.Services.Feedbacks;
 using eKuharica.Services.Follows;
 using eKuharica.Services.Recipes;
 using eKuharica.Services.RecipeTranslations;
+using eKuharica.Services.Roles;
 using eKuharica.Services.Users;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
@@ -70,6 +71,7 @@ namespace eKuharica
             services.AddScoped<IFeedbackService, FeedbackService>();
             services.AddScoped<IRecipeTranslationService, RecipeTranslationService>();
             services.AddScoped<IFollowService, FollowService>();
+            services.AddScoped<IRoleService, RoleService>();
 
 
             services.AddAuthentication("BasicAuthentication")

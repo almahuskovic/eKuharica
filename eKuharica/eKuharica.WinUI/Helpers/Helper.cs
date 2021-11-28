@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -91,6 +93,35 @@ namespace eKuharica.WinUI.Helpers
             }
             return dt;
         }
+        #endregion
+
+        #region PictureConvertor
+
+        public static byte[] ImageToByteArray(Image imageIn)
+        {
+            if(imageIn != null)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    imageIn.Save(ms, imageIn.RawFormat);
+                    return ms.ToArray();
+                }
+            }
+            return null;
+        }
+        public static Image ByteArrayToImage(byte[] bytesArr)
+        {
+            if (bytesArr.Length > 0)
+            {
+                using (MemoryStream memstr = new MemoryStream(bytesArr))
+                {
+                    Image img = Image.FromStream(memstr);
+                    return img;
+                }
+            }
+            return null;
+        }
+
         #endregion
 
         #region EnumerationSelectLists

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -48,6 +49,7 @@ namespace eKuharica.WinUI.Recipes
                 txtAdvice.Text = _recipe.Advice;
                 txtMethod.Text = _recipe.Method;
                 txtServing.Text = _recipe.Serving;
+                pbCoverPicture.Image = Helpers.Helper.ByteArrayToImage(_recipe.Picture);
                 cmbMealType.SelectedIndex = _recipe.MealType;
                 cmbWeightOfPreparation.SelectedIndex = _recipe.WeightOfPreparation;
                 nudPreparationTime.Value = int.Parse((_recipe.PreparationTime.Hour * 60 + _recipe.PreparationTime.Minute).ToString());
@@ -85,6 +87,7 @@ namespace eKuharica.WinUI.Recipes
             recipeTranslationRequest.Method = recipeRequest.Method = txtMethod.Text;
             recipeTranslationRequest.Advice = recipeRequest.Advice = txtAdvice.Text;
             recipeTranslationRequest.Serving = recipeRequest.Serving = txtServing.Text;
+            recipeRequest.Picture = Helpers.Helper.ImageToByteArray(pbCoverPicture.Image);
             recipeRequest.UserId = userId;//logovanog uzimati
             recipeRequest.IsTranslated = _recipeTranslation != null ? true : false;
             recipeTranslationRequest.RecipeId = _recipe.Id;
@@ -138,13 +141,44 @@ namespace eKuharica.WinUI.Recipes
             }
             else
             {
-                frmUserRecipes frmRecipes = new frmUserRecipes();
-                frmRecipes.MdiParent = MdiParent;
-                frmRecipes.WindowState = FormWindowState.Maximized;
-                frmRecipes.Show();
+                frmUserRecipes frmUserRecipes = new frmUserRecipes();
+                frmUserRecipes.MdiParent = MdiParent;
+                frmUserRecipes.WindowState = FormWindowState.Maximized;
+                frmUserRecipes.Show();
                 Hide();
             } 
         }
 
+        private void pbCoverPicture_Click(object sender, EventArgs e)
+        {
+            var result = ofdPicture.ShowDialog();
+
+            if(result == DialogResult.OK)
+            {
+                var fileName = ofdPicture.FileName;
+                var file = File.ReadAllBytes(fileName);
+
+                pbCoverPicture.Image = Image.FromFile(fileName);
+            }
+        }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            if (!_recipe.IsSent)
+            {
+                frmUserRecipes frmUserRecipes = new frmUserRecipes();
+                frmUserRecipes.MdiParent = MdiParent;
+                frmUserRecipes.WindowState = FormWindowState.Maximized;
+                frmUserRecipes.Show();
+                Hide();
+                //return;
+            }
+
+            frmRecipes frmRecipes = new frmRecipes();
+            frmRecipes.MdiParent = MdiParent;
+            frmRecipes.WindowState = FormWindowState.Maximized;
+            frmRecipes.Show();
+            Hide();
+        }
     }
 }

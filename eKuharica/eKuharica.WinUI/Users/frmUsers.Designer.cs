@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsers));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sdgvUsers = new eKuharica.WinUI.Helpers.SuperGrid();
+            this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Akcija = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -45,15 +48,12 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sdgvUsers = new eKuharica.WinUI.Helpers.SuperGrid();
-            this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Akcija = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -67,6 +67,45 @@
             this.groupBox1.Size = new System.Drawing.Size(776, 300);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // sdgvUsers
+            // 
+            this.sdgvUsers.AllowUserToAddRows = false;
+            this.sdgvUsers.AllowUserToDeleteRows = false;
+            this.sdgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sdgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.User,
+            this.Akcija});
+            this.sdgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sdgvUsers.Location = new System.Drawing.Point(3, 18);
+            this.sdgvUsers.Name = "sdgvUsers";
+            this.sdgvUsers.PageSize = 10;
+            this.sdgvUsers.ReadOnly = true;
+            this.sdgvUsers.RowHeadersWidth = 51;
+            this.sdgvUsers.RowTemplate.Height = 24;
+            this.sdgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.sdgvUsers.Size = new System.Drawing.Size(770, 279);
+            this.sdgvUsers.TabIndex = 0;
+            this.sdgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUsers_CellContentClick);
+            // 
+            // User
+            // 
+            this.User.DataPropertyName = "FullName";
+            this.User.HeaderText = "Korisnik";
+            this.User.MinimumWidth = 6;
+            this.User.Name = "User";
+            this.User.ReadOnly = true;
+            this.User.Width = 125;
+            // 
+            // Akcija
+            // 
+            this.Akcija.HeaderText = "Akcija";
+            this.Akcija.MinimumWidth = 6;
+            this.Akcija.Name = "Akcija";
+            this.Akcija.ReadOnly = true;
+            this.Akcija.Text = "Prikaži";
+            this.Akcija.UseColumnTextForButtonValue = true;
+            this.Akcija.Width = 125;
             // 
             // groupBox2
             // 
@@ -116,21 +155,21 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 457);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 461);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(800, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(800, 27);
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -140,7 +179,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -149,19 +188,18 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -170,7 +208,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -178,7 +216,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -187,58 +225,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // sdgvUsers
-            // 
-            this.sdgvUsers.AllowUserToAddRows = false;
-            this.sdgvUsers.AllowUserToDeleteRows = false;
-            this.sdgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sdgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.User,
-            this.Akcija});
-            this.sdgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sdgvUsers.Location = new System.Drawing.Point(3, 18);
-            this.sdgvUsers.Name = "sdgvUsers";
-            this.sdgvUsers.PageSize = 10;
-            this.sdgvUsers.ReadOnly = true;
-            this.sdgvUsers.RowHeadersWidth = 51;
-            this.sdgvUsers.RowTemplate.Height = 24;
-            this.sdgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.sdgvUsers.Size = new System.Drawing.Size(770, 279);
-            this.sdgvUsers.TabIndex = 0;
-            this.sdgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUsers_CellContentClick);
-            // 
-            // User
-            // 
-            this.User.DataPropertyName = "FullName";
-            this.User.HeaderText = "Korisnik";
-            this.User.MinimumWidth = 6;
-            this.User.Name = "User";
-            this.User.ReadOnly = true;
-            this.User.Width = 125;
-            // 
-            // Akcija
-            // 
-            this.Akcija.HeaderText = "Akcija";
-            this.Akcija.MinimumWidth = 6;
-            this.Akcija.Name = "Akcija";
-            this.Akcija.ReadOnly = true;
-            this.Akcija.Text = "Prikaži";
-            this.Akcija.UseColumnTextForButtonValue = true;
-            this.Akcija.Width = 125;
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 488);
+            this.ControlBox = false;
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -246,13 +246,13 @@
             this.Text = "frmUsers";
             this.Load += new System.EventHandler(this.frmUsers_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
