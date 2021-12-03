@@ -6,6 +6,7 @@ using AutoMapper;
 using eKuharica.Filters;
 using eKuharica.Security;
 using eKuharica.Services;
+using eKuharica.Services.Articles;
 using eKuharica.Services.Feedbacks;
 using eKuharica.Services.Follows;
 using eKuharica.Services.Recipes;
@@ -72,6 +73,7 @@ namespace eKuharica
             services.AddScoped<IRecipeTranslationService, RecipeTranslationService>();
             services.AddScoped<IFollowService, FollowService>();
             services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IArticleService, ArticleService>();
 
 
             services.AddAuthentication("BasicAuthentication")
