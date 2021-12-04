@@ -419,6 +419,7 @@
             // 
             resources.ApplyResources(this.tsbArticles, "tsbArticles");
             this.tsbArticles.Name = "tsbArticles";
+            this.tsbArticles.Click += new System.EventHandler(this.tsbArticles_Click);
             // 
             // tsbFeedbacks
             // 

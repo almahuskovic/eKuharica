@@ -109,7 +109,7 @@ namespace eKuharica.WinUI.Recipes
                     _recipe.IsTranslated = true;
                     
                     await _recipeService.Update<RecipeDto>(_recipe.Id, _recipe);
-                    await _recipeTranslationService.Insert<RecipeDto>(recipeTranslationRequest);
+                    await _recipeTranslationService.Insert<RecipeTranslationDto>(recipeTranslationRequest);
                 }
                 else
                 {

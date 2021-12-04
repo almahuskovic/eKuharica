@@ -3,6 +3,7 @@ using eKuharica.WinUI.Recipes;
 using System.Windows.Forms;
 using eKuharica.WinUI.UserRecipes;
 using eKuharica.WinUI.Users;
+using eKuharica.WinUI.Articles;
 
 namespace eKuharica.WinUI
 {
@@ -94,6 +95,15 @@ namespace eKuharica.WinUI
             frmUsers.WindowState = FormWindowState.Maximized;
             frmUsers.Text = "eKuharica";
             frmUsers.Show();
+        }
+
+        private void tsbArticles_Click(object sender, EventArgs e)
+        {
+            frmArticles frmArticles = new frmArticles();
+            frmArticles.MdiParent = this;
+            frmArticles.WindowState = FormWindowState.Maximized;
+            frmArticles.Text = "eKuharica";
+            frmArticles.Show();
         }
     }
 }

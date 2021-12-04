@@ -28,12 +28,176 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.txtContent = new System.Windows.Forms.TextBox();
+            this.lblContent = new System.Windows.Forms.Label();
+            this.pbPicture = new System.Windows.Forms.PictureBox();
+            this.lblPicture = new System.Windows.Forms.Label();
+            this.txtKeyWords = new System.Windows.Forms.TextBox();
+            this.lblKeyWords = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.ofdPicture = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Location = new System.Drawing.Point(24, 89);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(51, 17);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Naslov";
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTitle.Location = new System.Drawing.Point(27, 122);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(715, 22);
+            this.txtTitle.TabIndex = 1;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(667, 40);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 34);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Spremi";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnShow
+            // 
+            this.btnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShow.Location = new System.Drawing.Point(568, 40);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(75, 34);
+            this.btnShow.TabIndex = 3;
+            this.btnShow.Text = "Prikaži";
+            this.btnShow.UseVisualStyleBackColor = true;
+            // 
+            // txtContent
+            // 
+            this.txtContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtContent.Location = new System.Drawing.Point(27, 202);
+            this.txtContent.Multiline = true;
+            this.txtContent.Name = "txtContent";
+            this.txtContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtContent.Size = new System.Drawing.Size(715, 222);
+            this.txtContent.TabIndex = 5;
+            // 
+            // lblContent
+            // 
+            this.lblContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblContent.AutoSize = true;
+            this.lblContent.Location = new System.Drawing.Point(24, 169);
+            this.lblContent.Name = "lblContent";
+            this.lblContent.Size = new System.Drawing.Size(56, 17);
+            this.lblContent.TabIndex = 4;
+            this.lblContent.Text = "Sadržaj";
+            // 
+            // pbPicture
+            // 
+            this.pbPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPicture.Location = new System.Drawing.Point(27, 482);
+            this.pbPicture.Name = "pbPicture";
+            this.pbPicture.Size = new System.Drawing.Size(715, 64);
+            this.pbPicture.TabIndex = 6;
+            this.pbPicture.TabStop = false;
+            this.pbPicture.Click += new System.EventHandler(this.pbPicture_Click);
+            // 
+            // lblPicture
+            // 
+            this.lblPicture.AutoSize = true;
+            this.lblPicture.Location = new System.Drawing.Point(24, 453);
+            this.lblPicture.Name = "lblPicture";
+            this.lblPicture.Size = new System.Drawing.Size(134, 17);
+            this.lblPicture.TabIndex = 7;
+            this.lblPicture.Text = "Naslovna fotografija";
+            // 
+            // txtKeyWords
+            // 
+            this.txtKeyWords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtKeyWords.Location = new System.Drawing.Point(27, 612);
+            this.txtKeyWords.Name = "txtKeyWords";
+            this.txtKeyWords.Size = new System.Drawing.Size(715, 22);
+            this.txtKeyWords.TabIndex = 9;
+            // 
+            // lblKeyWords
+            // 
+            this.lblKeyWords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblKeyWords.AutoSize = true;
+            this.lblKeyWords.Location = new System.Drawing.Point(24, 579);
+            this.lblKeyWords.Name = "lblKeyWords";
+            this.lblKeyWords.Size = new System.Drawing.Size(87, 17);
+            this.lblKeyWords.TabIndex = 8;
+            this.lblKeyWords.Text = "Ključne riječi";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(24, 688);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(46, 17);
+            this.lblDate.TabIndex = 10;
+            this.lblDate.Text = "label5";
+            // 
+            // ofdPicture
+            // 
+            this.ofdPicture.FileName = "ofdPicture";
+            // 
+            // frmAddArticles
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 723);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.txtKeyWords);
+            this.Controls.Add(this.lblKeyWords);
+            this.Controls.Add(this.lblPicture);
+            this.Controls.Add(this.pbPicture);
+            this.Controls.Add(this.txtContent);
+            this.Controls.Add(this.lblContent);
+            this.Controls.Add(this.btnShow);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.lblTitle);
+            this.Name = "frmAddArticles";
             this.Text = "frmAddArticles";
+            this.Load += new System.EventHandler(this.frmAddArticles_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.TextBox txtContent;
+        private System.Windows.Forms.Label lblContent;
+        private System.Windows.Forms.PictureBox pbPicture;
+        private System.Windows.Forms.Label lblPicture;
+        private System.Windows.Forms.TextBox txtKeyWords;
+        private System.Windows.Forms.Label lblKeyWords;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.OpenFileDialog ofdPicture;
     }
 }

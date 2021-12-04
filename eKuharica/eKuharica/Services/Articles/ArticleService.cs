@@ -15,5 +15,17 @@ namespace eKuharica.Services.Articles
         public ArticleService(Context context, IMapper mapper) : base(context, mapper)
         {
         }
+        public override IEnumerable<ArticleDto> Get(ArticleSearchRequest search = null)
+        {
+            var entity = Context.Set<Article>().AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(search?.Title))
+            {
+                entity = entity.Where(x => x.Title.ToLower().Contains(search.Title.ToLower()));
+            }
+
+            var list = entity.ToList();
+            return _mapper.Map<List<ArticleDto>>(list);
+        }
     }
 }

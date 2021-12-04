@@ -30,6 +30,9 @@ namespace eKuharica.Mapping
             CreateMap<Article, ArticleDto>().ReverseMap();
             CreateMap<ArticleUpsertRequest, Article>();
 
+            CreateMap<ArticleTranslation, ArticleTranslationDto>().ReverseMap();
+            CreateMap<ArticleTranslationUpsertRequest, ArticleTranslation>();
+
             CreateMap<RecipeTranslationDto, RecipeTranslation>().ReverseMap();
             CreateMap<RecipeTranslationUpsertRequest, RecipeTranslation>();
 

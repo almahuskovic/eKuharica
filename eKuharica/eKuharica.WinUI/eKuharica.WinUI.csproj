@@ -360,6 +360,12 @@
     <Compile Include="Users\frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Articles\frmAddArticles.resx">
+      <DependentUpon>frmAddArticles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Articles\frmArticles.resx">
+      <DependentUpon>frmArticles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

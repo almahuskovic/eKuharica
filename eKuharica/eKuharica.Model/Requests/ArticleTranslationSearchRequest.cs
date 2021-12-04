@@ -4,8 +4,8 @@ using System.Text;
 
 namespace eKuharica.Model.Requests
 {
-    public class ArticleSearchRequest
+    public class ArticleTranslationSearchRequest
     {
-        public string Title { get; set; }
+        public int ArticleId { get; set; }  
     }
 }
