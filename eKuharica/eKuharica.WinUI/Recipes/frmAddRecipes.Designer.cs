@@ -70,6 +70,7 @@
             resources.ApplyResources(this.btnRecipePreview, "btnRecipePreview");
             this.btnRecipePreview.Name = "btnRecipePreview";
             this.btnRecipePreview.UseVisualStyleBackColor = true;
+            this.btnRecipePreview.Click += new System.EventHandler(this.btnRecipePreview_Click);
             // 
             // btnSubmit
             // 

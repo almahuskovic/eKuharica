@@ -48,7 +48,8 @@ namespace eKuharica.WinUI.Articles
                 txtContent.Text = _articleTranslation.Content;
                 txtKeyWords.Text = _articleTranslation.KeyWords;
                 lblDate.Text = _articleTranslation.CreatedAt.ToShortDateString();
-                pbPicture.Hide();
+                gbKeyWords.Top = gbKeyWords.Top;
+                gbPicture.Hide();
             }
             else
             {
@@ -119,5 +120,25 @@ namespace eKuharica.WinUI.Articles
                 pbPicture.Image = Image.FromFile(fileName);
             }
         }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            var article = new ArticleDto()
+            {
+                Content = txtContent.Text,
+                Title = txtTitle.Text,
+                KeyWords = txtKeyWords.Text,
+                CreatedAt = DateTime.Now,
+                Picture = Helpers.Helper.ImageToByteArray(pbPicture.Image),
+                CreatedByUser = APIService.Username
+            };
+
+            frmShowArticles frmShowArticle = new frmShowArticles(article);
+            frmShowArticle.MdiParent = MdiParent;
+            frmShowArticle.WindowState = FormWindowState.Maximized;
+            frmShowArticle.Show();
+            Hide();
+        }
+
     }
 }

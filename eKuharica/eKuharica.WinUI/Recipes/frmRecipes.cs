@@ -123,9 +123,13 @@ namespace eKuharica.WinUI.Recipes
                     frmEditRecipe.Show();
                     Hide();
                 }
-                if (e.ColumnIndex == 3)
+                if (e.ColumnIndex == 3) //prikazi
                 {
-                    //prikazi
+                    frmShowRecipes frmShowRecipe = new frmShowRecipes(selectedRow);
+                    frmShowRecipe.MdiParent = MdiParent;
+                    frmShowRecipe.WindowState = FormWindowState.Maximized;
+                    frmShowRecipe.Show();
+                    Hide();
                 }
                 if (e.ColumnIndex == 4)//edit
                 {

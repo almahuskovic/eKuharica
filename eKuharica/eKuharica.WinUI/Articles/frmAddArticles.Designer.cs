@@ -40,7 +40,11 @@
             this.lblKeyWords = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.ofdPicture = new System.Windows.Forms.OpenFileDialog();
+            this.gbPicture = new System.Windows.Forms.GroupBox();
+            this.gbKeyWords = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
+            this.gbPicture.SuspendLayout();
+            this.gbKeyWords.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -83,6 +87,7 @@
             this.btnShow.TabIndex = 3;
             this.btnShow.Text = "Prikaži";
             this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // txtContent
             // 
@@ -111,7 +116,7 @@
             this.pbPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbPicture.Location = new System.Drawing.Point(27, 482);
+            this.pbPicture.Location = new System.Drawing.Point(0, 50);
             this.pbPicture.Name = "pbPicture";
             this.pbPicture.Size = new System.Drawing.Size(715, 64);
             this.pbPicture.TabIndex = 6;
@@ -121,7 +126,7 @@
             // lblPicture
             // 
             this.lblPicture.AutoSize = true;
-            this.lblPicture.Location = new System.Drawing.Point(24, 453);
+            this.lblPicture.Location = new System.Drawing.Point(6, 18);
             this.lblPicture.Name = "lblPicture";
             this.lblPicture.Size = new System.Drawing.Size(134, 17);
             this.lblPicture.TabIndex = 7;
@@ -131,7 +136,7 @@
             // 
             this.txtKeyWords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtKeyWords.Location = new System.Drawing.Point(27, 612);
+            this.txtKeyWords.Location = new System.Drawing.Point(0, 67);
             this.txtKeyWords.Name = "txtKeyWords";
             this.txtKeyWords.Size = new System.Drawing.Size(715, 22);
             this.txtKeyWords.TabIndex = 9;
@@ -141,7 +146,7 @@
             this.lblKeyWords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKeyWords.AutoSize = true;
-            this.lblKeyWords.Location = new System.Drawing.Point(24, 579);
+            this.lblKeyWords.Location = new System.Drawing.Point(-3, 34);
             this.lblKeyWords.Name = "lblKeyWords";
             this.lblKeyWords.Size = new System.Drawing.Size(87, 17);
             this.lblKeyWords.TabIndex = 8;
@@ -160,16 +165,40 @@
             // 
             this.ofdPicture.FileName = "ofdPicture";
             // 
+            // gbPicture
+            // 
+            this.gbPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbPicture.Controls.Add(this.pbPicture);
+            this.gbPicture.Controls.Add(this.lblPicture);
+            this.gbPicture.ForeColor = System.Drawing.Color.Black;
+            this.gbPicture.Location = new System.Drawing.Point(27, 446);
+            this.gbPicture.Name = "gbPicture";
+            this.gbPicture.Size = new System.Drawing.Size(715, 120);
+            this.gbPicture.TabIndex = 11;
+            this.gbPicture.TabStop = false;
+            // 
+            // gbKeyWords
+            // 
+            this.gbKeyWords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbKeyWords.Controls.Add(this.lblKeyWords);
+            this.gbKeyWords.Controls.Add(this.txtKeyWords);
+            this.gbKeyWords.Location = new System.Drawing.Point(27, 566);
+            this.gbKeyWords.Name = "gbKeyWords";
+            this.gbKeyWords.Size = new System.Drawing.Size(715, 106);
+            this.gbKeyWords.TabIndex = 12;
+            this.gbKeyWords.TabStop = false;
+            // 
             // frmAddArticles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 723);
+            this.ControlBox = false;
+            this.Controls.Add(this.gbKeyWords);
+            this.Controls.Add(this.gbPicture);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.txtKeyWords);
-            this.Controls.Add(this.lblKeyWords);
-            this.Controls.Add(this.lblPicture);
-            this.Controls.Add(this.pbPicture);
             this.Controls.Add(this.txtContent);
             this.Controls.Add(this.lblContent);
             this.Controls.Add(this.btnShow);
@@ -180,6 +209,10 @@
             this.Text = "frmAddArticles";
             this.Load += new System.EventHandler(this.frmAddArticles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
+            this.gbPicture.ResumeLayout(false);
+            this.gbPicture.PerformLayout();
+            this.gbKeyWords.ResumeLayout(false);
+            this.gbKeyWords.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +232,7 @@
         private System.Windows.Forms.Label lblKeyWords;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.OpenFileDialog ofdPicture;
+        private System.Windows.Forms.GroupBox gbPicture;
+        private System.Windows.Forms.GroupBox gbKeyWords;
     }
 }

@@ -180,5 +180,19 @@ namespace eKuharica.WinUI.Recipes
             frmRecipes.Show();
             Hide();
         }
+
+        private void btnRecipePreview_Click(object sender, EventArgs e)
+        {
+            var recipe = new RecipeDto()
+            {
+
+            };
+
+            frmShowRecipes frmShowRecipe = new frmShowRecipes(recipe);
+            frmShowRecipe.MdiParent = MdiParent;
+            frmShowRecipe.WindowState = FormWindowState.Maximized;
+            frmShowRecipe.Show();
+            Hide();
+        }
     }
 }

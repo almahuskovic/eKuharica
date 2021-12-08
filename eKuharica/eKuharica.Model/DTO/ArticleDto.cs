@@ -17,5 +17,7 @@ namespace eKuharica.Model.DTO
         public bool IsTranslated { get; set; }
         public bool IsDeleted { get; set; }
         public int CreateUserId { get; set; }
+        public string CreatedByUser { get; set; }
+        
     }
 }
