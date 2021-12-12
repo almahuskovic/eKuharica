@@ -425,6 +425,7 @@
             // 
             resources.ApplyResources(this.tsbFeedbacks, "tsbFeedbacks");
             this.tsbFeedbacks.Name = "tsbFeedbacks";
+            this.tsbFeedbacks.Click += new System.EventHandler(this.tsbFeedbacks_Click);
             // 
             // toolStripSeparator2
             // 

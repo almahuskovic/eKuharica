@@ -185,7 +185,17 @@ namespace eKuharica.WinUI.Recipes
         {
             var recipe = new RecipeDto()
             {
-
+                Advice = txtAdvice.Text,
+                Method = txtMethod.Text,
+                Ingredients = txtIngridients.Text,
+                Introduction = txtIntroduction.Text,
+                Picture = Helpers.Helper.ImageToByteArray(pbCoverPicture.Image),
+                Serving = txtServing.Text,
+                Title = txtTitle.Text,
+                WeightOfPreparation = cmbWeightOfPreparation.SelectedIndex,
+                MealType = cmbMealType.SelectedIndex,
+                PreparationTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, (int)nudPreparationTime.Value / 60, (int)nudPreparationTime.Value % 60, 0),
+                AuthorUserName = APIService.Username
             };
 
             frmShowRecipes frmShowRecipe = new frmShowRecipes(recipe);

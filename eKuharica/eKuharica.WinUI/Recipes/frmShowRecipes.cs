@@ -1,4 +1,5 @@
 ﻿using eKuharica.Model.DTO;
+using eKuharica.Model.Enumerations;
 using eKuharica.Model.Requests;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,9 @@ namespace eKuharica.WinUI.Recipes
                 pbPicture.Image = Helpers.Helper.ByteArrayToImage(_recipe.Picture);
                 lblTitle.Text = _recipe.Title;
                 gbAdvice.Visible = gbServing.Visible = true;
+                lblPrepTime.Text = _recipe.PreparationTime.ToShortTimeString();
+                lblMealType.Text = Enum.GetName(typeof(Enumerations.MealType), _recipe.MealType);
+                lblWeightOfPrep.Text = Enum.GetName(typeof(Enumerations.WeightOfPreparation), _recipe.WeightOfPreparation);
 
                 var loggedUser = (await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = APIService.Username }));
                 lblAuthor.Text = loggedUser.FirstOrDefault().Username;

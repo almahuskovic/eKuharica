@@ -1,5 +1,6 @@
 ﻿using eKuharica.Model.DTO;
 using eKuharica.Model.Requests;
+using eKuharica.WinUI.Recipes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,9 +72,13 @@ namespace eKuharica.WinUI.Articles
                     frmEditArticleTranslation.Show();
                     Hide();
                 }
-                if (e.ColumnIndex == 3)
+                if (e.ColumnIndex == 3)//prikazi
                 {
-                    //prikazi
+                    frmShowArticles frmShowArticle = new frmShowArticles(selectedRow);
+                    frmShowArticle.MdiParent = MdiParent;
+                    frmShowArticle.WindowState = FormWindowState.Maximized;
+                    frmShowArticle.Show();
+                    Hide();
                 }
                 if (e.ColumnIndex == 4)//edit
                 {

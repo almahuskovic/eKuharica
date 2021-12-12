@@ -8,6 +8,7 @@ namespace eKuharica.Model.DTO
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public string AuthorUserName { get; set; }
         public string Introduction { get; set; }
         public string Ingredients { get; set; }
         public string Method { get; set; }

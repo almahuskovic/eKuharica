@@ -237,6 +237,9 @@
   <data name="txtIntroduction.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="txtIntroduction.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
   <data name="txtIntroduction.Size" type="System.Drawing.Size, System.Drawing">
     <value>744, 50</value>
   </data>
@@ -604,6 +607,9 @@
   <data name="txtMethod.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="txtMethod.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
   <data name="txtMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>744, 50</value>
   </data>
@@ -658,6 +664,9 @@
   <data name="txtServing.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="txtServing.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
   <data name="txtServing.Size" type="System.Drawing.Size, System.Drawing">
     <value>744, 50</value>
   </data>
@@ -711,6 +720,9 @@
   </data>
   <data name="txtAdvice.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="txtAdvice.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
   </data>
   <data name="txtAdvice.Size" type="System.Drawing.Size, System.Drawing">
     <value>744, 50</value>

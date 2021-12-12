@@ -124,7 +124,7 @@ namespace eKuharica.WinUI.Helpers
 
         #endregion
 
-        #region EnumerationSelectLists
+        #region SelectLists
         //TODO:refaktorisanje, napraviti univerzalnu fn za convert enuma u listu
         public static List<MealType> MealTypeToSelectList()
         {
@@ -146,6 +146,21 @@ namespace eKuharica.WinUI.Helpers
             preparationTimeCategory.Insert(0, new PreparationTimeCategory());
             return preparationTimeCategory;
         }
+
+        public static List<int> RatingSelectList()
+        {
+            var list = new List<int>();
+
+            for (int i = 0; i < 6; i++)
+                list.Add(i);
+
+            return list;
+        }
+
         #endregion
+
+
+
+
     }
 }
