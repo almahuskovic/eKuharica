@@ -13,6 +13,7 @@ using eKuharica.Services.Follows;
 using eKuharica.Services.Recipes;
 using eKuharica.Services.RecipeTranslations;
 using eKuharica.Services.Roles;
+using eKuharica.Services.UserFavouriteRecipes;
 using eKuharica.Services.Users;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
@@ -76,6 +77,7 @@ namespace eKuharica
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IArticleService, ArticleService>();
             services.AddScoped<IArticleTranslationService, ArticleTranslationService>();
+            services.AddScoped<IUserFavouriteRecipeService, UserFavouriteRecipeService>();
 
 
             services.AddAuthentication("BasicAuthentication")

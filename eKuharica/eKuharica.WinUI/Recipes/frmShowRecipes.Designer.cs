@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShowRecipes));
+            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection1 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
+            Syncfusion.Windows.Forms.Tools.ResetButton resetButton1 = new Syncfusion.Windows.Forms.Tools.ResetButton();
+            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection2 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
+            Syncfusion.Windows.Forms.Tools.ResetButton resetButton2 = new Syncfusion.Windows.Forms.Tools.ResetButton();
             this.pbPicture = new System.Windows.Forms.PictureBox();
             this.gbCover = new System.Windows.Forms.GroupBox();
             this.lblBack = new System.Windows.Forms.Label();
@@ -36,7 +40,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
             this.lblLikesDisplay = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.rtbIntroduction = new System.Windows.Forms.RichTextBox();
             this.lblIngredients = new System.Windows.Forms.Label();
             this.gbIngredients = new System.Windows.Forms.GroupBox();
@@ -45,15 +48,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.rtbMethod = new System.Windows.Forms.RichTextBox();
             this.gbAdvice = new System.Windows.Forms.GroupBox();
+            this.lblAdvice = new System.Windows.Forms.Label();
             this.rtbAdvice = new System.Windows.Forms.RichTextBox();
             this.gbServing = new System.Windows.Forms.GroupBox();
+            this.lblServing = new System.Windows.Forms.Label();
             this.rtbServing = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblPrepTime = new System.Windows.Forms.Label();
             this.lblMealType = new System.Windows.Forms.Label();
-            this.lblAdvice = new System.Windows.Forms.Label();
-            this.lblServing = new System.Windows.Forms.Label();
             this.lblWeightOfPrep = new System.Windows.Forms.Label();
+            this.rcStar = new Syncfusion.Windows.Forms.Tools.RatingControl();
+            this.rcLike = new Syncfusion.Windows.Forms.Tools.RatingControl();
+            this.gbLike = new System.Windows.Forms.GroupBox();
+            this.rbtnComments = new eKuharica.WinUI.Helpers.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.gbCover.SuspendLayout();
             this.gbIngredients.SuspendLayout();
@@ -61,6 +68,7 @@
             this.gbAdvice.SuspendLayout();
             this.gbServing.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.gbLike.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbPicture
@@ -71,7 +79,7 @@
             this.pbPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbPicture.Location = new System.Drawing.Point(3, 18);
             this.pbPicture.Name = "pbPicture";
-            this.pbPicture.Size = new System.Drawing.Size(986, 228);
+            this.pbPicture.Size = new System.Drawing.Size(987, 228);
             this.pbPicture.TabIndex = 1;
             this.pbPicture.TabStop = false;
             // 
@@ -86,7 +94,7 @@
             this.gbCover.Controls.Add(this.pbPicture);
             this.gbCover.Location = new System.Drawing.Point(12, 12);
             this.gbCover.Name = "gbCover";
-            this.gbCover.Size = new System.Drawing.Size(992, 249);
+            this.gbCover.Size = new System.Drawing.Size(993, 249);
             this.gbCover.TabIndex = 2;
             this.gbCover.TabStop = false;
             // 
@@ -130,21 +138,11 @@
             // lblLikesDisplay
             // 
             this.lblLikesDisplay.AutoSize = true;
-            this.lblLikesDisplay.Location = new System.Drawing.Point(31, 277);
+            this.lblLikesDisplay.Location = new System.Drawing.Point(42, 11);
             this.lblLikesDisplay.Name = "lblLikesDisplay";
             this.lblLikesDisplay.Size = new System.Drawing.Size(46, 17);
             this.lblLikesDisplay.TabIndex = 7;
             this.lblLikesDisplay.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(934, 277);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Zvijezde?";
             // 
             // rtbIntroduction
             // 
@@ -153,7 +151,7 @@
             this.rtbIntroduction.Location = new System.Drawing.Point(15, 327);
             this.rtbIntroduction.Name = "rtbIntroduction";
             this.rtbIntroduction.ReadOnly = true;
-            this.rtbIntroduction.Size = new System.Drawing.Size(986, 69);
+            this.rtbIntroduction.Size = new System.Drawing.Size(987, 69);
             this.rtbIntroduction.TabIndex = 9;
             this.rtbIntroduction.Text = "";
             // 
@@ -174,7 +172,7 @@
             this.gbIngredients.Controls.Add(this.lblIngredients);
             this.gbIngredients.Location = new System.Drawing.Point(3, 3);
             this.gbIngredients.Name = "gbIngredients";
-            this.gbIngredients.Size = new System.Drawing.Size(392, 439);
+            this.gbIngredients.Size = new System.Drawing.Size(392, 423);
             this.gbIngredients.TabIndex = 11;
             this.gbIngredients.TabStop = false;
             // 
@@ -194,7 +192,7 @@
             this.gbMethod.Controls.Add(this.rtbMethod);
             this.gbMethod.Location = new System.Drawing.Point(401, 3);
             this.gbMethod.Name = "gbMethod";
-            this.gbMethod.Size = new System.Drawing.Size(582, 439);
+            this.gbMethod.Size = new System.Drawing.Size(583, 423);
             this.gbMethod.TabIndex = 12;
             this.gbMethod.TabStop = false;
             // 
@@ -222,11 +220,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbAdvice.Controls.Add(this.lblAdvice);
             this.gbAdvice.Controls.Add(this.rtbAdvice);
-            this.gbAdvice.Location = new System.Drawing.Point(3, 448);
+            this.gbAdvice.Location = new System.Drawing.Point(3, 432);
             this.gbAdvice.Name = "gbAdvice";
-            this.gbAdvice.Size = new System.Drawing.Size(392, 163);
+            this.gbAdvice.Size = new System.Drawing.Size(392, 158);
             this.gbAdvice.TabIndex = 13;
             this.gbAdvice.TabStop = false;
+            // 
+            // lblAdvice
+            // 
+            this.lblAdvice.AutoSize = true;
+            this.lblAdvice.Location = new System.Drawing.Point(6, 14);
+            this.lblAdvice.Name = "lblAdvice";
+            this.lblAdvice.Size = new System.Drawing.Size(46, 17);
+            this.lblAdvice.TabIndex = 12;
+            this.lblAdvice.Text = "label2";
             // 
             // rtbAdvice
             // 
@@ -243,11 +250,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbServing.Controls.Add(this.lblServing);
             this.gbServing.Controls.Add(this.rtbServing);
-            this.gbServing.Location = new System.Drawing.Point(401, 448);
+            this.gbServing.Location = new System.Drawing.Point(401, 432);
             this.gbServing.Name = "gbServing";
-            this.gbServing.Size = new System.Drawing.Size(582, 163);
+            this.gbServing.Size = new System.Drawing.Size(583, 158);
             this.gbServing.TabIndex = 14;
             this.gbServing.TabStop = false;
+            // 
+            // lblServing
+            // 
+            this.lblServing.AutoSize = true;
+            this.lblServing.Location = new System.Drawing.Point(6, 14);
+            this.lblServing.Name = "lblServing";
+            this.lblServing.Size = new System.Drawing.Size(46, 17);
+            this.lblServing.TabIndex = 13;
+            this.lblServing.Text = "label5";
             // 
             // rtbServing
             // 
@@ -275,7 +291,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.48841F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.51159F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(986, 614);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(987, 593);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // lblPrepTime
@@ -296,24 +312,6 @@
             this.lblMealType.TabIndex = 16;
             this.lblMealType.Text = "label3";
             // 
-            // lblAdvice
-            // 
-            this.lblAdvice.AutoSize = true;
-            this.lblAdvice.Location = new System.Drawing.Point(6, 14);
-            this.lblAdvice.Name = "lblAdvice";
-            this.lblAdvice.Size = new System.Drawing.Size(46, 17);
-            this.lblAdvice.TabIndex = 12;
-            this.lblAdvice.Text = "label2";
-            // 
-            // lblServing
-            // 
-            this.lblServing.AutoSize = true;
-            this.lblServing.Location = new System.Drawing.Point(6, 14);
-            this.lblServing.Name = "lblServing";
-            this.lblServing.Size = new System.Drawing.Size(46, 17);
-            this.lblServing.TabIndex = 13;
-            this.lblServing.Text = "label5";
-            // 
             // lblWeightOfPrep
             // 
             this.lblWeightOfPrep.AutoSize = true;
@@ -323,6 +321,53 @@
             this.lblWeightOfPrep.TabIndex = 17;
             this.lblWeightOfPrep.Text = "label3";
             // 
+            // rcStar
+            // 
+            this.rcStar.Images = customImageCollection1;
+            this.rcStar.ItemSize = new System.Drawing.Size(20, 20);
+            this.rcStar.Location = new System.Drawing.Point(851, 278);
+            this.rcStar.Name = "rcStar";
+            this.rcStar.ResetButton = resetButton1;
+            this.rcStar.Size = new System.Drawing.Size(153, 27);
+            this.rcStar.TabIndex = 18;
+            this.rcStar.Text = "ratingControl1";
+            this.rcStar.Click += new System.EventHandler(this.rcStar_Click);
+            // 
+            // rcLike
+            // 
+            this.rcLike.Images = customImageCollection2;
+            this.rcLike.ItemsCount = 1;
+            this.rcLike.ItemSize = new System.Drawing.Size(22, 22);
+            this.rcLike.Location = new System.Drawing.Point(6, 11);
+            this.rcLike.Name = "rcLike";
+            this.rcLike.ResetButton = resetButton2;
+            this.rcLike.Shape = Syncfusion.Windows.Forms.Tools.Shapes.Heart;
+            this.rcLike.Size = new System.Drawing.Size(30, 27);
+            this.rcLike.TabIndex = 19;
+            this.rcLike.Text = "ratingControl2";
+            this.rcLike.Click += new System.EventHandler(this.rcLike_Click);
+            // 
+            // gbLike
+            // 
+            this.gbLike.Controls.Add(this.rcLike);
+            this.gbLike.Controls.Add(this.lblLikesDisplay);
+            this.gbLike.Location = new System.Drawing.Point(12, 267);
+            this.gbLike.Name = "gbLike";
+            this.gbLike.Size = new System.Drawing.Size(116, 44);
+            this.gbLike.TabIndex = 20;
+            this.gbLike.TabStop = false;
+            // 
+            // rbtnComments
+            // 
+            this.rbtnComments.BackColor = System.Drawing.Color.Chartreuse;
+            this.rbtnComments.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rbtnComments.BackgroundImage")));
+            this.rbtnComments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rbtnComments.Location = new System.Drawing.Point(984, 967);
+            this.rbtnComments.Name = "rbtnComments";
+            this.rbtnComments.Size = new System.Drawing.Size(63, 61);
+            this.rbtnComments.TabIndex = 21;
+            this.rbtnComments.UseVisualStyleBackColor = false;
+            // 
             // frmShowRecipes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -331,13 +376,14 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1046, 1069);
             this.ControlBox = false;
+            this.Controls.Add(this.rbtnComments);
+            this.Controls.Add(this.gbLike);
+            this.Controls.Add(this.rcStar);
             this.Controls.Add(this.lblPrepTime);
             this.Controls.Add(this.lblWeightOfPrep);
             this.Controls.Add(this.lblMealType);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.rtbIntroduction);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblLikesDisplay);
             this.Controls.Add(this.gbCover);
             this.Name = "frmShowRecipes";
             this.Text = "frmShowRecipes";
@@ -355,6 +401,8 @@
             this.gbServing.ResumeLayout(false);
             this.gbServing.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.gbLike.ResumeLayout(false);
+            this.gbLike.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,7 +417,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblAuthor;
         private System.Windows.Forms.Label lblLikesDisplay;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtbIntroduction;
         private System.Windows.Forms.Label lblIngredients;
         private System.Windows.Forms.GroupBox gbIngredients;
@@ -387,5 +434,9 @@
         private System.Windows.Forms.Label lblServing;
         private System.Windows.Forms.Label lblMealType;
         private System.Windows.Forms.Label lblWeightOfPrep;
+        private Syncfusion.Windows.Forms.Tools.RatingControl rcStar;
+        private Syncfusion.Windows.Forms.Tools.RatingControl rcLike;
+        private System.Windows.Forms.GroupBox gbLike;
+        private Helpers.RoundButton rbtnComments;
     }
 }

@@ -59,15 +59,14 @@ namespace eKuharica.WinUI.Articles
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            var loggedUser = (await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = APIService.Username }));
-            var userId = loggedUser.FirstOrDefault().Id;
+            var loggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id; 
 
             ArticleTranslationUpsertRequest articleTranslationRequest = new ArticleTranslationUpsertRequest();
             ArticleUpsertRequest articleRequest = new ArticleUpsertRequest();
 
             articleTranslationRequest.Title = articleRequest.Title = txtTitle.Text;
             articleTranslationRequest.ArticleId = _article.Id;
-            articleRequest.CreateUserId = userId;
+            articleRequest.CreateUserId = loggedUserId;
             articleTranslationRequest.Content = articleRequest.Content = txtContent.Text;
             articleTranslationRequest.KeyWords = articleRequest.KeyWords = txtKeyWords.Text;
             articleTranslationRequest.ModifiedAt = articleRequest.ModifiedAt = DateTime.Now;

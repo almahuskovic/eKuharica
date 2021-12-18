@@ -35,7 +35,7 @@ namespace eKuharica.WinUI
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+            //toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,6 +114,15 @@ namespace eKuharica.WinUI
             frmFeedbacks.WindowState = FormWindowState.Maximized;
             frmFeedbacks.Text = "eKuharica";
             frmFeedbacks.Show();
+        }
+
+        private void favouriteRecipeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRecipes frmRecipes = new frmRecipes();
+            frmRecipes.MdiParent = this;
+            frmRecipes.WindowState = FormWindowState.Maximized;
+            frmRecipes.Text = "eKuharica";
+            frmRecipes.Show();
         }
     }
 }

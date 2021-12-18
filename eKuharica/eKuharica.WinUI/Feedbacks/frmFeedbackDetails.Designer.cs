@@ -32,7 +32,6 @@
             Syncfusion.Windows.Forms.Tools.ResetButton resetButton1 = new Syncfusion.Windows.Forms.Tools.ResetButton();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.lblRating = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblCreatedTime = new System.Windows.Forms.Label();
             this.ratingControl1 = new Syncfusion.Windows.Forms.Tools.RatingControl();
@@ -55,15 +54,6 @@
             this.lblUsername.Size = new System.Drawing.Size(46, 17);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "label1";
-            // 
-            // lblRating
-            // 
-            this.lblRating.AutoSize = true;
-            this.lblRating.Location = new System.Drawing.Point(382, 258);
-            this.lblRating.Name = "lblRating";
-            this.lblRating.Size = new System.Drawing.Size(46, 17);
-            this.lblRating.TabIndex = 2;
-            this.lblRating.Text = "label1";
             // 
             // btnClose
             // 
@@ -90,6 +80,7 @@
             this.ratingControl1.ItemSize = new System.Drawing.Size(20, 20);
             this.ratingControl1.Location = new System.Drawing.Point(455, 258);
             this.ratingControl1.Name = "ratingControl1";
+            this.ratingControl1.ReadOnly = true;
             this.ratingControl1.ResetButton = resetButton1;
             this.ratingControl1.Size = new System.Drawing.Size(153, 26);
             this.ratingControl1.TabIndex = 5;
@@ -103,7 +94,6 @@
             this.Controls.Add(this.ratingControl1);
             this.Controls.Add(this.lblCreatedTime);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.lblRating);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.txtDescription);
             this.MaximizeBox = false;
@@ -121,7 +111,6 @@
 
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblRating;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblCreatedTime;
         private Syncfusion.Windows.Forms.Tools.RatingControl ratingControl1;

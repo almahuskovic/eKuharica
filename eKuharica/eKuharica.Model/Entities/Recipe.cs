@@ -25,6 +25,7 @@ namespace eKuharica.Model.Entities
         public bool IsTranslated { get; set; }
         public bool IsRead { get; set; }
         public bool IsApproved { get; set; }
+        public int Rating { get; set; }
         public bool IsSent { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }

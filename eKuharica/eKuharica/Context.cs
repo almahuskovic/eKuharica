@@ -32,5 +32,6 @@ namespace eKuharica
         public DbSet<UserFavouriteRecipe> UserFavouriteRecipe { get; set; }
         public DbSet<UserRole> UserRole { get; set; }
         public DbSet<ArticleTranslation> ArticleTranslation { get; set; }
+        public DbSet<UserRecipeRating> UserRecipeRating { get; set; }
     }
 }

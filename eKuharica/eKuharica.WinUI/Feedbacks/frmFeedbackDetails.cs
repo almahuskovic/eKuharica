@@ -27,7 +27,7 @@ namespace eKuharica.WinUI.Feedbacks
                 txtDescription.Text = _feedback.Description;
                 lblCreatedTime.Text = _feedback.CreatedAt.ToShortDateString();
                 lblUsername.Text = _feedback.Username;
-                lblRating.Text = _feedback.Rating.ToString();
+                ratingControl1.Value = _feedback.Rating;
             }
         }
 

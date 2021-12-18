@@ -31,5 +31,12 @@ namespace eKuharica.Model.Enumerations
             Btw1hAnd2h,
             MoreThan2h
         }
+
+        public enum Source
+        {
+            Index,
+            Add,
+            Edit,
+        }
     }
 }

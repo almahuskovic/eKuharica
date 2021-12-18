@@ -1,4 +1,5 @@
 ﻿using eKuharica.Model.DTO;
+using eKuharica.Model.Requests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,11 @@ namespace eKuharica.WinUI.Helpers
 {
     public static class Helper
     {
+        public async static Task<UserDto> GetLoggedUser(APIService userService, string username)
+        {
+            return (await userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = username })).FirstOrDefault();
+        }
+
         #region BindingDataToDgvAndReverse
         public static DataTable ToDataTable<T>(this IList<T> data)
         {

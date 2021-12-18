@@ -1,6 +1,7 @@
 ﻿using Azure.Core;
 using eKuharica.Model.DTO;
 using eKuharica.Model.Entities;
+using eKuharica.Model.Enumerations;
 using eKuharica.Model.Requests;
 using eKuharica.WinUI.Properties;
 using eKuharica.WinUI.UserRecipes;
@@ -74,9 +75,8 @@ namespace eKuharica.WinUI.Recipes
         }
 
         private async void btnSubmit_Click(object sender, EventArgs e)
-        { 
-            var loggedUser = (await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = APIService.Username }));
-            var userId = loggedUser.FirstOrDefault().Id;
+        {
+            var loggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id;
 
             RecipeTranslationUpsertRequest recipeTranslationRequest = new RecipeTranslationUpsertRequest();
             RecipeUpsertRequest recipeRequest = new RecipeUpsertRequest();
@@ -88,7 +88,7 @@ namespace eKuharica.WinUI.Recipes
             recipeTranslationRequest.Advice = recipeRequest.Advice = txtAdvice.Text;
             recipeTranslationRequest.Serving = recipeRequest.Serving = txtServing.Text;
             recipeRequest.Picture = Helpers.Helper.ImageToByteArray(pbCoverPicture.Image);
-            recipeRequest.UserId = userId;//logovanog uzimati
+            recipeRequest.UserId = loggedUserId;//logovanog uzimati
             recipeRequest.IsTranslated = _recipeTranslation != null ? true : false;
             recipeTranslationRequest.RecipeId = _recipe.Id;
             recipeRequest.IsRead = true;
@@ -198,7 +198,7 @@ namespace eKuharica.WinUI.Recipes
                 AuthorUserName = APIService.Username
             };
 
-            frmShowRecipes frmShowRecipe = new frmShowRecipes(recipe);
+            frmShowRecipes frmShowRecipe = new frmShowRecipes(recipe, Enum.GetName(typeof(Enumerations.Source),Enumerations.Source.Add));
             frmShowRecipe.MdiParent = MdiParent;
             frmShowRecipe.WindowState = FormWindowState.Maximized;
             frmShowRecipe.Show();

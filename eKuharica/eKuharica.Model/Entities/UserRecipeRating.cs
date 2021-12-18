@@ -6,10 +6,11 @@ using System.Text;
 
 namespace eKuharica.Model.Entities
 {
-    [Table("UserFavouriteRecipes")]
-    public class UserFavouriteRecipe
+    [Table("UserRecipeRatings")]
+    public class UserRecipeRating
     {
         public int Id { get; set; }
+        public int Rating { get; set; }
 
         [Required, ForeignKey(nameof(Recipe)), Range(1, int.MaxValue)]
         public int RecipeId { get; set; }
@@ -19,6 +20,7 @@ namespace eKuharica.Model.Entities
         public int UserId { get; set; }
         public virtual User User { get; set; }
 
+        public DateTime CreatedAt { get; set; }
         public bool IsDeleted { get; set; }
     }
 }
