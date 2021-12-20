@@ -34,6 +34,9 @@ namespace eKuharica.Services.Users
             if (!string.IsNullOrWhiteSpace(request.LastName))
                 query = query.Where(x => x.LastName.ToLower().Contains(request.LastName.ToLower()));
 
+            if (!string.IsNullOrWhiteSpace(request.UserName))
+                query = query.Where(x => x.Username.ToLower().Contains(request.UserName.ToLower()));
+
             var list = query.ToList();
 
             return _mapper.Map<List<UserDto>>(list);

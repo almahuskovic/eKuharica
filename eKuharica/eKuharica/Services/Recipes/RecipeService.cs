@@ -23,6 +23,11 @@ namespace eKuharica.Services.Recipes
 
             if (!search.ByUsers)
             {
+                if (search.IsFavouriteRecipeSearch && search.RecipeIds == null)
+                {
+                    return new List<RecipeDto>();
+                }
+
                 if (!string.IsNullOrWhiteSpace(search?.Title))
                 {
                     entity = entity.Where(x => x.Title.ToLower().Contains(search.Title.ToLower()));
@@ -39,6 +44,10 @@ namespace eKuharica.Services.Recipes
                 {
                     entity = entity.Where(x => x.MealType == search.MealType);
                 }
+                if (search.RecipeIds != null && search.RecipeIds.Any())
+                {
+                    entity = entity.Where(x => search.RecipeIds.Contains(x.Id));
+                }
 
                 entity = entity.Where(x => x.IsApproved);
             }
@@ -49,7 +58,6 @@ namespace eKuharica.Services.Recipes
 
             var list = entity.ToList();
             return _mapper.Map<List<RecipeDto>>(list);
-
         }
     }
 }

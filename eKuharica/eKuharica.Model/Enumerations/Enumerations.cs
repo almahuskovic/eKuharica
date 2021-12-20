@@ -37,6 +37,7 @@ namespace eKuharica.Model.Enumerations
             Index,
             Add,
             Edit,
+            Other
         }
     }
 }

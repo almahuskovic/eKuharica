@@ -20,16 +20,26 @@ namespace eKuharica.WinUI.Recipes
     {
         APIService _recipeService = new APIService("Recipe");
         APIService _recipeTranslationService = new APIService("RecipeTranslation");
-       
-        public frmRecipes()
+        APIService _userService = new APIService("User");
+        APIService _userFavouriteRecipeService = new APIService("UserFavouriteRecipe");
+        bool _isFavouriteRecipeList;
+        public frmRecipes(bool isFav = false)
         {
             InitializeComponent();
             sdgvRecipes.AutoGenerateColumns = false;
             gbExtraFilters.Visible = false;
+            _isFavouriteRecipeList = isFav;
 
             cmbMealType.DataSource = Helpers.Helper.MealTypeToSelectList();
             cmbPreparationTime.DataSource = Helpers.Helper.PreparationTimeCategoryToSelectList();
             cmbWeightOfPreparation.DataSource = Helpers.Helper.WeightOfPreparationToSelectList();
+
+            if(_isFavouriteRecipeList)
+            {
+                btnNewRecipe.Visible = false;
+                sdgvRecipes.Columns["Akcije"].Visible = sdgvRecipes.Columns["Prevod"].Visible = 
+                sdgvRecipes.Columns["Uredi"].Visible = sdgvRecipes.Columns["Obrisi"].Visible = false;
+            }
         }
 
         private void LoadData(List<RecipeDto> data)
@@ -60,7 +70,25 @@ namespace eKuharica.WinUI.Recipes
 
         private async void frmRecipes_Load(object sender, EventArgs e)
         {
-            var data = await _recipeService.Get<List<RecipeDto>>();
+            var data = new List<RecipeDto>();
+            var searchObj = new RecipeSearchObject();
+
+            if (_isFavouriteRecipeList)
+            {
+                var searchRequest = new UserFavouriteRecipeSearchRequest() { 
+                    UserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id 
+                };
+
+                searchObj.RecipeIds = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(searchRequest))
+                    .Where(x => !x.IsDeleted)
+                    .Select(x => x.RecipeId)
+                    .ToList();
+                searchObj.IsFavouriteRecipeSearch = true;
+
+                
+            }
+
+            data = await _recipeService.Get<List<RecipeDto>>(searchObj);
             LoadData(data);
         }
 

@@ -52,9 +52,9 @@ namespace eKuharica.WinUI.Recipes
                 var loggedUser = (await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = APIService.Username }));
                 lblAuthor.Text = loggedUser.FirstOrDefault().Username;
 
-                if ((int)Enum.Parse(typeof(Enumerations.Source), _source) == (int)Enumerations.Source.Add)
+                if (_source != "" && (int)Enum.Parse(typeof(Enumerations.Source), _source) == (int)Enumerations.Source.Add)
                 {
-                    gbLike.Visible = rcStar.Visible = rbtnComments.Visible = false;
+                    gbLike.Visible = rcStar.Visible = false;//rbtnComments.Visible = false;
                 }
             }
         }
@@ -65,15 +65,6 @@ namespace eKuharica.WinUI.Recipes
 
             var userFavSearchRequest = new UserFavouriteRecipeSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
             var exist = await _userFavouriteRecipeService.Get<UserFavouriteRecipeDto>(userFavSearchRequest);
-
-            if (exist != null)//ukloni iz favorita
-            {
-                
-            }
-            else //spasi u favorite
-            {
-               
-            }
 
             exist.IsDeleted = !exist.IsDeleted;
             await _userFavouriteRecipeService.Update<UserFavouriteRecipeDto>(exist.Id, exist);
