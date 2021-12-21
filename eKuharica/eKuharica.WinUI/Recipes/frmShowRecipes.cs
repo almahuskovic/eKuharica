@@ -20,6 +20,7 @@ namespace eKuharica.WinUI.Recipes
         APIService _userService = new APIService("User");
         APIService _recipeService = new APIService("Recipe");
         APIService _userFavouriteRecipeService = new APIService("UserFavouriteRecipe");
+        APIService _userRecipeRatingService = new APIService("UserRecipeRating");
         public frmShowRecipes(RecipeDto recipe = null, string source="")
         {
             InitializeComponent();
@@ -36,6 +37,8 @@ namespace eKuharica.WinUI.Recipes
         {
             if (_recipe != null)
             {
+                var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+
                 rtbAdvice.Text = _recipe.Advice;
                 rtbMethod.Text = _recipe.Method;
                 rtbIntroduction.Text = _recipe.Introduction;
@@ -47,10 +50,10 @@ namespace eKuharica.WinUI.Recipes
                 lblPrepTime.Text = _recipe.PreparationTime.ToShortTimeString();
                 lblMealType.Text = Enum.GetName(typeof(Enumerations.MealType), _recipe.MealType);
                 lblWeightOfPrep.Text = Enum.GetName(typeof(Enumerations.WeightOfPreparation), _recipe.WeightOfPreparation);
-                rcStar.Value = _recipe.Rating;
+                rcStar.Value = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(new UserRecipeRatingSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id })).FirstOrDefault().Rating;
+                rcLike.Value = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(new UserFavouriteRecipeSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id })).Count()>0?1:0;
 
-                var loggedUser = (await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = APIService.Username }));
-                lblAuthor.Text = loggedUser.FirstOrDefault().Username;
+                lblAuthor.Text = loggedUser.Username;
 
                 if (_source != "" && (int)Enum.Parse(typeof(Enumerations.Source), _source) == (int)Enumerations.Source.Add)
                 {
@@ -64,20 +67,51 @@ namespace eKuharica.WinUI.Recipes
             var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
 
             var userFavSearchRequest = new UserFavouriteRecipeSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
-            var exist = await _userFavouriteRecipeService.Get<UserFavouriteRecipeDto>(userFavSearchRequest);
+            var exist = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(userFavSearchRequest)).FirstOrDefault();
 
-            exist.IsDeleted = !exist.IsDeleted;
-            await _userFavouriteRecipeService.Update<UserFavouriteRecipeDto>(exist.Id, exist);
+            if (exist != null)
+            {
+                exist.IsDeleted = !exist.IsDeleted;
+                await _userFavouriteRecipeService.Update<UserFavouriteRecipeUpsertRequest>(exist.Id, exist);
+            }
+            else
+            {
+                var userFavourite = new UserFavouriteRecipeUpsertRequest()
+                {
+                    IsDeleted = false,
+                    RecipeId = _recipe.Id,
+                    UserId = loggedUser.Id
+                };
+                await _userFavouriteRecipeService.Insert<UserFavouriteRecipeUpsertRequest>(userFavourite);
+            }
         }
 
         private async void rcStar_Click(object sender, EventArgs e)
         {
             var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+            var rating = int.Parse(rcStar.ToolTipSettings.Body.Text);
 
-            //var userFavSearchRequest = new UserFavouriteRecipeSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
-            //var exist = await _userFavouriteRecipeService.Get<UserFavouriteRecipeDto>(userFavSearchRequest);
+            var userRatingSearchRequest = new UserRecipeRatingSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
+            var exist = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(userRatingSearchRequest)).FirstOrDefault();
 
-            //await _userFavouriteRecipeService.Update<UserFavouriteRecipeDto>(exist.Id, exist);
+            if (exist != null && exist.Rating != rating)
+            {
+                exist.Rating = rating;
+                await _userRecipeRatingService.Update<UserRecipeRatingUpsertRequest>(exist.Id, exist);
+            }
+            else
+            {
+                var userRating = new UserRecipeRatingUpsertRequest()
+                {
+                    CreatedAt = DateTime.Now,
+                    IsDeleted = false,
+                    Rating = rating,
+                    RecipeId = _recipe.Id,
+                    UserId = loggedUser.Id
+                };
+
+                await _userRecipeRatingService.Insert<UserRecipeRatingUpsertRequest>(userRating);
+            }
         }
     }
 }

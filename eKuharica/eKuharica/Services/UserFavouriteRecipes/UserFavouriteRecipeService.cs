@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace eKuharica.Services.UserFavouriteRecipes
 {
-    public class UserFavouriteRecipeService : BaseCRUDService<UserFavouriteRecipeDto, UserFavouriteRecipeService,  UserFavouriteRecipeSearchRequest, UserFavouriteRecipeUpsertRequest, UserFavouriteRecipeUpsertRequest>, IUserFavouriteRecipeService
+    public class UserFavouriteRecipeService : BaseCRUDService<UserFavouriteRecipeDto, UserFavouriteRecipe,  UserFavouriteRecipeSearchRequest, UserFavouriteRecipeUpsertRequest, UserFavouriteRecipeUpsertRequest>, IUserFavouriteRecipeService
     {
         public UserFavouriteRecipeService(Context context, IMapper mapper) : base(context, mapper)
         {

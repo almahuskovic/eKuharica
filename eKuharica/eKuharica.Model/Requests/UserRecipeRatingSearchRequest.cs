@@ -6,5 +6,8 @@ namespace eKuharica.Model.Requests
 {
     public class UserRecipeRatingSearchRequest
     {
+        public int UserId { get; set; }
+        public int RecipeId { get; set; }
+        public int Rating { get; set; }
     }
 }
