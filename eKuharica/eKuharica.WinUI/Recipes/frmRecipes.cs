@@ -1,5 +1,6 @@
 ﻿using eKuharica.Model.DTO;
 using eKuharica.Model.Entities;
+using eKuharica.Model.Enumerations;
 using eKuharica.Model.Models;
 using eKuharica.Model.Requests;
 using Microsoft.SqlServer.Management.Sdk.Sfc;
@@ -153,7 +154,11 @@ namespace eKuharica.WinUI.Recipes
                 }
                 if (e.ColumnIndex == 3) //prikazi
                 {
-                    frmShowRecipes frmShowRecipe = new frmShowRecipes(selectedRow);
+                    var source = _isFavouriteRecipeList ?
+                        Enum.GetName(typeof(Source), Source.Other) :
+                        Enum.GetName(typeof(Source), Source.Index);
+
+                    frmShowRecipes frmShowRecipe = new frmShowRecipes(selectedRow, source);
                     frmShowRecipe.MdiParent = MdiParent;
                     frmShowRecipe.WindowState = FormWindowState.Maximized;
                     frmShowRecipe.Show();

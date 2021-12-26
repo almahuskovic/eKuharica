@@ -42,6 +42,9 @@ namespace eKuharica.Mapping
             CreateMap<UserRecipeRatingDto, UserRecipeRating>().ReverseMap();
             CreateMap<UserRecipeRatingUpsertRequest, UserRecipeRating>();
 
+            CreateMap<CommentDto, Comment>().ReverseMap();
+            CreateMap<CommentUpsertRequest, Comment>();
+
             CreateMap<Feedback, FeedbackDto>();
         }
     }

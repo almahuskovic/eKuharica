@@ -55,14 +55,14 @@
             this.tsbFeedbacks = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbReports = new System.Windows.Forms.ToolStripButton();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tsbSettings = new System.Windows.Forms.ToolStripDropDownButton();
             this.favouriteRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.followingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.followsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myRecipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -255,6 +255,7 @@
             // 
             this.followingToolStripMenuItem.Name = "followingToolStripMenuItem";
             resources.ApplyResources(this.followingToolStripMenuItem, "followingToolStripMenuItem");
+            this.followingToolStripMenuItem.Click += new System.EventHandler(this.followingToolStripMenuItem_Click);
             // 
             // followsToolStripMenuItem
             // 
@@ -266,15 +267,16 @@
             this.myRecipesToolStripMenuItem.Name = "myRecipesToolStripMenuItem";
             resources.ApplyResources(this.myRecipesToolStripMenuItem, "myRecipesToolStripMenuItem");
             // 
-            // editProfileToolStripMenuItem
-            // 
-            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            resources.ApplyResources(this.editProfileToolStripMenuItem, "editProfileToolStripMenuItem");
-            // 
             // sendRecipeToolStripMenuItem
             // 
             this.sendRecipeToolStripMenuItem.Name = "sendRecipeToolStripMenuItem";
             resources.ApplyResources(this.sendRecipeToolStripMenuItem, "sendRecipeToolStripMenuItem");
+            this.sendRecipeToolStripMenuItem.Click += new System.EventHandler(this.sendRecipeToolStripMenuItem_Click);
+            // 
+            // editProfileToolStripMenuItem
+            // 
+            this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
+            resources.ApplyResources(this.editProfileToolStripMenuItem, "editProfileToolStripMenuItem");
             // 
             // frmWelcome
             // 

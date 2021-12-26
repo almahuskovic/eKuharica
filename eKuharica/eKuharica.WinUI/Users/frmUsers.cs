@@ -16,16 +16,44 @@ namespace eKuharica.WinUI.Users
     public partial class frmUsers : Form
     {
         APIService _serviceUsers = new APIService("User");
-        public frmUsers()
+        APIService _followService = new APIService("Follow");
+        bool _followers = false;
+        bool _following = false;
+        public frmUsers(bool followers = false, bool following = false)
         {
             InitializeComponent();
             sdgvUsers.AutoGenerateColumns = false;
+            _followers = followers;
+            _following = following;
         }
 
         private async void frmUsers_Load(object sender, EventArgs e)
         {
-            var data = await _serviceUsers.Get<List<UserDto>>();
-            data.ForEach(x => x.FullName = x.FirstName + " " + x.LastName);
+            var data = new List<UserDto>();
+            //TODO:ovdje skontati ko sta malo sam se zapetljala
+            if(_following)
+            {
+                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { })).Select(x => new UserDto
+                {
+                    Username = x.UserName,
+                    Id = x.UserId
+                }).ToList();
+
+            }
+            else if(_followers)
+            {
+                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { })).Select(x => new UserDto
+                {
+                    Username = x.UserName,
+                    Id = x.UserId
+                }).ToList();
+            }
+            else
+            {
+                data = await _serviceUsers.Get<List<UserDto>>();
+                data.ForEach(x => x.FullName = x.FirstName + " " + x.LastName);
+            }
+         
             sdgvUsers.DataSource = data;//data.Where(x=>x.UserRoles.Contains())- hocu da displaya sve osim admina
 
             sdgvUsers.PageSize = 10;

@@ -164,9 +164,14 @@ namespace eKuharica.WinUI.Helpers
         }
 
         #endregion
-
-
-
-
+        public static string GenerateCommentsDisplayList(List<CommentDto> comments)
+        {
+            var commentsList = "";
+            foreach (var comment in comments)
+            {
+                commentsList += comment.User + ":" + Environment.NewLine + comment.Description + Environment.NewLine;
+            }
+            return commentsList;
+        }
     }
 }

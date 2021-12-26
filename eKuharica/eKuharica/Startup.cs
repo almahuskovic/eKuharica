@@ -8,6 +8,7 @@ using eKuharica.Security;
 using eKuharica.Services;
 using eKuharica.Services.Articles;
 using eKuharica.Services.ArticleTranslations;
+using eKuharica.Services.Comments;
 using eKuharica.Services.Feedbacks;
 using eKuharica.Services.Follows;
 using eKuharica.Services.Recipes;
@@ -80,6 +81,7 @@ namespace eKuharica
             services.AddScoped<IArticleTranslationService, ArticleTranslationService>();
             services.AddScoped<IUserFavouriteRecipeService, UserFavouriteRecipeService>();
             services.AddScoped<IUserRecipeRatingService, UserRecipeRatingService>();
+            services.AddScoped<ICommentService, CommentService>();
 
 
             services.AddAuthentication("BasicAuthentication")

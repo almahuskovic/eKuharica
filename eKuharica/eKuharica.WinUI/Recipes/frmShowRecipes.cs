@@ -21,6 +21,7 @@ namespace eKuharica.WinUI.Recipes
         APIService _recipeService = new APIService("Recipe");
         APIService _userFavouriteRecipeService = new APIService("UserFavouriteRecipe");
         APIService _userRecipeRatingService = new APIService("UserRecipeRating");
+        APIService _commentService = new APIService("Comment");
         public frmShowRecipes(RecipeDto recipe = null, string source="")
         {
             InitializeComponent();
@@ -51,38 +52,16 @@ namespace eKuharica.WinUI.Recipes
                 lblMealType.Text = Enum.GetName(typeof(Enumerations.MealType), _recipe.MealType);
                 lblWeightOfPrep.Text = Enum.GetName(typeof(Enumerations.WeightOfPreparation), _recipe.WeightOfPreparation);
                 rcStar.Value = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(new UserRecipeRatingSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id })).FirstOrDefault().Rating;
-                rcLike.Value = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(new UserFavouriteRecipeSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id })).Count()>0?1:0;
+                rcAddFavourite.Value = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(new UserFavouriteRecipeSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id })).Count()>0?1:0;
+                rtbComments.Text = Helpers.Helper.GenerateCommentsDisplayList(await _commentService.Get<List<CommentDto>>(new CommentSearchRequest() { RecipeId = _recipe.Id }));
+                lblLikesDisplay.Text = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(new UserFavouriteRecipeSearchRequest() { RecipeId = _recipe.Id })).Count().ToString();
 
                 lblAuthor.Text = loggedUser.Username;
 
                 if (_source != "" && (int)Enum.Parse(typeof(Enumerations.Source), _source) == (int)Enumerations.Source.Add)
                 {
-                    gbLike.Visible = rcStar.Visible = false;//rbtnComments.Visible = false;
+                    gbLike.Visible = rcStar.Visible = rcAddFavourite.Visible = gbComments.Visible = false;//rbtnComments.Visible = false;
                 }
-            }
-        }
-
-        private async void rcLike_Click(object sender, EventArgs e)
-        {
-            var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
-
-            var userFavSearchRequest = new UserFavouriteRecipeSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
-            var exist = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(userFavSearchRequest)).FirstOrDefault();
-
-            if (exist != null)
-            {
-                exist.IsDeleted = !exist.IsDeleted;
-                await _userFavouriteRecipeService.Update<UserFavouriteRecipeUpsertRequest>(exist.Id, exist);
-            }
-            else
-            {
-                var userFavourite = new UserFavouriteRecipeUpsertRequest()
-                {
-                    IsDeleted = false,
-                    RecipeId = _recipe.Id,
-                    UserId = loggedUser.Id
-                };
-                await _userFavouriteRecipeService.Insert<UserFavouriteRecipeUpsertRequest>(userFavourite);
             }
         }
 
@@ -112,6 +91,87 @@ namespace eKuharica.WinUI.Recipes
 
                 await _userRecipeRatingService.Insert<UserRecipeRatingUpsertRequest>(userRating);
             }
+        }
+
+        private async void rcAddFavourite_Click(object sender, EventArgs e)
+        {
+            var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+
+            var userFavSearchRequest = new UserFavouriteRecipeSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
+            var exist = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(userFavSearchRequest)).FirstOrDefault();
+
+            if (exist != null)
+            {
+                exist.IsDeleted = !exist.IsDeleted;
+                await _userFavouriteRecipeService.Update<UserFavouriteRecipeUpsertRequest>(exist.Id, exist);
+            }
+            else
+            {
+                var userFavourite = new UserFavouriteRecipeUpsertRequest()
+                {
+                    IsDeleted = false,
+                    RecipeId = _recipe.Id,
+                    UserId = loggedUser.Id
+                };
+                await _userFavouriteRecipeService.Insert<UserFavouriteRecipeUpsertRequest>(userFavourite);
+            }
+        }
+
+        private async void btnAddComment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var comment = new CommentUpsertRequest()
+                {
+                    Description = txtComment.Text,
+                    IsDeleted = false,
+                    ModifiedAt = DateTime.Now,
+                    RecipeId = _recipe.Id,
+                    UserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id
+                };
+
+                await _commentService.Insert<CommentUpsertRequest>(comment);
+
+                MessageBox.Show("Komentar je uspješno spašen");
+            }
+            catch
+            {
+                MessageBox.Show("Dogodila se greška");
+            }
+        }
+
+        private void btnMethodMore_Click(object sender, EventArgs e)
+        {
+            frmMoreToRead frmMoreToRead = new frmMoreToRead(_recipe.Method);
+            frmMoreToRead.Owner = this;
+            Enabled = false;
+            frmMoreToRead.ShowDialog();
+        }
+
+        private void btnServingMore_Click(object sender, EventArgs e)
+        {
+            frmMoreToRead frmMoreToRead = new frmMoreToRead(_recipe.Serving);
+            frmMoreToRead.Owner = this;
+            Enabled = false;
+            frmMoreToRead.ShowDialog();
+        }
+
+        private void btnAdviceMore_Click(object sender, EventArgs e)
+        {
+            frmMoreToRead frmMoreToRead = new frmMoreToRead(_recipe.Advice);
+            frmMoreToRead.Owner = this;
+            Enabled = false;
+            frmMoreToRead.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            var isFavourite = (int)Enum.Parse(typeof(Enumerations.Source), _source) == (int)Enumerations.Source.Other;
+
+            frmRecipes frmRecipes = new frmRecipes(isFavourite);
+            frmRecipes.MdiParent = MdiParent;
+            frmRecipes.WindowState = FormWindowState.Maximized;
+            frmRecipes.Show();
         }
     }
 }

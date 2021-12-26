@@ -79,5 +79,19 @@ namespace eKuharica.WinUI
             frmRecipes.Text = "eKuharica";
             frmRecipes.Show();
         }
+
+        private void followingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsers frmUsers = new frmUsers();
+            frmUsers.MdiParent = this;
+            frmUsers.WindowState = FormWindowState.Maximized;
+            frmUsers.Text = "eKuharica";
+            frmUsers.Show();
+        }
+
+        private void sendRecipeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddRecipes frmAddRecipes = new frmAddRecipes();
+        }
     }
 }

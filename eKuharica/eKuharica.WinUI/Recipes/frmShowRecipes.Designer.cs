@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection7 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton7 = new Syncfusion.Windows.Forms.Tools.ResetButton();
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection8 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton8 = new Syncfusion.Windows.Forms.Tools.ResetButton();
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection9 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton9 = new Syncfusion.Windows.Forms.Tools.ResetButton();
+            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection1 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
+            Syncfusion.Windows.Forms.Tools.ResetButton resetButton1 = new Syncfusion.Windows.Forms.Tools.ResetButton();
+            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection2 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
+            Syncfusion.Windows.Forms.Tools.ResetButton resetButton2 = new Syncfusion.Windows.Forms.Tools.ResetButton();
+            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection3 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
+            Syncfusion.Windows.Forms.Tools.ResetButton resetButton3 = new Syncfusion.Windows.Forms.Tools.ResetButton();
             this.pbPicture = new System.Windows.Forms.PictureBox();
             this.gbCover = new System.Windows.Forms.GroupBox();
+            this.rcAddFavourite = new Syncfusion.Windows.Forms.Tools.RatingControl();
             this.lblBack = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@
             this.rtbIngredients = new System.Windows.Forms.RichTextBox();
             this.gbMethod = new System.Windows.Forms.GroupBox();
             this.btnMethodMore = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblMethod = new System.Windows.Forms.Label();
             this.rtbMethod = new System.Windows.Forms.RichTextBox();
             this.gbAdvice = new System.Windows.Forms.GroupBox();
             this.btnAdviceMore = new System.Windows.Forms.Button();
@@ -62,11 +63,11 @@
             this.rcStar = new Syncfusion.Windows.Forms.Tools.RatingControl();
             this.rcLike = new Syncfusion.Windows.Forms.Tools.RatingControl();
             this.gbLike = new System.Windows.Forms.GroupBox();
-            this.rcAddFavourite = new Syncfusion.Windows.Forms.Tools.RatingControl();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.btnAddComment = new System.Windows.Forms.Button();
-            this.txtComment = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.gbComments = new System.Windows.Forms.GroupBox();
+            this.txtComment = new System.Windows.Forms.TextBox();
+            this.btnAddComment = new System.Windows.Forms.Button();
+            this.rtbComments = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.gbCover.SuspendLayout();
             this.gbIngredients.SuspendLayout();
@@ -74,6 +75,7 @@
             this.gbAdvice.SuspendLayout();
             this.gbServing.SuspendLayout();
             this.gbLike.SuspendLayout();
+            this.gbComments.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbPicture
@@ -84,7 +86,7 @@
             this.pbPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbPicture.Location = new System.Drawing.Point(3, 18);
             this.pbPicture.Name = "pbPicture";
-            this.pbPicture.Size = new System.Drawing.Size(1318, 228);
+            this.pbPicture.Size = new System.Drawing.Size(1341, 228);
             this.pbPicture.TabIndex = 1;
             this.pbPicture.TabStop = false;
             // 
@@ -99,9 +101,30 @@
             this.gbCover.Controls.Add(this.pbPicture);
             this.gbCover.Location = new System.Drawing.Point(12, 12);
             this.gbCover.Name = "gbCover";
-            this.gbCover.Size = new System.Drawing.Size(1324, 249);
+            this.gbCover.Size = new System.Drawing.Size(1350, 249);
             this.gbCover.TabIndex = 2;
             this.gbCover.TabStop = false;
+            // 
+            // rcAddFavourite
+            // 
+            this.rcAddFavourite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rcAddFavourite.ApplyGradientColors = false;
+            this.rcAddFavourite.Images = customImageCollection1;
+            this.rcAddFavourite.ItemHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.rcAddFavourite.ItemHighlightEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.rcAddFavourite.ItemHighlightStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.rcAddFavourite.ItemsCount = 1;
+            this.rcAddFavourite.ItemSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
+            this.rcAddFavourite.ItemSelectionStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rcAddFavourite.ItemSize = new System.Drawing.Size(22, 22);
+            this.rcAddFavourite.Location = new System.Drawing.Point(1281, 21);
+            this.rcAddFavourite.Name = "rcAddFavourite";
+            this.rcAddFavourite.ResetButton = resetButton1;
+            this.rcAddFavourite.Shape = Syncfusion.Windows.Forms.Tools.Shapes.Heart;
+            this.rcAddFavourite.Size = new System.Drawing.Size(55, 32);
+            this.rcAddFavourite.TabIndex = 20;
+            this.rcAddFavourite.Text = "rcAddFavourite";
+            this.rcAddFavourite.Click += new System.EventHandler(this.rcAddFavourite_Click);
             // 
             // lblBack
             // 
@@ -133,7 +156,7 @@
             // lblLikesDisplay
             // 
             this.lblLikesDisplay.AutoSize = true;
-            this.lblLikesDisplay.Location = new System.Drawing.Point(63, 11);
+            this.lblLikesDisplay.Location = new System.Drawing.Point(80, 18);
             this.lblLikesDisplay.Name = "lblLikesDisplay";
             this.lblLikesDisplay.Size = new System.Drawing.Size(46, 17);
             this.lblLikesDisplay.TabIndex = 7;
@@ -146,7 +169,7 @@
             this.rtbIntroduction.Location = new System.Drawing.Point(15, 327);
             this.rtbIntroduction.Name = "rtbIntroduction";
             this.rtbIntroduction.ReadOnly = true;
-            this.rtbIntroduction.Size = new System.Drawing.Size(1318, 69);
+            this.rtbIntroduction.Size = new System.Drawing.Size(1351, 69);
             this.rtbIntroduction.TabIndex = 9;
             this.rtbIntroduction.Text = "";
             // 
@@ -185,32 +208,33 @@
             this.gbMethod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbMethod.Controls.Add(this.btnMethodMore);
-            this.gbMethod.Controls.Add(this.label2);
+            this.gbMethod.Controls.Add(this.lblMethod);
             this.gbMethod.Controls.Add(this.rtbMethod);
             this.gbMethod.Location = new System.Drawing.Point(497, 438);
             this.gbMethod.Name = "gbMethod";
-            this.gbMethod.Size = new System.Drawing.Size(845, 210);
+            this.gbMethod.Size = new System.Drawing.Size(865, 210);
             this.gbMethod.TabIndex = 12;
             this.gbMethod.TabStop = false;
             // 
             // btnMethodMore
             // 
             this.btnMethodMore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMethodMore.Location = new System.Drawing.Point(764, 181);
+            this.btnMethodMore.Location = new System.Drawing.Point(784, 181);
             this.btnMethodMore.Name = "btnMethodMore";
             this.btnMethodMore.Size = new System.Drawing.Size(75, 23);
             this.btnMethodMore.TabIndex = 13;
             this.btnMethodMore.Text = "button1";
             this.btnMethodMore.UseVisualStyleBackColor = true;
+            this.btnMethodMore.Click += new System.EventHandler(this.btnMethodMore_Click);
             // 
-            // label2
+            // lblMethod
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "label2";
+            this.lblMethod.AutoSize = true;
+            this.lblMethod.Location = new System.Drawing.Point(6, 10);
+            this.lblMethod.Name = "lblMethod";
+            this.lblMethod.Size = new System.Drawing.Size(46, 17);
+            this.lblMethod.TabIndex = 12;
+            this.lblMethod.Text = "label2";
             // 
             // rtbMethod
             // 
@@ -219,7 +243,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbMethod.Location = new System.Drawing.Point(6, 30);
             this.rtbMethod.Name = "rtbMethod";
-            this.rtbMethod.Size = new System.Drawing.Size(833, 145);
+            this.rtbMethod.Size = new System.Drawing.Size(853, 145);
             this.rtbMethod.TabIndex = 12;
             this.rtbMethod.Text = "";
             // 
@@ -232,19 +256,20 @@
             this.gbAdvice.Controls.Add(this.rtbAdvice);
             this.gbAdvice.Location = new System.Drawing.Point(497, 654);
             this.gbAdvice.Name = "gbAdvice";
-            this.gbAdvice.Size = new System.Drawing.Size(417, 207);
+            this.gbAdvice.Size = new System.Drawing.Size(456, 207);
             this.gbAdvice.TabIndex = 13;
             this.gbAdvice.TabStop = false;
             // 
             // btnAdviceMore
             // 
             this.btnAdviceMore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdviceMore.Location = new System.Drawing.Point(336, 169);
+            this.btnAdviceMore.Location = new System.Drawing.Point(333, 169);
             this.btnAdviceMore.Name = "btnAdviceMore";
             this.btnAdviceMore.Size = new System.Drawing.Size(75, 23);
             this.btnAdviceMore.TabIndex = 14;
             this.btnAdviceMore.Text = "button2";
             this.btnAdviceMore.UseVisualStyleBackColor = true;
+            this.btnAdviceMore.Click += new System.EventHandler(this.btnAdviceMore_Click);
             // 
             // lblAdvice
             // 
@@ -262,7 +287,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbAdvice.Location = new System.Drawing.Point(6, 34);
             this.rtbAdvice.Name = "rtbAdvice";
-            this.rtbAdvice.Size = new System.Drawing.Size(405, 129);
+            this.rtbAdvice.Size = new System.Drawing.Size(402, 129);
             this.rtbAdvice.TabIndex = 13;
             this.rtbAdvice.Text = "";
             // 
@@ -272,21 +297,22 @@
             this.gbServing.Controls.Add(this.btnServingMore);
             this.gbServing.Controls.Add(this.lblServing);
             this.gbServing.Controls.Add(this.rtbServing);
-            this.gbServing.Location = new System.Drawing.Point(920, 654);
+            this.gbServing.Location = new System.Drawing.Point(959, 654);
             this.gbServing.Name = "gbServing";
-            this.gbServing.Size = new System.Drawing.Size(416, 207);
+            this.gbServing.Size = new System.Drawing.Size(407, 207);
             this.gbServing.TabIndex = 14;
             this.gbServing.TabStop = false;
             // 
             // btnServingMore
             // 
             this.btnServingMore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnServingMore.Location = new System.Drawing.Point(332, 169);
+            this.btnServingMore.Location = new System.Drawing.Point(323, 169);
             this.btnServingMore.Name = "btnServingMore";
             this.btnServingMore.Size = new System.Drawing.Size(75, 23);
             this.btnServingMore.TabIndex = 15;
             this.btnServingMore.Text = "button3";
             this.btnServingMore.UseVisualStyleBackColor = true;
+            this.btnServingMore.Click += new System.EventHandler(this.btnServingMore_Click);
             // 
             // lblServing
             // 
@@ -304,14 +330,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbServing.Location = new System.Drawing.Point(6, 34);
             this.rtbServing.Name = "rtbServing";
-            this.rtbServing.Size = new System.Drawing.Size(401, 129);
+            this.rtbServing.Size = new System.Drawing.Size(392, 129);
             this.rtbServing.TabIndex = 14;
             this.rtbServing.Text = "";
             // 
             // lblPrepTime
             // 
+            this.lblPrepTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrepTime.AutoSize = true;
-            this.lblPrepTime.Location = new System.Drawing.Point(946, 399);
+            this.lblPrepTime.Location = new System.Drawing.Point(1290, 399);
             this.lblPrepTime.Name = "lblPrepTime";
             this.lblPrepTime.Size = new System.Drawing.Size(46, 17);
             this.lblPrepTime.TabIndex = 15;
@@ -328,8 +355,10 @@
             // 
             // lblWeightOfPrep
             // 
+            this.lblWeightOfPrep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWeightOfPrep.AutoSize = true;
-            this.lblWeightOfPrep.Location = new System.Drawing.Point(422, 399);
+            this.lblWeightOfPrep.Location = new System.Drawing.Point(649, 399);
             this.lblWeightOfPrep.Name = "lblWeightOfPrep";
             this.lblWeightOfPrep.Size = new System.Drawing.Size(46, 17);
             this.lblWeightOfPrep.TabIndex = 17;
@@ -338,11 +367,11 @@
             // rcStar
             // 
             this.rcStar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rcStar.Images = customImageCollection7;
+            this.rcStar.Images = customImageCollection2;
             this.rcStar.ItemSize = new System.Drawing.Size(20, 20);
-            this.rcStar.Location = new System.Drawing.Point(1162, 278);
+            this.rcStar.Location = new System.Drawing.Point(1163, 278);
             this.rcStar.Name = "rcStar";
-            this.rcStar.ResetButton = resetButton7;
+            this.rcStar.ResetButton = resetButton2;
             this.rcStar.Size = new System.Drawing.Size(203, 27);
             this.rcStar.TabIndex = 18;
             this.rcStar.Text = "ratingControl1";
@@ -350,17 +379,24 @@
             // 
             // rcLike
             // 
-            this.rcLike.Images = customImageCollection8;
+            this.rcLike.ApplyGradientColors = false;
+            this.rcLike.Images = customImageCollection3;
+            this.rcLike.ItemHighlightColor = System.Drawing.Color.DarkRed;
+            this.rcLike.ItemHighlightEndColor = System.Drawing.Color.Red;
+            this.rcLike.ItemHighlightStartColor = System.Drawing.Color.Red;
             this.rcLike.ItemsCount = 1;
+            this.rcLike.ItemSelectionColor = System.Drawing.Color.Red;
+            this.rcLike.ItemSelectionStartColor = System.Drawing.Color.Red;
             this.rcLike.ItemSize = new System.Drawing.Size(22, 22);
             this.rcLike.Location = new System.Drawing.Point(6, 11);
             this.rcLike.Name = "rcLike";
-            this.rcLike.ResetButton = resetButton8;
+            this.rcLike.ReadOnly = true;
+            this.rcLike.ResetButton = resetButton3;
             this.rcLike.Shape = Syncfusion.Windows.Forms.Tools.Shapes.Heart;
-            this.rcLike.Size = new System.Drawing.Size(30, 27);
+            this.rcLike.Size = new System.Drawing.Size(59, 27);
             this.rcLike.TabIndex = 19;
             this.rcLike.Text = "ratingControl2";
-            this.rcLike.Click += new System.EventHandler(this.rcLike_Click);
+            this.rcLike.Value = 1F;
             // 
             // gbLike
             // 
@@ -372,49 +408,6 @@
             this.gbLike.TabIndex = 20;
             this.gbLike.TabStop = false;
             // 
-            // rcAddFavourite
-            // 
-            this.rcAddFavourite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rcAddFavourite.Images = customImageCollection9;
-            this.rcAddFavourite.ItemsCount = 1;
-            this.rcAddFavourite.ItemSize = new System.Drawing.Size(22, 22);
-            this.rcAddFavourite.Location = new System.Drawing.Point(1285, 21);
-            this.rcAddFavourite.Name = "rcAddFavourite";
-            this.rcAddFavourite.ResetButton = resetButton9;
-            this.rcAddFavourite.Shape = Syncfusion.Windows.Forms.Tools.Shapes.Heart;
-            this.rcAddFavourite.Size = new System.Drawing.Size(30, 27);
-            this.rcAddFavourite.TabIndex = 20;
-            this.rcAddFavourite.Text = "rcAddFavourite";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(15, 883);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1312, 102);
-            this.richTextBox1.TabIndex = 21;
-            this.richTextBox1.Text = "";
-            // 
-            // btnAddComment
-            // 
-            this.btnAddComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddComment.Location = new System.Drawing.Point(1252, 991);
-            this.btnAddComment.Name = "btnAddComment";
-            this.btnAddComment.Size = new System.Drawing.Size(75, 23);
-            this.btnAddComment.TabIndex = 15;
-            this.btnAddComment.Text = "button4";
-            this.btnAddComment.UseVisualStyleBackColor = true;
-            // 
-            // txtComment
-            // 
-            this.txtComment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtComment.Location = new System.Drawing.Point(15, 992);
-            this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(1231, 22);
-            this.txtComment.TabIndex = 22;
-            // 
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(12, 1034);
@@ -423,6 +416,51 @@
             this.btnClose.TabIndex = 23;
             this.btnClose.Text = "Zatvori";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // gbComments
+            // 
+            this.gbComments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbComments.Controls.Add(this.txtComment);
+            this.gbComments.Controls.Add(this.btnAddComment);
+            this.gbComments.Controls.Add(this.rtbComments);
+            this.gbComments.Location = new System.Drawing.Point(3, 867);
+            this.gbComments.Name = "gbComments";
+            this.gbComments.Size = new System.Drawing.Size(1363, 161);
+            this.gbComments.TabIndex = 24;
+            this.gbComments.TabStop = false;
+            // 
+            // txtComment
+            // 
+            this.txtComment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtComment.Location = new System.Drawing.Point(6, 130);
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(1270, 22);
+            this.txtComment.TabIndex = 25;
+            // 
+            // btnAddComment
+            // 
+            this.btnAddComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddComment.Location = new System.Drawing.Point(1282, 129);
+            this.btnAddComment.Name = "btnAddComment";
+            this.btnAddComment.Size = new System.Drawing.Size(75, 23);
+            this.btnAddComment.TabIndex = 23;
+            this.btnAddComment.Text = "button4";
+            this.btnAddComment.UseVisualStyleBackColor = true;
+            this.btnAddComment.Click += new System.EventHandler(this.btnAddComment_Click);
+            // 
+            // rtbComments
+            // 
+            this.rtbComments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbComments.Location = new System.Drawing.Point(6, 21);
+            this.rtbComments.Name = "rtbComments";
+            this.rtbComments.ReadOnly = true;
+            this.rtbComments.Size = new System.Drawing.Size(1347, 102);
+            this.rtbComments.TabIndex = 24;
+            this.rtbComments.Text = "";
             // 
             // frmShowRecipes
             // 
@@ -430,12 +468,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1377, 1069);
+            this.ClientSize = new System.Drawing.Size(1374, 1069);
             this.ControlBox = false;
+            this.Controls.Add(this.gbComments);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.txtComment);
-            this.Controls.Add(this.btnAddComment);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.gbIngredients);
             this.Controls.Add(this.gbMethod);
             this.Controls.Add(this.gbServing);
@@ -464,6 +500,8 @@
             this.gbServing.PerformLayout();
             this.gbLike.ResumeLayout(false);
             this.gbLike.PerformLayout();
+            this.gbComments.ResumeLayout(false);
+            this.gbComments.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,7 +525,7 @@
         private System.Windows.Forms.RichTextBox rtbMethod;
         private System.Windows.Forms.RichTextBox rtbAdvice;
         private System.Windows.Forms.RichTextBox rtbServing;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMethod;
         private System.Windows.Forms.Label lblPrepTime;
         private System.Windows.Forms.Label lblAdvice;
         private System.Windows.Forms.Label lblServing;
@@ -500,9 +538,10 @@
         private System.Windows.Forms.Button btnAdviceMore;
         private System.Windows.Forms.Button btnServingMore;
         private Syncfusion.Windows.Forms.Tools.RatingControl rcAddFavourite;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button btnAddComment;
-        private System.Windows.Forms.TextBox txtComment;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.GroupBox gbComments;
+        private System.Windows.Forms.TextBox txtComment;
+        private System.Windows.Forms.Button btnAddComment;
+        private System.Windows.Forms.RichTextBox rtbComments;
     }
 }

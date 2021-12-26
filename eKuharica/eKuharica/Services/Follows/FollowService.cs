@@ -19,6 +19,7 @@ namespace eKuharica.Services.Follows
         public override IEnumerable<FollowDto> Get(FollowSearchRequest request = null)
         {
             var query = Context.Follow.AsQueryable();
+            var queryUsers = Context.User.AsQueryable();
 
             if (request.UserId > 0)
                 query = query.Where(x => x.UserId == request.UserId);
@@ -27,8 +28,15 @@ namespace eKuharica.Services.Follows
                 query = query.Where(x => x.FollowerId == request.FollowerId);
 
             var list = query.ToList();
+            var mappedList = _mapper.Map<List<FollowDto>>(list);
 
-            return _mapper.Map<List<FollowDto>>(list);
+            mappedList.ForEach(x =>
+            {
+                x.UserName = queryUsers.Where(u => u.Id == x.UserId).FirstOrDefault().Username;
+                x.FollowerName = queryUsers.Where(u => u.Id == x.FollowerId).FirstOrDefault().Username;
+            });
+
+            return mappedList;
         }
 
         public IEnumerable<FollowDto> GetUserFollowers(int userId)
