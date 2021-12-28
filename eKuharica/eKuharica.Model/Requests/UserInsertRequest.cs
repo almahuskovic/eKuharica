@@ -31,6 +31,7 @@ namespace eKuharica.Model.Requests
         //TODO:Regex
         public string Password { get; set; }
         public string PasswordConfirm { get; set; }
+        public byte[] Picture { get; set; }
 
         public List<int> Roles { get; set; } = new List<int>();
     }

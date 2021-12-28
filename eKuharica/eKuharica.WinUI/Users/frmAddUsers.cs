@@ -17,10 +17,14 @@ namespace eKuharica.WinUI.Users
     {
         APIService _roleService = new APIService("Role");
         APIService _userService = new APIService("User");
-
-        public frmAddUsers()
+        private UserDto _user;
+        public frmAddUsers(UserDto user = null)
         {
             InitializeComponent();
+            _user = user;
+
+            if (_user != null)
+                clbRoles.Visible = false;
         }
 
         private void pbPicture_Click(object sender, EventArgs e)
@@ -41,30 +45,69 @@ namespace eKuharica.WinUI.Users
             var roleList = await _roleService.Get<List<RoleDto>>();
             clbRoles.DataSource = roleList;
             clbRoles.DisplayMember = "Name";
+
+            if (_user != null)
+            {
+                txtFirstName.Text = _user.FirstName;
+                txtLastName.Text = _user.LastName;
+                txtPhoneNumber.Text = _user.PhoneNumber;
+                txtEmail.Text = _user.Email;
+                txtUserName.Text = _user.Username;
+                pbPicture.Image = Helpers.Helper.ByteArrayToImage(_user.Picture);
+
+                txtUserName.ReadOnly = true;
+            }
         }
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
             var selectedRoles = clbRoles.CheckedItems.Cast<RoleDto>().Select(x => x.Id).ToList();
 
-            UserInsertRequest userInsertRequest = new UserInsertRequest()
+            if (_user != null)
             {
-                FirstName = txtFirstName.Text,
-                LastName = txtLastName.Text,
-                Email = txtEmail.Text,
-                Username = txtUserName.Text,
-                Password = txtPassword.Text,
-                PasswordConfirm = txtConfirmPassword.Text,
-                Roles = selectedRoles,
-                PhoneNumber = txtPhoneNumber.Text
-            };
+                UserUpdateRequest userInsertRequest = new UserUpdateRequest()
+                {
+                    FirstName = txtFirstName.Text,
+                    LastName = txtLastName.Text,
+                    Email = txtEmail.Text,
+                    Password = txtPassword.Text,
+                    PasswordConfirm = txtConfirmPassword.Text,
+                    PhoneNumber = txtPhoneNumber.Text,
+                    Picture = Helpers.Helper.ImageToByteArray(pbPicture.Image)
+                };
 
-            await _userService.Insert<UserDto>(userInsertRequest);
+                await _userService.Update<UserDto>(_user.Id, userInsertRequest);
+            }
+            else
+            {
+                UserInsertRequest userInsertRequest = new UserInsertRequest()
+                {
+                    FirstName = txtFirstName.Text,
+                    LastName = txtLastName.Text,
+                    Email = txtEmail.Text,
+                    Username = txtUserName.Text,
+                    Password = txtPassword.Text,
+                    PasswordConfirm = txtConfirmPassword.Text,
+                    Roles = selectedRoles,
+                    PhoneNumber = txtPhoneNumber.Text,
+                    Picture  = Helpers.Helper.ImageToByteArray(pbPicture.Image)
+                };
 
-            frmUsers frmUsers = new frmUsers();
-            frmUsers.MdiParent = MdiParent;
-            frmUsers.WindowState = FormWindowState.Maximized;
-            frmUsers.Show();
+                await _userService.Insert<UserDto>(userInsertRequest);
+            }
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (_user == null)
+            {
+                frmUsers frmUsers = new frmUsers();
+                frmUsers.MdiParent = MdiParent;
+                frmUsers.WindowState = FormWindowState.Maximized;
+                frmUsers.Show();
+            }
+
             Hide();
         }
     }

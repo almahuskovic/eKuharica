@@ -29,22 +29,23 @@ namespace eKuharica.WinUI.Users
 
         private async void frmUsers_Load(object sender, EventArgs e)
         {
+            var loggedUserId = (await Helpers.Helper.GetLoggedUser(_serviceUsers, APIService.Username)).Id;
             var data = new List<UserDto>();
-            //TODO:ovdje skontati ko sta malo sam se zapetljala
-            if(_following)
+          
+            if (_following)//koga prati ovaj korisnik
             {
-                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { })).Select(x => new UserDto
+                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { UserId = loggedUserId })).Select(x => new UserDto
                 {
-                    Username = x.UserName,
+                    FullName = x.FollowerName,
                     Id = x.UserId
                 }).ToList();
 
             }
-            else if(_followers)
+            else if (_followers)//ko sve prati ovog korisnika
             {
-                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { })).Select(x => new UserDto
+                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { FollowerId = loggedUserId })).Select(x => new UserDto
                 {
-                    Username = x.UserName,
+                    FullName = x.UserName,
                     Id = x.UserId
                 }).ToList();
             }

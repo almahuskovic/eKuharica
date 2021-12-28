@@ -58,7 +58,7 @@
             this.tsbSettings = new System.Windows.Forms.ToolStripDropDownButton();
             this.favouriteRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.followingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.followsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.followersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myRecipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -238,7 +238,7 @@
             this.tsbSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.favouriteRecipeToolStripMenuItem,
             this.followingToolStripMenuItem,
-            this.followsToolStripMenuItem,
+            this.followersToolStripMenuItem,
             this.myRecipesToolStripMenuItem,
             this.sendRecipeToolStripMenuItem,
             this.editProfileToolStripMenuItem});
@@ -257,15 +257,17 @@
             resources.ApplyResources(this.followingToolStripMenuItem, "followingToolStripMenuItem");
             this.followingToolStripMenuItem.Click += new System.EventHandler(this.followingToolStripMenuItem_Click);
             // 
-            // followsToolStripMenuItem
+            // followersToolStripMenuItem
             // 
-            this.followsToolStripMenuItem.Name = "followsToolStripMenuItem";
-            resources.ApplyResources(this.followsToolStripMenuItem, "followsToolStripMenuItem");
+            this.followersToolStripMenuItem.Name = "followersToolStripMenuItem";
+            resources.ApplyResources(this.followersToolStripMenuItem, "followersToolStripMenuItem");
+            this.followersToolStripMenuItem.Click += new System.EventHandler(this.followersToolStripMenuItem_Click);
             // 
             // myRecipesToolStripMenuItem
             // 
             this.myRecipesToolStripMenuItem.Name = "myRecipesToolStripMenuItem";
             resources.ApplyResources(this.myRecipesToolStripMenuItem, "myRecipesToolStripMenuItem");
+            this.myRecipesToolStripMenuItem.Click += new System.EventHandler(this.myRecipesToolStripMenuItem_Click);
             // 
             // sendRecipeToolStripMenuItem
             // 
@@ -277,6 +279,7 @@
             // 
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
             resources.ApplyResources(this.editProfileToolStripMenuItem, "editProfileToolStripMenuItem");
+            this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
             // 
             // frmWelcome
             // 
@@ -328,7 +331,7 @@
         private System.Windows.Forms.ToolStripDropDownButton tsbSettings;
         private System.Windows.Forms.ToolStripMenuItem favouriteRecipeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem followingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem followsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem followersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem myRecipesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sendRecipeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;

@@ -10,6 +10,7 @@ namespace eKuharica.WinUI
 {
     public partial class frmWelcome : Form
     {
+        APIService _userService = new APIService("User");
         public frmWelcome()
         {
             InitializeComponent();
@@ -82,7 +83,16 @@ namespace eKuharica.WinUI
 
         private void followingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUsers frmUsers = new frmUsers();
+            frmUsers frmUsers = new frmUsers(false,true);
+            frmUsers.MdiParent = this;
+            frmUsers.WindowState = FormWindowState.Maximized;
+            frmUsers.Text = "eKuharica";
+            frmUsers.Show();
+        }
+
+        private void followersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsers frmUsers = new frmUsers(true, false);
             frmUsers.MdiParent = this;
             frmUsers.WindowState = FormWindowState.Maximized;
             frmUsers.Text = "eKuharica";
@@ -91,7 +101,30 @@ namespace eKuharica.WinUI
 
         private void sendRecipeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddRecipes frmAddRecipes = new frmAddRecipes();
+            frmAddRecipes frmSendRecipe = new frmAddRecipes(null,null,false,true);
+            frmSendRecipe.MdiParent = this;
+            frmSendRecipe.WindowState = FormWindowState.Maximized;
+            frmSendRecipe.Text = "eKuharica";
+            frmSendRecipe.Show();
+        }
+
+        private void myRecipesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRecipes frmRecipes = new frmRecipes(false, true);
+            frmRecipes.MdiParent = this;
+            frmRecipes.WindowState = FormWindowState.Maximized;
+            frmRecipes.Text = "eKuharica";
+            frmRecipes.Show();
+        }
+
+        private async void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var user = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+            frmAddUsers frmUsers = new frmAddUsers(user);
+            frmUsers.MdiParent = this;
+            frmUsers.WindowState = FormWindowState.Maximized;
+            frmUsers.Text = "eKuharica";
+            frmUsers.Show();
         }
     }
 }

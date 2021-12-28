@@ -27,26 +27,32 @@ namespace eKuharica.Services.Recipes
                 {
                     return new List<RecipeDto>();
                 }
-
-                if (!string.IsNullOrWhiteSpace(search?.Title))
+                if(search.MyRecipes)//prikazi sve recepte od korisnika
                 {
-                    entity = entity.Where(x => x.Title.ToLower().Contains(search.Title.ToLower()));
+                    entity = entity.Where(x => x.UserId == search.LoggedUserId);
                 }
-                if (search.PreparationTimeCategory.HasValue)
+                else
                 {
-                    entity = entity.Where(x => x.PreparationTimeCategory == search.PreparationTimeCategory);
-                }
-                if (search.WeightOfPreparation.HasValue)
-                {
-                    entity = entity.Where(x => x.WeightOfPreparation == search.WeightOfPreparation);
-                }
-                if (search.MealType.HasValue)
-                {
-                    entity = entity.Where(x => x.MealType == search.MealType);
-                }
-                if (search.RecipeIds != null && search.RecipeIds.Any())
-                {
-                    entity = entity.Where(x => search.RecipeIds.Contains(x.Id));
+                    if (!string.IsNullOrWhiteSpace(search?.Title))
+                    {
+                        entity = entity.Where(x => x.Title.ToLower().Contains(search.Title.ToLower()));
+                    }
+                    if (search.PreparationTimeCategory.HasValue)
+                    {
+                        entity = entity.Where(x => x.PreparationTimeCategory == search.PreparationTimeCategory);
+                    }
+                    if (search.WeightOfPreparation.HasValue)
+                    {
+                        entity = entity.Where(x => x.WeightOfPreparation == search.WeightOfPreparation);
+                    }
+                    if (search.MealType.HasValue)
+                    {
+                        entity = entity.Where(x => x.MealType == search.MealType);
+                    }
+                    if (search.RecipeIds != null && search.RecipeIds.Any())
+                    {
+                        entity = entity.Where(x => search.RecipeIds.Contains(x.Id));
+                    }
                 }
 
                 entity = entity.Where(x => x.IsApproved);

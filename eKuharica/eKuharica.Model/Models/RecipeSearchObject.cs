@@ -14,6 +14,7 @@ namespace eKuharica.Model.Models
         public List<int> RecipeIds { get; set; }
         public bool IsFavouriteRecipeSearch { get; set; }
         public bool ByUsers { get; set; }
-
+        public bool MyRecipes { get; set; }
+        public int LoggedUserId { get; set; }
     }
 }

@@ -38,7 +38,7 @@ namespace eKuharica.WinUI.Users
                 lblFollowingValue.Text = follows.Count().ToString();
                 lblCreatedAtValue.Text = _user.CreatedAt.ToShortDateString();
                 lblUserName.Text = _user.FullName;
-                pbUserProfilePicture.Image = Helpers.Helper.ByteArrayToImage(_user.Picture);
+                pbUserProfilePicture.Image = _user.Picture != null ? Helpers.Helper.ByteArrayToImage(_user.Picture) : null;
             }
         }
 

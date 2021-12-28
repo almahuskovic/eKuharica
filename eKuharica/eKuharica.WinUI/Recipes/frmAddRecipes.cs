@@ -28,13 +28,15 @@ namespace eKuharica.WinUI.Recipes
         private RecipeDto _recipe;
         private RecipeTranslationDto _recipeTranslation;
         private bool _translate;
+        private bool _send;
 
-        public frmAddRecipes(RecipeDto recipe = null, RecipeTranslationDto recipeTranslation = null, bool translate = false)
+        public frmAddRecipes(RecipeDto recipe = null, RecipeTranslationDto recipeTranslation = null, bool translate = false, bool send = false)
         {
             InitializeComponent();
             _recipe = recipe;
             _recipeTranslation = recipeTranslation;
             _translate = translate;
+            _send = send;
         }
 
         private void frmAddRecipes_Load(object sender, EventArgs e)
@@ -92,7 +94,7 @@ namespace eKuharica.WinUI.Recipes
             recipeRequest.IsTranslated = _recipeTranslation != null ? true : false;
             recipeTranslationRequest.RecipeId = _recipe.Id;
             recipeRequest.IsRead = true;
-            recipeRequest.IsSent = _recipe.IsSent;
+            recipeRequest.IsSent = _send ? _send : _recipe.IsSent;
             recipeRequest.IsApproved = _recipe.IsApproved;
 
             if (!_translate) //dodijeli parametre ako je otvoren recept
@@ -164,6 +166,12 @@ namespace eKuharica.WinUI.Recipes
 
         private void pbBack_Click(object sender, EventArgs e)
         {
+            if (_send)
+            {
+                Hide();
+                return;
+            }
+
             if (!_recipe.IsSent)
             {
                 frmUserRecipes frmUserRecipes = new frmUserRecipes();

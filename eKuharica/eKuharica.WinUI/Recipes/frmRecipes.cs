@@ -23,13 +23,15 @@ namespace eKuharica.WinUI.Recipes
         APIService _recipeTranslationService = new APIService("RecipeTranslation");
         APIService _userService = new APIService("User");
         APIService _userFavouriteRecipeService = new APIService("UserFavouriteRecipe");
-        bool _isFavouriteRecipeList;
-        public frmRecipes(bool isFav = false)
+        private bool _isFavouriteRecipeList;
+        private bool _myRecipes;
+        public frmRecipes(bool isFav = false, bool myRecipes = false)
         {
             InitializeComponent();
             sdgvRecipes.AutoGenerateColumns = false;
             gbExtraFilters.Visible = false;
             _isFavouriteRecipeList = isFav;
+            _myRecipes = myRecipes;
 
             cmbMealType.DataSource = Helpers.Helper.MealTypeToSelectList();
             cmbPreparationTime.DataSource = Helpers.Helper.PreparationTimeCategoryToSelectList();
@@ -62,7 +64,9 @@ namespace eKuharica.WinUI.Recipes
                 Title = txtSearch.Text,
                 MealType = cmbMealType.SelectedIndex > 0 ? (int?)cmbMealType.SelectedIndex : null,
                 PreparationTimeCategory = cmbPreparationTime.SelectedIndex > 0 ? (int?)cmbPreparationTime.SelectedIndex : null,
-                WeightOfPreparation = cmbWeightOfPreparation.SelectedIndex > 0 ? (int?)cmbWeightOfPreparation.SelectedIndex : null
+                WeightOfPreparation = cmbWeightOfPreparation.SelectedIndex > 0 ? (int?)cmbWeightOfPreparation.SelectedIndex : null,
+                MyRecipes = _myRecipes,
+                LoggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id
             };
 
             var data = await _recipeService.Get<List<RecipeDto>>(request);
