@@ -24,6 +24,7 @@ namespace eKuharica.WinUI.Users
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            Owner.Enabled = true;
             Hide();
         }
 
@@ -42,9 +43,13 @@ namespace eKuharica.WinUI.Users
             }
         }
 
-        private void lblUserName_Click(object sender, EventArgs e)
+        private void lblUserName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //napraviti da ide na profil korisnika
+            frmUserProfile frmUserProfile = new frmUserProfile(_user);
+            frmUserProfile.MdiParent = MdiParent;
+            frmUserProfile.WindowState = FormWindowState.Maximized;
+            frmUserProfile.Show();
+            //Hide();
         }
     }
 }

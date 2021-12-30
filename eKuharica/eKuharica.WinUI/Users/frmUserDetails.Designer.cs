@@ -122,6 +122,7 @@
             this.lblUserName.TabIndex = 10;
             this.lblUserName.TabStop = true;
             this.lblUserName.Text = "linkLabel1";
+            this.lblUserName.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblUserName_LinkClicked);
             // 
             // frmUserDetails
             // 

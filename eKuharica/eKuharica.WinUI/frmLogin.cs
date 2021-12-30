@@ -22,12 +22,20 @@ namespace eKuharica.WinUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            APIService.Username = txtUsername.Text;
-            APIService.Password = txtPassword.Text;
+            if(!string.IsNullOrWhiteSpace(txtUsername.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                APIService.Username = txtUsername.Text;
+                APIService.Password = txtPassword.Text;
+            }
+            else
+            {
+                MessageBox.Show("Niste unijeli username ili password");
+                return;
+            }
 
             try
             {
-                //nemam pojma cemu bi ovo trebalo da sluzi
+              
                 //var result = await _aPIService.Get<List<UserDto>>();
 
                 frmWelcome frm = new frmWelcome();

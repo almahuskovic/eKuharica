@@ -80,22 +80,34 @@ namespace eKuharica.WinUI.Users
             }
             else
             {
-                UserInsertRequest userInsertRequest = new UserInsertRequest()
+                var usernameValidation = await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName=txtUserName.Text});
+                if (usernameValidation.Count > 0)
                 {
-                    FirstName = txtFirstName.Text,
-                    LastName = txtLastName.Text,
-                    Email = txtEmail.Text,
-                    Username = txtUserName.Text,
-                    Password = txtPassword.Text,
-                    PasswordConfirm = txtConfirmPassword.Text,
-                    Roles = selectedRoles,
-                    PhoneNumber = txtPhoneNumber.Text,
-                    Picture  = Helpers.Helper.ImageToByteArray(pbPicture.Image)
-                };
+                    DialogResult r = MessageBox.Show("Korisničko ime je zauzeto!");
+                    if (r == DialogResult.OK)
+                    {
+                        txtUserName.Text = "";
+                    }
+                }
+                else
+                {
+                    UserInsertRequest userInsertRequest = new UserInsertRequest()
+                    {
+                        FirstName = txtFirstName.Text,
+                        LastName = txtLastName.Text,
+                        Email = txtEmail.Text,
+                        Username = txtUserName.Text,
+                        Password = txtPassword.Text,
+                        PasswordConfirm = txtConfirmPassword.Text,
+                        Roles = selectedRoles,
+                        PhoneNumber = txtPhoneNumber.Text,
+                        Picture = Helpers.Helper.ImageToByteArray(pbPicture.Image)
+                    };
 
-                await _userService.Insert<UserDto>(userInsertRequest);
+                    await _userService.Insert<UserDto>(userInsertRequest);
+                }
             }
-
+            MessageBox.Show("Uspješno ste spremili podatke o korisniku");
         }
 
         private void btnClose_Click(object sender, EventArgs e)

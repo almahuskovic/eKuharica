@@ -105,6 +105,8 @@ namespace eKuharica.WinUI.Users
                 if (e.ColumnIndex == 1)
                 {
                     frmUserDetails frmUserDetails = new frmUserDetails(selectedRow);
+                    frmUserDetails.Owner = this;
+                    Enabled = false;
                     frmUserDetails.Show();
                 }
             }

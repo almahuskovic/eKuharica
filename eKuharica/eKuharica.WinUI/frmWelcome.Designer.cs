@@ -31,18 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcome));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOuttoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.languageBatoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.languageENtoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,11 +38,11 @@
             this.tsbRecipes = new System.Windows.Forms.ToolStripButton();
             this.tsbUserRecipes = new System.Windows.Forms.ToolStripButton();
             this.tsbUsers = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbArticles = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbFeedbacks = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbReports = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbSettings = new System.Windows.Forms.ToolStripDropDownButton();
             this.favouriteRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.followingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +51,9 @@
             this.sendRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.prevediToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bosanskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.engleskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -71,84 +62,11 @@
             // 
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileMenu,
             this.logOuttoolStripMenuItem1,
-            this.languageBatoolStripMenuItem2});
+            this.languageBatoolStripMenuItem2,
+            this.prevediToolStripMenuItem});
             resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
-            // 
-            // fileMenu
-            // 
-            this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem,
-            this.openToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.saveToolStripMenuItem,
-            this.saveAsToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.printToolStripMenuItem,
-            this.printPreviewToolStripMenuItem,
-            this.printSetupToolStripMenuItem,
-            this.toolStripSeparator5,
-            this.exitToolStripMenuItem});
-            resources.ApplyResources(this.fileMenu, "fileMenu");
-            this.fileMenu.Name = "fileMenu";
-            // 
-            // newToolStripMenuItem
-            // 
-            resources.ApplyResources(this.newToolStripMenuItem, "newToolStripMenuItem");
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            // 
-            // openToolStripMenuItem
-            // 
-            resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-            // 
-            // saveToolStripMenuItem
-            // 
-            resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            // 
-            // saveAsToolStripMenuItem
-            // 
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            resources.ApplyResources(this.saveAsToolStripMenuItem, "saveAsToolStripMenuItem");
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
-            // 
-            // printToolStripMenuItem
-            // 
-            resources.ApplyResources(this.printToolStripMenuItem, "printToolStripMenuItem");
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            // 
-            // printPreviewToolStripMenuItem
-            // 
-            resources.ApplyResources(this.printPreviewToolStripMenuItem, "printPreviewToolStripMenuItem");
-            this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            // 
-            // printSetupToolStripMenuItem
-            // 
-            this.printSetupToolStripMenuItem.Name = "printSetupToolStripMenuItem";
-            resources.ApplyResources(this.printSetupToolStripMenuItem, "printSetupToolStripMenuItem");
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
             // logOuttoolStripMenuItem1
             // 
@@ -180,8 +98,8 @@
             this.tsbRecipes,
             this.tsbUserRecipes,
             this.tsbUsers,
-            this.tsbArticles,
             this.toolStripSeparator1,
+            this.tsbArticles,
             this.tsbFeedbacks,
             this.tsbReports,
             this.toolStripSeparator2,
@@ -206,16 +124,16 @@
             this.tsbUsers.Name = "tsbUsers";
             this.tsbUsers.Click += new System.EventHandler(this.tsbUsers_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            // 
             // tsbArticles
             // 
             resources.ApplyResources(this.tsbArticles, "tsbArticles");
             this.tsbArticles.Name = "tsbArticles";
             this.tsbArticles.Click += new System.EventHandler(this.tsbArticles_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // tsbFeedbacks
             // 
@@ -223,15 +141,15 @@
             this.tsbFeedbacks.Name = "tsbFeedbacks";
             this.tsbFeedbacks.Click += new System.EventHandler(this.tsbFeedbacks_Click);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
             // tsbReports
             // 
             resources.ApplyResources(this.tsbReports, "tsbReports");
             this.tsbReports.Name = "tsbReports";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             // 
             // tsbSettings
             // 
@@ -281,6 +199,24 @@
             resources.ApplyResources(this.editProfileToolStripMenuItem, "editProfileToolStripMenuItem");
             this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
             // 
+            // prevediToolStripMenuItem
+            // 
+            this.prevediToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bosanskiToolStripMenuItem,
+            this.engleskiToolStripMenuItem});
+            this.prevediToolStripMenuItem.Name = "prevediToolStripMenuItem";
+            resources.ApplyResources(this.prevediToolStripMenuItem, "prevediToolStripMenuItem");
+            // 
+            // bosanskiToolStripMenuItem
+            // 
+            this.bosanskiToolStripMenuItem.Name = "bosanskiToolStripMenuItem";
+            resources.ApplyResources(this.bosanskiToolStripMenuItem, "bosanskiToolStripMenuItem");
+            // 
+            // engleskiToolStripMenuItem
+            // 
+            this.engleskiToolStripMenuItem.Name = "engleskiToolStripMenuItem";
+            resources.ApplyResources(this.engleskiToolStripMenuItem, "engleskiToolStripMenuItem");
+            // 
             // frmWelcome
             // 
             resources.ApplyResources(this, "$this");
@@ -306,18 +242,6 @@
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem printSetupToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fileMenu;
-        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton tsbRecipes;
         private System.Windows.Forms.ToolStripButton tsbUserRecipes;
         private System.Windows.Forms.ToolStripButton tsbUsers;
@@ -335,6 +259,9 @@
         private System.Windows.Forms.ToolStripMenuItem myRecipesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sendRecipeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prevediToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bosanskiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem engleskiToolStripMenuItem;
     }
 }
 

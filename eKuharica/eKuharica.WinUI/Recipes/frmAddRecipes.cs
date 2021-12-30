@@ -133,6 +133,8 @@ namespace eKuharica.WinUI.Recipes
                 }
             }
 
+            MessageBox.Show("Uspješno ste izmijenili podatke o receptu");
+
             if (!_recipe.IsSent)
             {
                 frmRecipes frmRecipes = new frmRecipes();
