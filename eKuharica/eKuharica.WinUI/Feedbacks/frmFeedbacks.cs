@@ -42,7 +42,7 @@ namespace eKuharica.WinUI.Feedbacks
                 Username = txtUserName.Text
             };
 
-            sdgvFeedbacks.DataSource = await _feedbackService.Get<FeedbackDto>(request);
+            sdgvFeedbacks.DataSource = await _feedbackService.Get<List<FeedbackDto>>(request);
         }
 
         private async void frmFeedbacks_Load(object sender, EventArgs e)

@@ -24,7 +24,7 @@ namespace eKuharica.WinUI.Users
             _user = user;
 
             if (_user != null)
-                clbRoles.Visible = false;
+                gbRoles.Visible = gbPassword.Visible = false;
         }
 
         private void pbPicture_Click(object sender, EventArgs e)

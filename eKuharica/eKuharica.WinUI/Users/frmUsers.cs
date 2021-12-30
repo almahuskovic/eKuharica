@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static eKuharica.Model.Enumerations.Enumerations;
 
 namespace eKuharica.WinUI.Users
 {
@@ -29,12 +30,15 @@ namespace eKuharica.WinUI.Users
 
         private async void frmUsers_Load(object sender, EventArgs e)
         {
-            var loggedUserId = (await Helpers.Helper.GetLoggedUser(_serviceUsers, APIService.Username)).Id;
+            var loggedUser = (await Helpers.Helper.GetLoggedUser(_serviceUsers, APIService.Username));
             var data = new List<UserDto>();
-          
+
+            if (!Helpers.Helper.IsAdministrator(loggedUser))
+               btnAddUser.Visible = false;
+
             if (_following)//koga prati ovaj korisnik
             {
-                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { UserId = loggedUserId })).Select(x => new UserDto
+                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { UserId = loggedUser.Id })).Select(x => new UserDto
                 {
                     FullName = x.FollowerName,
                     Id = x.UserId
@@ -43,7 +47,7 @@ namespace eKuharica.WinUI.Users
             }
             else if (_followers)//ko sve prati ovog korisnika
             {
-                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { FollowerId = loggedUserId })).Select(x => new UserDto
+                data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { FollowerId = loggedUser.Id })).Select(x => new UserDto
                 {
                     FullName = x.UserName,
                     Id = x.UserId
@@ -54,8 +58,14 @@ namespace eKuharica.WinUI.Users
                 data = await _serviceUsers.Get<List<UserDto>>();
                 data.ForEach(x => x.FullName = x.FirstName + " " + x.LastName);
             }
-         
-            sdgvUsers.DataSource = data;//data.Where(x=>x.UserRoles.Contains())- hocu da displaya sve osim admina
+
+            if (!Helpers.Helper.IsAdministrator(loggedUser))//hocu da displaya samo usere
+            {
+                data = data.Where(x => !x.UserRoles.Any(s => s.Role.Name == Enum.GetName(typeof(Roles), Roles.Administrator) 
+                || s.Role.Name == Enum.GetName(typeof(Roles), Roles.Employee))).ToList();
+            }
+
+            sdgvUsers.DataSource = data;
 
             sdgvUsers.PageSize = 10;
             DataTable dt = Helpers.Helper.ToDataTable(data);

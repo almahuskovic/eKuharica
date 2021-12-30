@@ -24,7 +24,7 @@ namespace eKuharica.Controllers
             _userService = userService;
         }
 
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public UserDto Insert([FromBody] UserInsertRequest request)
         {

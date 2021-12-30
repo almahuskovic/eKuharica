@@ -180,11 +180,11 @@
             this.tsbRecipes,
             this.tsbUserRecipes,
             this.tsbUsers,
-            this.toolStripSeparator1,
             this.tsbArticles,
+            this.toolStripSeparator1,
             this.tsbFeedbacks,
-            this.toolStripSeparator2,
             this.tsbReports,
+            this.toolStripSeparator2,
             this.tsbSettings});
             this.toolStrip.Name = "toolStrip";
             // 

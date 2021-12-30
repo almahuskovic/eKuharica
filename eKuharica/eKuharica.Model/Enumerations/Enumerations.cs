@@ -39,5 +39,12 @@ namespace eKuharica.Model.Enumerations
             Edit,
             Other
         }
+
+        public enum Roles
+        {
+            Administrator,
+            Employee,
+            User
+        }
     }
 }

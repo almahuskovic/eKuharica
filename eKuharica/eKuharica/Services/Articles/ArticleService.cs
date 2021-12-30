@@ -25,7 +25,10 @@ namespace eKuharica.Services.Articles
             }
 
             var list = entity.ToList();
-            return _mapper.Map<List<ArticleDto>>(list);
+            var mappedList = _mapper.Map<List<ArticleDto>>(list);
+            mappedList.ForEach(x => x.IsCreatedByLoggedUser = (x.CreateUserId == search.LoggedUserId));
+
+            return mappedList;
         }
     }
 }

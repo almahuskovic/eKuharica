@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace eKuharica.Services.Feedbacks
 {
-    public class FeedbackService : BaseCRUDService<FeedbackDto, Follow, FeedbackSearchRequest, FeedbackUpsertRequest, FeedbackUpsertRequest>, IFeedbackService
+    public class FeedbackService : BaseCRUDService<FeedbackDto, Feedback, FeedbackSearchRequest, FeedbackUpsertRequest, FeedbackUpsertRequest>, IFeedbackService
     {
         public FeedbackService(Context context, IMapper mapper) : base(context, mapper)
         {

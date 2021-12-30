@@ -49,23 +49,21 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbRoles = new System.Windows.Forms.GroupBox();
+            this.gbPassword = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.gbRoles.SuspendLayout();
+            this.gbPassword.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFirstName.Location = new System.Drawing.Point(33, 62);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(253, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(469, 22);
             this.txtFirstName.TabIndex = 0;
             // 
             // lblFirstName
             // 
-            this.lblFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Location = new System.Drawing.Point(30, 42);
             this.lblFirstName.Name = "lblFirstName";
@@ -78,7 +76,7 @@
             this.lblLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(300, 42);
+            this.lblLastName.Location = new System.Drawing.Point(505, 42);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(74, 17);
             this.lblLastName.TabIndex = 3;
@@ -88,9 +86,9 @@
             // 
             this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLastName.Location = new System.Drawing.Point(303, 62);
+            this.txtLastName.Location = new System.Drawing.Point(508, 62);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(262, 22);
+            this.txtLastName.Size = new System.Drawing.Size(327, 22);
             this.txtLastName.TabIndex = 2;
             // 
             // lblEmail
@@ -98,7 +96,7 @@
             this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(300, 100);
+            this.lblEmail.Location = new System.Drawing.Point(505, 100);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(42, 17);
             this.lblEmail.TabIndex = 5;
@@ -108,15 +106,13 @@
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(303, 120);
+            this.txtEmail.Location = new System.Drawing.Point(508, 120);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(262, 22);
+            this.txtEmail.Size = new System.Drawing.Size(327, 22);
             this.txtEmail.TabIndex = 4;
             // 
             // lblUsername
             // 
-            this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsername.AutoSize = true;
             this.lblUsername.Location = new System.Drawing.Point(31, 100);
             this.lblUsername.Name = "lblUsername";
@@ -126,19 +122,15 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserName.Location = new System.Drawing.Point(33, 120);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(253, 22);
+            this.txtUserName.Size = new System.Drawing.Size(469, 22);
             this.txtUserName.TabIndex = 6;
             // 
             // lblPassword
             // 
-            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(30, 240);
+            this.lblPassword.Location = new System.Drawing.Point(6, 19);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(69, 17);
             this.lblPassword.TabIndex = 9;
@@ -146,12 +138,10 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPassword.Location = new System.Drawing.Point(33, 260);
+            this.txtPassword.Location = new System.Drawing.Point(9, 39);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(253, 22);
+            this.txtPassword.Size = new System.Drawing.Size(460, 22);
             this.txtPassword.TabIndex = 8;
             // 
             // lblConfirmPassword
@@ -159,7 +149,7 @@
             this.lblConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(300, 240);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(472, 19);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(120, 17);
             this.lblConfirmPassword.TabIndex = 11;
@@ -169,10 +159,10 @@
             // 
             this.txtConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(303, 260);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(475, 39);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(262, 22);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(320, 22);
             this.txtConfirmPassword.TabIndex = 10;
             // 
             // lblRoles
@@ -189,7 +179,7 @@
             this.clbRoles.FormattingEnabled = true;
             this.clbRoles.Location = new System.Drawing.Point(9, 40);
             this.clbRoles.Name = "clbRoles";
-            this.clbRoles.Size = new System.Drawing.Size(531, 157);
+            this.clbRoles.Size = new System.Drawing.Size(531, 123);
             this.clbRoles.TabIndex = 13;
             // 
             // ofdPicture
@@ -200,17 +190,15 @@
             // 
             this.pbPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbPicture.Location = new System.Drawing.Point(628, 42);
+            this.pbPicture.Location = new System.Drawing.Point(841, 42);
             this.pbPicture.Name = "pbPicture";
-            this.pbPicture.Size = new System.Drawing.Size(209, 215);
+            this.pbPicture.Size = new System.Drawing.Size(209, 240);
             this.pbPicture.TabIndex = 14;
             this.pbPicture.TabStop = false;
             this.pbPicture.Click += new System.EventHandler(this.pbPicture_Click);
             // 
             // lblPhoneNumber
             // 
-            this.lblPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Location = new System.Drawing.Point(31, 163);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
@@ -220,18 +208,15 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhoneNumber.Location = new System.Drawing.Point(33, 183);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(253, 22);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(469, 22);
             this.txtPhoneNumber.TabIndex = 15;
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSave.Location = new System.Drawing.Point(33, 539);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSave.Location = new System.Drawing.Point(33, 499);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(99, 31);
             this.btnSave.TabIndex = 17;
@@ -241,9 +226,8 @@
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(750, 539);
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Location = new System.Drawing.Point(951, 499);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(99, 31);
             this.btnClose.TabIndex = 18;
@@ -257,28 +241,37 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbRoles.Controls.Add(this.lblRoles);
             this.gbRoles.Controls.Add(this.clbRoles);
-            this.gbRoles.Location = new System.Drawing.Point(33, 306);
+            this.gbRoles.Location = new System.Drawing.Point(33, 288);
             this.gbRoles.Name = "gbRoles";
-            this.gbRoles.Size = new System.Drawing.Size(804, 212);
+            this.gbRoles.Size = new System.Drawing.Size(1017, 178);
             this.gbRoles.TabIndex = 19;
             this.gbRoles.TabStop = false;
+            // 
+            // gbPassword
+            // 
+            this.gbPassword.Controls.Add(this.lblPassword);
+            this.gbPassword.Controls.Add(this.txtPassword);
+            this.gbPassword.Controls.Add(this.txtConfirmPassword);
+            this.gbPassword.Controls.Add(this.lblConfirmPassword);
+            this.gbPassword.Location = new System.Drawing.Point(33, 211);
+            this.gbPassword.Name = "gbPassword";
+            this.gbPassword.Size = new System.Drawing.Size(802, 71);
+            this.gbPassword.TabIndex = 20;
+            this.gbPassword.TabStop = false;
             // 
             // frmAddUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 606);
+            this.ClientSize = new System.Drawing.Size(1135, 606);
             this.ControlBox = false;
+            this.Controls.Add(this.gbPassword);
             this.Controls.Add(this.gbRoles);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.pbPicture);
-            this.Controls.Add(this.lblConfirmPassword);
-            this.Controls.Add(this.txtConfirmPassword);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblEmail);
@@ -293,6 +286,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
             this.gbRoles.ResumeLayout(false);
             this.gbRoles.PerformLayout();
+            this.gbPassword.ResumeLayout(false);
+            this.gbPassword.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +316,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox gbRoles;
+        private System.Windows.Forms.GroupBox gbPassword;
     }
 }

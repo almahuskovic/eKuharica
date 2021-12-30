@@ -173,5 +173,28 @@ namespace eKuharica.WinUI.Helpers
             }
             return commentsList;
         }
+        public static void CloseAllOpenForms()
+        {
+            List<Form> openForms = new List<Form>();
+
+            foreach (Form f in Application.OpenForms)
+                openForms.Add(f);
+
+            foreach (Form f in openForms)
+            {
+                if (f.Name != "frmWelcome" && f.Name !="frmLogin")
+                    f.Close();
+            }
+        }
+
+        public static bool IsAdministrator(UserDto user)
+        {
+            for (int i = 0; i < user.UserRoles.Count() ; i++)
+            {
+                if ((user.UserRoles as List<UserRoleDto>)[i].Role.Name == Enum.GetName(typeof(Roles), Roles.Administrator))
+                    return true;
+            }
+            return false;
+        }
     }
 }

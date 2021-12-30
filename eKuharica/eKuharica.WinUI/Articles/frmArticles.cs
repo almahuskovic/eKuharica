@@ -17,6 +17,7 @@ namespace eKuharica.WinUI.Articles
     {
         APIService _articleService = new APIService("Article");
         APIService _articleTranslationService = new APIService("ArticleTranslation");
+        APIService _userService = new APIService("User");
         public frmArticles()
         {
             InitializeComponent();
@@ -34,7 +35,8 @@ namespace eKuharica.WinUI.Articles
 
         private async void frmArticles_Load(object sender, EventArgs e)
         {
-            var data = await _articleService.Get<List<ArticleDto>>();
+            var user = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+            var data = await _articleService.Get<List<ArticleDto>>(new ArticleSearchRequest() { LoggedUserId = user.Id });
             LoadData(data);
         }
 
@@ -59,6 +61,15 @@ namespace eKuharica.WinUI.Articles
                 //TODO:mozda ce trebati dodati 1 na index
                 var elementIndex = (currentRow.Rows.Count / 10) < 0 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
                 var selectedRow = Helpers.Helper.CreateItemFromRow<ArticleDto>(currentRow.Rows[elementIndex]);
+
+                var user = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+
+                if (!Helpers.Helper.IsAdministrator(user) && !selectedRow.IsCreatedByLoggedUser &&
+                    (e.ColumnIndex == 2 || e.ColumnIndex == 4 || e.ColumnIndex == 5))
+                {
+                    MessageBox.Show("Nemate permisije");
+                    return;
+                }
 
                 var searchR = new ArticleTranslationDto() { ArticleId = selectedRow.Id };
                 var articleTranslation = await _articleTranslationService.Get<List<ArticleTranslationDto>>(searchR);
@@ -101,6 +112,7 @@ namespace eKuharica.WinUI.Articles
             ArticleSearchRequest request = new ArticleSearchRequest()
             {
                 Title = txtSearchArticle.Text,
+                LoggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id
             };
 
             var data = await _articleService.Get<List<ArticleDto>>(request);

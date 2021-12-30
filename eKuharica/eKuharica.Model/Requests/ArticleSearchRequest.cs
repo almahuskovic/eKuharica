@@ -7,5 +7,6 @@ namespace eKuharica.Model.Requests
     public class ArticleSearchRequest
     {
         public string Title { get; set; }
+        public int LoggedUserId { get; set; }
     }
 }

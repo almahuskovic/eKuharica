@@ -168,7 +168,7 @@ namespace eKuharica.WinUI.Recipes
         {
             if (_send)
             {
-                Hide();
+                Helpers.Helper.CloseAllOpenForms();
                 return;
             }
 
@@ -179,7 +179,7 @@ namespace eKuharica.WinUI.Recipes
                 frmUserRecipes.WindowState = FormWindowState.Maximized;
                 frmUserRecipes.Show();
                 Hide();
-                //return;
+                return;
             }
 
             frmRecipes frmRecipes = new frmRecipes();

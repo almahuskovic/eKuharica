@@ -63,7 +63,10 @@ namespace eKuharica.Services.Recipes
             }
 
             var list = entity.ToList();
-            return _mapper.Map<List<RecipeDto>>(list);
+            var mappedList = _mapper.Map<List<RecipeDto>>(list);
+            mappedList.ForEach(x => x.IsCreatedByLoggedUser = (x.UserId == search.LoggedUserId));
+
+            return mappedList;
         }
     }
 }

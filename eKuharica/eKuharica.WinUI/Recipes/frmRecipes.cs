@@ -148,6 +148,15 @@ namespace eKuharica.WinUI.Recipes
                 var recipeTranslation = await _recipeTranslationService.Get<List<RecipeTranslationDto>>(searchR);
                 var _recipeTranslation = recipeTranslation.Any() ? recipeTranslation.First() : null;
 
+                var user = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+
+                if (!Helpers.Helper.IsAdministrator(user) && !selectedRow.IsCreatedByLoggedUser &&
+                    (e.ColumnIndex == 2 || e.ColumnIndex == 4 || e.ColumnIndex == 5))
+                {
+                    MessageBox.Show("Nemate permisije");
+                    return;
+                }
+
                 if (e.ColumnIndex == 2)//prevod
                 {
                     frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, _recipeTranslation, true);

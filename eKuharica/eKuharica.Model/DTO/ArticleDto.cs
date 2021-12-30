@@ -16,6 +16,7 @@ namespace eKuharica.Model.DTO
         public DateTime ModifiedAt { get; set; }
         public bool IsTranslated { get; set; }
         public bool IsDeleted { get; set; }
+        public bool IsCreatedByLoggedUser { get; set; }
         public int CreateUserId { get; set; }
         public string CreatedByUser { get; set; }
         

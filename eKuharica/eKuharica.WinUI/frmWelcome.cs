@@ -5,6 +5,9 @@ using eKuharica.WinUI.UserRecipes;
 using eKuharica.WinUI.Users;
 using eKuharica.WinUI.Articles;
 using eKuharica.WinUI.Feedbacks;
+using eKuharica.Model.DTO;
+using static eKuharica.Model.Enumerations.Enumerations;
+using System.Collections.Generic;
 
 namespace eKuharica.WinUI
 {
@@ -14,7 +17,7 @@ namespace eKuharica.WinUI
         public frmWelcome()
         {
             InitializeComponent();
-
+            tsbFeedbacks.Visible = tsbReports.Visible = false;
         }
 
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
@@ -22,13 +25,19 @@ namespace eKuharica.WinUI
             this.Close();
         }
 
-        private void frmWelcome_Load(object sender, EventArgs e)
+        private async void frmWelcome_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            var user = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+
+            if (Helpers.Helper.IsAdministrator(user))
+                tsbFeedbacks.Visible = tsbReports.Visible = true;
         }
 
         private void tsbRecipes_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmRecipes frmRecipes = new frmRecipes();
             frmRecipes.MdiParent = this;
             frmRecipes.WindowState = FormWindowState.Maximized;
@@ -38,6 +47,8 @@ namespace eKuharica.WinUI
 
         private void tsbUserRecipes_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmUserRecipes frmRecipes = new frmUserRecipes();
             frmRecipes.MdiParent = this;
             frmRecipes.WindowState = FormWindowState.Maximized;
@@ -47,6 +58,8 @@ namespace eKuharica.WinUI
 
         private void tsbUsers_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmUsers frmUsers = new frmUsers();
             frmUsers.MdiParent = this;
             frmUsers.WindowState = FormWindowState.Maximized;
@@ -56,6 +69,8 @@ namespace eKuharica.WinUI
 
         private void tsbArticles_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmArticles frmArticles = new frmArticles();
             frmArticles.MdiParent = this;
             frmArticles.WindowState = FormWindowState.Maximized;
@@ -65,6 +80,8 @@ namespace eKuharica.WinUI
 
         private void tsbFeedbacks_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmFeedbacks frmFeedbacks = new frmFeedbacks();
             frmFeedbacks.MdiParent = this;
             frmFeedbacks.WindowState = FormWindowState.Maximized;
@@ -74,6 +91,8 @@ namespace eKuharica.WinUI
 
         private void favouriteRecipeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmRecipes frmRecipes = new frmRecipes(true);
             frmRecipes.MdiParent = this;
             frmRecipes.WindowState = FormWindowState.Maximized;
@@ -83,6 +102,8 @@ namespace eKuharica.WinUI
 
         private void followingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmUsers frmUsers = new frmUsers(false,true);
             frmUsers.MdiParent = this;
             frmUsers.WindowState = FormWindowState.Maximized;
@@ -92,6 +113,8 @@ namespace eKuharica.WinUI
 
         private void followersToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmUsers frmUsers = new frmUsers(true, false);
             frmUsers.MdiParent = this;
             frmUsers.WindowState = FormWindowState.Maximized;
@@ -101,6 +124,8 @@ namespace eKuharica.WinUI
 
         private void sendRecipeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmAddRecipes frmSendRecipe = new frmAddRecipes(null,null,false,true);
             frmSendRecipe.MdiParent = this;
             frmSendRecipe.WindowState = FormWindowState.Maximized;
@@ -110,6 +135,8 @@ namespace eKuharica.WinUI
 
         private void myRecipesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             frmRecipes frmRecipes = new frmRecipes(false, true);
             frmRecipes.MdiParent = this;
             frmRecipes.WindowState = FormWindowState.Maximized;
@@ -119,6 +146,8 @@ namespace eKuharica.WinUI
 
         private async void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Helpers.Helper.CloseAllOpenForms();
+
             var user = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
             frmAddUsers frmUsers = new frmAddUsers(user);
             frmUsers.MdiParent = this;
