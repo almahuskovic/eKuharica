@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -50,9 +51,11 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.gbRoles = new System.Windows.Forms.GroupBox();
             this.gbPassword = new System.Windows.Forms.GroupBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.gbRoles.SuspendLayout();
             this.gbPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -259,6 +262,10 @@
             this.gbPassword.TabIndex = 20;
             this.gbPassword.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAddUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,6 +295,7 @@
             this.gbRoles.PerformLayout();
             this.gbPassword.ResumeLayout(false);
             this.gbPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +325,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox gbRoles;
         private System.Windows.Forms.GroupBox gbPassword;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

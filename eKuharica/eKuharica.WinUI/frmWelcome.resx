@@ -828,7 +828,7 @@
 </value>
   </data>
   <data name="languageENtoolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>83, 26</value>
   </data>
   <data name="languageBatoolStripMenuItem2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -890,13 +890,13 @@
     <value>24, 24</value>
   </data>
   <data name="bosanskiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>149, 26</value>
   </data>
   <data name="bosanskiToolStripMenuItem.Text" xml:space="preserve">
     <value>Bosanski</value>
   </data>
   <data name="engleskiToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>149, 26</value>
   </data>
   <data name="engleskiToolStripMenuItem.Text" xml:space="preserve">
     <value>Engleski</value>
@@ -1095,37 +1095,37 @@
     <value>111, 6</value>
   </data>
   <data name="favouriteRecipeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="favouriteRecipeToolStripMenuItem.Text" xml:space="preserve">
     <value>Favourite recipes</value>
   </data>
   <data name="followingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="followingToolStripMenuItem.Text" xml:space="preserve">
     <value>Following</value>
   </data>
   <data name="followersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="followersToolStripMenuItem.Text" xml:space="preserve">
     <value>Followers</value>
   </data>
   <data name="myRecipesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="myRecipesToolStripMenuItem.Text" xml:space="preserve">
     <value>My recipes</value>
   </data>
   <data name="sendRecipeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="sendRecipeToolStripMenuItem.Text" xml:space="preserve">
     <value>Send recipe</value>
   </data>
   <data name="editProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="editProfileToolStripMenuItem.Text" xml:space="preserve">
     <value>Edit profile</value>
@@ -1217,6 +1217,24 @@
   <data name="&gt;&gt;languageENtoolStripMenuItem3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;prevediToolStripMenuItem.Name" xml:space="preserve">
+    <value>prevediToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;prevediToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bosanskiToolStripMenuItem.Name" xml:space="preserve">
+    <value>bosanskiToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;bosanskiToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;engleskiToolStripMenuItem.Name" xml:space="preserve">
+    <value>engleskiToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;engleskiToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;tsbRecipes.Name" xml:space="preserve">
     <value>tsbRecipes</value>
   </data>
@@ -1235,17 +1253,17 @@
   <data name="&gt;&gt;tsbUsers.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tsbArticles.Name" xml:space="preserve">
-    <value>tsbArticles</value>
-  </data>
-  <data name="&gt;&gt;tsbArticles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsbArticles.Name" xml:space="preserve">
+    <value>tsbArticles</value>
+  </data>
+  <data name="&gt;&gt;tsbArticles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsbFeedbacks.Name" xml:space="preserve">
     <value>tsbFeedbacks</value>
@@ -1312,24 +1330,6 @@
   </data>
   <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;prevediToolStripMenuItem.Name" xml:space="preserve">
-    <value>prevediToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;prevediToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bosanskiToolStripMenuItem.Name" xml:space="preserve">
-    <value>bosanskiToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;bosanskiToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;engleskiToolStripMenuItem.Name" xml:space="preserve">
-    <value>engleskiToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;engleskiToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmWelcome</value>

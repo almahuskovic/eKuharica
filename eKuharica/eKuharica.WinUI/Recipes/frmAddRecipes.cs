@@ -29,14 +29,16 @@ namespace eKuharica.WinUI.Recipes
         private RecipeTranslationDto _recipeTranslation;
         private bool _translate;
         private bool _send;
+        private string _frmSource;
 
-        public frmAddRecipes(RecipeDto recipe = null, RecipeTranslationDto recipeTranslation = null, bool translate = false, bool send = false)
+        public frmAddRecipes(RecipeDto recipe = null, RecipeTranslationDto recipeTranslation = null, bool translate = false, bool send = false, string frmSource = "frmRecipe")
         {
             InitializeComponent();
             _recipe = recipe;
             _recipeTranslation = recipeTranslation;
             _translate = translate;
             _send = send;
+            _frmSource = frmSource;
         }
 
         private void frmAddRecipes_Load(object sender, EventArgs e)
@@ -78,6 +80,27 @@ namespace eKuharica.WinUI.Recipes
 
         private async void btnSubmit_Click(object sender, EventArgs e)
         {
+            bool isValid = true;
+            if (string.IsNullOrWhiteSpace(txtTitle.Text))
+            {
+                errorProvider1.SetError(txtTitle, "Required");
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(txtIngridients.Text))
+            {
+                errorProvider1.SetError(txtIngridients, "Required");
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(txtMethod.Text))
+            {
+                errorProvider1.SetError(txtMethod, "Required");
+                isValid = false;
+            }
+            if (!isValid)
+                return;
+            else
+                errorProvider1.Clear();
+
             var loggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id;
 
             RecipeTranslationUpsertRequest recipeTranslationRequest = new RecipeTranslationUpsertRequest();
@@ -90,12 +113,21 @@ namespace eKuharica.WinUI.Recipes
             recipeTranslationRequest.Advice = recipeRequest.Advice = txtAdvice.Text;
             recipeTranslationRequest.Serving = recipeRequest.Serving = txtServing.Text;
             recipeRequest.Picture = Helpers.Helper.ImageToByteArray(pbCoverPicture.Image);
-            recipeRequest.UserId = loggedUserId;//logovanog uzimati
+            //recipeRequest.UserId = loggedUserId;
             recipeRequest.IsTranslated = _recipeTranslation != null ? true : false;
-            recipeTranslationRequest.RecipeId = _recipe.Id;
             recipeRequest.IsRead = true;
-            recipeRequest.IsSent = _send ? _send : _recipe.IsSent;
-            recipeRequest.IsApproved = _recipe.IsApproved;
+            //recipeRequest.IsSent = _send ? _send : _recipe.IsSent;
+
+            if (!(_recipe != null && _recipe.IsSent))
+            {
+                recipeRequest.IsSent = _send;
+                recipeRequest.UserId = loggedUserId;
+            }
+            else
+            {
+                recipeRequest.IsSent = _recipe.IsSent;
+                recipeRequest.UserId = _recipe.UserId;
+            }
 
             if (!_translate) //dodijeli parametre ako je otvoren recept
             {
@@ -109,19 +141,22 @@ namespace eKuharica.WinUI.Recipes
                 if (_translate)
                 {
                     _recipe.IsTranslated = true;
-                    
+                    recipeTranslationRequest.RecipeId = _recipe.Id;
+
                     await _recipeService.Update<RecipeDto>(_recipe.Id, _recipe);
                     await _recipeTranslationService.Insert<RecipeTranslationDto>(recipeTranslationRequest);
                 }
                 else
                 {
-                    recipeRequest.IsApproved = true;
+                    recipeRequest.IsApproved = _send ? false : true;
                     await _recipeService.Insert<RecipeDto>(recipeRequest);
                 }
             }
             else //edit
             {
                 //TODO:preklopiti funkciju za convert datetime u odredjenu kategoriju
+                recipeRequest.IsApproved = _recipe.IsApproved;
+                recipeTranslationRequest.RecipeId = _recipe.Id;
 
                 if (_translate)
                 {
@@ -135,7 +170,7 @@ namespace eKuharica.WinUI.Recipes
 
             MessageBox.Show("Uspješno ste izmijenili podatke o receptu");
 
-            if (!_recipe.IsSent)
+            if ((int)Enum.Parse(typeof(Enumerations.RecipeAddSource), _frmSource) != (int)Enumerations.RecipeAddSource.frmUserRecipe)//   _recipe != null && !_recipe.IsSent)
             {
                 frmRecipes frmRecipes = new frmRecipes();
                 frmRecipes.MdiParent = MdiParent;
@@ -174,7 +209,7 @@ namespace eKuharica.WinUI.Recipes
                 return;
             }
 
-            if (!_recipe.IsSent)
+            if ((int)Enum.Parse(typeof(Enumerations.RecipeAddSource), _frmSource) == (int)Enumerations.RecipeAddSource.frmUserRecipe)//_recipe !=null &&  !_recipe.IsSent)
             {
                 frmUserRecipes frmUserRecipes = new frmUserRecipes();
                 frmUserRecipes.MdiParent = MdiParent;
@@ -184,7 +219,9 @@ namespace eKuharica.WinUI.Recipes
                 return;
             }
 
-            frmRecipes frmRecipes = new frmRecipes();
+            var myRecipes = (int)Enum.Parse(typeof(Enumerations.RecipeAddSource), _frmSource) == (int)Enumerations.RecipeAddSource.frmMyRecipes;
+            var favRecipes = (int)Enum.Parse(typeof(Enumerations.RecipeAddSource), _frmSource) == (int)Enumerations.RecipeAddSource.frmFavRecipes;
+            frmRecipes frmRecipes = new frmRecipes(favRecipes, myRecipes);
             frmRecipes.MdiParent = MdiParent;
             frmRecipes.WindowState = FormWindowState.Maximized;
             frmRecipes.Show();

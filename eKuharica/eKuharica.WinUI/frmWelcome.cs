@@ -155,5 +155,10 @@ namespace eKuharica.WinUI
             frmUsers.Text = "eKuharica";
             frmUsers.Show();
         }
+
+        private void logOuttoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -42,9 +43,11 @@
             this.ofdPicture = new System.Windows.Forms.OpenFileDialog();
             this.gbPicture = new System.Windows.Forms.GroupBox();
             this.gbKeyWords = new System.Windows.Forms.GroupBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.gbPicture.SuspendLayout();
             this.gbKeyWords.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -190,6 +193,10 @@
             this.gbKeyWords.TabIndex = 12;
             this.gbKeyWords.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAddArticles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -213,6 +220,7 @@
             this.gbPicture.PerformLayout();
             this.gbKeyWords.ResumeLayout(false);
             this.gbKeyWords.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +242,6 @@
         private System.Windows.Forms.OpenFileDialog ofdPicture;
         private System.Windows.Forms.GroupBox gbPicture;
         private System.Windows.Forms.GroupBox gbKeyWords;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

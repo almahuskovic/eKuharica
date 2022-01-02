@@ -59,7 +59,7 @@ namespace eKuharica.WinUI.Articles
             {
                 var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
                 //TODO:mozda ce trebati dodati 1 na index
-                var elementIndex = (currentRow.Rows.Count / 10) < 0 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
+                var elementIndex = (currentRow.Rows.Count / 10) <= 1 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
                 var selectedRow = Helpers.Helper.CreateItemFromRow<ArticleDto>(currentRow.Rows[elementIndex]);
 
                 var user = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);

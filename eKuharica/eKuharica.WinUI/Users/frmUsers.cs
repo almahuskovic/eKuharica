@@ -98,7 +98,7 @@ namespace eKuharica.WinUI.Users
             {
                 //TODO:mozda ce trebati dodati 1 na index
                 var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
-                var elementIndex = (currentRow.Rows.Count / 10) < 0 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
+                var elementIndex = (currentRow.Rows.Count / 10) <= 1 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
                 //ne moze pretvoriti fullname u properti jer nije properti nego konkretno polje 
                 var selectedRow = Helpers.Helper.CreateItemFromRow<UserDto>(currentRow.Rows[elementIndex]);
 

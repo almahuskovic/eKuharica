@@ -70,6 +70,7 @@
             this.dgvRecipesSendByUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRecipesSendByUser.Size = new System.Drawing.Size(1198, 234);
             this.dgvRecipesSendByUser.TabIndex = 1;
+            this.dgvRecipesSendByUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecipesSendByUser_CellContentClick);
             // 
             // lblUserName
             // 
@@ -132,7 +133,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "button1";
+            this.btnClose.Text = "Zatvori";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -151,6 +152,7 @@
             this.Akcija.MinimumWidth = 6;
             this.Akcija.Name = "Akcija";
             this.Akcija.ReadOnly = true;
+            this.Akcija.Text = "Prikazi";
             this.Akcija.Width = 125;
             // 
             // frmUserProfile
@@ -170,6 +172,7 @@
             this.Controls.Add(this.pbPicture);
             this.Name = "frmUserProfile";
             this.Text = "frmUserProfile";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmUserProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecipesSendByUser)).EndInit();

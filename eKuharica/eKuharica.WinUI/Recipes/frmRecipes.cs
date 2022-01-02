@@ -75,13 +75,18 @@ namespace eKuharica.WinUI.Recipes
 
         private async void frmRecipes_Load(object sender, EventArgs e)
         {
+            var loggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id;
+
             var data = new List<RecipeDto>();
-            var searchObj = new RecipeSearchObject();
+            var searchObj = new RecipeSearchObject() {
+                LoggedUserId = loggedUserId, 
+                MyRecipes = _myRecipes 
+            };
 
             if (_isFavouriteRecipeList)
             {
                 var searchRequest = new UserFavouriteRecipeSearchRequest() { 
-                    UserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id 
+                    UserId = loggedUserId
                 };
 
                 searchObj.RecipeIds = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(searchRequest))
@@ -89,8 +94,6 @@ namespace eKuharica.WinUI.Recipes
                     .Select(x => x.RecipeId)
                     .ToList();
                 searchObj.IsFavouriteRecipeSearch = true;
-
-                
             }
 
             data = await _recipeService.Get<List<RecipeDto>>(searchObj);
@@ -141,7 +144,7 @@ namespace eKuharica.WinUI.Recipes
             {
                 var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
                 //TODO:mozda ce trebati dodati 1 na index
-                var elementIndex = (currentRow.Rows.Count / 10) < 0 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
+                var elementIndex = (currentRow.Rows.Count / 10) <= 1 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
                 var selectedRow = Helpers.Helper.CreateItemFromRow<RecipeDto>(currentRow.Rows[elementIndex]);
 
                 var searchR = new RecipeTranslationSearchRequest() { RecipeId = selectedRow.Id };
@@ -159,7 +162,7 @@ namespace eKuharica.WinUI.Recipes
 
                 if (e.ColumnIndex == 2)//prevod
                 {
-                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, _recipeTranslation, true);
+                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, _recipeTranslation, true, false, RecipeAddSource.frmRecipe.ToString());
                     frmEditRecipe.MdiParent = MdiParent;
                     frmEditRecipe.WindowState = FormWindowState.Maximized;
                     frmEditRecipe.Show();
@@ -179,7 +182,8 @@ namespace eKuharica.WinUI.Recipes
                 }
                 if (e.ColumnIndex == 4)//edit
                 {
-                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, _recipeTranslation);
+                    var source = _myRecipes ? RecipeAddSource.frmMyRecipes.ToString() : (_isFavouriteRecipeList ? RecipeAddSource.frmFavRecipes.ToString() : RecipeAddSource.frmRecipe.ToString());
+                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, _recipeTranslation, false, false, source);
                     frmEditRecipe.MdiParent = MdiParent;
                     frmEditRecipe.WindowState = FormWindowState.Maximized;
                     frmEditRecipe.Show();

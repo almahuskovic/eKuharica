@@ -46,10 +46,11 @@ namespace eKuharica.WinUI.Users
         private void lblUserName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmUserProfile frmUserProfile = new frmUserProfile(_user);
-            frmUserProfile.MdiParent = MdiParent;
+            frmUserProfile.MdiParent = Owner.MdiParent;
             frmUserProfile.WindowState = FormWindowState.Maximized;
             frmUserProfile.Show();
-            //Hide();
+            Owner.Enabled = true;
+            Hide();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddRecipes));
             this.btnRecipePreview = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -59,10 +60,12 @@
             this.txtIngridients = new System.Windows.Forms.TextBox();
             this.gbTags = new System.Windows.Forms.GroupBox();
             this.pbBack = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbCoverPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).BeginInit();
             this.gbTags.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRecipePreview
@@ -237,6 +240,10 @@
             this.pbBack.TabStop = false;
             this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmAddRecipes
             // 
             resources.ApplyResources(this, "$this");
@@ -270,6 +277,7 @@
             this.gbTags.ResumeLayout(false);
             this.gbTags.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +315,6 @@
         private System.Windows.Forms.TextBox txtIngridients;
         private System.Windows.Forms.GroupBox gbTags;
         private System.Windows.Forms.PictureBox pbBack;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

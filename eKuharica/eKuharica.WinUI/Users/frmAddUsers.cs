@@ -80,6 +80,8 @@ namespace eKuharica.WinUI.Users
             }
             else
             {
+                bool isValid = true;
+
                 var usernameValidation = await _userService.Get<List<UserDto>>(new UserSearchRequest() { UserName=txtUserName.Text});
                 if (usernameValidation.Count > 0)
                 {
@@ -88,24 +90,44 @@ namespace eKuharica.WinUI.Users
                     {
                         txtUserName.Text = "";
                     }
+                    isValid = false;
                 }
-                else
-                {
-                    UserInsertRequest userInsertRequest = new UserInsertRequest()
-                    {
-                        FirstName = txtFirstName.Text,
-                        LastName = txtLastName.Text,
-                        Email = txtEmail.Text,
-                        Username = txtUserName.Text,
-                        Password = txtPassword.Text,
-                        PasswordConfirm = txtConfirmPassword.Text,
-                        Roles = selectedRoles,
-                        PhoneNumber = txtPhoneNumber.Text,
-                        Picture = Helpers.Helper.ImageToByteArray(pbPicture.Image)
-                    };
 
-                    await _userService.Insert<UserDto>(userInsertRequest);
+                if (selectedRoles.Count() == 0)
+                {
+                    isValid = false;
+                    errorProvider1.SetError(clbRoles, "Required");
                 }
+                if (string.IsNullOrWhiteSpace(txtConfirmPassword.Text))
+                {
+                    isValid = false;
+                    errorProvider1.SetError(txtConfirmPassword, "Required");
+                }
+                if (string.IsNullOrWhiteSpace(txtPassword.Text))
+                {
+                    isValid = false;
+                    errorProvider1.SetError(txtPassword, "Required");
+                }
+                if (!isValid)
+                    return;
+                else
+                    errorProvider1.Clear();
+
+                UserInsertRequest userInsertRequest = new UserInsertRequest()
+                {
+                    FirstName = txtFirstName.Text,
+                    LastName = txtLastName.Text,
+                    Email = txtEmail.Text,
+                    Username = txtUserName.Text,
+                    Password = txtPassword.Text,
+                    PasswordConfirm = txtConfirmPassword.Text,
+                    Roles = selectedRoles,
+                    PhoneNumber = txtPhoneNumber.Text,
+                    Picture = Helpers.Helper.ImageToByteArray(pbPicture.Image)
+                };
+
+                await _userService.Insert<UserDto>(userInsertRequest);
+
             }
             MessageBox.Show("Uspješno ste spremili podatke o korisniku");
         }

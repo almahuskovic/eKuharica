@@ -166,6 +166,12 @@ namespace eKuharica.WinUI.Recipes
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            if (_source == string.Empty)
+            {
+                Hide();
+                return;
+            }
+
             var isFavourite = (int)Enum.Parse(typeof(Enumerations.Source), _source) == (int)Enumerations.Source.Other;
 
             frmRecipes frmRecipes = new frmRecipes(isFavourite);

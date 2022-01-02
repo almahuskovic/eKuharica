@@ -39,6 +39,13 @@ namespace eKuharica.Model.Enumerations
             Edit,
             Other
         }
+        public enum RecipeAddSource
+        {
+           frmRecipe,
+           frmUserRecipe,
+           frmMyRecipes,
+           frmFavRecipes
+        }
 
         public enum Roles
         {

@@ -1,4 +1,5 @@
 ﻿using eKuharica.Model.DTO;
+using eKuharica.Model.Enumerations;
 using eKuharica.Model.Models;
 using eKuharica.Model.Requests;
 using eKuharica.WinUI.Recipes;
@@ -47,7 +48,7 @@ namespace eKuharica.WinUI.UserRecipes
         private async void sdgvUserRecipes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
-            var elementIndex = (currentRow.Rows.Count / 10) < 0 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
+            var elementIndex = (currentRow.Rows.Count / 10) <= 1 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
             var selectedRow = Helpers.Helper.CreateItemFromRow<RecipeDto>(currentRow.Rows[elementIndex]);
 
             if (e.RowIndex >= 0)
@@ -60,7 +61,7 @@ namespace eKuharica.WinUI.UserRecipes
                 }
                 else if (e.ColumnIndex == 2)//uredi
                 {
-                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, null, false);
+                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, null, false,false,Enumerations.RecipeAddSource.frmUserRecipe.ToString());
                     frmEditRecipe.MdiParent = MdiParent;
                     frmEditRecipe.WindowState = FormWindowState.Maximized;
                     frmEditRecipe.Show();

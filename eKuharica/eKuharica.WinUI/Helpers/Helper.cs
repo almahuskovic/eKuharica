@@ -46,7 +46,7 @@ namespace eKuharica.WinUI.Helpers
                                     {
                                         Title = Convert.ToString(rw["Title"]),
                                         Advice = Convert.ToString(rw["Advice"]),
-                                        Content = Convert.ToString(rw["Content"]),
+                                        Method = Convert.ToString(rw["Method"]),
                                         UserId = Convert.ToInt32(rw["UserId"])
                                     }).ToList();
 

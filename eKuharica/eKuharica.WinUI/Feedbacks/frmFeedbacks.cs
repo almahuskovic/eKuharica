@@ -66,7 +66,7 @@ namespace eKuharica.WinUI.Feedbacks
             if (e.RowIndex == 3)
             {
                 var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
-                var elementIndex = (currentRow.Rows.Count / 10) < 0 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
+                var elementIndex = (currentRow.Rows.Count / 10) <= 1 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
                 var selectedRow = Helpers.Helper.CreateItemFromRow<FeedbackDto>(currentRow.Rows[elementIndex]);
 
                 frmFeedbackDetails frmFeedbackDetails = new frmFeedbackDetails(selectedRow);

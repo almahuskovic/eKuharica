@@ -29,7 +29,7 @@ namespace eKuharica.Services.Recipes
                 }
                 if(search.MyRecipes)//prikazi sve recepte od korisnika
                 {
-                    entity = entity.Where(x => x.UserId == search.LoggedUserId);
+                    entity = entity.Where(x => x.UserId == search.LoggedUserId && x.IsSent);
                 }
                 else
                 {

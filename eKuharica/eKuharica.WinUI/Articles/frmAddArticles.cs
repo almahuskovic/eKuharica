@@ -59,13 +59,29 @@ namespace eKuharica.WinUI.Articles
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
+            bool isValid = true;
+            if(string.IsNullOrWhiteSpace(txtTitle.Text))
+            {
+                errorProvider1.SetError(txtTitle, "Required");
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(txtContent.Text))
+            {
+                errorProvider1.SetError(txtContent, "Required");
+                isValid = false;
+            }
+            if (!isValid)
+                return;
+            else
+                errorProvider1.Clear();
+
             var loggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id; 
 
             ArticleTranslationUpsertRequest articleTranslationRequest = new ArticleTranslationUpsertRequest();
             ArticleUpsertRequest articleRequest = new ArticleUpsertRequest();
 
             articleTranslationRequest.Title = articleRequest.Title = txtTitle.Text;
-            articleTranslationRequest.ArticleId = _article.Id;
+            articleTranslationRequest.ArticleId = _article != null ? _article.Id : 0;
             articleRequest.CreateUserId = loggedUserId;
             articleTranslationRequest.Content = articleRequest.Content = txtContent.Text;
             articleTranslationRequest.KeyWords = articleRequest.KeyWords = txtKeyWords.Text;

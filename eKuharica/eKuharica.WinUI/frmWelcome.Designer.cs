@@ -34,12 +34,15 @@
             this.logOuttoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.languageBatoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.languageENtoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.prevediToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bosanskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.engleskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.tsbRecipes = new System.Windows.Forms.ToolStripButton();
             this.tsbUserRecipes = new System.Windows.Forms.ToolStripButton();
             this.tsbUsers = new System.Windows.Forms.ToolStripButton();
-            this.tsbArticles = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbArticles = new System.Windows.Forms.ToolStripButton();
             this.tsbFeedbacks = new System.Windows.Forms.ToolStripButton();
             this.tsbReports = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -51,9 +54,6 @@
             this.sendRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.prevediToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bosanskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.engleskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,7 @@
             this.logOuttoolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             resources.ApplyResources(this.logOuttoolStripMenuItem1, "logOuttoolStripMenuItem1");
             this.logOuttoolStripMenuItem1.Name = "logOuttoolStripMenuItem1";
+            this.logOuttoolStripMenuItem1.Click += new System.EventHandler(this.logOuttoolStripMenuItem1_Click);
             // 
             // languageBatoolStripMenuItem2
             // 
@@ -89,6 +90,24 @@
             this.languageENtoolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.languageENtoolStripMenuItem3, "languageENtoolStripMenuItem3");
             this.languageENtoolStripMenuItem3.Name = "languageENtoolStripMenuItem3";
+            // 
+            // prevediToolStripMenuItem
+            // 
+            this.prevediToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bosanskiToolStripMenuItem,
+            this.engleskiToolStripMenuItem});
+            this.prevediToolStripMenuItem.Name = "prevediToolStripMenuItem";
+            resources.ApplyResources(this.prevediToolStripMenuItem, "prevediToolStripMenuItem");
+            // 
+            // bosanskiToolStripMenuItem
+            // 
+            this.bosanskiToolStripMenuItem.Name = "bosanskiToolStripMenuItem";
+            resources.ApplyResources(this.bosanskiToolStripMenuItem, "bosanskiToolStripMenuItem");
+            // 
+            // engleskiToolStripMenuItem
+            // 
+            this.engleskiToolStripMenuItem.Name = "engleskiToolStripMenuItem";
+            resources.ApplyResources(this.engleskiToolStripMenuItem, "engleskiToolStripMenuItem");
             // 
             // toolStrip
             // 
@@ -124,16 +143,16 @@
             this.tsbUsers.Name = "tsbUsers";
             this.tsbUsers.Click += new System.EventHandler(this.tsbUsers_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
             // tsbArticles
             // 
             resources.ApplyResources(this.tsbArticles, "tsbArticles");
             this.tsbArticles.Name = "tsbArticles";
             this.tsbArticles.Click += new System.EventHandler(this.tsbArticles_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // tsbFeedbacks
             // 
@@ -198,24 +217,6 @@
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
             resources.ApplyResources(this.editProfileToolStripMenuItem, "editProfileToolStripMenuItem");
             this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
-            // 
-            // prevediToolStripMenuItem
-            // 
-            this.prevediToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bosanskiToolStripMenuItem,
-            this.engleskiToolStripMenuItem});
-            this.prevediToolStripMenuItem.Name = "prevediToolStripMenuItem";
-            resources.ApplyResources(this.prevediToolStripMenuItem, "prevediToolStripMenuItem");
-            // 
-            // bosanskiToolStripMenuItem
-            // 
-            this.bosanskiToolStripMenuItem.Name = "bosanskiToolStripMenuItem";
-            resources.ApplyResources(this.bosanskiToolStripMenuItem, "bosanskiToolStripMenuItem");
-            // 
-            // engleskiToolStripMenuItem
-            // 
-            this.engleskiToolStripMenuItem.Name = "engleskiToolStripMenuItem";
-            resources.ApplyResources(this.engleskiToolStripMenuItem, "engleskiToolStripMenuItem");
             // 
             // frmWelcome
             // 
