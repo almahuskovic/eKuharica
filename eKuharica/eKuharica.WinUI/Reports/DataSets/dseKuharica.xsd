@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dseKuharica" targetNamespace="http://tempuri.org/dseKuharica.xsd" xmlns:mstns="http://tempuri.org/dseKuharica.xsd" xmlns="http://tempuri.org/dseKuharica.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dseKuharica" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dseKuharica" msprop:Generator_UserDSName="dseKuharica">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RecipeRating" msprop:Generator_TableClassName="RecipeRatingDataTable" msprop:Generator_TableVarName="tableRecipeRating" msprop:Generator_TablePropName="RecipeRating" msprop:Generator_RowDeletingName="RecipeRatingRowDeleting" msprop:Generator_RowChangingName="RecipeRatingRowChanging" msprop:Generator_RowEvHandlerName="RecipeRatingRowChangeEventHandler" msprop:Generator_RowDeletedName="RecipeRatingRowDeleted" msprop:Generator_UserTableName="RecipeRating" msprop:Generator_RowChangedName="RecipeRatingRowChanged" msprop:Generator_RowEvArgName="RecipeRatingRowChangeEvent" msprop:Generator_RowClassName="RecipeRatingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Recipe" msprop:Generator_ColumnVarNameInTable="columnRecipe" msprop:Generator_ColumnPropNameInRow="Recipe" msprop:Generator_ColumnPropNameInTable="RecipeColumn" msprop:Generator_UserColumnName="Recipe" type="xs:string" minOccurs="0" />
+              <xs:element name="AvgRating" msprop:Generator_ColumnVarNameInTable="columnAvgRating" msprop:Generator_ColumnPropNameInRow="AvgRating" msprop:Generator_ColumnPropNameInTable="AvgRatingColumn" msprop:Generator_UserColumnName="AvgRating" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

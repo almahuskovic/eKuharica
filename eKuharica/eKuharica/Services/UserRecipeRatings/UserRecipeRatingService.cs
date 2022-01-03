@@ -15,5 +15,26 @@ namespace eKuharica.Services.UserRecipeRatings
         public UserRecipeRatingService(Context context, IMapper mapper) : base(context, mapper)
         {
         }
+        public override IEnumerable<UserRecipeRatingDto> Get(UserRecipeRatingSearchRequest search = null)
+        {
+            var entityRecipes = Context.Set<Recipe>().AsQueryable();
+            var entity = Context.Set<UserRecipeRating>().AsQueryable();
+
+            if (search != null && search.GetTop3)
+            {
+                return entity.GroupBy(x => x.RecipeId).Select(
+                    g => new UserRecipeRatingDto()
+                    {
+                        RecipeId = g.Key,
+                        AvgRating = (decimal)g.Sum(s => s.Rating) / g.Count(),
+                        Recipe = entityRecipes.Where(r => r.Id == g.Key).FirstOrDefault().Title
+                    }
+                    ).OrderByDescending(x=>x.AvgRating).Take(3).AsEnumerable();
+            }
+            
+            var list = entity.ToList();
+
+            return _mapper.Map<List<UserRecipeRatingDto>>(list);
+        }
     }
 }

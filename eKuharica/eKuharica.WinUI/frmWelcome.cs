@@ -8,6 +8,7 @@ using eKuharica.WinUI.Feedbacks;
 using eKuharica.Model.DTO;
 using static eKuharica.Model.Enumerations.Enumerations;
 using System.Collections.Generic;
+using eKuharica.WinUI.Reports;
 
 namespace eKuharica.WinUI
 {
@@ -17,7 +18,7 @@ namespace eKuharica.WinUI
         public frmWelcome()
         {
             InitializeComponent();
-            tsbFeedbacks.Visible = tsbReports.Visible = false;
+            tsbFeedbacks.Visible = tsdReports.Visible = false;
         }
 
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace eKuharica.WinUI
             var user = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
 
             if (Helpers.Helper.IsAdministrator(user))
-                tsbFeedbacks.Visible = tsbReports.Visible = true;
+                tsbFeedbacks.Visible = tsdReports.Visible = true;
         }
 
         private void tsbRecipes_Click(object sender, EventArgs e)
@@ -159,6 +160,17 @@ namespace eKuharica.WinUI
         private void logOuttoolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void bestRankedRecipesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Helpers.Helper.CloseAllOpenForms();
+
+            frmTop3BestRatedRecipes bestRatedRecipes = new frmTop3BestRatedRecipes();
+            bestRatedRecipes.MdiParent = this;
+            bestRatedRecipes.WindowState = FormWindowState.Maximized;
+            bestRatedRecipes.Text = "eKuharica";
+            bestRatedRecipes.Show();
         }
     }
 }
