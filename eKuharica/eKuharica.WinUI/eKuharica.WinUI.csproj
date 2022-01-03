@@ -412,11 +412,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dseKuharica.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\frmTop3BestRatedRecipes.cs">
+    <Compile Include="Reports\frmReports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\frmTop3BestRatedRecipes.Designer.cs">
-      <DependentUpon>frmTop3BestRatedRecipes.cs</DependentUpon>
+    <Compile Include="Reports\frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmReportsByMealType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReportsByMealType.Designer.cs">
+      <DependentUpon>frmReportsByMealType.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UserRecipes\frmUserRecipes.cs">
@@ -499,8 +505,11 @@
       <DependentUpon>frmShowRecipes.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\frmTop3BestRatedRecipes.resx">
-      <DependentUpon>frmTop3BestRatedRecipes.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReportsByMealType.resx">
+      <DependentUpon>frmReportsByMealType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Top3BestRatedRecipes.rdlc" />
     <EmbeddedResource Include="UserRecipes\frmUserRecipes.resx">

@@ -166,11 +166,22 @@ namespace eKuharica.WinUI
         {
             Helpers.Helper.CloseAllOpenForms();
 
-            frmTop3BestRatedRecipes bestRatedRecipes = new frmTop3BestRatedRecipes();
+            frmReports bestRatedRecipes = new frmReports(true);
             bestRatedRecipes.MdiParent = this;
             bestRatedRecipes.WindowState = FormWindowState.Maximized;
             bestRatedRecipes.Text = "eKuharica";
             bestRatedRecipes.Show();
+        }
+
+        private void mostLikedRecipesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Helpers.Helper.CloseAllOpenForms();
+
+            frmReportsByMealType reportsByMealType = new frmReportsByMealType(true);
+            reportsByMealType.MdiParent = this;
+            reportsByMealType.WindowState = FormWindowState.Maximized;
+            reportsByMealType.Text = "eKuharica";
+            reportsByMealType.Show();
         }
     }
 }

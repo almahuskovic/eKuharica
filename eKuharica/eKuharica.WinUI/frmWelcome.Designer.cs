@@ -44,6 +44,11 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbArticles = new System.Windows.Forms.ToolStripButton();
             this.tsbFeedbacks = new System.Windows.Forms.ToolStripButton();
+            this.tsdReports = new System.Windows.Forms.ToolStripDropDownButton();
+            this.bestRankedRecipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostLikedRecipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numberOfNewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numberOfNewRecipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbSettings = new System.Windows.Forms.ToolStripDropDownButton();
             this.favouriteRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,11 +58,6 @@
             this.sendRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.tsdReports = new System.Windows.Forms.ToolStripDropDownButton();
-            this.bestRankedRecipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mostLikedRecipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.numberOfNewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.numberOfNewRecipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -164,6 +164,38 @@
             this.tsbFeedbacks.Name = "tsbFeedbacks";
             this.tsbFeedbacks.Click += new System.EventHandler(this.tsbFeedbacks_Click);
             // 
+            // tsdReports
+            // 
+            this.tsdReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bestRankedRecipesToolStripMenuItem,
+            this.mostLikedRecipesToolStripMenuItem,
+            this.numberOfNewUsersToolStripMenuItem,
+            this.numberOfNewRecipesToolStripMenuItem});
+            resources.ApplyResources(this.tsdReports, "tsdReports");
+            this.tsdReports.Name = "tsdReports";
+            // 
+            // bestRankedRecipesToolStripMenuItem
+            // 
+            this.bestRankedRecipesToolStripMenuItem.Name = "bestRankedRecipesToolStripMenuItem";
+            resources.ApplyResources(this.bestRankedRecipesToolStripMenuItem, "bestRankedRecipesToolStripMenuItem");
+            this.bestRankedRecipesToolStripMenuItem.Click += new System.EventHandler(this.bestRankedRecipesToolStripMenuItem_Click);
+            // 
+            // mostLikedRecipesToolStripMenuItem
+            // 
+            this.mostLikedRecipesToolStripMenuItem.Name = "mostLikedRecipesToolStripMenuItem";
+            resources.ApplyResources(this.mostLikedRecipesToolStripMenuItem, "mostLikedRecipesToolStripMenuItem");
+            this.mostLikedRecipesToolStripMenuItem.Click += new System.EventHandler(this.mostLikedRecipesToolStripMenuItem_Click);
+            // 
+            // numberOfNewUsersToolStripMenuItem
+            // 
+            this.numberOfNewUsersToolStripMenuItem.Name = "numberOfNewUsersToolStripMenuItem";
+            resources.ApplyResources(this.numberOfNewUsersToolStripMenuItem, "numberOfNewUsersToolStripMenuItem");
+            // 
+            // numberOfNewRecipesToolStripMenuItem
+            // 
+            this.numberOfNewRecipesToolStripMenuItem.Name = "numberOfNewRecipesToolStripMenuItem";
+            resources.ApplyResources(this.numberOfNewRecipesToolStripMenuItem, "numberOfNewRecipesToolStripMenuItem");
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -216,37 +248,6 @@
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
             resources.ApplyResources(this.editProfileToolStripMenuItem, "editProfileToolStripMenuItem");
             this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
-            // 
-            // tsdReports
-            // 
-            this.tsdReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bestRankedRecipesToolStripMenuItem,
-            this.mostLikedRecipesToolStripMenuItem,
-            this.numberOfNewUsersToolStripMenuItem,
-            this.numberOfNewRecipesToolStripMenuItem});
-            resources.ApplyResources(this.tsdReports, "tsdReports");
-            this.tsdReports.Name = "tsdReports";
-            // 
-            // bestRankedRecipesToolStripMenuItem
-            // 
-            this.bestRankedRecipesToolStripMenuItem.Name = "bestRankedRecipesToolStripMenuItem";
-            resources.ApplyResources(this.bestRankedRecipesToolStripMenuItem, "bestRankedRecipesToolStripMenuItem");
-            this.bestRankedRecipesToolStripMenuItem.Click += new System.EventHandler(this.bestRankedRecipesToolStripMenuItem_Click);
-            // 
-            // mostLikedRecipesToolStripMenuItem
-            // 
-            this.mostLikedRecipesToolStripMenuItem.Name = "mostLikedRecipesToolStripMenuItem";
-            resources.ApplyResources(this.mostLikedRecipesToolStripMenuItem, "mostLikedRecipesToolStripMenuItem");
-            // 
-            // numberOfNewUsersToolStripMenuItem
-            // 
-            this.numberOfNewUsersToolStripMenuItem.Name = "numberOfNewUsersToolStripMenuItem";
-            resources.ApplyResources(this.numberOfNewUsersToolStripMenuItem, "numberOfNewUsersToolStripMenuItem");
-            // 
-            // numberOfNewRecipesToolStripMenuItem
-            // 
-            this.numberOfNewRecipesToolStripMenuItem.Name = "numberOfNewRecipesToolStripMenuItem";
-            resources.ApplyResources(this.numberOfNewRecipesToolStripMenuItem, "numberOfNewRecipesToolStripMenuItem");
             // 
             // frmWelcome
             // 

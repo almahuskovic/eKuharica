@@ -1,6 +1,6 @@
 ﻿namespace eKuharica.WinUI.Reports
 {
-    partial class frmTop3BestRatedRecipes
+    partial class frmReports
     {
         /// <summary>
         /// Required designer variable.
@@ -38,34 +38,34 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "eKuharica.WinUI.Reports.Top3BestRatedRecipes.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 42);
+            this.reportViewer1.Location = new System.Drawing.Point(-1, 119);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 408);
-            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 417);
+            this.reportViewer1.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(713, 12);
+            this.btnClose.Location = new System.Drawing.Point(713, 30);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 1;
+            this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // frmTop3BestRatedRecipes
+            // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 539);
             this.ControlBox = false;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmTop3BestRatedRecipes";
-            this.Text = "frmTop3BestRatedRecipes";
-            this.Load += new System.EventHandler(this.frmTop3BestRatedRecipes_Load);
+            this.Name = "frmReports";
+            this.Text = "frmReports";
+            this.Load += new System.EventHandler(this.frmReports_Load);
             this.ResumeLayout(false);
 
         }
