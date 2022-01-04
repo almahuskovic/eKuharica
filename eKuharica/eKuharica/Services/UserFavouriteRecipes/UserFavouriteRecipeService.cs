@@ -18,6 +18,20 @@ namespace eKuharica.Services.UserFavouriteRecipes
         public override IEnumerable<UserFavouriteRecipeDto> Get(UserFavouriteRecipeSearchRequest search = null)
         {
             var entity = Context.Set<UserFavouriteRecipe>().AsQueryable();
+            var entityRecipe = Context.Set<Recipe>().AsQueryable();
+
+            if (search.DataForReport)
+            {
+                if (search.MealTypeId != null && search.MealTypeId > 0)
+                    return entityRecipe.Where(x => x.MealType == (int)search.MealTypeId).Select(x => new UserFavouriteRecipeDto()
+                    {
+                        Recipe = x.Title,
+                        RecipeId = x.Id,
+                        NumberOfLikes = entity.Where(t => t.RecipeId == x.Id).Count()
+                    }).OrderByDescending(x => x.NumberOfLikes).ToList();
+                else
+                    return null;
+            }
 
             if (search?.RecipeId > 0)
             {

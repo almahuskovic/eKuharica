@@ -511,6 +511,7 @@
     <EmbeddedResource Include="Reports\frmReportsByMealType.resx">
       <DependentUpon>frmReportsByMealType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MostLikedRecipes.rdlc" />
     <EmbeddedResource Include="Reports\Top3BestRatedRecipes.rdlc" />
     <EmbeddedResource Include="UserRecipes\frmUserRecipes.resx">
       <DependentUpon>frmUserRecipes.cs</DependentUpon>
