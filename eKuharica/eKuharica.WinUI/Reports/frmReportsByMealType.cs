@@ -45,7 +45,7 @@ namespace eKuharica.WinUI.Reports
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            frmReports bestRatedRecipes = new frmReports(false, _data.Take(3).ToList());
+            frmMostLikedRecipes bestRatedRecipes = new frmMostLikedRecipes(_data.Take(3).ToList());
             bestRatedRecipes.WindowState = FormWindowState.Maximized;
             bestRatedRecipes.MdiParent = MdiParent;
             bestRatedRecipes.Text = "eKuharica";

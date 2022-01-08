@@ -166,7 +166,7 @@ namespace eKuharica.WinUI
         {
             Helpers.Helper.CloseAllOpenForms();
 
-            frmReports bestRatedRecipes = new frmReports(true);
+            frmTop3BestRatedRecipes bestRatedRecipes = new frmTop3BestRatedRecipes();
             bestRatedRecipes.MdiParent = this;
             bestRatedRecipes.WindowState = FormWindowState.Maximized;
             bestRatedRecipes.Text = "eKuharica";
@@ -177,11 +177,22 @@ namespace eKuharica.WinUI
         {
             Helpers.Helper.CloseAllOpenForms();
 
-            frmReportsByMealType reportsByMealType = new frmReportsByMealType(true);
-            reportsByMealType.MdiParent = this;
-            reportsByMealType.WindowState = FormWindowState.Maximized;
-            reportsByMealType.Text = "eKuharica";
-            reportsByMealType.Show();
+            frmReportsByMealType mostLikedRecipes = new frmReportsByMealType();
+            mostLikedRecipes.MdiParent = this;
+            mostLikedRecipes.WindowState = FormWindowState.Maximized;
+            mostLikedRecipes.Text = "eKuharica";
+            mostLikedRecipes.Show();
+        }
+
+        private void numberOfNewUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Helpers.Helper.CloseAllOpenForms();
+
+            frmNewUsersPerMonth newUsersPerMonths = new frmNewUsersPerMonth();
+            newUsersPerMonths.MdiParent = this;
+            newUsersPerMonths.WindowState = FormWindowState.Maximized;
+            newUsersPerMonths.Text = "eKuharica";
+            newUsersPerMonths.Show();
         }
     }
 }

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsLikes" targetNamespace="http://tempuri.org/dsLikes.xsd" xmlns:mstns="http://tempuri.org/dsLikes.xsd" xmlns="http://tempuri.org/dsLikes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsLikes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsLikes" msprop:Generator_UserDSName="dsLikes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RecipeLikes" msprop:Generator_TableClassName="RecipeLikesDataTable" msprop:Generator_TableVarName="tableRecipeLikes" msprop:Generator_TablePropName="RecipeLikes" msprop:Generator_RowDeletingName="RecipeLikesRowDeleting" msprop:Generator_RowChangingName="RecipeLikesRowChanging" msprop:Generator_RowEvHandlerName="RecipeLikesRowChangeEventHandler" msprop:Generator_RowDeletedName="RecipeLikesRowDeleted" msprop:Generator_UserTableName="RecipeLikes" msprop:Generator_RowChangedName="RecipeLikesRowChanged" msprop:Generator_RowEvArgName="RecipeLikesRowChangeEvent" msprop:Generator_RowClassName="RecipeLikesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Recipe" msprop:Generator_ColumnVarNameInTable="columnRecipe" msprop:Generator_ColumnPropNameInRow="Recipe" msprop:Generator_ColumnPropNameInTable="RecipeColumn" msprop:Generator_UserColumnName="Recipe" type="xs:string" minOccurs="0" />
+              <xs:element name="NumberOfLikes" msprop:Generator_ColumnVarNameInTable="columnNumberOfLikes" msprop:Generator_ColumnPropNameInRow="NumberOfLikes" msprop:Generator_ColumnPropNameInTable="NumberOfLikesColumn" msprop:Generator_UserColumnName="NumberOfLikes" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

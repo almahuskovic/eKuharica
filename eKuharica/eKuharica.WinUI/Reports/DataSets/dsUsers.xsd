@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsUsers" targetNamespace="http://tempuri.org/dsUsers.xsd" xmlns:mstns="http://tempuri.org/dsUsers.xsd" xmlns="http://tempuri.org/dsUsers.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsUsers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsUsers" msprop:Generator_UserDSName="dsUsers">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UsersPerMonth" msprop:Generator_TableClassName="UsersPerMonthDataTable" msprop:Generator_TableVarName="tableUsersPerMonth" msprop:Generator_TablePropName="UsersPerMonth" msprop:Generator_RowDeletingName="UsersPerMonthRowDeleting" msprop:Generator_RowChangingName="UsersPerMonthRowChanging" msprop:Generator_RowEvHandlerName="UsersPerMonthRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersPerMonthRowDeleted" msprop:Generator_UserTableName="UsersPerMonth" msprop:Generator_RowChangedName="UsersPerMonthRowChanged" msprop:Generator_RowEvArgName="UsersPerMonthRowChangeEvent" msprop:Generator_RowClassName="UsersPerMonthRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Month" msprop:Generator_ColumnVarNameInTable="columnMonth" msprop:Generator_ColumnPropNameInRow="Month" msprop:Generator_ColumnPropNameInTable="MonthColumn" msprop:Generator_UserColumnName="Month" type="xs:string" minOccurs="0" />
+              <xs:element name="NumberOfUsers" msprop:Generator_ColumnVarNameInTable="columnNumberOfUsers" msprop:Generator_ColumnPropNameInRow="NumberOfUsers" msprop:Generator_ColumnPropNameInTable="NumberOfUsersColumn" msprop:Generator_UserColumnName="NumberOfUsers" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

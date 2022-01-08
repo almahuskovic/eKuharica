@@ -190,6 +190,7 @@
             // 
             this.numberOfNewUsersToolStripMenuItem.Name = "numberOfNewUsersToolStripMenuItem";
             resources.ApplyResources(this.numberOfNewUsersToolStripMenuItem, "numberOfNewUsersToolStripMenuItem");
+            this.numberOfNewUsersToolStripMenuItem.Click += new System.EventHandler(this.numberOfNewUsersToolStripMenuItem_Click);
             // 
             // numberOfNewRecipesToolStripMenuItem
             // 

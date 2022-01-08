@@ -27,7 +27,7 @@ namespace eKuharica.Services.UserFavouriteRecipes
                     {
                         Recipe = x.Title,
                         RecipeId = x.Id,
-                        NumberOfLikes = entity.Where(t => t.RecipeId == x.Id).Count()
+                        NumberOfLikes = entity.Where(t => t.RecipeId == x.Id).Count().ToString()
                     }).OrderByDescending(x => x.NumberOfLikes).ToList();
                 else
                     return null;
