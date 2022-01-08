@@ -2,34 +2,34 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="dsUsers">
+    <DataSource Name="dsRatio">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>507a9382-5db6-4f99-b39d-c2bf2c874951</rd:DataSourceID>
+      <rd:DataSourceID>62bcae10-42d9-4ead-a689-258c781f3899</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dsUsers">
+    <DataSet Name="dsRatio">
       <Query>
-        <DataSourceName>dsUsers</DataSourceName>
+        <DataSourceName>dsRatio</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Month">
-          <DataField>Month</DataField>
+        <Field Name="Name">
+          <DataField>Name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="NumberOfUsers">
-          <DataField>NumberOfUsers</DataField>
+        <Field Name="CountOf">
+          <DataField>CountOf</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>dsUsers</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\User\source\repos\eKuharica\eKuharica\eKuharica.WinUI\Reports\DataSets\dsUsers.xsd</rd:SchemaPath>
-        <rd:TableName>UsersPerMonth</rd:TableName>
+        <rd:DataSetName>dsRatio</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\User\source\repos\eKuharica\eKuharica\eKuharica.WinUI\Reports\DataSets\dsRatio.xsd</rd:SchemaPath>
+        <rd:TableName>TypeRatio</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -47,7 +47,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>BROJ NOVIH KORISNIKA PO MJESECIMA</Value>
+                    <Value>OMJER OBJAVLJENIH RECEPATA PO VRSTI JELA</Value>
                     <Style>
                       <FontSize>14pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -60,8 +60,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>0.47195in</Top>
-            <Left>0.61916in</Left>
+            <Top>0.47086in</Top>
+            <Left>0.58333in</Left>
             <Height>0.28333in</Height>
             <Width>5.35834in</Width>
             <Style>
@@ -75,8 +75,8 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>0.82471in</Top>
-            <Left>0.41917in</Left>
+            <Top>0.82362in</Top>
+            <Left>0.38334in</Left>
             <Height>0in</Height>
             <Width>5.73333in</Width>
             <ZIndex>1</ZIndex>
@@ -92,36 +92,37 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!Month.Value</GroupExpression>
+                      <GroupExpression>=Fields!Name.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Month.Value</Value>
+                      <Value>=Fields!Name.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!Month.Value</Label>
+                  <Label>=Fields!Name.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>Number Of Users</Label>
+                  <Label>Count Of</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="NumberOfUsers">
+                <ChartSeries Name="CountOf">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Fields!NumberOfUsers.Value</Y>
+                        <Y>=Fields!CountOf.Value</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
+                      <ToolTip>=Count(Fields!CountOf.Value)</ToolTip>
                       <Style />
                       <ChartMarker>
                         <Style />
@@ -129,7 +130,6 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
-                  <Type>Line</Type>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -431,11 +431,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>dsUsers</DataSetName>
-            <Top>1.18in</Top>
-            <Left>0.61916in</Left>
-            <Height>2.69167in</Height>
-            <Width>4.95583in</Width>
+            <DataSetName>dsRatio</DataSetName>
+            <Top>1.22167in</Top>
+            <Left>0.93in</Left>
+            <Height>2.9in</Height>
+            <Width>4.73667in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -447,10 +447,10 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>4.11333in</Height>
+        <Height>4.36334in</Height>
         <Style />
       </Body>
-      <Width>6.57167in</Width>
+      <Width>6.5in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
@@ -467,5 +467,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>d202f8d0-0e2a-494b-b18e-2bce77bc2e10</rd:ReportID>
+  <rd:ReportID>b7142e94-509e-4823-aeae-8bae144735bd</rd:ReportID>
 </Report>

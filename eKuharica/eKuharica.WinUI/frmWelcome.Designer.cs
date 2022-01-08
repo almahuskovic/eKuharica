@@ -196,6 +196,7 @@
             // 
             this.numberOfNewRecipesToolStripMenuItem.Name = "numberOfNewRecipesToolStripMenuItem";
             resources.ApplyResources(this.numberOfNewRecipesToolStripMenuItem, "numberOfNewRecipesToolStripMenuItem");
+            this.numberOfNewRecipesToolStripMenuItem.Click += new System.EventHandler(this.numberOfNewRecipesToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 

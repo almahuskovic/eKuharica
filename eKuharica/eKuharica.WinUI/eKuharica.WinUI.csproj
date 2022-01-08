@@ -417,10 +417,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsRating.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DataSets\dsRatio.cs">
+      <DependentUpon>dsRatio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\dsRatio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRatio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DataSets\dsUsers.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUsers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmMealTypeRatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmMealTypeRatio.Designer.cs">
+      <DependentUpon>frmMealTypeRatio.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\frmMostLikedRecipes.cs">
       <SubType>Form</SubType>
@@ -527,6 +541,9 @@
       <DependentUpon>frmShowRecipes.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmMealTypeRatio.resx">
+      <DependentUpon>frmMealTypeRatio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\frmMostLikedRecipes.resx">
       <DependentUpon>frmMostLikedRecipes.cs</DependentUpon>
     </EmbeddedResource>
@@ -539,6 +556,7 @@
     <EmbeddedResource Include="Reports\frmTop3BestRatedRecipes.resx">
       <DependentUpon>frmTop3BestRatedRecipes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MealTypeRatio.rdlc" />
     <EmbeddedResource Include="Reports\MostLikedRecipes.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -594,6 +612,17 @@
     </None>
     <None Include="Reports\DataSets\dsRating.xss">
       <DependentUpon>dsRating.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSets\dsRatio.xsc">
+      <DependentUpon>dsRatio.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSets\dsRatio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRatio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\dsRatio.xss">
+      <DependentUpon>dsRatio.xsd</DependentUpon>
     </None>
     <None Include="Reports\DataSets\dsUsers.xsc">
       <DependentUpon>dsUsers.xsd</DependentUpon>

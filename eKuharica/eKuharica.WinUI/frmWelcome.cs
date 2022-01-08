@@ -194,5 +194,16 @@ namespace eKuharica.WinUI
             newUsersPerMonths.Text = "eKuharica";
             newUsersPerMonths.Show();
         }
+
+        private void numberOfNewRecipesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Helpers.Helper.CloseAllOpenForms();
+
+            frmMealTypeRatio mealTypeRatio = new frmMealTypeRatio();
+            mealTypeRatio.MdiParent = this;
+            mealTypeRatio.WindowState = FormWindowState.Maximized;
+            mealTypeRatio.Text = "eKuharica";
+            mealTypeRatio.Show();
+        }
     }
 }

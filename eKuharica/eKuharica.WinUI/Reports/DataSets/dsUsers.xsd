@@ -12,11 +12,11 @@
   <xs:element name="dsUsers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsUsers" msprop:Generator_UserDSName="dsUsers">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="UsersPerMonth" msprop:Generator_TableClassName="UsersPerMonthDataTable" msprop:Generator_TableVarName="tableUsersPerMonth" msprop:Generator_TablePropName="UsersPerMonth" msprop:Generator_RowDeletingName="UsersPerMonthRowDeleting" msprop:Generator_RowChangingName="UsersPerMonthRowChanging" msprop:Generator_RowEvHandlerName="UsersPerMonthRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersPerMonthRowDeleted" msprop:Generator_UserTableName="UsersPerMonth" msprop:Generator_RowChangedName="UsersPerMonthRowChanged" msprop:Generator_RowEvArgName="UsersPerMonthRowChangeEvent" msprop:Generator_RowClassName="UsersPerMonthRow">
+        <xs:element name="UsersPerMonth" msprop:Generator_TableClassName="UsersPerMonthDataTable" msprop:Generator_TableVarName="tableUsersPerMonth" msprop:Generator_RowChangedName="UsersPerMonthRowChanged" msprop:Generator_TablePropName="UsersPerMonth" msprop:Generator_RowDeletingName="UsersPerMonthRowDeleting" msprop:Generator_RowChangingName="UsersPerMonthRowChanging" msprop:Generator_RowEvHandlerName="UsersPerMonthRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersPerMonthRowDeleted" msprop:Generator_RowClassName="UsersPerMonthRow" msprop:Generator_UserTableName="UsersPerMonth" msprop:Generator_RowEvArgName="UsersPerMonthRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Month" msprop:Generator_ColumnVarNameInTable="columnMonth" msprop:Generator_ColumnPropNameInRow="Month" msprop:Generator_ColumnPropNameInTable="MonthColumn" msprop:Generator_UserColumnName="Month" type="xs:string" minOccurs="0" />
-              <xs:element name="NumberOfUsers" msprop:Generator_ColumnVarNameInTable="columnNumberOfUsers" msprop:Generator_ColumnPropNameInRow="NumberOfUsers" msprop:Generator_ColumnPropNameInTable="NumberOfUsersColumn" msprop:Generator_UserColumnName="NumberOfUsers" type="xs:string" minOccurs="0" />
+              <xs:element name="NumberOfUsers" msprop:Generator_ColumnVarNameInTable="columnNumberOfUsers" msprop:Generator_ColumnPropNameInRow="NumberOfUsers" msprop:Generator_ColumnPropNameInTable="NumberOfUsersColumn" msprop:Generator_UserColumnName="NumberOfUsers" type="xs:short" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -14,6 +14,8 @@ namespace eKuharica.Model.DTO
         public string Username { get; set; }
         public byte[] Picture{ get; set; }
         public string FullName { get; set; }
+        public string Month { get; set; }
+        public int NumberOfUsers { get; set; }
         public DateTime CreatedAt { get; set; } 
 
         public ICollection<UserRoleDto> UserRoles { get; set; }

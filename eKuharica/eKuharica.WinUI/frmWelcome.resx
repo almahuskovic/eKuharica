@@ -1117,37 +1117,37 @@
     <value>111, 6</value>
   </data>
   <data name="favouriteRecipeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="favouriteRecipeToolStripMenuItem.Text" xml:space="preserve">
     <value>Favourite recipes</value>
   </data>
   <data name="followingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="followingToolStripMenuItem.Text" xml:space="preserve">
     <value>Following</value>
   </data>
   <data name="followersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="followersToolStripMenuItem.Text" xml:space="preserve">
     <value>Followers</value>
   </data>
   <data name="myRecipesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="myRecipesToolStripMenuItem.Text" xml:space="preserve">
     <value>My recipes</value>
   </data>
   <data name="sendRecipeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="sendRecipeToolStripMenuItem.Text" xml:space="preserve">
     <value>Send recipe</value>
   </data>
   <data name="editProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 26</value>
+    <value>224, 26</value>
   </data>
   <data name="editProfileToolStripMenuItem.Text" xml:space="preserve">
     <value>Edit profile</value>

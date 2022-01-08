@@ -20,17 +20,17 @@ namespace eKuharica.WinUI.Reports.DataSets {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsUsers")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsRatio")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsUsers : global::System.Data.DataSet {
+    public partial class dsRatio : global::System.Data.DataSet {
         
-        private UsersPerMonthDataTable tableUsersPerMonth;
+        private TypeRatioDataTable tableTypeRatio;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public dsUsers() {
+        public dsRatio() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace eKuharica.WinUI.Reports.DataSets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected dsUsers(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsRatio(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace eKuharica.WinUI.Reports.DataSets {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["UsersPerMonth"] != null)) {
-                    base.Tables.Add(new UsersPerMonthDataTable(ds.Tables["UsersPerMonth"]));
+                if ((ds.Tables["TypeRatio"] != null)) {
+                    base.Tables.Add(new TypeRatioDataTable(ds.Tables["TypeRatio"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace eKuharica.WinUI.Reports.DataSets {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public UsersPerMonthDataTable UsersPerMonth {
+        public TypeRatioDataTable TypeRatio {
             get {
-                return this.tableUsersPerMonth;
+                return this.tableTypeRatio;
             }
         }
         
@@ -127,7 +127,7 @@ namespace eKuharica.WinUI.Reports.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsUsers cln = ((dsUsers)(base.Clone()));
+            dsRatio cln = ((dsRatio)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace eKuharica.WinUI.Reports.DataSets {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["UsersPerMonth"] != null)) {
-                    base.Tables.Add(new UsersPerMonthDataTable(ds.Tables["UsersPerMonth"]));
+                if ((ds.Tables["TypeRatio"] != null)) {
+                    base.Tables.Add(new TypeRatioDataTable(ds.Tables["TypeRatio"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace eKuharica.WinUI.Reports.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableUsersPerMonth = ((UsersPerMonthDataTable)(base.Tables["UsersPerMonth"]));
+            this.tableTypeRatio = ((TypeRatioDataTable)(base.Tables["TypeRatio"]));
             if ((initTable == true)) {
-                if ((this.tableUsersPerMonth != null)) {
-                    this.tableUsersPerMonth.InitVars();
+                if ((this.tableTypeRatio != null)) {
+                    this.tableTypeRatio.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace eKuharica.WinUI.Reports.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsUsers";
+            this.DataSetName = "dsRatio";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsUsers.xsd";
+            this.Namespace = "http://tempuri.org/dsRatio.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableUsersPerMonth = new UsersPerMonthDataTable();
-            base.Tables.Add(this.tableUsersPerMonth);
+            this.tableTypeRatio = new TypeRatioDataTable();
+            base.Tables.Add(this.tableTypeRatio);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeUsersPerMonth() {
+        private bool ShouldSerializeTypeRatio() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace eKuharica.WinUI.Reports.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsUsers ds = new dsUsers();
+            dsRatio ds = new dsRatio();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,23 @@ namespace eKuharica.WinUI.Reports.DataSets {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void UsersPerMonthRowChangeEventHandler(object sender, UsersPerMonthRowChangeEvent e);
+        public delegate void TypeRatioRowChangeEventHandler(object sender, TypeRatioRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class UsersPerMonthDataTable : global::System.Data.TypedTableBase<UsersPerMonthRow> {
+        public partial class TypeRatioDataTable : global::System.Data.TypedTableBase<TypeRatioRow> {
             
-            private global::System.Data.DataColumn columnMonth;
+            private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnNumberOfUsers;
+            private global::System.Data.DataColumn columnCountOf;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersPerMonthDataTable() {
-                this.TableName = "UsersPerMonth";
+            public TypeRatioDataTable() {
+                this.TableName = "TypeRatio";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +294,7 @@ namespace eKuharica.WinUI.Reports.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal UsersPerMonthDataTable(global::System.Data.DataTable table) {
+            internal TypeRatioDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +311,24 @@ namespace eKuharica.WinUI.Reports.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected UsersPerMonthDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TypeRatioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn MonthColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnMonth;
+                    return this.columnName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NumberOfUsersColumn {
+            public global::System.Data.DataColumn CountOfColumn {
                 get {
-                    return this.columnNumberOfUsers;
+                    return this.columnCountOf;
                 }
             }
             
@@ -343,46 +343,46 @@ namespace eKuharica.WinUI.Reports.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersPerMonthRow this[int index] {
+            public TypeRatioRow this[int index] {
                 get {
-                    return ((UsersPerMonthRow)(this.Rows[index]));
+                    return ((TypeRatioRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event UsersPerMonthRowChangeEventHandler UsersPerMonthRowChanging;
+            public event TypeRatioRowChangeEventHandler TypeRatioRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event UsersPerMonthRowChangeEventHandler UsersPerMonthRowChanged;
+            public event TypeRatioRowChangeEventHandler TypeRatioRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event UsersPerMonthRowChangeEventHandler UsersPerMonthRowDeleting;
+            public event TypeRatioRowChangeEventHandler TypeRatioRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event UsersPerMonthRowChangeEventHandler UsersPerMonthRowDeleted;
+            public event TypeRatioRowChangeEventHandler TypeRatioRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddUsersPerMonthRow(UsersPerMonthRow row) {
+            public void AddTypeRatioRow(TypeRatioRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersPerMonthRow AddUsersPerMonthRow(string Month, short NumberOfUsers) {
-                UsersPerMonthRow rowUsersPerMonthRow = ((UsersPerMonthRow)(this.NewRow()));
+            public TypeRatioRow AddTypeRatioRow(string Name, int CountOf) {
+                TypeRatioRow rowTypeRatioRow = ((TypeRatioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Month,
-                        NumberOfUsers};
-                rowUsersPerMonthRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowUsersPerMonthRow);
-                return rowUsersPerMonthRow;
+                        Name,
+                        CountOf};
+                rowTypeRatioRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTypeRatioRow);
+                return rowTypeRatioRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                UsersPerMonthDataTable cln = ((UsersPerMonthDataTable)(base.Clone()));
+                TypeRatioDataTable cln = ((TypeRatioDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -390,49 +390,49 @@ namespace eKuharica.WinUI.Reports.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new UsersPerMonthDataTable();
+                return new TypeRatioDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnMonth = base.Columns["Month"];
-                this.columnNumberOfUsers = base.Columns["NumberOfUsers"];
+                this.columnName = base.Columns["Name"];
+                this.columnCountOf = base.Columns["CountOf"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnMonth = new global::System.Data.DataColumn("Month", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMonth);
-                this.columnNumberOfUsers = new global::System.Data.DataColumn("NumberOfUsers", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumberOfUsers);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnCountOf = new global::System.Data.DataColumn("CountOf", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountOf);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersPerMonthRow NewUsersPerMonthRow() {
-                return ((UsersPerMonthRow)(this.NewRow()));
+            public TypeRatioRow NewTypeRatioRow() {
+                return ((TypeRatioRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new UsersPerMonthRow(builder);
+                return new TypeRatioRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(UsersPerMonthRow);
+                return typeof(TypeRatioRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.UsersPerMonthRowChanged != null)) {
-                    this.UsersPerMonthRowChanged(this, new UsersPerMonthRowChangeEvent(((UsersPerMonthRow)(e.Row)), e.Action));
+                if ((this.TypeRatioRowChanged != null)) {
+                    this.TypeRatioRowChanged(this, new TypeRatioRowChangeEvent(((TypeRatioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -440,8 +440,8 @@ namespace eKuharica.WinUI.Reports.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.UsersPerMonthRowChanging != null)) {
-                    this.UsersPerMonthRowChanging(this, new UsersPerMonthRowChangeEvent(((UsersPerMonthRow)(e.Row)), e.Action));
+                if ((this.TypeRatioRowChanging != null)) {
+                    this.TypeRatioRowChanging(this, new TypeRatioRowChangeEvent(((TypeRatioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -449,8 +449,8 @@ namespace eKuharica.WinUI.Reports.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.UsersPerMonthRowDeleted != null)) {
-                    this.UsersPerMonthRowDeleted(this, new UsersPerMonthRowChangeEvent(((UsersPerMonthRow)(e.Row)), e.Action));
+                if ((this.TypeRatioRowDeleted != null)) {
+                    this.TypeRatioRowDeleted(this, new TypeRatioRowChangeEvent(((TypeRatioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -458,14 +458,14 @@ namespace eKuharica.WinUI.Reports.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.UsersPerMonthRowDeleting != null)) {
-                    this.UsersPerMonthRowDeleting(this, new UsersPerMonthRowChangeEvent(((UsersPerMonthRow)(e.Row)), e.Action));
+                if ((this.TypeRatioRowDeleting != null)) {
+                    this.TypeRatioRowDeleting(this, new TypeRatioRowChangeEvent(((TypeRatioRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveUsersPerMonthRow(UsersPerMonthRow row) {
+            public void RemoveTypeRatioRow(TypeRatioRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -474,7 +474,7 @@ namespace eKuharica.WinUI.Reports.DataSets {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsUsers ds = new dsUsers();
+                dsRatio ds = new dsRatio();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -492,7 +492,7 @@ namespace eKuharica.WinUI.Reports.DataSets {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "UsersPerMonthDataTable";
+                attribute2.FixedValue = "TypeRatioDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -536,71 +536,71 @@ namespace eKuharica.WinUI.Reports.DataSets {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class UsersPerMonthRow : global::System.Data.DataRow {
+        public partial class TypeRatioRow : global::System.Data.DataRow {
             
-            private UsersPerMonthDataTable tableUsersPerMonth;
+            private TypeRatioDataTable tableTypeRatio;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal UsersPerMonthRow(global::System.Data.DataRowBuilder rb) : 
+            internal TypeRatioRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableUsersPerMonth = ((UsersPerMonthDataTable)(this.Table));
+                this.tableTypeRatio = ((TypeRatioDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Month {
+            public string Name {
                 get {
                     try {
-                        return ((string)(this[this.tableUsersPerMonth.MonthColumn]));
+                        return ((string)(this[this.tableTypeRatio.NameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Month\' in table \'UsersPerMonth\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'TypeRatio\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUsersPerMonth.MonthColumn] = value;
+                    this[this.tableTypeRatio.NameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short NumberOfUsers {
+            public int CountOf {
                 get {
                     try {
-                        return ((short)(this[this.tableUsersPerMonth.NumberOfUsersColumn]));
+                        return ((int)(this[this.tableTypeRatio.CountOfColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NumberOfUsers\' in table \'UsersPerMonth\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CountOf\' in table \'TypeRatio\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUsersPerMonth.NumberOfUsersColumn] = value;
+                    this[this.tableTypeRatio.CountOfColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsMonthNull() {
-                return this.IsNull(this.tableUsersPerMonth.MonthColumn);
+            public bool IsNameNull() {
+                return this.IsNull(this.tableTypeRatio.NameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetMonthNull() {
-                this[this.tableUsersPerMonth.MonthColumn] = global::System.Convert.DBNull;
+            public void SetNameNull() {
+                this[this.tableTypeRatio.NameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsNumberOfUsersNull() {
-                return this.IsNull(this.tableUsersPerMonth.NumberOfUsersColumn);
+            public bool IsCountOfNull() {
+                return this.IsNull(this.tableTypeRatio.CountOfColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetNumberOfUsersNull() {
-                this[this.tableUsersPerMonth.NumberOfUsersColumn] = global::System.Convert.DBNull;
+            public void SetCountOfNull() {
+                this[this.tableTypeRatio.CountOfColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -608,22 +608,22 @@ namespace eKuharica.WinUI.Reports.DataSets {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class UsersPerMonthRowChangeEvent : global::System.EventArgs {
+        public class TypeRatioRowChangeEvent : global::System.EventArgs {
             
-            private UsersPerMonthRow eventRow;
+            private TypeRatioRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersPerMonthRowChangeEvent(UsersPerMonthRow row, global::System.Data.DataRowAction action) {
+            public TypeRatioRowChangeEvent(TypeRatioRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersPerMonthRow Row {
+            public TypeRatioRow Row {
                 get {
                     return this.eventRow;
                 }

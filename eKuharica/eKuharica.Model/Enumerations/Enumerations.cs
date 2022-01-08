@@ -53,5 +53,21 @@ namespace eKuharica.Model.Enumerations
             Employee,
             User
         }
+
+        public enum Months
+        {
+            Januar,
+            Februar,
+            Mart,
+            April,
+            Maj,
+            Juni,
+            Juli,
+            August,
+            Septembar,
+            Oktobar,
+            Novembar,
+            Decembar
+        }
     }
 }

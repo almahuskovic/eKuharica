@@ -33,11 +33,11 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.dgvReportData = new System.Windows.Forms.DataGridView();
             this.lblNote = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbMealTypes = new System.Windows.Forms.GroupBox();
             this.Recipe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumberOfLikes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportData)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gbMealTypes.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbChooseMealType
@@ -93,16 +93,16 @@
             this.lblNote.TabIndex = 4;
             this.lblNote.Text = "label1";
             // 
-            // groupBox1
+            // gbMealTypes
             // 
-            this.groupBox1.Controls.Add(this.cmbChooseMealType);
-            this.groupBox1.Controls.Add(this.lblNote);
-            this.groupBox1.Controls.Add(this.lblChooseMealType);
-            this.groupBox1.Location = new System.Drawing.Point(34, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(298, 89);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
+            this.gbMealTypes.Controls.Add(this.cmbChooseMealType);
+            this.gbMealTypes.Controls.Add(this.lblNote);
+            this.gbMealTypes.Controls.Add(this.lblChooseMealType);
+            this.gbMealTypes.Location = new System.Drawing.Point(34, 12);
+            this.gbMealTypes.Name = "gbMealTypes";
+            this.gbMealTypes.Size = new System.Drawing.Size(298, 89);
+            this.gbMealTypes.TabIndex = 5;
+            this.gbMealTypes.TabStop = false;
             // 
             // Recipe
             // 
@@ -128,15 +128,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbMealTypes);
             this.Controls.Add(this.dgvReportData);
             this.Controls.Add(this.btnPrint);
             this.Name = "frmReportsByMealType";
             this.Text = "frmReportsByMealType";
             this.Load += new System.EventHandler(this.frmReportsByMealType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportData)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbMealTypes.ResumeLayout(false);
+            this.gbMealTypes.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -148,7 +148,7 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.DataGridView dgvReportData;
         private System.Windows.Forms.Label lblNote;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbMealTypes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Recipe;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfLikes;
     }

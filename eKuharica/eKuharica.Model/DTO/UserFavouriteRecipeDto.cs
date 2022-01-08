@@ -10,7 +10,7 @@ namespace eKuharica.Model.DTO
         public int UserId { get; set; }
         public int RecipeId { get; set; }
         public string Recipe { get; set; }
-        public string NumberOfLikes { get; set; }
+        public int NumberOfLikes { get; set; }
         public bool IsDeleted { get; set; }
     }
 }
