@@ -18,10 +18,12 @@ namespace eKuharica.WinUI.Articles
         APIService _articleService = new APIService("Article");
         APIService _articleTranslationService = new APIService("ArticleTranslation");
         APIService _userService = new APIService("User");
+        public DataGridView Dgv {get; set; }
         public frmArticles()
         {
             InitializeComponent();
             sdgvArticles.AutoGenerateColumns = false;
+            Dgv = sdgvArticles;
         }
 
         private void btnAddArticle_Click(object sender, EventArgs e)

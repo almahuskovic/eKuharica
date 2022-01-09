@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -195,6 +196,52 @@ namespace eKuharica.WinUI.Helpers
                     return true;
             }
             return false;
+        }
+
+        public static void ChangeLanguage(string language)
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name != "frmWelcome" && f.Name != "frmLogin")
+                    foreach (Control c in f.Controls)
+                    {
+                        ComponentResourceManager resources = new ComponentResourceManager(Type.GetType(f.Text));
+                        resources.ApplyResources(c, c.Name, new CultureInfo(language));
+                    }
+                //for (var i = 0; i < DataGridView.ColumnCount; i++)
+                //    var name = DataGridView.Columns[i].HeaderText;
+            }
+        }
+        public static void ChangeWelcomeFormLanguage(Form form, string language)
+        {
+            foreach (Control c in form.Controls)
+            {
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(frmWelcome));
+                if (c is ToolStrip)
+                {
+                    foreach (var item in (c as ToolStrip).Items)
+                    {
+                        if(item is ToolStripButton)
+                            resources.ApplyResources(item, (item as ToolStripButton).Name, new CultureInfo(language));
+                        else if(item is ToolStripDropDownButton)
+                        {
+                            resources.ApplyResources(item, (item as ToolStripDropDownButton).Name, new CultureInfo(language));
+                            foreach (var ddItem in (item as ToolStripDropDownButton).DropDownItems)
+                            {
+                                resources.ApplyResources(ddItem, (ddItem as ToolStripMenuItem).Name, new CultureInfo(language));
+                            }
+                        }
+                        else if(item is ToolStripMenuItem)
+                        {
+                            resources.ApplyResources(item, (item as ToolStripMenuItem).Name, new CultureInfo(language));
+                            foreach (var itemI in (item as ToolStripMenuItem).DropDownItems)
+                            {
+                                resources.ApplyResources(itemI, (itemI as ToolStripMenuItem).Name, new CultureInfo(language));
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

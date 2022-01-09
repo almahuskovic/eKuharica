@@ -9,6 +9,8 @@ using eKuharica.Model.DTO;
 using static eKuharica.Model.Enumerations.Enumerations;
 using System.Collections.Generic;
 using eKuharica.WinUI.Reports;
+using System.Resources;
+using System.Reflection;
 
 namespace eKuharica.WinUI
 {
@@ -42,7 +44,6 @@ namespace eKuharica.WinUI
             frmRecipes frmRecipes = new frmRecipes();
             frmRecipes.MdiParent = this;
             frmRecipes.WindowState = FormWindowState.Maximized;
-            frmRecipes.Text = "eKuharica";
             frmRecipes.Show();
         }
 
@@ -53,7 +54,6 @@ namespace eKuharica.WinUI
             frmUserRecipes frmRecipes = new frmUserRecipes();
             frmRecipes.MdiParent = this;
             frmRecipes.WindowState = FormWindowState.Maximized;
-            frmRecipes.Text = "eKuharica";
             frmRecipes.Show();
         }
 
@@ -64,7 +64,6 @@ namespace eKuharica.WinUI
             frmUsers frmUsers = new frmUsers();
             frmUsers.MdiParent = this;
             frmUsers.WindowState = FormWindowState.Maximized;
-            frmUsers.Text = "eKuharica";
             frmUsers.Show();
         }
 
@@ -75,7 +74,6 @@ namespace eKuharica.WinUI
             frmArticles frmArticles = new frmArticles();
             frmArticles.MdiParent = this;
             frmArticles.WindowState = FormWindowState.Maximized;
-            frmArticles.Text = "eKuharica";
             frmArticles.Show();
         }
 
@@ -86,7 +84,6 @@ namespace eKuharica.WinUI
             frmFeedbacks frmFeedbacks = new frmFeedbacks();
             frmFeedbacks.MdiParent = this;
             frmFeedbacks.WindowState = FormWindowState.Maximized;
-            frmFeedbacks.Text = "eKuharica";
             frmFeedbacks.Show();
         }
 
@@ -97,7 +94,6 @@ namespace eKuharica.WinUI
             frmRecipes frmRecipes = new frmRecipes(true);
             frmRecipes.MdiParent = this;
             frmRecipes.WindowState = FormWindowState.Maximized;
-            frmRecipes.Text = "eKuharica";
             frmRecipes.Show();
         }
 
@@ -108,7 +104,6 @@ namespace eKuharica.WinUI
             frmUsers frmUsers = new frmUsers(false,true);
             frmUsers.MdiParent = this;
             frmUsers.WindowState = FormWindowState.Maximized;
-            frmUsers.Text = "eKuharica";
             frmUsers.Show();
         }
 
@@ -119,7 +114,6 @@ namespace eKuharica.WinUI
             frmUsers frmUsers = new frmUsers(true, false);
             frmUsers.MdiParent = this;
             frmUsers.WindowState = FormWindowState.Maximized;
-            frmUsers.Text = "eKuharica";
             frmUsers.Show();
         }
 
@@ -130,7 +124,6 @@ namespace eKuharica.WinUI
             frmAddRecipes frmSendRecipe = new frmAddRecipes(null,null,false,true);
             frmSendRecipe.MdiParent = this;
             frmSendRecipe.WindowState = FormWindowState.Maximized;
-            frmSendRecipe.Text = "eKuharica";
             frmSendRecipe.Show();
         }
 
@@ -141,7 +134,6 @@ namespace eKuharica.WinUI
             frmRecipes frmRecipes = new frmRecipes(false, true);
             frmRecipes.MdiParent = this;
             frmRecipes.WindowState = FormWindowState.Maximized;
-            frmRecipes.Text = "eKuharica";
             frmRecipes.Show();
         }
 
@@ -153,7 +145,6 @@ namespace eKuharica.WinUI
             frmAddUsers frmUsers = new frmAddUsers(user);
             frmUsers.MdiParent = this;
             frmUsers.WindowState = FormWindowState.Maximized;
-            frmUsers.Text = "eKuharica";
             frmUsers.Show();
         }
 
@@ -169,7 +160,6 @@ namespace eKuharica.WinUI
             frmTop3BestRatedRecipes bestRatedRecipes = new frmTop3BestRatedRecipes();
             bestRatedRecipes.MdiParent = this;
             bestRatedRecipes.WindowState = FormWindowState.Maximized;
-            bestRatedRecipes.Text = "eKuharica";
             bestRatedRecipes.Show();
         }
 
@@ -180,7 +170,6 @@ namespace eKuharica.WinUI
             frmReportsByMealType mostLikedRecipes = new frmReportsByMealType();
             mostLikedRecipes.MdiParent = this;
             mostLikedRecipes.WindowState = FormWindowState.Maximized;
-            mostLikedRecipes.Text = "eKuharica";
             mostLikedRecipes.Show();
         }
 
@@ -191,7 +180,6 @@ namespace eKuharica.WinUI
             frmNewUsersPerMonth newUsersPerMonths = new frmNewUsersPerMonth();
             newUsersPerMonths.MdiParent = this;
             newUsersPerMonths.WindowState = FormWindowState.Maximized;
-            newUsersPerMonths.Text = "eKuharica";
             newUsersPerMonths.Show();
         }
 
@@ -202,8 +190,25 @@ namespace eKuharica.WinUI
             frmMealTypeRatio mealTypeRatio = new frmMealTypeRatio();
             mealTypeRatio.MdiParent = this;
             mealTypeRatio.WindowState = FormWindowState.Maximized;
-            mealTypeRatio.Text = "eKuharica";
             mealTypeRatio.Show();
+        }
+
+        private void bosanskiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Helpers.Helper.ChangeWelcomeFormLanguage(this, "bs");
+            Helpers.Helper.ChangeLanguage("bs");
+
+            //System.Threading.Thread.CurrentThread.CurrentCulture =
+            //System.Globalization.CultureInfo.GetCultureInfo("bs");
+        }
+
+        private void engleskiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Helpers.Helper.ChangeWelcomeFormLanguage(this, "en");
+            Helpers.Helper.ChangeLanguage("en");
+
+            //System.Threading.Thread.CurrentThread.CurrentCulture =
+            //System.Globalization.CultureInfo.GetCultureInfo("en-GB");
         }
     }
 }

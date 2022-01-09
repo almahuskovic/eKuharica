@@ -1061,9 +1061,6 @@
   <data name="languageBaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
   </data>
-  <data name="menuStrip.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="tsbRecipes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
@@ -1167,13 +1164,64 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="toolStrip.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="tsbRecipes.Text" xml:space="preserve">
     <value>Recepti</value>
+  </data>
+  <data name="bestRankedRecipesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Najbolje ocjenjeni recepti</value>
+  </data>
+  <data name="bosanskiToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bosanski</value>
+  </data>
+  <data name="editProfileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Postavke profila</value>
+  </data>
+  <data name="engleskiToolStripMenuItem.Text" xml:space="preserve">
+    <value>Engleski</value>
+  </data>
+  <data name="favouriteRecipeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Omiljeni recepti</value>
+  </data>
+  <data name="followersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pratitelji</value>
+  </data>
+  <data name="followingToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pratim</value>
+  </data>
+  <data name="mostLikedRecipesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Omiljeni recepti</value>
+  </data>
+  <data name="myRecipesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Moji recepti</value>
+  </data>
+  <data name="numberOfNewRecipesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Broj novih recepata</value>
+  </data>
+  <data name="numberOfNewUsersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Broj novih korisnika</value>
+  </data>
+  <data name="sendRecipeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pošalji recept</value>
+  </data>
+  <data name="tsbArticles.Text" xml:space="preserve">
+    <value>Članci</value>
+  </data>
+  <data name="tsbFeedbacks.Text" xml:space="preserve">
+    <value>Dojmovi</value>
+  </data>
+  <data name="tsbSettings.Text" xml:space="preserve">
+    <value>Postavke</value>
+  </data>
+  <data name="tsbUserRecipes.Text" xml:space="preserve">
+    <value>Recepti korisnika</value>
+  </data>
+  <data name="tsbUsers.Text" xml:space="preserve">
+    <value>Korisnici</value>
+  </data>
+  <data name="tsdReports.Text" xml:space="preserve">
+    <value>Izvještaji</value>
+  </data>
+  <data name="tsmiTranslate.Text" xml:space="preserve">
+    <value>Prevedi</value>
   </data>
 </root>

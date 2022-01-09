@@ -494,6 +494,12 @@
     <EmbeddedResource Include="Articles\frmAddArticles.resx">
       <DependentUpon>frmAddArticles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Articles\frmArticles.bs.resx">
+      <DependentUpon>frmArticles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Articles\frmArticles.en.resx">
+      <DependentUpon>frmArticles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Articles\frmArticles.resx">
       <DependentUpon>frmArticles.cs</DependentUpon>
     </EmbeddedResource>
@@ -512,7 +518,7 @@
     <EmbeddedResource Include="frmWelcome.bs.resx">
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWelcome.en-GB.resx">
+    <EmbeddedResource Include="frmWelcome.en.resx">
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWelcome.resx">
