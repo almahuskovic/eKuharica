@@ -30,15 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArticles));
-            this.gbArticles = new System.Windows.Forms.GroupBox();
-            this.sdgvArticles = new eKuharica.WinUI.Helpers.SuperGrid();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsTranslated = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Actions = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.gbArticlesSearch = new System.Windows.Forms.GroupBox();
             this.txtSearchArticle = new System.Windows.Forms.TextBox();
             this.btnAddArticle = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -51,93 +42,17 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.gbArticles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvArticles)).BeginInit();
-            this.gbArticlesSearch.SuspendLayout();
+            this.sdgvArticles = new eKuharica.WinUI.Helpers.SuperGrid();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsTranslated = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Actions = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvArticles)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gbArticles
-            // 
-            resources.ApplyResources(this.gbArticles, "gbArticles");
-            this.gbArticles.Controls.Add(this.sdgvArticles);
-            this.gbArticles.Name = "gbArticles";
-            this.gbArticles.TabStop = false;
-            // 
-            // sdgvArticles
-            // 
-            resources.ApplyResources(this.sdgvArticles, "sdgvArticles");
-            this.sdgvArticles.AllowUserToAddRows = false;
-            this.sdgvArticles.AllowUserToDeleteRows = false;
-            this.sdgvArticles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sdgvArticles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Title,
-            this.IsTranslated,
-            this.Actions,
-            this.Show,
-            this.Edit,
-            this.Delete});
-            this.sdgvArticles.Name = "sdgvArticles";
-            this.sdgvArticles.PageSize = 10;
-            this.sdgvArticles.ReadOnly = true;
-            this.sdgvArticles.RowTemplate.Height = 24;
-            this.sdgvArticles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.sdgvArticles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvArticles_CellContentClick);
-            // 
-            // Title
-            // 
-            this.Title.DataPropertyName = "Title";
-            resources.ApplyResources(this.Title, "Title");
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            // 
-            // IsTranslated
-            // 
-            this.IsTranslated.DataPropertyName = "IsTranslated";
-            resources.ApplyResources(this.IsTranslated, "IsTranslated");
-            this.IsTranslated.Name = "IsTranslated";
-            this.IsTranslated.ReadOnly = true;
-            // 
-            // Actions
-            // 
-            resources.ApplyResources(this.Actions, "Actions");
-            this.Actions.Name = "Actions";
-            this.Actions.ReadOnly = true;
-            this.Actions.Text = "Prevod";
-            this.Actions.UseColumnTextForButtonValue = true;
-            // 
-            // Show
-            // 
-            resources.ApplyResources(this.Show, "Show");
-            this.Show.Name = "Show";
-            this.Show.ReadOnly = true;
-            this.Show.Text = "Prikaži";
-            this.Show.UseColumnTextForButtonValue = true;
-            // 
-            // Edit
-            // 
-            resources.ApplyResources(this.Edit, "Edit");
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Text = "Izmijeni";
-            this.Edit.UseColumnTextForButtonValue = true;
-            // 
-            // Delete
-            // 
-            resources.ApplyResources(this.Delete, "Delete");
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Obriši";
-            this.Delete.UseColumnTextForButtonValue = true;
-            // 
-            // gbArticlesSearch
-            // 
-            resources.ApplyResources(this.gbArticlesSearch, "gbArticlesSearch");
-            this.gbArticlesSearch.Controls.Add(this.txtSearchArticle);
-            this.gbArticlesSearch.Controls.Add(this.btnAddArticle);
-            this.gbArticlesSearch.Name = "gbArticlesSearch";
-            this.gbArticlesSearch.TabStop = false;
             // 
             // txtSearchArticle
             // 
@@ -225,33 +140,93 @@
             resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             // 
+            // sdgvArticles
+            // 
+            resources.ApplyResources(this.sdgvArticles, "sdgvArticles");
+            this.sdgvArticles.AllowUserToAddRows = false;
+            this.sdgvArticles.AllowUserToDeleteRows = false;
+            this.sdgvArticles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sdgvArticles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Title,
+            this.IsTranslated,
+            this.Actions,
+            this.Show,
+            this.Edit,
+            this.Delete});
+            this.sdgvArticles.Name = "sdgvArticles";
+            this.sdgvArticles.PageSize = 10;
+            this.sdgvArticles.ReadOnly = true;
+            this.sdgvArticles.RowTemplate.Height = 24;
+            this.sdgvArticles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.sdgvArticles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvArticles_CellContentClick);
+            // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "Title";
+            resources.ApplyResources(this.Title, "Title");
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // IsTranslated
+            // 
+            this.IsTranslated.DataPropertyName = "IsTranslated";
+            resources.ApplyResources(this.IsTranslated, "IsTranslated");
+            this.IsTranslated.Name = "IsTranslated";
+            this.IsTranslated.ReadOnly = true;
+            // 
+            // Actions
+            // 
+            resources.ApplyResources(this.Actions, "Actions");
+            this.Actions.Name = "Actions";
+            this.Actions.ReadOnly = true;
+            this.Actions.Text = "Translate";
+            this.Actions.UseColumnTextForButtonValue = true;
+            // 
+            // Show
+            // 
+            resources.ApplyResources(this.Show, "Show");
+            this.Show.Name = "Show";
+            this.Show.ReadOnly = true;
+            this.Show.Text = "Preview";
+            this.Show.UseColumnTextForButtonValue = true;
+            // 
+            // Edit
+            // 
+            resources.ApplyResources(this.Edit, "Edit");
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            resources.ApplyResources(this.Delete, "Delete");
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // frmArticles
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
+            this.Controls.Add(this.sdgvArticles);
+            this.Controls.Add(this.btnAddArticle);
+            this.Controls.Add(this.txtSearchArticle);
             this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.gbArticlesSearch);
-            this.Controls.Add(this.gbArticles);
             this.Name = "frmArticles";
             this.Load += new System.EventHandler(this.frmArticles_Load);
-            this.gbArticles.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvArticles)).EndInit();
-            this.gbArticlesSearch.ResumeLayout(false);
-            this.gbArticlesSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvArticles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gbArticles;
-        private System.Windows.Forms.GroupBox gbArticlesSearch;
-        private Helpers.SuperGrid sdgvArticles;
         private System.Windows.Forms.TextBox txtSearchArticle;
         private System.Windows.Forms.Button btnAddArticle;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
@@ -264,6 +239,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private Helpers.SuperGrid sdgvArticles;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsTranslated;
         private System.Windows.Forms.DataGridViewButtonColumn Actions;

@@ -54,6 +54,12 @@ namespace eKuharica.Model.Enumerations
             User
         }
 
+        public enum Languages
+        {
+            BA,
+            ENG
+        }
+
         public enum Months
         {
             Januar,

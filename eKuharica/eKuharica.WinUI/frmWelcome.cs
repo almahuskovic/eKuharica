@@ -11,16 +11,29 @@ using System.Collections.Generic;
 using eKuharica.WinUI.Reports;
 using System.Resources;
 using System.Reflection;
+using System.Threading;
+using System.Globalization;
+using eKuharica.Model.Enumerations;
 
 namespace eKuharica.WinUI
 {
     public partial class frmWelcome : Form
     {
         APIService _userService = new APIService("User");
-        public frmWelcome()
+        public frmWelcome(string language = "")
         {
+            if (!string.IsNullOrWhiteSpace(language))
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+                Helpers.Helper.CurrentLanguage = language;
+            }
+            else
+                Helpers.Helper.CurrentLanguage = "bs";
+
             InitializeComponent();
             tsbFeedbacks.Visible = tsdReports.Visible = false;
+            cmbTranslations.DataSource = Enum.GetValues(typeof(Languages));
+            cmbTranslations.SelectedIndex = Helpers.Helper.CurrentLanguage == "bs" ? (int)Languages.BA : (int)Languages.ENG;
         }
 
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
@@ -193,22 +206,18 @@ namespace eKuharica.WinUI
             mealTypeRatio.Show();
         }
 
-        private void bosanskiToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cmbTranslations_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Helpers.Helper.ChangeWelcomeFormLanguage(this, "bs");
-            Helpers.Helper.ChangeLanguage("bs");
-
-            //System.Threading.Thread.CurrentThread.CurrentCulture =
-            //System.Globalization.CultureInfo.GetCultureInfo("bs");
-        }
-
-        private void engleskiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Helpers.Helper.ChangeWelcomeFormLanguage(this, "en");
-            Helpers.Helper.ChangeLanguage("en");
-
-            //System.Threading.Thread.CurrentThread.CurrentCulture =
-            //System.Globalization.CultureInfo.GetCultureInfo("en-GB");
+            DialogResult r = MessageBox.Show("Sve što niste spasili bit će izgubljeno");
+            if (r == DialogResult.OK)
+            {
+                Helpers.Helper.CloseAllOpenForms();
+                Helpers.Helper.CurrentLanguage = Enum.GetName(typeof(Languages), cmbTranslations.SelectedIndex) == Enum.GetName(typeof(Languages), Languages.BA)
+                    ? "bs" : "en";
+                Hide();
+                frmWelcome frmWelcome = new frmWelcome(Helpers.Helper.CurrentLanguage);
+                frmWelcome.Show();
+            }
         }
     }
 }

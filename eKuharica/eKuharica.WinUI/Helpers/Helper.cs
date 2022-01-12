@@ -12,12 +12,16 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eKuharica.WinUI.Articles;
 using static eKuharica.Model.Enumerations.Enumerations;
+using System.Web.Compilation;
+using eKuharica.WinUI.Feedbacks;
 
 namespace eKuharica.WinUI.Helpers
 {
     public static class Helper
     {
+        public static string CurrentLanguage { get; set; }
         public async static Task<UserDto> GetLoggedUser(APIService userService, string username)
         {
             return (await userService.Get<List<UserDto>>(new UserSearchRequest() { UserName = username })).FirstOrDefault();
@@ -187,7 +191,7 @@ namespace eKuharica.WinUI.Helpers
                     f.Close();
             }
         }
-
+       
         public static bool IsAdministrator(UserDto user)
         {
             for (int i = 0; i < user.UserRoles.Count() ; i++)
@@ -198,16 +202,51 @@ namespace eKuharica.WinUI.Helpers
             return false;
         }
 
-        public static void ChangeLanguage(string language)
+
+        #region pokusaj translation-a
+        public static Type GetType(string typeName)
+        {
+            Type returnType = null;
+
+            switch (typeName)
+            {
+                case "frmArticles": returnType = typeof(frmArticles); break;
+                case "frmWelcome": returnType = typeof(frmWelcome); break;
+                case "frmFeedbacks": returnType = typeof(frmFeedbacks); break;
+
+            }
+            return returnType;
+        }
+
+        public static void ChangeLanguage(string language, Type typeOfForm=null)
         {
             foreach (Form f in Application.OpenForms)
             {
                 if (f.Name != "frmWelcome" && f.Name != "frmLogin")
+                {
+                    ComponentResourceManager resources = new ComponentResourceManager(GetType(f.Text));
+
                     foreach (Control c in f.Controls)
                     {
-                        ComponentResourceManager resources = new ComponentResourceManager(Type.GetType(f.Text));
                         resources.ApplyResources(c, c.Name, new CultureInfo(language));
+
+                        if(c is DataGridView)
+                        {
+                            foreach (DataGridViewColumn item in (c as DataGridView).Columns)
+                            {
+                                resources.ApplyResources(item, item.Name, new CultureInfo(language));
+                            }
+                            foreach (DataGridViewRow item in (c as DataGridView).Rows)
+                            {
+                                foreach (var itemR in item.Cells)
+                                {
+                                    if (itemR is DataGridViewButtonCell)
+                                        resources.ApplyResources(itemR, (itemR as DataGridViewButtonCell).Value.ToString() , new CultureInfo(language));
+                                }
+                            }
+                        }
                     }
+                }
                 //for (var i = 0; i < DataGridView.ColumnCount; i++)
                 //    var name = DataGridView.Columns[i].HeaderText;
             }
@@ -243,5 +282,7 @@ namespace eKuharica.WinUI.Helpers
                 }
             }
         }
+
+        #endregion
     }
 }

@@ -315,6 +315,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -337,9 +338,11 @@
     </Compile>
     <Compile Include="Articles\frmArticles.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Articles\frmArticles.Designer.cs">
       <DependentUpon>frmArticles.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Articles\frmShowArticles.cs">
       <SubType>Form</SubType>
@@ -502,6 +505,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Articles\frmArticles.resx">
       <DependentUpon>frmArticles.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Articles\frmShowArticles.resx">
       <DependentUpon>frmShowArticles.cs</DependentUpon>
@@ -651,9 +655,7 @@
       <Name>eKuharica.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Settings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
