@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShowArticles));
             this.gbCover = new System.Windows.Forms.GroupBox();
             this.pbPicture = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -41,76 +42,46 @@
             // 
             // gbCover
             // 
-            this.gbCover.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.gbCover, "gbCover");
             this.gbCover.Controls.Add(this.pbPicture);
-            this.gbCover.Location = new System.Drawing.Point(22, 139);
             this.gbCover.Name = "gbCover";
-            this.gbCover.Size = new System.Drawing.Size(992, 249);
-            this.gbCover.TabIndex = 3;
             this.gbCover.TabStop = false;
             // 
             // pbPicture
             // 
-            this.pbPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbPicture.Location = new System.Drawing.Point(3, 18);
+            resources.ApplyResources(this.pbPicture, "pbPicture");
             this.pbPicture.Name = "pbPicture";
-            this.pbPicture.Size = new System.Drawing.Size(986, 228);
-            this.pbPicture.TabIndex = 1;
             this.pbPicture.TabStop = false;
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(471, 46);
+            resources.ApplyResources(this.lblTitle, "lblTitle");
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(46, 17);
-            this.lblTitle.TabIndex = 4;
-            this.lblTitle.Text = "label1";
             // 
             // rtbContent
             // 
-            this.rtbContent.Location = new System.Drawing.Point(25, 411);
+            resources.ApplyResources(this.rtbContent, "rtbContent");
             this.rtbContent.Name = "rtbContent";
-            this.rtbContent.Size = new System.Drawing.Size(986, 613);
-            this.rtbContent.TabIndex = 5;
-            this.rtbContent.Text = "";
             // 
             // lblKeyWords
             // 
-            this.lblKeyWords.AutoSize = true;
-            this.lblKeyWords.Location = new System.Drawing.Point(22, 1043);
+            resources.ApplyResources(this.lblKeyWords, "lblKeyWords");
             this.lblKeyWords.Name = "lblKeyWords";
-            this.lblKeyWords.Size = new System.Drawing.Size(46, 17);
-            this.lblKeyWords.TabIndex = 6;
-            this.lblKeyWords.Text = "label1";
             // 
             // lblAuthor
             // 
-            this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(965, 1043);
+            resources.ApplyResources(this.lblAuthor, "lblAuthor");
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(46, 17);
-            this.lblAuthor.TabIndex = 7;
-            this.lblAuthor.Text = "label1";
             // 
             // lblDate
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(471, 1043);
+            resources.ApplyResources(this.lblDate, "lblDate");
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(46, 17);
-            this.lblDate.TabIndex = 8;
-            this.lblDate.Text = "label1";
             // 
             // frmShowArticles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 1069);
             this.ControlBox = false;
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblAuthor);
@@ -119,7 +90,6 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.gbCover);
             this.Name = "frmShowArticles";
-            this.Text = "frmShowArticles";
             this.Load += new System.EventHandler(this.frmShowArticles_Load);
             this.gbCover.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();

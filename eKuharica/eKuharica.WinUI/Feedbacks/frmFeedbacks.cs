@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +19,8 @@ namespace eKuharica.WinUI.Feedbacks
         APIService _feedbackService = new APIService("Feedback");
         public frmFeedbacks()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Helpers.Helper.CurrentLanguage);
+
             InitializeComponent();
             sdgvFeedbacks.AutoGenerateColumns = false;
             cmbRating.DataSource = Helpers.Helper.RatingSelectList();

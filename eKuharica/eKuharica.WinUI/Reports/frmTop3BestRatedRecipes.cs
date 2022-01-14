@@ -19,6 +19,7 @@ namespace eKuharica.WinUI.Reports
         public frmTop3BestRatedRecipes()
         {
             InitializeComponent();
+            btnClose.Text = Helpers.Helper.TranslationForBtnBack();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

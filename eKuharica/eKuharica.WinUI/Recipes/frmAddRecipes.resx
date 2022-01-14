@@ -1039,58 +1039,6 @@
   <data name="&gt;&gt;gbTags.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pbBack.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        5A+OclmzEq9txgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pbBack.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="pbBack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 26</value>
-  </data>
-  <data name="pbBack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 21</value>
-  </data>
-  <data name="pbBack.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;pbBack.Name" xml:space="preserve">
-    <value>pbBack</value>
-  </data>
-  <data name="&gt;&gt;pbBack.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbBack.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pbBack.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>143, 17</value>
   </metadata>
@@ -1108,6 +1056,36 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 977</value>
+  </data>
+  <data name="lblBack.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblBack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblBack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 26</value>
+  </data>
+  <data name="lblBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 17</value>
+  </data>
+  <data name="lblBack.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="lblBack.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="&gt;&gt;lblBack.Name" xml:space="preserve">
+    <value>lblBack</value>
+  </data>
+  <data name="&gt;&gt;lblBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBack.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblBack.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>frmAddRecipes</value>

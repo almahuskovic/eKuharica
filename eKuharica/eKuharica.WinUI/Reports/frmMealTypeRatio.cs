@@ -20,6 +20,7 @@ namespace eKuharica.WinUI.Reports
         public frmMealTypeRatio()
         {
             InitializeComponent();
+            btnClose.Text = Helpers.Helper.TranslationForBtnBack();
         }
 
         private async void frmMealTypeRatio_Load(object sender, EventArgs e)

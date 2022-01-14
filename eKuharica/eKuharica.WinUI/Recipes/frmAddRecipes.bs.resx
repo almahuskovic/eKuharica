@@ -1,0 +1,1013 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbBack.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        5A+OclmzEq9txgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbBack.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbBack.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblPreparationTime.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblPreparationTime.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblTags.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTags.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbMealType.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cmbMealType.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="nudPreparationTime.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="nudPreparationTime.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblMealGroup.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblMealGroup.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cmbWeightOfPreparation.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="cmbWeightOfPreparation.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblMin.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblMin.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblWeightOfPreparation.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblWeightOfPreparation.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbTags.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="gbTags.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtIngridients.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtIngridients.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panel3.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="panel3.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtAdvice.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtAdvice.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblAdvice.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblAdvice.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtServing.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtServing.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblServing.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblServing.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtMethod.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtMethod.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblPreparation.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblPreparation.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panel2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="panel2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblIngredients.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblIngredients.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panel1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="panel1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblCoverPicture.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCoverPicture.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pbCoverPicture.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEBLAEsAAD/4QA0RXhpZgAATU0AKgAAAAgAAQEOAAIAAAASAAAAGgAAAABDYW1l
+        cmEgR2x5cGggSWNvbgD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0
+        KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7
+        Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wgARCAJkAmQDAREAAhEBAxEB/8QAGwABAAID
+        AQEAAAAAAAAAAAAAAAUGAwQHAgH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAG5gAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        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
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//EACoQ
+        AAEDAgQHAAIDAQAAAAAAAAMAAgQBBRMwNEAQERIUFSBQITIkMaAi/9oACAEBAAEFAv8AOoaWACfeGrzB
+        V5cq8uVeXKvLlXlyry5V5cq8uVeXKvLlXlyry5V5cqbeHId0jvTXUfT7D3tGyVc3l2YTkA6JPZI+u51G
+        Nly3SibSleVbfNx2/Vusnm7bDe4bwlocP03voMb3Ve/b2gvzXSAtXeRl3kZd5GXeRl3kZd5GU+WJ0TcQ
+        SUFL7yMu8jLvIy7yMu8jLvIy7uOmva/4cq5MCiyTH+TStW1j3Qo0EzDs39xm9PzY8h8cgTNOLeyjdvHr
+        XnX5trkYZ97eCfnaf2mxTvVLdKqvGylWDJanDezLZBkkb42UvGyl42UvGyl42UixDhpxbWrXMd1s3l21
+        eyDbTlQrWBiYNg/YkOOVGtCKAoK+1uFQsv2rSjqHZhn4xNJvLtq9hGglkqPDDHy3No6km1UqnMcx3pat
+        X7zNZxiaTeXbV58K281/WdJijktkRnxn8bVX+Z7y685fGJpN5dtXnW+B0e9a0oqyQNXeR00o3+5gsOOT
+        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
+        /9oADAMBAAIAAwAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACSSSSSSSSSAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAQAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAACA
+        AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA
+        AAAAAAACAAASAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAASQAAAAAAAAAAAAAAAQAAAAAAAAAAAA
+        AAAAAAAAACQAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAASQCAAA
+        AACSSAACAAAAAAAAAAAAAAAAAAAAAAASQAAQAAAAAAACQAAAAAAAAAAAAAAACAAAAAAAACAAAAAQAACA
+        AAAACAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAQAAAQAQAAAAAAAAAAAAACAAAAAAAQAACCQAACQCAAAA
+        ACAAAAAAAAAAAAAAQAAAAAAAAAAQAQQAAQAAAAAAQAAAAAAAAAAAAACAAAAAASACAAAACQAAAAAAAACA
+        AAAAAAAAAAAAAQAAAAAAACAAAAACQASAAAAAAQAAAAAAAAAAAAACAAAAACAAAAAAAAAAAQAAAAACAAAA
+        AAAAAAAAAAQAAAAAAACAAAAAAAACQAAAAAQAAAAAAAAAAAAACAAAAACAAAAAAAAAQAAAAAAACAAAAAAA
+        AAAAAAAQAAAAAAAAAAAAAAAQAQAAAAAQAAAAAAAAAAAAACAAAAAAAAAAAAAAACACAAAAACAAAAAAAAAA
+        AAAAQAAAAAQAQAAAAAAAQAQAAAAAQAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA
+        AQAAAAAAAAAAAAAACAAQAAAAAQAAAAAAAAAAAAACAAAAAAACAAAAAAAAAQAAAAACAAAAAAAAAAAAAAQA
+        AAAACAAAAAAAAQACAAAAAAQAAAAAAAAAAAAACAAAAAAAASAAAAACACAAAAAACAAAAAAAAAAAAAAQAAAA
+        ACAASQAAACAAQAAAAAAQAAAAAAAAAAAAACAAAAAACQAACAAQAAAAAAAAACAAAAAAAAAAAAAAQAAAAAAA
+        QAASCAAAQAAAAAAAQAAAAAAAAAAAAACAAAAAAACQAAAAAASAAAAAAACAAAAAAAAAAAAAAQAAAAAAACAA
+        AAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAASAACQAAAAAAAACAAAAAAAAAAAAAAQAAAAAAAAAAQAA
+        AAAAAAAAACQAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAACAAAAAAAAAAAAAAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACSSSSSSSSSSSSSSSSS
+        SQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAwP/aAAgBAwEBPxA5T//EABQRAQAA
+        AAAAAAAAAAAAAAAAAMD/2gAIAQIBAT8QOU//xAArEAEAAAIIBgMBAQEBAAAAAAABABEhMDFBUWHB8CBA
+        cYGRobHR8VAQoOH/2gAIAQEAAT8Q/wCdSYhP55Z3h8PuB6k4a0Vgq1jefaN59o3n2jefaN59o3n2jefa
+        N59o3n2jefaN59o3n2jffaAJL75vyGCDpzvIn7lFjGIge5/ZNGU9qlhJLPKyDrcyPMIiKtKt/JDXc8Xr
+        ljBYJC09xafP9c7SCrghxMmk72zfXKpgdNEkcYoNk18jrj5/rWDtceh2FPcw5dWpaadIoh5l8g7P9T1A
+        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
+        G+NI3xpG+NITmpifVBwQWASP+cr/2Q==
+</value>
+  </data>
+  <data name="pbCoverPicture.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="pbCoverPicture.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtIntroduction.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtIntroduction.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblIntroduction.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblIntroduction.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTitle.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtTitle.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblTitle.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTitle.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSubmit.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnSubmit.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnRecipePreview.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnRecipePreview.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Add Recipe</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmAddRecipes</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecipePreview.Name" xml:space="preserve">
+    <value>btnRecipePreview</value>
+  </data>
+  <data name="&gt;&gt;btnRecipePreview.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnRecipePreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecipePreview.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.Name" xml:space="preserve">
+    <value>btnSubmit</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;cmbMealType.Name" xml:space="preserve">
+    <value>cmbMealType</value>
+  </data>
+  <data name="&gt;&gt;cmbMealType.Parent" xml:space="preserve">
+    <value>gbTags</value>
+  </data>
+  <data name="&gt;&gt;cmbMealType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbMealType.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmbWeightOfPreparation.Name" xml:space="preserve">
+    <value>cmbWeightOfPreparation</value>
+  </data>
+  <data name="&gt;&gt;cmbWeightOfPreparation.Parent" xml:space="preserve">
+    <value>gbTags</value>
+  </data>
+  <data name="&gt;&gt;cmbWeightOfPreparation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbWeightOfPreparation.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbTags.Name" xml:space="preserve">
+    <value>gbTags</value>
+  </data>
+  <data name="&gt;&gt;gbTags.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbTags.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbTags.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblAdvice.Name" xml:space="preserve">
+    <value>lblAdvice</value>
+  </data>
+  <data name="&gt;&gt;lblAdvice.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblAdvice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAdvice.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblCoverPicture.Name" xml:space="preserve">
+    <value>lblCoverPicture</value>
+  </data>
+  <data name="&gt;&gt;lblCoverPicture.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCoverPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCoverPicture.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lblIngredients.Name" xml:space="preserve">
+    <value>lblIngredients</value>
+  </data>
+  <data name="&gt;&gt;lblIngredients.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblIngredients.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblIngredients.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;lblIntroduction.Name" xml:space="preserve">
+    <value>lblIntroduction</value>
+  </data>
+  <data name="&gt;&gt;lblIntroduction.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblIntroduction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblIntroduction.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;lblMealGroup.Name" xml:space="preserve">
+    <value>lblMealGroup</value>
+  </data>
+  <data name="&gt;&gt;lblMealGroup.Parent" xml:space="preserve">
+    <value>gbTags</value>
+  </data>
+  <data name="&gt;&gt;lblMealGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMealGroup.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblMin.Name" xml:space="preserve">
+    <value>lblMin</value>
+  </data>
+  <data name="&gt;&gt;lblMin.Parent" xml:space="preserve">
+    <value>gbTags</value>
+  </data>
+  <data name="&gt;&gt;lblMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMin.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblPreparation.Name" xml:space="preserve">
+    <value>lblPreparation</value>
+  </data>
+  <data name="&gt;&gt;lblPreparation.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPreparation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPreparation.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lblPreparationTime.Name" xml:space="preserve">
+    <value>lblPreparationTime</value>
+  </data>
+  <data name="&gt;&gt;lblPreparationTime.Parent" xml:space="preserve">
+    <value>gbTags</value>
+  </data>
+  <data name="&gt;&gt;lblPreparationTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPreparationTime.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblServing.Name" xml:space="preserve">
+    <value>lblServing</value>
+  </data>
+  <data name="&gt;&gt;lblServing.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblServing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblServing.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lblTags.Name" xml:space="preserve">
+    <value>lblTags</value>
+  </data>
+  <data name="&gt;&gt;lblTags.Parent" xml:space="preserve">
+    <value>gbTags</value>
+  </data>
+  <data name="&gt;&gt;lblTags.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTags.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;lblWeightOfPreparation.Name" xml:space="preserve">
+    <value>lblWeightOfPreparation</value>
+  </data>
+  <data name="&gt;&gt;lblWeightOfPreparation.Parent" xml:space="preserve">
+    <value>gbTags</value>
+  </data>
+  <data name="&gt;&gt;lblWeightOfPreparation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblWeightOfPreparation.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;nudPreparationTime.Name" xml:space="preserve">
+    <value>nudPreparationTime</value>
+  </data>
+  <data name="&gt;&gt;nudPreparationTime.Parent" xml:space="preserve">
+    <value>gbTags</value>
+  </data>
+  <data name="&gt;&gt;nudPreparationTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudPreparationTime.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ofdPicture.Name" xml:space="preserve">
+    <value>ofdPicture</value>
+  </data>
+  <data name="&gt;&gt;ofdPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pbBack.Name" xml:space="preserve">
+    <value>pbBack</value>
+  </data>
+  <data name="&gt;&gt;pbBack.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbBack.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pbCoverPicture.Name" xml:space="preserve">
+    <value>pbCoverPicture</value>
+  </data>
+  <data name="&gt;&gt;pbCoverPicture.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbCoverPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbCoverPicture.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;txtAdvice.Name" xml:space="preserve">
+    <value>txtAdvice</value>
+  </data>
+  <data name="&gt;&gt;txtAdvice.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtAdvice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAdvice.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtIngridients.Name" xml:space="preserve">
+    <value>txtIngridients</value>
+  </data>
+  <data name="&gt;&gt;txtIngridients.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtIngridients.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtIngridients.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtIntroduction.Name" xml:space="preserve">
+    <value>txtIntroduction</value>
+  </data>
+  <data name="&gt;&gt;txtIntroduction.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtIntroduction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtIntroduction.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;txtMethod.Name" xml:space="preserve">
+    <value>txtMethod</value>
+  </data>
+  <data name="&gt;&gt;txtMethod.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtMethod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtMethod.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;txtServing.Name" xml:space="preserve">
+    <value>txtServing</value>
+  </data>
+  <data name="&gt;&gt;txtServing.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtServing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtServing.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtTitle.Name" xml:space="preserve">
+    <value>txtTitle</value>
+  </data>
+  <data name="&gt;&gt;txtTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtTitle.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="btnRecipePreview.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecipePreview.Text" xml:space="preserve">
+    <value>Pregledaj recept</value>
+  </data>
+  <data name="btnSubmit.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSubmit.Text" xml:space="preserve">
+    <value>Spremi</value>
+  </data>
+  <data name="cmbMealType.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbWeightOfPreparation.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbTags.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdvice.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAdvice.Text" xml:space="preserve">
+    <value>Savjet</value>
+  </data>
+  <data name="lblCoverPicture.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCoverPicture.Text" xml:space="preserve">
+    <value>Naslovana fotografija</value>
+  </data>
+  <data name="lblIngredients.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIngredients.Text" xml:space="preserve">
+    <value>Sastojci</value>
+  </data>
+  <data name="lblIntroduction.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIntroduction.Text" xml:space="preserve">
+    <value>Uvod</value>
+  </data>
+  <data name="lblMealGroup.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMealGroup.Text" xml:space="preserve">
+    <value>Grupa jela</value>
+  </data>
+  <data name="lblMin.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMin.Text" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="lblPreparation.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPreparation.Text" xml:space="preserve">
+    <value>Priprema</value>
+  </data>
+  <data name="lblPreparationTime.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPreparationTime.Text" xml:space="preserve">
+    <value>Vrijeme pripreme</value>
+  </data>
+  <data name="lblServing.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblServing.Text" xml:space="preserve">
+    <value>Posluživanje</value>
+  </data>
+  <data name="lblTags.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTags.Text" xml:space="preserve">
+    <value>Oznake</value>
+  </data>
+  <data name="lblTitle.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>Naslov</value>
+  </data>
+  <data name="lblWeightOfPreparation.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWeightOfPreparation.Text" xml:space="preserve">
+    <value>Težina pripreme</value>
+  </data>
+  <data name="nudPreparationTime.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel3.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbBack.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbCoverPicture.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAdvice.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIngridients.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIntroduction.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMethod.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtServing.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTitle.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblBack.Text" xml:space="preserve">
+    <value>Nazad</value>
+  </data>
+</root>

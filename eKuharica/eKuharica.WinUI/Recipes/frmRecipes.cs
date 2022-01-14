@@ -9,8 +9,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static eKuharica.Model.Enumerations.Enumerations;
@@ -27,6 +29,8 @@ namespace eKuharica.WinUI.Recipes
         private bool _myRecipes;
         public frmRecipes(bool isFav = false, bool myRecipes = false)
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Helpers.Helper.CurrentLanguage);
+
             InitializeComponent();
             sdgvRecipes.AutoGenerateColumns = false;
             gbExtraFilters.Visible = false;

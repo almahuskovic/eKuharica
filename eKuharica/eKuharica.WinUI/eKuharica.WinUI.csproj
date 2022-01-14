@@ -494,6 +494,12 @@
     <Compile Include="Users\frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Articles\frmAddArticles.bs.resx">
+      <DependentUpon>frmAddArticles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Articles\frmAddArticles.en.resx">
+      <DependentUpon>frmAddArticles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Articles\frmAddArticles.resx">
       <DependentUpon>frmAddArticles.cs</DependentUpon>
     </EmbeddedResource>
@@ -512,6 +518,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Feedbacks\frmFeedbackDetails.resx">
       <DependentUpon>frmFeedbackDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedbacks\frmFeedbacks.bs.resx">
+      <DependentUpon>frmFeedbacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedbacks\frmFeedbacks.en.resx">
+      <DependentUpon>frmFeedbacks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feedbacks\frmFeedbacks.resx">
       <DependentUpon>frmFeedbacks.cs</DependentUpon>
@@ -538,11 +550,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Recipes\frmAddRecipes.bs.resx">
+      <DependentUpon>frmAddRecipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipes\frmAddRecipes.en.resx">
+      <DependentUpon>frmAddRecipes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recipes\frmAddRecipes.resx">
       <DependentUpon>frmAddRecipes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recipes\frmMoreToRead.resx">
       <DependentUpon>frmMoreToRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipes\frmRecipes.bs.resx">
+      <DependentUpon>frmRecipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recipes\frmRecipes.en.resx">
+      <DependentUpon>frmRecipes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recipes\frmRecipes.resx">
       <DependentUpon>frmRecipes.cs</DependentUpon>
@@ -576,8 +600,20 @@
     <EmbeddedResource Include="Reports\Top3BestRatedRecipes.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserRecipes\frmUserRecipes.bs.resx">
+      <DependentUpon>frmUserRecipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRecipes\frmUserRecipes.en.resx">
+      <DependentUpon>frmUserRecipes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserRecipes\frmUserRecipes.resx">
       <DependentUpon>frmUserRecipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddUsers.bs.resx">
+      <DependentUpon>frmAddUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAddUsers.en.resx">
+      <DependentUpon>frmAddUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddUsers.resx">
       <DependentUpon>frmAddUsers.cs</DependentUpon>
@@ -587,6 +623,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUserProfile.resx">
       <DependentUpon>frmUserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUsers.bs.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmUsers.en.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>

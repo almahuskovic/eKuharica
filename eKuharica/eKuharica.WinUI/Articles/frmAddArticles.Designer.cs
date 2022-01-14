@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddArticles));
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -52,156 +53,136 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(24, 89);
+            resources.ApplyResources(this.lblTitle, "lblTitle");
+            this.errorProvider1.SetError(this.lblTitle, resources.GetString("lblTitle.Error"));
+            this.errorProvider1.SetIconAlignment(this.lblTitle, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblTitle.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.lblTitle, ((int)(resources.GetObject("lblTitle.IconPadding"))));
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(51, 17);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Naslov";
             // 
             // txtTitle
             // 
-            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTitle.Location = new System.Drawing.Point(27, 122);
+            resources.ApplyResources(this.txtTitle, "txtTitle");
+            this.errorProvider1.SetError(this.txtTitle, resources.GetString("txtTitle.Error"));
+            this.errorProvider1.SetIconAlignment(this.txtTitle, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtTitle.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.txtTitle, ((int)(resources.GetObject("txtTitle.IconPadding"))));
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(715, 22);
-            this.txtTitle.TabIndex = 1;
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(667, 40);
+            resources.ApplyResources(this.btnSave, "btnSave");
+            this.errorProvider1.SetError(this.btnSave, resources.GetString("btnSave.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnSave, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnSave.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnSave, ((int)(resources.GetObject("btnSave.IconPadding"))));
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 34);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnShow
             // 
-            this.btnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShow.Location = new System.Drawing.Point(568, 40);
+            resources.ApplyResources(this.btnShow, "btnShow");
+            this.errorProvider1.SetError(this.btnShow, resources.GetString("btnShow.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnShow, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnShow.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnShow, ((int)(resources.GetObject("btnShow.IconPadding"))));
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(75, 34);
-            this.btnShow.TabIndex = 3;
-            this.btnShow.Text = "Prikaži";
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // txtContent
             // 
-            this.txtContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContent.Location = new System.Drawing.Point(27, 202);
-            this.txtContent.Multiline = true;
+            resources.ApplyResources(this.txtContent, "txtContent");
+            this.errorProvider1.SetError(this.txtContent, resources.GetString("txtContent.Error"));
+            this.errorProvider1.SetIconAlignment(this.txtContent, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtContent.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.txtContent, ((int)(resources.GetObject("txtContent.IconPadding"))));
             this.txtContent.Name = "txtContent";
-            this.txtContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtContent.Size = new System.Drawing.Size(715, 222);
-            this.txtContent.TabIndex = 5;
             // 
             // lblContent
             // 
-            this.lblContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblContent.AutoSize = true;
-            this.lblContent.Location = new System.Drawing.Point(24, 169);
+            resources.ApplyResources(this.lblContent, "lblContent");
+            this.errorProvider1.SetError(this.lblContent, resources.GetString("lblContent.Error"));
+            this.errorProvider1.SetIconAlignment(this.lblContent, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblContent.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.lblContent, ((int)(resources.GetObject("lblContent.IconPadding"))));
             this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(56, 17);
-            this.lblContent.TabIndex = 4;
-            this.lblContent.Text = "Sadržaj";
             // 
             // pbPicture
             // 
-            this.pbPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.pbPicture, "pbPicture");
             this.pbPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbPicture.Location = new System.Drawing.Point(0, 50);
+            this.errorProvider1.SetError(this.pbPicture, resources.GetString("pbPicture.Error"));
+            this.errorProvider1.SetIconAlignment(this.pbPicture, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pbPicture.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.pbPicture, ((int)(resources.GetObject("pbPicture.IconPadding"))));
             this.pbPicture.Name = "pbPicture";
-            this.pbPicture.Size = new System.Drawing.Size(715, 64);
-            this.pbPicture.TabIndex = 6;
             this.pbPicture.TabStop = false;
             this.pbPicture.Click += new System.EventHandler(this.pbPicture_Click);
             // 
             // lblPicture
             // 
-            this.lblPicture.AutoSize = true;
-            this.lblPicture.Location = new System.Drawing.Point(6, 18);
+            resources.ApplyResources(this.lblPicture, "lblPicture");
+            this.errorProvider1.SetError(this.lblPicture, resources.GetString("lblPicture.Error"));
+            this.errorProvider1.SetIconAlignment(this.lblPicture, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblPicture.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.lblPicture, ((int)(resources.GetObject("lblPicture.IconPadding"))));
             this.lblPicture.Name = "lblPicture";
-            this.lblPicture.Size = new System.Drawing.Size(134, 17);
-            this.lblPicture.TabIndex = 7;
-            this.lblPicture.Text = "Naslovna fotografija";
             // 
             // txtKeyWords
             // 
-            this.txtKeyWords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtKeyWords.Location = new System.Drawing.Point(0, 67);
+            resources.ApplyResources(this.txtKeyWords, "txtKeyWords");
+            this.errorProvider1.SetError(this.txtKeyWords, resources.GetString("txtKeyWords.Error"));
+            this.errorProvider1.SetIconAlignment(this.txtKeyWords, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtKeyWords.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.txtKeyWords, ((int)(resources.GetObject("txtKeyWords.IconPadding"))));
             this.txtKeyWords.Name = "txtKeyWords";
-            this.txtKeyWords.Size = new System.Drawing.Size(715, 22);
-            this.txtKeyWords.TabIndex = 9;
             // 
             // lblKeyWords
             // 
-            this.lblKeyWords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblKeyWords.AutoSize = true;
-            this.lblKeyWords.Location = new System.Drawing.Point(-3, 34);
+            resources.ApplyResources(this.lblKeyWords, "lblKeyWords");
+            this.errorProvider1.SetError(this.lblKeyWords, resources.GetString("lblKeyWords.Error"));
+            this.errorProvider1.SetIconAlignment(this.lblKeyWords, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblKeyWords.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.lblKeyWords, ((int)(resources.GetObject("lblKeyWords.IconPadding"))));
             this.lblKeyWords.Name = "lblKeyWords";
-            this.lblKeyWords.Size = new System.Drawing.Size(87, 17);
-            this.lblKeyWords.TabIndex = 8;
-            this.lblKeyWords.Text = "Ključne riječi";
             // 
             // lblDate
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(24, 688);
+            resources.ApplyResources(this.lblDate, "lblDate");
+            this.errorProvider1.SetError(this.lblDate, resources.GetString("lblDate.Error"));
+            this.errorProvider1.SetIconAlignment(this.lblDate, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblDate.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.lblDate, ((int)(resources.GetObject("lblDate.IconPadding"))));
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(46, 17);
-            this.lblDate.TabIndex = 10;
-            this.lblDate.Text = "label5";
             // 
             // ofdPicture
             // 
             this.ofdPicture.FileName = "ofdPicture";
+            resources.ApplyResources(this.ofdPicture, "ofdPicture");
             // 
             // gbPicture
             // 
-            this.gbPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.gbPicture, "gbPicture");
             this.gbPicture.Controls.Add(this.pbPicture);
             this.gbPicture.Controls.Add(this.lblPicture);
+            this.errorProvider1.SetError(this.gbPicture, resources.GetString("gbPicture.Error"));
             this.gbPicture.ForeColor = System.Drawing.Color.Black;
-            this.gbPicture.Location = new System.Drawing.Point(27, 446);
+            this.errorProvider1.SetIconAlignment(this.gbPicture, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("gbPicture.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.gbPicture, ((int)(resources.GetObject("gbPicture.IconPadding"))));
             this.gbPicture.Name = "gbPicture";
-            this.gbPicture.Size = new System.Drawing.Size(715, 120);
-            this.gbPicture.TabIndex = 11;
             this.gbPicture.TabStop = false;
             // 
             // gbKeyWords
             // 
-            this.gbKeyWords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.gbKeyWords, "gbKeyWords");
             this.gbKeyWords.Controls.Add(this.lblKeyWords);
             this.gbKeyWords.Controls.Add(this.txtKeyWords);
-            this.gbKeyWords.Location = new System.Drawing.Point(27, 566);
+            this.errorProvider1.SetError(this.gbKeyWords, resources.GetString("gbKeyWords.Error"));
+            this.errorProvider1.SetIconAlignment(this.gbKeyWords, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("gbKeyWords.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.gbKeyWords, ((int)(resources.GetObject("gbKeyWords.IconPadding"))));
             this.gbKeyWords.Name = "gbKeyWords";
-            this.gbKeyWords.Size = new System.Drawing.Size(715, 106);
-            this.gbKeyWords.TabIndex = 12;
             this.gbKeyWords.TabStop = false;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // frmAddArticles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 723);
             this.ControlBox = false;
             this.Controls.Add(this.gbKeyWords);
             this.Controls.Add(this.gbPicture);
@@ -213,7 +194,6 @@
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmAddArticles";
-            this.Text = "frmAddArticles";
             this.Load += new System.EventHandler(this.frmAddArticles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
             this.gbPicture.ResumeLayout(false);

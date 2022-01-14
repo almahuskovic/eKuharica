@@ -201,7 +201,31 @@ namespace eKuharica.WinUI.Recipes
             }
         }
 
-        private void pbBack_Click(object sender, EventArgs e)
+        private void btnRecipePreview_Click(object sender, EventArgs e)
+        {
+            var recipe = new RecipeDto()
+            {
+                Advice = txtAdvice.Text,
+                Method = txtMethod.Text,
+                Ingredients = txtIngridients.Text,
+                Introduction = txtIntroduction.Text,
+                Picture = Helpers.Helper.ImageToByteArray(pbCoverPicture.Image),
+                Serving = txtServing.Text,
+                Title = txtTitle.Text,
+                WeightOfPreparation = cmbWeightOfPreparation.SelectedIndex,
+                MealType = cmbMealType.SelectedIndex,
+                PreparationTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, (int)nudPreparationTime.Value / 60, (int)nudPreparationTime.Value % 60, 0),
+                AuthorUserName = APIService.Username
+            };
+
+            frmShowRecipes frmShowRecipe = new frmShowRecipes(recipe, Enum.GetName(typeof(Enumerations.Source),Enumerations.Source.Add));
+            frmShowRecipe.MdiParent = MdiParent;
+            frmShowRecipe.WindowState = FormWindowState.Maximized;
+            frmShowRecipe.Show();
+            Hide();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
         {
             if (_send)
             {
@@ -225,30 +249,6 @@ namespace eKuharica.WinUI.Recipes
             frmRecipes.MdiParent = MdiParent;
             frmRecipes.WindowState = FormWindowState.Maximized;
             frmRecipes.Show();
-            Hide();
-        }
-
-        private void btnRecipePreview_Click(object sender, EventArgs e)
-        {
-            var recipe = new RecipeDto()
-            {
-                Advice = txtAdvice.Text,
-                Method = txtMethod.Text,
-                Ingredients = txtIngridients.Text,
-                Introduction = txtIntroduction.Text,
-                Picture = Helpers.Helper.ImageToByteArray(pbCoverPicture.Image),
-                Serving = txtServing.Text,
-                Title = txtTitle.Text,
-                WeightOfPreparation = cmbWeightOfPreparation.SelectedIndex,
-                MealType = cmbMealType.SelectedIndex,
-                PreparationTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, (int)nudPreparationTime.Value / 60, (int)nudPreparationTime.Value % 60, 0),
-                AuthorUserName = APIService.Username
-            };
-
-            frmShowRecipes frmShowRecipe = new frmShowRecipes(recipe, Enum.GetName(typeof(Enumerations.Source),Enumerations.Source.Add));
-            frmShowRecipe.MdiParent = MdiParent;
-            frmShowRecipe.WindowState = FormWindowState.Maximized;
-            frmShowRecipe.Show();
             Hide();
         }
     }

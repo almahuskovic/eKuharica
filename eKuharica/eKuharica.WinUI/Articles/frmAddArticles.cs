@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,6 +27,8 @@ namespace eKuharica.WinUI.Articles
 
         public frmAddArticles(ArticleDto article = null, ArticleTranslationDto articleTranslation = null, bool translate = false)
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Helpers.Helper.CurrentLanguage);
+
             InitializeComponent();
 
             _article = article;

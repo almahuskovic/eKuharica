@@ -122,14 +122,18 @@ namespace eKuharica.WinUI.Helpers
         }
         public static Image ByteArrayToImage(byte[] bytesArr)
         {
-            if (bytesArr.Length > 0)
+            if (bytesArr != null)
             {
-                using (MemoryStream memstr = new MemoryStream(bytesArr))
+                if (bytesArr.Length > 0)
                 {
-                    Image img = Image.FromStream(memstr);
-                    return img;
+                    using (MemoryStream memstr = new MemoryStream(bytesArr))
+                    {
+                        Image img = Image.FromStream(memstr);
+                        return img;
+                    }
                 }
             }
+            
             return null;
         }
 
@@ -202,6 +206,13 @@ namespace eKuharica.WinUI.Helpers
             return false;
         }
 
+        public static string TranslationForBtnBack()
+        {
+            if (CurrentLanguage == "bs")
+                return "Zatvori";
+
+            return "Close";
+        }
 
         #region pokusaj translation-a
         public static Type GetType(string typeName)

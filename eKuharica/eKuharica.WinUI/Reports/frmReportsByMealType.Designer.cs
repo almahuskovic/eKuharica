@@ -28,111 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportsByMealType));
             this.cmbChooseMealType = new System.Windows.Forms.ComboBox();
             this.lblChooseMealType = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.dgvReportData = new System.Windows.Forms.DataGridView();
-            this.lblNote = new System.Windows.Forms.Label();
-            this.gbMealTypes = new System.Windows.Forms.GroupBox();
             this.Recipe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumberOfLikes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNote = new System.Windows.Forms.Label();
+            this.gbMealTypes = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportData)).BeginInit();
             this.gbMealTypes.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbChooseMealType
             // 
+            resources.ApplyResources(this.cmbChooseMealType, "cmbChooseMealType");
             this.cmbChooseMealType.FormattingEnabled = true;
-            this.cmbChooseMealType.Location = new System.Drawing.Point(18, 33);
             this.cmbChooseMealType.Name = "cmbChooseMealType";
-            this.cmbChooseMealType.Size = new System.Drawing.Size(143, 24);
-            this.cmbChooseMealType.TabIndex = 0;
             this.cmbChooseMealType.SelectedIndexChanged += new System.EventHandler(this.cmbChooseMealType_SelectedIndexChanged);
             // 
             // lblChooseMealType
             // 
-            this.lblChooseMealType.AutoSize = true;
-            this.lblChooseMealType.Location = new System.Drawing.Point(15, 13);
+            resources.ApplyResources(this.lblChooseMealType, "lblChooseMealType");
             this.lblChooseMealType.Name = "lblChooseMealType";
-            this.lblChooseMealType.Size = new System.Drawing.Size(46, 17);
-            this.lblChooseMealType.TabIndex = 1;
-            this.lblChooseMealType.Text = "label1";
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(685, 392);
+            resources.ApplyResources(this.btnPrint, "btnPrint");
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(75, 23);
-            this.btnPrint.TabIndex = 2;
-            this.btnPrint.Text = "button1";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // dgvReportData
             // 
+            resources.ApplyResources(this.dgvReportData, "dgvReportData");
             this.dgvReportData.AllowUserToAddRows = false;
             this.dgvReportData.AllowUserToDeleteRows = false;
             this.dgvReportData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReportData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Recipe,
             this.NumberOfLikes});
-            this.dgvReportData.Location = new System.Drawing.Point(34, 107);
             this.dgvReportData.Name = "dgvReportData";
             this.dgvReportData.ReadOnly = true;
-            this.dgvReportData.RowHeadersWidth = 51;
             this.dgvReportData.RowTemplate.Height = 24;
-            this.dgvReportData.Size = new System.Drawing.Size(726, 260);
-            this.dgvReportData.TabIndex = 3;
-            // 
-            // lblNote
-            // 
-            this.lblNote.AutoSize = true;
-            this.lblNote.Location = new System.Drawing.Point(15, 62);
-            this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(46, 17);
-            this.lblNote.TabIndex = 4;
-            this.lblNote.Text = "label1";
-            // 
-            // gbMealTypes
-            // 
-            this.gbMealTypes.Controls.Add(this.cmbChooseMealType);
-            this.gbMealTypes.Controls.Add(this.lblNote);
-            this.gbMealTypes.Controls.Add(this.lblChooseMealType);
-            this.gbMealTypes.Location = new System.Drawing.Point(34, 12);
-            this.gbMealTypes.Name = "gbMealTypes";
-            this.gbMealTypes.Size = new System.Drawing.Size(298, 89);
-            this.gbMealTypes.TabIndex = 5;
-            this.gbMealTypes.TabStop = false;
             // 
             // Recipe
             // 
             this.Recipe.DataPropertyName = "Recipe";
-            this.Recipe.HeaderText = "Recipe";
-            this.Recipe.MinimumWidth = 6;
+            resources.ApplyResources(this.Recipe, "Recipe");
             this.Recipe.Name = "Recipe";
             this.Recipe.ReadOnly = true;
-            this.Recipe.Width = 125;
             // 
             // NumberOfLikes
             // 
             this.NumberOfLikes.DataPropertyName = "NumberOfLikes";
-            this.NumberOfLikes.HeaderText = "NumberOfLikes";
-            this.NumberOfLikes.MinimumWidth = 6;
+            resources.ApplyResources(this.NumberOfLikes, "NumberOfLikes");
             this.NumberOfLikes.Name = "NumberOfLikes";
             this.NumberOfLikes.ReadOnly = true;
-            this.NumberOfLikes.Width = 125;
+            // 
+            // lblNote
+            // 
+            resources.ApplyResources(this.lblNote, "lblNote");
+            this.lblNote.Name = "lblNote";
+            // 
+            // gbMealTypes
+            // 
+            resources.ApplyResources(this.gbMealTypes, "gbMealTypes");
+            this.gbMealTypes.Controls.Add(this.cmbChooseMealType);
+            this.gbMealTypes.Controls.Add(this.lblNote);
+            this.gbMealTypes.Controls.Add(this.lblChooseMealType);
+            this.gbMealTypes.Name = "gbMealTypes";
+            this.gbMealTypes.TabStop = false;
             // 
             // frmReportsByMealType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.gbMealTypes);
             this.Controls.Add(this.dgvReportData);
             this.Controls.Add(this.btnPrint);
             this.Name = "frmReportsByMealType";
-            this.Text = "frmReportsByMealType";
             this.Load += new System.EventHandler(this.frmReportsByMealType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportData)).EndInit();
             this.gbMealTypes.ResumeLayout(false);

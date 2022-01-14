@@ -59,12 +59,11 @@
             this.nudPreparationTime = new System.Windows.Forms.NumericUpDown();
             this.txtIngridients = new System.Windows.Forms.TextBox();
             this.gbTags = new System.Windows.Forms.GroupBox();
-            this.pbBack = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblBack = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCoverPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).BeginInit();
             this.gbTags.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,23 +232,22 @@
             this.gbTags.Name = "gbTags";
             this.gbTags.TabStop = false;
             // 
-            // pbBack
-            // 
-            resources.ApplyResources(this.pbBack, "pbBack");
-            this.pbBack.Name = "pbBack";
-            this.pbBack.TabStop = false;
-            this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // lblBack
+            // 
+            resources.ApplyResources(this.lblBack, "lblBack");
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
             // 
             // frmAddRecipes
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
-            this.Controls.Add(this.pbBack);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.gbTags);
             this.Controls.Add(this.txtIngridients);
             this.Controls.Add(this.panel3);
@@ -276,7 +274,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPreparationTime)).EndInit();
             this.gbTags.ResumeLayout(false);
             this.gbTags.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -314,7 +311,7 @@
         private System.Windows.Forms.NumericUpDown nudPreparationTime;
         private System.Windows.Forms.TextBox txtIngridients;
         private System.Windows.Forms.GroupBox gbTags;
-        private System.Windows.Forms.PictureBox pbBack;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblBack;
     }
 }

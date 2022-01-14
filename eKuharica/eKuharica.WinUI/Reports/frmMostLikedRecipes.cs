@@ -17,6 +17,8 @@ namespace eKuharica.WinUI.Reports
         private List<UserFavouriteRecipeDto> _data = null;
         public frmMostLikedRecipes(List<UserFavouriteRecipeDto> data)
         {
+            btnClose.Text = Helpers.Helper.TranslationForBtnBack();
+
             InitializeComponent();
             _data = data;
         }

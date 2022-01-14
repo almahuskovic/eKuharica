@@ -117,4 +117,919 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gbLike.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblBack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 36</value>
+  </data>
+  <data name="lblPrepTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1290, 399</value>
+  </data>
+  <data name="&gt;&gt;lblIngredients.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rtbIntroduction.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="rtbComments.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;rcLike.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gbLike.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rtbComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnMethodMore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;gbServing.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblAuthor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtComment.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lblIngredients.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="btnAdviceMore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblWeightOfPrep.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblServing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="&gt;&gt;gbIngredients.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gbAdvice.Name" xml:space="preserve">
+    <value>gbAdvice</value>
+  </data>
+  <data name="lblServing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="pbPicture.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="&gt;&gt;lblWeightOfPrep.Name" xml:space="preserve">
+    <value>lblWeightOfPrep</value>
+  </data>
+  <data name="gbAdvice.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="rtbMethod.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbMethod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>497, 438</value>
+  </data>
+  <data name="rtbServing.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="rtbAdvice.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;gbComments.Name" xml:space="preserve">
+    <value>gbComments</value>
+  </data>
+  <data name="btnMethodMore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblServing.Text" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;lblMealType.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="rtbIntroduction.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="gbLike.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 44</value>
+  </data>
+  <data name="btnAdviceMore.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;gbComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMethodMore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rcAddFavourite.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gbAdvice.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnServingMore.Parent" xml:space="preserve">
+    <value>gbServing</value>
+  </data>
+  <data name="rcLike.Text" xml:space="preserve">
+    <value>ratingControl2</value>
+  </data>
+  <data name="gbAdvice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>497, 654</value>
+  </data>
+  <data name="gbComments.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="lblTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblBack.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rcAddFavourite.Parent" xml:space="preserve">
+    <value>gbCover</value>
+  </data>
+  <data name="&gt;&gt;txtComment.Name" xml:space="preserve">
+    <value>txtComment</value>
+  </data>
+  <data name="&gt;&gt;btnAddComment.Parent" xml:space="preserve">
+    <value>gbComments</value>
+  </data>
+  <data name="lblWeightOfPrep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="&gt;&gt;pbPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblAdvice.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>frmShowRecipes</value>
+  </data>
+  <data name="&gt;&gt;lblBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
+  </data>
+  <data name="gbMethod.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="rtbIngredients.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 30</value>
+  </data>
+  <data name="&gt;&gt;rtbAdvice.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblPrepTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbPicture.Name" xml:space="preserve">
+    <value>pbPicture</value>
+  </data>
+  <data name="btnMethodMore.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="gbAdvice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>456, 207</value>
+  </data>
+  <data name="&gt;&gt;lblLikesDisplay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtbMethod.Name" xml:space="preserve">
+    <value>rtbMethod</value>
+  </data>
+  <data name="lblIngredients.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;gbIngredients.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbServing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAdviceMore.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbServing.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="rtbIntroduction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1351, 69</value>
+  </data>
+  <data name="lblAuthor.Text" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 1034</value>
+  </data>
+  <data name="&gt;&gt;lblMethod.Name" xml:space="preserve">
+    <value>lblMethod</value>
+  </data>
+  <data name="&gt;&gt;lblMealType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbIngredients.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 438</value>
+  </data>
+  <data name="gbCover.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1350, 249</value>
+  </data>
+  <data name="txtComment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;gbLike.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAdvice.Parent" xml:space="preserve">
+    <value>gbAdvice</value>
+  </data>
+  <data name="&gt;&gt;rtbAdvice.Name" xml:space="preserve">
+    <value>rtbAdvice</value>
+  </data>
+  <data name="&gt;&gt;lblWeightOfPrep.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pbPicture.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="rcStar.Text" xml:space="preserve">
+    <value>ratingControl1</value>
+  </data>
+  <data name="rcAddFavourite.Text" xml:space="preserve">
+    <value>rcAddFavourite</value>
+  </data>
+  <data name="lblPrepTime.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblWeightOfPrep.Text" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblLikesDisplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="btnAdviceMore.Text" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="lblAuthor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="btnAddComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="lblAdvice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rtbIngredients.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblWeightOfPrep.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPrepTime.Name" xml:space="preserve">
+    <value>lblPrepTime</value>
+  </data>
+  <data name="&gt;&gt;gbCover.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="rcStar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1163, 278</value>
+  </data>
+  <data name="rtbServing.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;pbPicture.Parent" xml:space="preserve">
+    <value>gbCover</value>
+  </data>
+  <data name="lblAuthor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 171</value>
+  </data>
+  <data name="lblMethod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 10</value>
+  </data>
+  <data name="lblAdvice.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;gbCover.Name" xml:space="preserve">
+    <value>gbCover</value>
+  </data>
+  <data name="rtbAdvice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 129</value>
+  </data>
+  <data name="gbServing.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;rcStar.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="gbServing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>959, 654</value>
+  </data>
+  <data name="rtbIntroduction.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbIngredients.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;lblAdvice.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbIngredients.Size" type="System.Drawing.Size, System.Drawing">
+    <value>463, 423</value>
+  </data>
+  <data name="lblMealType.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;rtbIngredients.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblAdvice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="&gt;&gt;btnAdviceMore.Name" xml:space="preserve">
+    <value>btnAdviceMore</value>
+  </data>
+  <data name="&gt;&gt;rtbIngredients.Name" xml:space="preserve">
+    <value>rtbIngredients</value>
+  </data>
+  <data name="&gt;&gt;gbComments.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblIngredients.Parent" xml:space="preserve">
+    <value>gbIngredients</value>
+  </data>
+  <data name="&gt;&gt;btnMethodMore.Parent" xml:space="preserve">
+    <value>gbMethod</value>
+  </data>
+  <data name="lblIngredients.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmShowRecipes</value>
+  </data>
+  <data name="rcAddFavourite.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 200</value>
+  </data>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="&gt;&gt;rtbIntroduction.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblServing.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gbLike.Name" xml:space="preserve">
+    <value>gbLike</value>
+  </data>
+  <data name="lblLikesDisplay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 18</value>
+  </data>
+  <data name="&gt;&gt;btnServingMore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAdviceMore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="lblMealType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="&gt;&gt;rtbComments.Parent" xml:space="preserve">
+    <value>gbComments</value>
+  </data>
+  <data name="&gt;&gt;lblServing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;btnServingMore.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rcLike.Parent" xml:space="preserve">
+    <value>gbLike</value>
+  </data>
+  <data name="gbComments.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;rcStar.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.RatingControl, Syncfusion.Tools.Windows, Version=19.3460.0.57, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;rtbAdvice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblBack.Name" xml:space="preserve">
+    <value>lblBack</value>
+  </data>
+  <data name="&gt;&gt;lblAuthor.Name" xml:space="preserve">
+    <value>lblAuthor</value>
+  </data>
+  <data name="btnServingMore.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnAddComment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblAuthor.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblPrepTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="lblServing.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="rtbComments.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="rcLike.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;gbIngredients.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1270, 22</value>
+  </data>
+  <data name="&gt;&gt;rtbIntroduction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblWeightOfPrep.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnMethodMore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>784, 181</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="rcLike.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 27</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rtbServing.Name" xml:space="preserve">
+    <value>rtbServing</value>
+  </data>
+  <data name="lblAdvice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="rtbServing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 34</value>
+  </data>
+  <data name="rtbComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 21</value>
+  </data>
+  <data name="&gt;&gt;gbCover.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAuthor.Parent" xml:space="preserve">
+    <value>gbCover</value>
+  </data>
+  <data name="btnAdviceMore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="gbCover.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="lblMealType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rtbMethod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 30</value>
+  </data>
+  <data name="lblLikesDisplay.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblMethod.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblMethod.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;btnMethodMore.Name" xml:space="preserve">
+    <value>btnMethodMore</value>
+  </data>
+  <data name="rcStar.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;gbComments.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rtbIngredients.Parent" xml:space="preserve">
+    <value>gbIngredients</value>
+  </data>
+  <data name="&gt;&gt;gbAdvice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbPicture.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblPrepTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblBack.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="rtbIntroduction.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;rcAddFavourite.Name" xml:space="preserve">
+    <value>rcAddFavourite</value>
+  </data>
+  <data name="&gt;&gt;gbCover.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;rtbServing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtbIngredients.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAddComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1282, 129</value>
+  </data>
+  <data name="&gt;&gt;rtbMethod.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rcLike.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.RatingControl, Syncfusion.Tools.Windows, Version=19.3460.0.57, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="&gt;&gt;gbLike.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnServingMore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="rtbIngredients.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 387</value>
+  </data>
+  <data name="&gt;&gt;rcAddFavourite.Type" xml:space="preserve">
+    <value>Syncfusion.Windows.Forms.Tools.RatingControl, Syncfusion.Tools.Windows, Version=19.3460.0.57, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  </data>
+  <data name="lblWeightOfPrep.Location" type="System.Drawing.Point, System.Drawing">
+    <value>649, 399</value>
+  </data>
+  <data name="&gt;&gt;gbMethod.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblMealType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblMethod.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pbPicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1341, 228</value>
+  </data>
+  <data name="btnMethodMore.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;rtbServing.Parent" xml:space="preserve">
+    <value>gbServing</value>
+  </data>
+  <data name="&gt;&gt;lblIngredients.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 130</value>
+  </data>
+  <data name="rtbAdvice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;btnServingMore.Name" xml:space="preserve">
+    <value>btnServingMore</value>
+  </data>
+  <data name="&gt;&gt;btnAddComment.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gbMethod.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbAdvice.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="rtbComments.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnAddComment.Name" xml:space="preserve">
+    <value>btnAddComment</value>
+  </data>
+  <data name="gbCover.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="gbLike.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 267</value>
+  </data>
+  <data name="&gt;&gt;rcStar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbServing.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;rtbMethod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblServing.Parent" xml:space="preserve">
+    <value>gbServing</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblPrepTime.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lblLikesDisplay.Name" xml:space="preserve">
+    <value>lblLikesDisplay</value>
+  </data>
+  <data name="rtbAdvice.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="rcLike.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 11</value>
+  </data>
+  <data name="&gt;&gt;lblBack.Parent" xml:space="preserve">
+    <value>gbCover</value>
+  </data>
+  <data name="pbPicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 18</value>
+  </data>
+  <data name="gbAdvice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblMealType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 399</value>
+  </data>
+  <data name="lblMethod.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rtbIntroduction.Name" xml:space="preserve">
+    <value>rtbIntroduction</value>
+  </data>
+  <data name="rtbMethod.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="rtbAdvice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 34</value>
+  </data>
+  <data name="gbMethod.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtComment.Parent" xml:space="preserve">
+    <value>gbComments</value>
+  </data>
+  <data name="&gt;&gt;rtbAdvice.Parent" xml:space="preserve">
+    <value>gbAdvice</value>
+  </data>
+  <data name="lblMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="lblIngredients.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;txtComment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="rtbIngredients.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="pbPicture.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="rtbServing.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="lblBack.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnServingMore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="lblMealType.Text" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="lblPrepTime.Text" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;gbMethod.Name" xml:space="preserve">
+    <value>gbMethod</value>
+  </data>
+  <data name="rcAddFavourite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 32</value>
+  </data>
+  <data name="&gt;&gt;lblWeightOfPrep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAdvice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnAddComment.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;txtComment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblAdvice.Name" xml:space="preserve">
+    <value>lblAdvice</value>
+  </data>
+  <data name="rtbComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1347, 102</value>
+  </data>
+  <data name="&gt;&gt;lblAuthor.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbServing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 207</value>
+  </data>
+  <data name="&gt;&gt;gbIngredients.Name" xml:space="preserve">
+    <value>gbIngredients</value>
+  </data>
+  <data name="&gt;&gt;lblMethod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rcStar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;rtbServing.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblIngredients.Name" xml:space="preserve">
+    <value>lblIngredients</value>
+  </data>
+  <data name="lblIngredients.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 10</value>
+  </data>
+  <data name="&gt;&gt;lblMealType.Name" xml:space="preserve">
+    <value>lblMealType</value>
+  </data>
+  <data name="lblLikesDisplay.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;rtbComments.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="rcAddFavourite.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="rtbIntroduction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 327</value>
+  </data>
+  <data name="&gt;&gt;lblServing.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1374, 1069</value>
+  </data>
+  <data name="&gt;&gt;rtbMethod.Parent" xml:space="preserve">
+    <value>gbMethod</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>gbCover</value>
+  </data>
+  <data name="btnAddComment.Text" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="lblPrepTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
+  </data>
+  <data name="&gt;&gt;btnAddComment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rcStar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 27</value>
+  </data>
+  <data name="&gt;&gt;lblLikesDisplay.Parent" xml:space="preserve">
+    <value>gbLike</value>
+  </data>
+  <data name="rtbServing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>392, 129</value>
+  </data>
+  <data name="&gt;&gt;rcStar.Name" xml:space="preserve">
+    <value>rcStar</value>
+  </data>
+  <data name="gbComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 867</value>
+  </data>
+  <data name="lblBack.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="gbCover.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblServing.Name" xml:space="preserve">
+    <value>lblServing</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>Zatvori</value>
+  </data>
+  <data name="lblLikesDisplay.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblWeightOfPrep.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnServingMore.Text" xml:space="preserve">
+    <value>button3</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lblAuthor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rtbIngredients.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;gbMethod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1363, 161</value>
+  </data>
+  <data name="&gt;&gt;btnAdviceMore.Parent" xml:space="preserve">
+    <value>gbAdvice</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rtbMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>853, 145</value>
+  </data>
+  <data name="&gt;&gt;lblPrepTime.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;gbServing.Name" xml:space="preserve">
+    <value>gbServing</value>
+  </data>
+  <data name="&gt;&gt;btnMethodMore.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbMethod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>865, 210</value>
+  </data>
+  <data name="rtbMethod.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnServingMore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>323, 169</value>
+  </data>
+  <data name="&gt;&gt;lblLikesDisplay.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="rcAddFavourite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1281, 21</value>
+  </data>
+  <data name="&gt;&gt;rtbComments.Name" xml:space="preserve">
+    <value>rtbComments</value>
+  </data>
+  <data name="btnAdviceMore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 169</value>
+  </data>
+  <data name="&gt;&gt;lblMethod.Parent" xml:space="preserve">
+    <value>gbMethod</value>
+  </data>
+  <data name="&gt;&gt;rcLike.Name" xml:space="preserve">
+    <value>rcLike</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
