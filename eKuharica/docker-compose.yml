@@ -1,0 +1,33 @@
+version: '3'
+services:
+#mssql docker
+  ekuharica-sql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Z_m03RES
+      - MSSQL_PID=Developer
+    ports:
+      - 1401:1433
+    networks:
+      - ekuharicanet
+
+  ekuharica-api:
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+      - ConnectionStrings:DefaultConnection=Server=ekuharica-sql,1433;Database=eKuharica;User=sa;Password=Z_m03RES;ConnectRetryCount=0
+    ports:
+      - 5010:5010
+    networks:
+      - ekuharicanet      
+    links:
+      - ekuharica-sql
+    depends_on:
+      - ekuharica-sql
+      
+networks:
+  ekuharicanet:
+    driver: bridge      
