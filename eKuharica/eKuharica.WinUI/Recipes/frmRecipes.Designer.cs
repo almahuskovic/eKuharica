@@ -34,7 +34,7 @@
             this.sdgvRecipes = new eKuharica.WinUI.Helpers.SuperGrid();
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prevod = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Akcije = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Prevedi = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Prikazi = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Uredi = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Obrisi = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -75,16 +75,16 @@
             // 
             // sdgvRecipes
             // 
-            resources.ApplyResources(this.sdgvRecipes, "sdgvRecipes");
             this.sdgvRecipes.AllowUserToAddRows = false;
             this.sdgvRecipes.AllowUserToDeleteRows = false;
+            resources.ApplyResources(this.sdgvRecipes, "sdgvRecipes");
             this.sdgvRecipes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.sdgvRecipes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.sdgvRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sdgvRecipes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Naziv,
             this.Prevod,
-            this.Akcije,
+            this.Prevedi,
             this.Prikazi,
             this.Uredi,
             this.Obrisi});
@@ -109,13 +109,13 @@
             this.Prevod.Name = "Prevod";
             this.Prevod.ReadOnly = true;
             // 
-            // Akcije
+            // Prevedi
             // 
-            resources.ApplyResources(this.Akcije, "Akcije");
-            this.Akcije.Name = "Akcije";
-            this.Akcije.ReadOnly = true;
-            this.Akcije.Text = "Prevod";
-            this.Akcije.UseColumnTextForButtonValue = true;
+            resources.ApplyResources(this.Prevedi, "Prevedi");
+            this.Prevedi.Name = "Prevedi";
+            this.Prevedi.ReadOnly = true;
+            this.Prevedi.Text = "Prevedi";
+            this.Prevedi.UseColumnTextForButtonValue = true;
             // 
             // Prikazi
             // 
@@ -153,31 +153,31 @@
             // 
             // gbExtraFilters
             // 
-            resources.ApplyResources(this.gbExtraFilters, "gbExtraFilters");
             this.gbExtraFilters.Controls.Add(this.cmbMealType);
             this.gbExtraFilters.Controls.Add(this.cmbPreparationTime);
             this.gbExtraFilters.Controls.Add(this.cmbWeightOfPreparation);
+            resources.ApplyResources(this.gbExtraFilters, "gbExtraFilters");
             this.gbExtraFilters.Name = "gbExtraFilters";
             this.gbExtraFilters.TabStop = false;
             // 
             // cmbMealType
             // 
-            resources.ApplyResources(this.cmbMealType, "cmbMealType");
             this.cmbMealType.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbMealType, "cmbMealType");
             this.cmbMealType.Name = "cmbMealType";
             this.cmbMealType.SelectedIndexChanged += new System.EventHandler(this.cmbMealType_SelectedIndexChanged);
             // 
             // cmbPreparationTime
             // 
-            resources.ApplyResources(this.cmbPreparationTime, "cmbPreparationTime");
             this.cmbPreparationTime.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbPreparationTime, "cmbPreparationTime");
             this.cmbPreparationTime.Name = "cmbPreparationTime";
             this.cmbPreparationTime.SelectedIndexChanged += new System.EventHandler(this.cmbPreparationTime_SelectedIndexChanged);
             // 
             // cmbWeightOfPreparation
             // 
-            resources.ApplyResources(this.cmbWeightOfPreparation, "cmbWeightOfPreparation");
             this.cmbWeightOfPreparation.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbWeightOfPreparation, "cmbWeightOfPreparation");
             this.cmbWeightOfPreparation.Name = "cmbWeightOfPreparation";
             this.cmbWeightOfPreparation.SelectedIndexChanged += new System.EventHandler(this.cmbWeightOfPreparation_SelectedIndexChanged);
             // 
@@ -203,10 +203,10 @@
             // 
             // bindingNavigator1
             // 
-            resources.ApplyResources(this.bindingNavigator1, "bindingNavigator1");
             this.bindingNavigator1.AddNewItem = null;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = null;
+            resources.ApplyResources(this.bindingNavigator1, "bindingNavigator1");
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -227,25 +227,25 @@
             // 
             // bindingNavigatorCountItem
             // 
-            resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
             // 
             // bindingNavigatorMoveFirstItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             // 
             // bindingNavigatorMovePreviousItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             // 
             // bindingNavigatorSeparator
             // 
-            resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
             // 
             // bindingNavigatorPositionItem
             // 
@@ -254,25 +254,25 @@
             // 
             // bindingNavigatorSeparator1
             // 
-            resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
             // 
             // bindingNavigatorMoveNextItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             // 
             // bindingNavigatorMoveLastItem
             // 
-            resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             // 
             // bindingNavigatorSeparator2
             // 
-            resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             // 
             // frmRecipes
             // 
@@ -325,7 +325,7 @@
         private Helpers.SuperGrid sdgvRecipes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Prevod;
-        private System.Windows.Forms.DataGridViewButtonColumn Akcije;
+        private System.Windows.Forms.DataGridViewButtonColumn Prevedi;
         private System.Windows.Forms.DataGridViewButtonColumn Prikazi;
         private System.Windows.Forms.DataGridViewButtonColumn Uredi;
         private System.Windows.Forms.DataGridViewButtonColumn Obrisi;

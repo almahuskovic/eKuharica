@@ -43,8 +43,16 @@ namespace eKuharica.WinUI.Recipes
 
         private void frmAddRecipes_Load(object sender, EventArgs e)
         {
-            cmbMealType.DataSource = Helpers.Helper.MealTypeToSelectList();
-            cmbWeightOfPreparation.DataSource = Helpers.Helper.WeightOfPreparationToSelectList();
+            if (Helpers.Helper.CurrentLanguage == "bs")
+            {
+                cmbMealType.DataSource = Helpers.Helper.VrsteJelaToSelectList();
+                cmbWeightOfPreparation.DataSource = Helpers.Helper.TezinaPripremeToSelectList();
+            }
+            else
+            {
+                cmbMealType.DataSource = Helpers.Helper.MealTypeToSelectList();
+                cmbWeightOfPreparation.DataSource = Helpers.Helper.WeightOfPreparationToSelectList();
+            }
 
             if (_recipe != null && !_translate)
             {

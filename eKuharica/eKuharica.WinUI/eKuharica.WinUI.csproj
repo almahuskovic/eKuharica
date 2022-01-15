@@ -375,12 +375,6 @@
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Helper.cs" />
-    <Compile Include="Helpers\PlaceHolderTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Helpers\RoundButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Helpers\SuperGrid.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -540,16 +534,6 @@
     <EmbeddedResource Include="frmWelcome.resx">
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Recipes\frmAddRecipes.bs.resx">
       <DependentUpon>frmAddRecipes.cs</DependentUpon>
     </EmbeddedResource>

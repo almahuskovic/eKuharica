@@ -55,7 +55,7 @@
               <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.225in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -71,7 +71,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Recipe</Value>
+                              <Value>Recept</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -101,7 +101,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Avg Rating</Value>
+                              <Value>Prosječna ocjena</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -211,7 +211,7 @@
         <Top>1.06333in</Top>
         <Left>2.12167in</Left>
         <Height>0.5in</Height>
-        <Width>2in</Width>
+        <Width>2.225in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>

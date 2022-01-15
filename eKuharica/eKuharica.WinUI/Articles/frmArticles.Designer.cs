@@ -45,7 +45,7 @@
             this.sdgvArticles = new eKuharica.WinUI.Helpers.SuperGrid();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsTranslated = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Actions = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Translate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -145,11 +145,13 @@
             this.sdgvArticles.AllowUserToAddRows = false;
             this.sdgvArticles.AllowUserToDeleteRows = false;
             resources.ApplyResources(this.sdgvArticles, "sdgvArticles");
+            this.sdgvArticles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.sdgvArticles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.sdgvArticles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sdgvArticles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Title,
             this.IsTranslated,
-            this.Actions,
+            this.Translate,
             this.Show,
             this.Edit,
             this.Delete});
@@ -174,13 +176,13 @@
             this.IsTranslated.Name = "IsTranslated";
             this.IsTranslated.ReadOnly = true;
             // 
-            // Actions
+            // Translate
             // 
-            resources.ApplyResources(this.Actions, "Actions");
-            this.Actions.Name = "Actions";
-            this.Actions.ReadOnly = true;
-            this.Actions.Text = "Translate";
-            this.Actions.UseColumnTextForButtonValue = true;
+            resources.ApplyResources(this.Translate, "Translate");
+            this.Translate.Name = "Translate";
+            this.Translate.ReadOnly = true;
+            this.Translate.Text = "Translate";
+            this.Translate.UseColumnTextForButtonValue = true;
             // 
             // Show
             // 
@@ -242,7 +244,7 @@
         private Helpers.SuperGrid sdgvArticles;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsTranslated;
-        private System.Windows.Forms.DataGridViewButtonColumn Actions;
+        private System.Windows.Forms.DataGridViewButtonColumn Translate;
         private System.Windows.Forms.DataGridViewButtonColumn Show;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;

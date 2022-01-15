@@ -16,6 +16,9 @@ using eKuharica.WinUI.Articles;
 using static eKuharica.Model.Enumerations.Enumerations;
 using System.Web.Compilation;
 using eKuharica.WinUI.Feedbacks;
+using eKuharica.WinUI.Recipes;
+using eKuharica.WinUI.Users;
+using eKuharica.WinUI.UserRecipes;
 
 namespace eKuharica.WinUI.Helpers
 {
@@ -143,7 +146,7 @@ namespace eKuharica.WinUI.Helpers
         //TODO:refaktorisanje, napraviti univerzalnu fn za convert enuma u listu
         public static List<MealType> MealTypeToSelectList()
         {
-            var mealTypes = Enum.GetValues(typeof(MealType)).Cast<MealType>().ToList();
+            var mealTypes =  Enum.GetValues(typeof(MealType)).Cast<MealType>().ToList();
             mealTypes.Insert(0, new MealType());
             return mealTypes;
         }
@@ -171,6 +174,30 @@ namespace eKuharica.WinUI.Helpers
 
             return list;
         }
+
+        #region Prevedene
+
+        public static List<VrsteJela> VrsteJelaToSelectList()
+        {
+            var mealTypes = Enum.GetValues(typeof(VrsteJela)).Cast<VrsteJela>().ToList();
+            mealTypes.Insert(0, new VrsteJela());
+            return mealTypes;
+        }
+
+        public static List<TezinaPripreme> TezinaPripremeToSelectList()
+        {
+            var weightOfPreparation = Enum.GetValues(typeof(TezinaPripreme)).Cast<TezinaPripreme>().ToList();
+            weightOfPreparation.Insert(0, new TezinaPripreme());
+            return weightOfPreparation;
+        }
+
+        public static List<VrijemePripremeKategorije> VrijemePripremeKategorijeToSelectList()
+        {
+            var preparationTimeCategory = Enum.GetValues(typeof(VrijemePripremeKategorije)).Cast<VrijemePripremeKategorije>().ToList();
+            preparationTimeCategory.Insert(0, new VrijemePripremeKategorije());
+            return preparationTimeCategory;
+        }
+        #endregion
 
         #endregion
         public static string GenerateCommentsDisplayList(List<CommentDto> comments)
@@ -206,6 +233,8 @@ namespace eKuharica.WinUI.Helpers
             return false;
         }
 
+        #region Translation
+
         public static string TranslationForBtnBack()
         {
             if (CurrentLanguage == "bs")
@@ -214,7 +243,25 @@ namespace eKuharica.WinUI.Helpers
             return "Close";
         }
 
-        #region pokusaj translation-a
+        public static void TranslationForDgvButtons(Form form, DataGridView dataGridView)
+        {
+            ComponentResourceManager resources = new ComponentResourceManager(GetType(form.Name));
+
+            foreach (DataGridViewRow item in (dataGridView as DataGridView).Rows)
+            {
+                foreach (DataGridViewColumn itemC in dataGridView.Columns)
+                {
+                    if (itemC is DataGridViewButtonColumn)
+                        (itemC as DataGridViewButtonColumn).Text = resources.GetString((itemC as DataGridViewButtonColumn).Name);
+                }
+                //foreach (var itemR in item.Cells)
+                //{
+                //    if (itemR is DataGridViewButtonCell)
+                //        (itemR as DataGridViewButtonCell).Value = resources.GetString((itemR as DataGridViewButtonCell).ToolTipText);
+                //}
+            }
+        }
+
         public static Type GetType(string typeName)
         {
             Type returnType = null;
@@ -224,76 +271,16 @@ namespace eKuharica.WinUI.Helpers
                 case "frmArticles": returnType = typeof(frmArticles); break;
                 case "frmWelcome": returnType = typeof(frmWelcome); break;
                 case "frmFeedbacks": returnType = typeof(frmFeedbacks); break;
+                case "frmRecipes": returnType = typeof(frmRecipes); break;
+                case "frmUserProfile": returnType = typeof(frmUserProfile); break;
+                case "frmUsers": returnType = typeof(frmUsers); break;
+                case "frmUserRecipes": returnType = typeof(frmUserRecipes); break;
 
             }
             return returnType;
         }
 
-        public static void ChangeLanguage(string language, Type typeOfForm=null)
-        {
-            foreach (Form f in Application.OpenForms)
-            {
-                if (f.Name != "frmWelcome" && f.Name != "frmLogin")
-                {
-                    ComponentResourceManager resources = new ComponentResourceManager(GetType(f.Text));
-
-                    foreach (Control c in f.Controls)
-                    {
-                        resources.ApplyResources(c, c.Name, new CultureInfo(language));
-
-                        if(c is DataGridView)
-                        {
-                            foreach (DataGridViewColumn item in (c as DataGridView).Columns)
-                            {
-                                resources.ApplyResources(item, item.Name, new CultureInfo(language));
-                            }
-                            foreach (DataGridViewRow item in (c as DataGridView).Rows)
-                            {
-                                foreach (var itemR in item.Cells)
-                                {
-                                    if (itemR is DataGridViewButtonCell)
-                                        resources.ApplyResources(itemR, (itemR as DataGridViewButtonCell).Value.ToString() , new CultureInfo(language));
-                                }
-                            }
-                        }
-                    }
-                }
-                //for (var i = 0; i < DataGridView.ColumnCount; i++)
-                //    var name = DataGridView.Columns[i].HeaderText;
-            }
-        }
-        public static void ChangeWelcomeFormLanguage(Form form, string language)
-        {
-            foreach (Control c in form.Controls)
-            {
-                ComponentResourceManager resources = new ComponentResourceManager(typeof(frmWelcome));
-                if (c is ToolStrip)
-                {
-                    foreach (var item in (c as ToolStrip).Items)
-                    {
-                        if(item is ToolStripButton)
-                            resources.ApplyResources(item, (item as ToolStripButton).Name, new CultureInfo(language));
-                        else if(item is ToolStripDropDownButton)
-                        {
-                            resources.ApplyResources(item, (item as ToolStripDropDownButton).Name, new CultureInfo(language));
-                            foreach (var ddItem in (item as ToolStripDropDownButton).DropDownItems)
-                            {
-                                resources.ApplyResources(ddItem, (ddItem as ToolStripMenuItem).Name, new CultureInfo(language));
-                            }
-                        }
-                        else if(item is ToolStripMenuItem)
-                        {
-                            resources.ApplyResources(item, (item as ToolStripMenuItem).Name, new CultureInfo(language));
-                            foreach (var itemI in (item as ToolStripMenuItem).DropDownItems)
-                            {
-                                resources.ApplyResources(itemI, (itemI as ToolStripMenuItem).Name, new CultureInfo(language));
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         #endregion
+
     }
 }

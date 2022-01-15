@@ -146,9 +146,9 @@
             // 
             // gbIngredients
             // 
-            resources.ApplyResources(this.gbIngredients, "gbIngredients");
             this.gbIngredients.Controls.Add(this.rtbIngredients);
             this.gbIngredients.Controls.Add(this.lblIngredients);
+            resources.ApplyResources(this.gbIngredients, "gbIngredients");
             this.gbIngredients.Name = "gbIngredients";
             this.gbIngredients.TabStop = false;
             // 
@@ -261,7 +261,6 @@
             // 
             // rcLike
             // 
-            resources.ApplyResources(this.rcLike, "rcLike");
             this.rcLike.ApplyGradientColors = false;
             this.rcLike.Images = customImageCollection3;
             this.rcLike.ItemHighlightColor = System.Drawing.Color.DarkRed;
@@ -271,6 +270,7 @@
             this.rcLike.ItemSelectionColor = System.Drawing.Color.Red;
             this.rcLike.ItemSelectionStartColor = System.Drawing.Color.Red;
             this.rcLike.ItemSize = new System.Drawing.Size(22, 22);
+            resources.ApplyResources(this.rcLike, "rcLike");
             this.rcLike.Name = "rcLike";
             this.rcLike.ReadOnly = true;
             this.rcLike.ResetButton = resetButton3;
@@ -279,9 +279,9 @@
             // 
             // gbLike
             // 
-            resources.ApplyResources(this.gbLike, "gbLike");
             this.gbLike.Controls.Add(this.rcLike);
             this.gbLike.Controls.Add(this.lblLikesDisplay);
+            resources.ApplyResources(this.gbLike, "gbLike");
             this.gbLike.Name = "gbLike";
             this.gbLike.TabStop = false;
             // 

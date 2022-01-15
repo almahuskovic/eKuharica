@@ -6,8 +6,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,6 +31,37 @@ namespace eKuharica.WinUI.Recipes
             InitializeComponent();
             _recipe = recipe;
             _source = source;
+
+            #region localizer
+
+            btnClose.Text = Helpers.Helper.TranslationForBtnBack();
+
+            if (Helpers.Helper.CurrentLanguage == "bs"){
+
+                lblAdvice.Text = "Savijet";
+                lblIngredients.Text = "Sastojci";
+                lblMethod.Text = "Postupak";
+                lblBack.Text = "Nazad";
+                lblServing.Text = "Posluživanje";
+                btnAddComment.Text = "Dodaj komentar";
+                btnMethodMore.Text = "Pročitajte više->";
+                btnAdviceMore.Text= "Pročitajte više->";
+                btnServingMore.Text="Pročitajte više->";
+            }
+            else
+            {
+                lblAdvice.Text = "Advice";
+                lblIngredients.Text = "Ingredients";
+                lblMethod.Text = "Method";
+                lblServing.Text = "Serving";
+                lblBack.Text = "Back";
+                btnAddComment.Text = "Add comment";
+                btnMethodMore.Text = "Read more->";
+                btnAdviceMore.Text = "Read more->";
+                btnServingMore.Text = "Read more->";
+            }
+
+            #endregion
         }
 
         private void frmShowRecipes_Load(object sender, EventArgs e)

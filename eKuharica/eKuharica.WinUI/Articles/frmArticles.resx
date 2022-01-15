@@ -175,7 +175,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="bindingNavigatorCountItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 24</value>
+    <value>45, 28</value>
   </data>
   <data name="bindingNavigatorCountItem.Text" xml:space="preserve">
     <value>of {0}</value>
@@ -201,7 +201,7 @@
     <value>True</value>
   </data>
   <data name="bindingNavigatorMoveFirstItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 24</value>
+    <value>29, 28</value>
   </data>
   <data name="bindingNavigatorMoveFirstItem.Text" xml:space="preserve">
     <value>Move first</value>
@@ -219,13 +219,13 @@
     <value>True</value>
   </data>
   <data name="bindingNavigatorMovePreviousItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 24</value>
+    <value>29, 28</value>
   </data>
   <data name="bindingNavigatorMovePreviousItem.Text" xml:space="preserve">
     <value>Move previous</value>
   </data>
   <data name="bindingNavigatorSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 27</value>
+    <value>6, 31</value>
   </data>
   <data name="bindingNavigatorPositionItem.AccessibleName" xml:space="preserve">
     <value>Position</value>
@@ -243,7 +243,7 @@
     <value>Current position</value>
   </data>
   <data name="bindingNavigatorSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 27</value>
+    <value>6, 31</value>
   </data>
   <data name="bindingNavigatorMoveNextItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -258,7 +258,7 @@
     <value>True</value>
   </data>
   <data name="bindingNavigatorMoveNextItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 24</value>
+    <value>29, 28</value>
   </data>
   <data name="bindingNavigatorMoveNextItem.Text" xml:space="preserve">
     <value>Move next</value>
@@ -278,19 +278,19 @@
     <value>True</value>
   </data>
   <data name="bindingNavigatorMoveLastItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 24</value>
+    <value>29, 28</value>
   </data>
   <data name="bindingNavigatorMoveLastItem.Text" xml:space="preserve">
     <value>Move last</value>
   </data>
   <data name="bindingNavigatorSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 27</value>
+    <value>6, 31</value>
   </data>
   <data name="bindingNavigator1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 423</value>
+    <value>0, 419</value>
   </data>
   <data name="bindingNavigator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 27</value>
+    <value>800, 31</value>
   </data>
   <data name="bindingNavigator1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -322,9 +322,6 @@
   <data name="Title.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="Title.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
   <metadata name="IsTranslated.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -334,56 +331,53 @@
   <data name="IsTranslated.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="IsTranslated.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <metadata name="Actions.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Translate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Actions.HeaderText" xml:space="preserve">
-    <value>Actions</value>
+  <data name="Translate.HeaderText" xml:space="preserve">
+    <value>Translate</value>
   </data>
-  <data name="Actions.MinimumWidth" type="System.Int32, mscorlib">
+  <data name="Translate.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="Actions.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+  <data name="Translate.ToolTipText" xml:space="preserve">
+    <value>Translate</value>
   </data>
   <metadata name="Show.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Show.HeaderText" xml:space="preserve">
-    <value />
+    <value>Preview</value>
   </data>
   <data name="Show.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="Show.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+  <data name="Show.ToolTipText" xml:space="preserve">
+    <value>Preview</value>
   </data>
   <metadata name="Edit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Edit.HeaderText" xml:space="preserve">
-    <value />
+    <value>Edit</value>
   </data>
   <data name="Edit.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="Edit.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+  <data name="Edit.ToolTipText" xml:space="preserve">
+    <value>Edit</value>
   </data>
   <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Delete.HeaderText" xml:space="preserve">
-    <value />
+    <value>Delete</value>
   </data>
   <data name="Delete.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="Delete.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+  <data name="Delete.ToolTipText" xml:space="preserve">
+    <value>Delete</value>
   </data>
   <data name="sdgvArticles.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 159</value>
@@ -420,6 +414,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 450</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>frmArticles</value>
@@ -490,10 +487,10 @@
   <data name="&gt;&gt;IsTranslated.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Actions.Name" xml:space="preserve">
-    <value>Actions</value>
+  <data name="&gt;&gt;Translate.Name" xml:space="preserve">
+    <value>Translate</value>
   </data>
-  <data name="&gt;&gt;Actions.Type" xml:space="preserve">
+  <data name="&gt;&gt;Translate.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Show.Name" xml:space="preserve">

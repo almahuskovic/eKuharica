@@ -20,6 +20,24 @@ namespace eKuharica.WinUI.Users
         {
             InitializeComponent();
             _user = user;
+
+            #region localizer
+
+            btnClose.Text = Helpers.Helper.TranslationForBtnBack();
+
+            if (Helpers.Helper.CurrentLanguage == "bs")
+            {
+                lblFollowers.Text = "Pratitelji";
+                lblFollowing.Text = "Pratim";
+                lblUserName.Text = "Korisničko ime";
+            }
+            else
+            {
+                lblFollowers.Text = "Followers";
+                lblFollowing.Text = "Following";
+                lblUserName.Text = "Username";
+            }
+            #endregion
         }
 
         private void btnClose_Click(object sender, EventArgs e)

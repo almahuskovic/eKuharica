@@ -32,10 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserRecipes));
             this.gbUserRecipes = new System.Windows.Forms.GroupBox();
             this.sdgvUserRecipes = new eKuharica.WinUI.Helpers.SuperGrid();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Publish = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -47,6 +43,10 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Approve = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbUserRecipes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -65,10 +65,12 @@
             // 
             this.sdgvUserRecipes.AllowUserToAddRows = false;
             this.sdgvUserRecipes.AllowUserToDeleteRows = false;
+            this.sdgvUserRecipes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.sdgvUserRecipes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.sdgvUserRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sdgvUserRecipes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Title,
-            this.Publish,
+            this.Approve,
             this.Edit,
             this.Delete});
             resources.ApplyResources(this.sdgvUserRecipes, "sdgvUserRecipes");
@@ -78,37 +80,6 @@
             this.sdgvUserRecipes.RowTemplate.Height = 24;
             this.sdgvUserRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.sdgvUserRecipes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUserRecipes_CellContentClick);
-            // 
-            // Title
-            // 
-            this.Title.DataPropertyName = "Title";
-            resources.ApplyResources(this.Title, "Title");
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            // 
-            // Publish
-            // 
-            resources.ApplyResources(this.Publish, "Publish");
-            this.Publish.Name = "Publish";
-            this.Publish.ReadOnly = true;
-            this.Publish.Text = "Odobri";
-            this.Publish.UseColumnTextForButtonValue = true;
-            // 
-            // Edit
-            // 
-            resources.ApplyResources(this.Edit, "Edit");
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Text = "Uredi";
-            this.Edit.UseColumnTextForButtonValue = true;
-            // 
-            // Delete
-            // 
-            resources.ApplyResources(this.Delete, "Delete");
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Obrisi";
-            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // bindingNavigator1
             // 
@@ -183,6 +154,37 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "Title";
+            resources.ApplyResources(this.Title, "Title");
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // Approve
+            // 
+            resources.ApplyResources(this.Approve, "Approve");
+            this.Approve.Name = "Approve";
+            this.Approve.ReadOnly = true;
+            this.Approve.Text = "Approve";
+            this.Approve.UseColumnTextForButtonValue = true;
+            // 
+            // Edit
+            // 
+            resources.ApplyResources(this.Edit, "Edit");
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            resources.ApplyResources(this.Delete, "Delete");
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
             // frmUserRecipes
             // 
             resources.ApplyResources(this, "$this");
@@ -219,7 +221,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewButtonColumn Publish;
+        private System.Windows.Forms.DataGridViewButtonColumn Approve;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }

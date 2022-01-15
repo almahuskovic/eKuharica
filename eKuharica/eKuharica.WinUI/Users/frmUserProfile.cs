@@ -25,6 +25,30 @@ namespace eKuharica.WinUI.Users
             InitializeComponent();
             _user = user;
             dgvRecipesSendByUser.AutoGenerateColumns = false;
+
+            #region localizer
+            btnClose.Text = Helpers.Helper.TranslationForBtnBack();
+
+            if (Helpers.Helper.CurrentLanguage == "bs")
+            {
+                lblFollowers.Text = "Pratitelji";
+                lblFollowing.Text = "Pratim";
+                lblUserName.Text = "Korisničko ime";
+
+                dgvRecipesSendByUser.Columns[0].HeaderText = "Recpet";
+                dgvRecipesSendByUser.Columns[1].HeaderText = "Prikaži";
+            }
+            else
+            {
+                lblFollowers.Text = "Followers";
+                lblFollowing.Text = "Following";
+                lblUserName.Text = "Username";
+
+                dgvRecipesSendByUser.Columns[0].HeaderText = "Recipe";
+                dgvRecipesSendByUser.Columns[1].HeaderText = "Preview";
+            }
+
+            #endregion
         }
 
         private async void frmUserProfile_Load(object sender, EventArgs e)

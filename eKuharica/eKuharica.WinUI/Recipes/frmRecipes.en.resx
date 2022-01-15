@@ -444,12 +444,27 @@
     <value>Delete</value>
   </data>
   <data name="Prevod.HeaderText" xml:space="preserve">
-    <value>Translation</value>
+    <value>Is translated</value>
   </data>
   <data name="Prikazi.HeaderText" xml:space="preserve">
     <value>Preview</value>
   </data>
   <data name="Uredi.HeaderText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Prevedi.HeaderText" xml:space="preserve">
+    <value>Translate</value>
+  </data>
+  <data name="Obrisi" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Prevedi" xml:space="preserve">
+    <value>Translate</value>
+  </data>
+  <data name="Prikazi" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Uredi" xml:space="preserve">
     <value>Edit</value>
   </data>
 </root>

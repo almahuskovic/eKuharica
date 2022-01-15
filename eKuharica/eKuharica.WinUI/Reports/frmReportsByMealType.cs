@@ -23,11 +23,36 @@ namespace eKuharica.WinUI.Reports
         {
             InitializeComponent();
             dgvReportData.AutoGenerateColumns = false;
+
+            #region localizer
+
+            if (Helpers.Helper.CurrentLanguage == "bs")
+            {
+                lblChooseMealType.Text = "Vrsta jela:";
+                lblNote.Text = "*Prvo odaberite vrstu jela da bi se prikazali podaci";
+                btnPrint.Text = "Printaj";
+                dgvReportData.Columns[0].HeaderText = "Recept";
+                dgvReportData.Columns[1].HeaderText = "Broj lajkova";
+            }
+            else
+            {
+                lblChooseMealType.Text = "Meal type:";
+                lblNote.Text = "*You must choose a meal type first";
+                btnPrint.Text = "Print";
+                dgvReportData.Columns[0].HeaderText = "Recipe";
+                dgvReportData.Columns[1].HeaderText = "Number of likes";
+            }
+
+            #endregion
         }
 
         private void frmReportsByMealType_Load(object sender, EventArgs e)
         {
-            cmbChooseMealType.DataSource = Helpers.Helper.MealTypeToSelectList();
+            if (Helpers.Helper.CurrentLanguage == "bs")
+                cmbChooseMealType.DataSource = Helpers.Helper.VrsteJelaToSelectList();
+            else
+                cmbChooseMealType.DataSource = Helpers.Helper.MealTypeToSelectList();
+
             dgvReportData.DataSource = _data = null;
         }
 

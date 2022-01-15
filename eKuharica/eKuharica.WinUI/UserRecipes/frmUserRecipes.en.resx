@@ -323,10 +323,19 @@
   <data name="Edit.HeaderText" xml:space="preserve">
     <value>Edit</value>
   </data>
-  <data name="Publish.HeaderText" xml:space="preserve">
-    <value>Publish</value>
-  </data>
   <data name="Title.HeaderText" xml:space="preserve">
     <value>Title</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Publish" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="Approve.HeaderText" xml:space="preserve">
+    <value>Approve</value>
   </data>
 </root>

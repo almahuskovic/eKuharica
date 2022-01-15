@@ -32,6 +32,8 @@ namespace eKuharica.WinUI.Feedbacks
             else
             {
                 sdgvFeedbacks.DataSource = data;
+                Helpers.Helper.TranslationForDgvButtons(this, sdgvFeedbacks);
+
                 sdgvFeedbacks.PageSize = 10;
                 DataTable dt = Helpers.Helper.ToDataTable(data);
                 sdgvFeedbacks.SetPagedDataSource(dt, bindingNavigator1);

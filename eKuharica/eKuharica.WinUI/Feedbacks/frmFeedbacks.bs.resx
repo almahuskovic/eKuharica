@@ -389,4 +389,10 @@
   <data name="UserName.HeaderText" xml:space="preserve">
     <value>Korisničko ime</value>
   </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalji</value>
+  </data>
+  <data name="Details.HeaderText" xml:space="preserve">
+    <value>Detalji</value>
+  </data>
 </root>

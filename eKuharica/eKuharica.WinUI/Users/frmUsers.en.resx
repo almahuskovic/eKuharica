@@ -311,9 +311,6 @@
   <data name="&gt;&gt;User.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Akcija.HeaderText" xml:space="preserve">
-    <value>Action</value>
-  </data>
   <data name="bindingNavigator1.Text" xml:space="preserve">
     <value>bindingNavigator1</value>
   </data>
@@ -349,5 +346,11 @@
   </data>
   <data name="User.HeaderText" xml:space="preserve">
     <value>User</value>
+  </data>
+  <data name="Prikaži.HeaderText" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Prikaži" xml:space="preserve">
+    <value>Preview</value>
   </data>
 </root>

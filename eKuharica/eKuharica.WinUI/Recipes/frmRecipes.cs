@@ -37,14 +37,25 @@ namespace eKuharica.WinUI.Recipes
             _isFavouriteRecipeList = isFav;
             _myRecipes = myRecipes;
 
-            cmbMealType.DataSource = Helpers.Helper.MealTypeToSelectList();
-            cmbPreparationTime.DataSource = Helpers.Helper.PreparationTimeCategoryToSelectList();
-            cmbWeightOfPreparation.DataSource = Helpers.Helper.WeightOfPreparationToSelectList();
+            if (Helpers.Helper.CurrentLanguage == "bs")
+            {
+                cmbMealType.DataSource = Helpers.Helper.VrsteJelaToSelectList();
+                cmbWeightOfPreparation.DataSource = Helpers.Helper.TezinaPripremeToSelectList();
+                cmbPreparationTime.DataSource = Helpers.Helper.VrijemePripremeKategorijeToSelectList();
+            }
+            else
+            {
+                cmbMealType.DataSource = Helpers.Helper.MealTypeToSelectList();
+                cmbWeightOfPreparation.DataSource = Helpers.Helper.WeightOfPreparationToSelectList();
+                cmbPreparationTime.DataSource = Helpers.Helper.PreparationTimeCategoryToSelectList();
+            }
+
 
             if(_isFavouriteRecipeList)
             {
                 btnNewRecipe.Visible = false;
-                sdgvRecipes.Columns["Akcije"].Visible = sdgvRecipes.Columns["Prevod"].Visible = 
+
+                sdgvRecipes.Columns["Prevedi"].Visible = sdgvRecipes.Columns["Prevod"].Visible = 
                 sdgvRecipes.Columns["Uredi"].Visible = sdgvRecipes.Columns["Obrisi"].Visible = false;
             }
         }
@@ -56,6 +67,8 @@ namespace eKuharica.WinUI.Recipes
             else
             {
                 sdgvRecipes.DataSource = data;
+                Helpers.Helper.TranslationForDgvButtons(this, sdgvRecipes);
+
                 sdgvRecipes.PageSize = 10;
                 DataTable dt = Helpers.Helper.ToDataTable(data);
                 sdgvRecipes.SetPagedDataSource(dt, bindingNavigator1);

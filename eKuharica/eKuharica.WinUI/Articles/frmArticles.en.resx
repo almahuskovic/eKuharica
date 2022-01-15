@@ -168,7 +168,7 @@
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Actions.Name" xml:space="preserve">
-    <value>Actions</value>
+    <value>Translation</value>
   </data>
   <data name="&gt;&gt;Actions.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -305,8 +305,8 @@
   <data name="&gt;&gt;txtSearchArticle.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Actions.HeaderText" xml:space="preserve">
-    <value>Actions</value>
+  <data name="Translate.HeaderText" xml:space="preserve">
+    <value>Translate</value>
   </data>
   <data name="bindingNavigator1.Text" xml:space="preserve">
     <value>bindingNavigator1</value>
@@ -351,9 +351,21 @@
     <value>Is translated</value>
   </data>
   <data name="Show.HeaderText" xml:space="preserve">
-    <value />
+    <value>Preview</value>
   </data>
   <data name="Title.HeaderText" xml:space="preserve">
     <value>Title</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Translate" xml:space="preserve">
+    <value>Translate</value>
   </data>
 </root>

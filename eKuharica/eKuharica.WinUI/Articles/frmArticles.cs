@@ -51,6 +51,8 @@ namespace eKuharica.WinUI.Articles
             else
             {
                 sdgvArticles.DataSource = data;
+                Helpers.Helper.TranslationForDgvButtons(this, sdgvArticles);
+
                 sdgvArticles.PageSize = 10;
                 DataTable dt = Helpers.Helper.ToDataTable(data);
                 sdgvArticles.SetPagedDataSource(dt, bindingNavigator1);

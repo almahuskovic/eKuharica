@@ -66,6 +66,7 @@ namespace eKuharica.WinUI.Users
             }
 
             sdgvUsers.DataSource = data;
+            Helpers.Helper.TranslationForDgvButtons(this, sdgvUsers);
 
             sdgvUsers.PageSize = 10;
             DataTable dt = Helpers.Helper.ToDataTable(data);

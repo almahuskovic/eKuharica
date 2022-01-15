@@ -35,7 +35,7 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbSearch = new System.Windows.Forms.GroupBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
@@ -69,12 +69,14 @@
             // 
             this.sdgvFeedbacks.AllowUserToAddRows = false;
             this.sdgvFeedbacks.AllowUserToDeleteRows = false;
+            this.sdgvFeedbacks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.sdgvFeedbacks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.sdgvFeedbacks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sdgvFeedbacks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Description,
             this.UserName,
             this.Rating,
-            this.Action});
+            this.Details});
             resources.ApplyResources(this.sdgvFeedbacks, "sdgvFeedbacks");
             this.sdgvFeedbacks.Name = "sdgvFeedbacks";
             this.sdgvFeedbacks.PageSize = 10;
@@ -104,13 +106,13 @@
             this.Rating.Name = "Rating";
             this.Rating.ReadOnly = true;
             // 
-            // Action
+            // Details
             // 
-            resources.ApplyResources(this.Action, "Action");
-            this.Action.Name = "Action";
-            this.Action.ReadOnly = true;
-            this.Action.Text = "Details";
-            this.Action.UseColumnTextForButtonValue = true;
+            resources.ApplyResources(this.Details, "Details");
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
+            this.Details.Text = "Details";
+            this.Details.UseColumnTextForButtonValue = true;
             // 
             // gbSearch
             // 
@@ -262,6 +264,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rating;
-        private System.Windows.Forms.DataGridViewButtonColumn Action;
+        private System.Windows.Forms.DataGridViewButtonColumn Details;
     }
 }

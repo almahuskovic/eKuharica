@@ -208,7 +208,12 @@ namespace eKuharica.WinUI
 
         private void cmbTranslations_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Sve što niste spasili bit će izgubljeno");
+            var message = Helpers.Helper.CurrentLanguage == "bs" ?
+                "Sve što niste spasili bit će izgubljeno. Da li želite nastaviti?" :
+                "All you have not saved will be lost. Continue?";
+
+            DialogResult r = MessageBox.Show(message);
+
             if (r == DialogResult.OK)
             {
                 Helpers.Helper.CloseAllOpenForms();

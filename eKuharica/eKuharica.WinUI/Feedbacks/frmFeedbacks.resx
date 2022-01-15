@@ -131,9 +131,6 @@
   <data name="Description.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="Description.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
   <metadata name="UserName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -142,9 +139,6 @@
   </data>
   <data name="UserName.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="UserName.Width" type="System.Int32, mscorlib">
-    <value>125</value>
   </data>
   <metadata name="Rating.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -155,20 +149,14 @@
   <data name="Rating.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="Rating.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <metadata name="Action.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Details.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="Action.HeaderText" xml:space="preserve">
-    <value>Action</value>
+  <data name="Details.HeaderText" xml:space="preserve">
+    <value>Details</value>
   </data>
-  <data name="Action.MinimumWidth" type="System.Int32, mscorlib">
+  <data name="Details.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="Action.Width" type="System.Int32, mscorlib">
-    <value>125</value>
   </data>
   <data name="sdgvFeedbacks.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -229,13 +217,13 @@
     <value>287, 29</value>
   </data>
   <data name="lblUserName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="lblUserName.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="lblUserName.Text" xml:space="preserve">
-    <value>label1</value>
+    <value>Username</value>
   </data>
   <data name="&gt;&gt;lblUserName.Name" xml:space="preserve">
     <value>lblUserName</value>
@@ -277,13 +265,13 @@
     <value>20, 29</value>
   </data>
   <data name="lblRating.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 17</value>
+    <value>49, 17</value>
   </data>
   <data name="lblRating.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="lblRating.Text" xml:space="preserve">
-    <value>label1</value>
+    <value>Rating</value>
   </data>
   <data name="&gt;&gt;lblRating.Name" xml:space="preserve">
     <value>lblRating</value>
@@ -401,6 +389,9 @@
   <data name="bindingNavigatorPositionItem.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="bindingNavigatorPositionItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
   <data name="bindingNavigatorPositionItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 27</value>
   </data>
@@ -514,10 +505,10 @@
   <data name="&gt;&gt;Rating.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Action.Name" xml:space="preserve">
-    <value>Action</value>
+  <data name="&gt;&gt;Details.Name" xml:space="preserve">
+    <value>Details</value>
   </data>
-  <data name="&gt;&gt;Action.Type" xml:space="preserve">
+  <data name="&gt;&gt;Details.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;bindingNavigatorCountItem.Name" xml:space="preserve">

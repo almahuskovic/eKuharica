@@ -18,6 +18,7 @@ namespace eKuharica.WinUI.Feedbacks
         {
             InitializeComponent();
             _feedback = feedback;
+            btnClose.Text = Helpers.Helper.TranslationForBtnBack();
         }
 
         private void frmFeedbackDetails_Load(object sender, EventArgs e)
