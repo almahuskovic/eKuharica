@@ -20,7 +20,7 @@ namespace eKuharica.WinUI
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             if(!string.IsNullOrWhiteSpace(txtUsername.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
@@ -36,7 +36,7 @@ namespace eKuharica.WinUI
             try
             {
               
-                //var result = await _aPIService.Get<List<UserDto>>();
+                var result = await _aPIService.Get<List<dynamic>>();
 
                 frmWelcome frm = new frmWelcome();
                 frm.Show();

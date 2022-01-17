@@ -1,6 +1,8 @@
-﻿using System;
+﻿using eKuharica.Mobile.Views;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -8,12 +10,10 @@ namespace eKuharica.Mobile.ViewModels
 {
     public class LoginViewModel:BaseViewModel
     {
+        private readonly APIService _service = new APIService("User");
         public LoginViewModel()
         {
-            LoginCommand = new Command(() =>
-            {
-                
-            });
+            LoginCommand = new Command(async () => await Login());
         }
 
         string _username = string.Empty;
@@ -30,5 +30,31 @@ namespace eKuharica.Mobile.ViewModels
             set { SetProperty(ref _password, value); }
         }
         public ICommand LoginCommand { get; set; }
+
+        async Task Login()
+        {
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password))
+                {
+                    IsBusy = true;
+                    APIService.Username = Username;
+                    APIService.Password = Password;
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Greška", "Niste unijeli username ili password", "OK");
+                    return;
+                }
+
+                await _service.Get<dynamic>(null);
+                Application.Current.MainPage = new MainPage();
+            }
+            catch (Exception e)
+            {
+                await Application.Current.MainPage.DisplayAlert("Greška", "Pogrešan username ili password", "OK");
+                return;
+            }
+        }
     }
 }

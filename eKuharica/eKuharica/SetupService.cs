@@ -10,7 +10,7 @@ namespace eKuharica
     {
         public void Init(Context context)
         {
-            context.Database.Migrate();
+            //context.Database.Migrate();
 
            
         }

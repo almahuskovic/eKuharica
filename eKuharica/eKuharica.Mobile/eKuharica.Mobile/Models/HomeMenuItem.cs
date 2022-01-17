@@ -7,7 +7,8 @@ namespace eKuharica.Mobile.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        Recipe
     }
     public class HomeMenuItem
     {
