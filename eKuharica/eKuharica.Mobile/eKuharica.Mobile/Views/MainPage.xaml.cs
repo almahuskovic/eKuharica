@@ -39,6 +39,9 @@ namespace eKuharica.Mobile.Views
                     case (int)MenuItemType.Recipe:
                         MenuPages.Add(id, new NavigationPage(new RecipesPage()));
                         break;
+                    case (int)MenuItemType.Articles:
+                        MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
+                        break;
                 }
             }
 

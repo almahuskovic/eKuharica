@@ -8,7 +8,8 @@ namespace eKuharica.Mobile.Models
     {
         Browse,
         About,
-        Recipe
+        Recipe,
+        Articles
     }
     public class HomeMenuItem
     {

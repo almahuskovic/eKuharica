@@ -2,16 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModels="clr-namespace:eKuharica.Mobile.ViewModels" xmlns:b="clr-namespace:eKuharica.Mobile.Behaviours"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:b="clr-namespace:eKuharica.Mobile.Behaviours"
              mc:Ignorable="d"
-             x:Class="eKuharica.Mobile.Views.RecipesPage">
-    <ContentPage.BindingContext>
-        <viewModels:RecipesViewModel></viewModels:RecipesViewModel>
-    </ContentPage.BindingContext>
+             x:Class="eKuharica.Mobile.Views.ArticlesPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Recepti"
+            <Label Text="Articles"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Entry Text="{Binding Title}">
@@ -21,10 +17,7 @@
                                  AutoDismissKeyboard="True" />
                 </Entry.Behaviors>
             </Entry>
-            <Picker Title="Meal type" ItemsSource="{Binding MealTypeList}" SelectedItem="{Binding SelectedMealType}" SelectedIndex="{Binding 0}" ItemDisplayBinding="{Binding Value}"></Picker>
-            <Picker Title="Weight Of Preparation" ItemsSource="{Binding WeightOfPreparationList}" SelectedItem="{Binding SelectedWeightOfPreparation}" SelectedIndex="{Binding 0}" ItemDisplayBinding="{Binding Value}"></Picker>
-            <Picker Title="Preparation Time" ItemsSource="{Binding PreparationTimeList}" SelectedItem="{Binding SelectedPreparationTime}" SelectedIndex="{Binding 0}" ItemDisplayBinding="{Binding Value}"></Picker>
-            <ListView ItemsSource="{Binding RecipeList}">
+            <ListView ItemsSource="{Binding ArticleList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
