@@ -9,7 +9,15 @@ namespace eKuharica.Mobile.Models
         Browse,
         About,
         Recipe,
-        Articles
+        Articles,
+        FavouriteRecipes,
+        Followers,
+        Following,
+        Settings,
+        SendRecipe,
+        MyRecipes,
+        Feedbacks,
+        LogOut
     }
     public class HomeMenuItem
     {

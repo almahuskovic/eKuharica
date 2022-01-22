@@ -42,6 +42,27 @@ namespace eKuharica.Mobile.Views
                     case (int)MenuItemType.Articles:
                         MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
                         break;
+                    case (int)MenuItemType.FavouriteRecipes:
+                        MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
+                        break;
+                    case (int)MenuItemType.Followers:
+                        MenuPages.Add(id, new NavigationPage(new FollowsPage(true)));
+                        break;
+                    case (int)MenuItemType.Following:
+                        MenuPages.Add(id, new NavigationPage(new FollowsPage(false)));
+                        break;
+                    case (int)MenuItemType.MyRecipes:
+                        MenuPages.Add(id, new NavigationPage(new MyRecipesPage()));
+                        break;
+                    case (int)MenuItemType.SendRecipe:
+                        MenuPages.Add(id, new NavigationPage(new SendRecipePage()));
+                        break;
+                    case (int)MenuItemType.Settings:
+                        MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
+                        break;
+                    case (int)MenuItemType.Feedbacks:
+                        MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
+                        break;
                 }
             }
 

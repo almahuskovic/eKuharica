@@ -12,15 +12,14 @@ using Xamarin.Forms.Xaml;
 namespace eKuharica.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ArticlesPage : ContentPage
+    public partial class MyRecipesPage : ContentPage
     {
-        private ArticlesViewModel model = null;
-        public ArticlesPage()
+        private MyRecipesViewModel model = null;
+        public MyRecipesPage()
         {
             InitializeComponent();
-            BindingContext = model = new ArticlesViewModel();
+            BindingContext = model = new MyRecipesViewModel();
         }
-
         protected override async void OnAppearing()
         {
             base.OnAppearing();
@@ -29,9 +28,9 @@ namespace eKuharica.Mobile.Views
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as ArticleDto;
+            var item = e.SelectedItem as RecipeDto;
 
-            Navigation.PushAsync(new ArticleDetailsPage(item));
+            Navigation.PushAsync(new RecipeDetailsPage(item));
         }
     }
 }

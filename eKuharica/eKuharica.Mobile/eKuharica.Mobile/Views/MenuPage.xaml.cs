@@ -20,10 +20,16 @@ namespace eKuharica.Mobile.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                //new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.Recipe, Title="Recipes" },
                 new HomeMenuItem {Id = MenuItemType.Articles, Title="Articles" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" },
+                new HomeMenuItem {Id = MenuItemType.FavouriteRecipes, Title="FavouriteRecipes" },
+                new HomeMenuItem {Id = MenuItemType.Followers, Title="Followers" },
+                new HomeMenuItem {Id = MenuItemType.Following, Title="Following" },
+                new HomeMenuItem {Id = MenuItemType.SendRecipe, Title="SendRecipe" },
+                new HomeMenuItem {Id = MenuItemType.MyRecipes, Title="MyRecipes" },
+                new HomeMenuItem {Id = MenuItemType.Feedbacks, Title="Feedbacks" },
+                new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings" },
+                new HomeMenuItem {Id = MenuItemType.LogOut, Title="LogOut" },
             };
 
             ListViewMenu.ItemsSource = menuItems;

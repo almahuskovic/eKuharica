@@ -1,4 +1,5 @@
-﻿using eKuharica.Model.Entities;
+﻿using eKuharica.Model.DTO;
+using eKuharica.Model.Entities;
 using eKuharica.Model.Requests;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace eKuharica.Mobile.ViewModels
         public ICommand InitCommand { get; set; }
         public ICommand TitleCommand { get; set; }
 
-        public ObservableCollection<Article> ArticleList { get; set; } = new ObservableCollection<Article>();
+        public ObservableCollection<ArticleDto> ArticleList { get; set; } = new ObservableCollection<ArticleDto>();
 
         string _title = string.Empty;
         public string Title
@@ -38,7 +39,7 @@ namespace eKuharica.Mobile.ViewModels
                 ArticleSearchRequest searchRequest = new ArticleSearchRequest();
                 searchRequest.Title = Title;
 
-                var list = await _articleService.Get<IEnumerable<Article>>(searchRequest);
+                var list = await _articleService.Get<IEnumerable<ArticleDto>>(searchRequest);
                 ArticleList.Clear();
                 foreach (var article in list)
                 {

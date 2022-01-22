@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="eKuharica.Mobile.Views.SendRecipePage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="Title"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding }"></Entry>
+            <Label Text="Introduction"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding }"></Entry>
+            <Label Text="Ingredients"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding }"></Entry>
+            <Label Text="Method"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding }"></Entry>
+            <Label Text="Serving"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding }"></Entry>
+            <Label Text="Advice"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding }"></Entry>
+            <Label Text="PreparationTime"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <TimePicker Time="{Binding }"></TimePicker>
+            <Picker Title="Meal type" ItemsSource="{Binding MealTypeList}" 
+                    SelectedItem="{Binding SelectedMealType}" 
+                    SelectedIndex="{Binding 0}" 
+                    ItemDisplayBinding="{Binding Value}"></Picker>
+            <Picker Title="Weight Of Preparation" ItemsSource="{Binding WeightOfPreparationList}" 
+                    SelectedItem="{Binding SelectedWeightOfPreparation}" 
+                    SelectedIndex="{Binding 0}" 
+                    ItemDisplayBinding="{Binding Value}"></Picker>
+            <Button Text="Add" Command="{Binding AddComment}" 
+                            VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="StartAndExpand"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

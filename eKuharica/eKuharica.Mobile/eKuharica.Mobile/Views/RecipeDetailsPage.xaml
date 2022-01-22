@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:converters="clr-namespace:eKuharica.Mobile.Converters"
+             mc:Ignorable="d"
+             x:Class="eKuharica.Mobile.Views.RecipeDetailsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Orientation="Vertical" Padding="20" VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding Recipe.Title}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Image WidthRequest="250" HeightRequest="200" Source="{Binding Recipe.Picture, Converter={StaticResource imgConv}}"></Image>
+            <Label Text="Introduction" 
+                   FontAttributes="Bold"
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Recipe.Introduction}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="Ingredients"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Recipe.Ingredients}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="Method"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Recipe.Method}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="Serving"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Recipe.Serving}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="Advice"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Recipe.Advice}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="WeightOfPreparation"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding WeightOfPreparation}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="PreparationTime"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Recipe.PreparationTime, StringFormat='{}{0:hh\\:mm}'}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="MealType"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding MealType}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="Comments"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Comments}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Entry Text="{Binding Comment}" 
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="StartAndExpand"></Entry>
+                    <Button Text="Add" Command="{Binding AddComment}" 
+                            VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="StartAndExpand"></Button>
+                </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -12,13 +12,13 @@ using Xamarin.Forms.Xaml;
 namespace eKuharica.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ArticlesPage : ContentPage
+    public partial class FollowsPage : ContentPage
     {
-        private ArticlesViewModel model = null;
-        public ArticlesPage()
+        private FollowsViewModel model = null;
+        public FollowsPage(bool getFollowers=false)
         {
             InitializeComponent();
-            BindingContext = model = new ArticlesViewModel();
+            BindingContext = model = new FollowsViewModel(getFollowers);
         }
 
         protected override async void OnAppearing()
@@ -29,9 +29,9 @@ namespace eKuharica.Mobile.Views
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as ArticleDto;
+            var item = e.SelectedItem as FollowDto;
 
-            Navigation.PushAsync(new ArticleDetailsPage(item));
+            Navigation.PushAsync(new UserDetailsPage(item.UserName));
         }
     }
 }
