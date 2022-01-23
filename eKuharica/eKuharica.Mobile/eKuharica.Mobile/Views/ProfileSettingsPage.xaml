@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="eKuharica.Mobile.Views.ProfileSettingsPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="20">
+            <Label Text="Settings"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="First name"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding User.FirstName}"  VerticalOptions="FillAndExpand"></Entry>
+
+            <Label Text="Last name"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding User.LastName}"  VerticalOptions="FillAndExpand"></Entry>
+
+            <Label Text="Email"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding User.Email}"  VerticalOptions="FillAndExpand"></Entry>
+
+            <Label Text="Password"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding Password}" IsPassword="True" VerticalOptions="FillAndExpand"></Entry>
+
+            <Label Text="Confirm password"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+            <Entry Text="{Binding ConfirmPassword}" IsPassword="True" VerticalOptions="FillAndExpand"></Entry>
+
+            <Button Text="Submit" Command="{Binding SubmitCommand}" 
+                            VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="StartAndExpand"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

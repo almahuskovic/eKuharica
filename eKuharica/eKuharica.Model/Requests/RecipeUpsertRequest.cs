@@ -12,7 +12,6 @@ namespace eKuharica.Model.Requests
         public string Method { get; set; }
         public string Serving { get; set; }
         public string Advice { get; set; }
-        public string Content { get; set; }
         public DateTime PreparationTime { get; set; }
         public int PreparationTimeCategory { get; set; } //enum
         public int MealType { get; set; } //enum

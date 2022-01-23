@@ -6,46 +6,75 @@
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.SendRecipePage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Label Text="Title"
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Padding="20">
+                <Label Text="Title"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-            <Entry Text="{Binding }"></Entry>
-            <Label Text="Introduction"
+                <Entry Text="{Binding Title}"></Entry>
+                
+                <Label Text="Introduction"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-            <Entry Text="{Binding }"></Entry>
-            <Label Text="Ingredients"
+                <ScrollView>
+                    <StackLayout>
+                        <Editor Text="{Binding Introduction}" HeightRequest="50" AutoSize="TextChanges"></Editor>
+                    </StackLayout>
+                </ScrollView>
+                
+                <Label Text="Ingredients"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-            <Entry Text="{Binding }"></Entry>
-            <Label Text="Method"
+                <ScrollView>
+                    <StackLayout >
+                        <Editor Text="{Binding Ingredients}" HeightRequest="200" AutoSize="TextChanges"></Editor>
+                    </StackLayout>
+                </ScrollView>
+
+                <Label Text="Method"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-            <Entry Text="{Binding }"></Entry>
-            <Label Text="Serving"
+                <ScrollView>
+                    <StackLayout >
+                        <Editor Text="{Binding Method}" HeightRequest="200" AutoSize="TextChanges"></Editor>
+                    </StackLayout>
+                </ScrollView>
+
+                <Label Text="Serving"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-            <Entry Text="{Binding }"></Entry>
-            <Label Text="Advice"
+                <ScrollView>
+                    <StackLayout >
+                        <Editor Text="{Binding Serving}" HeightRequest="50" AutoSize="TextChanges"></Editor>
+                    </StackLayout>
+                </ScrollView>
+
+                <Label Text="Advice"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-            <Entry Text="{Binding }"></Entry>
-            <Label Text="PreparationTime"
+                <ScrollView>
+                    <StackLayout >
+                        <Editor Text="{Binding Advice}" HeightRequest="50" AutoSize="TextChanges"></Editor>
+                    </StackLayout>
+                </ScrollView>
+                
+                <Label Text="PreparationTime (min)"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-            <TimePicker Time="{Binding }"></TimePicker>
-            <Picker Title="Meal type" ItemsSource="{Binding MealTypeList}" 
+                <Entry Placeholder="60" Text="{Binding PreparationTime}"  VerticalOptions="FillAndExpand"></Entry>
+                
+                <Picker Title="Meal type" ItemsSource="{Binding MealTypeList}" 
                     SelectedItem="{Binding SelectedMealType}" 
                     SelectedIndex="{Binding 0}" 
                     ItemDisplayBinding="{Binding Value}"></Picker>
-            <Picker Title="Weight Of Preparation" ItemsSource="{Binding WeightOfPreparationList}" 
+                <Picker Title="Weight Of Preparation" ItemsSource="{Binding WeightOfPreparationList}" 
                     SelectedItem="{Binding SelectedWeightOfPreparation}" 
                     SelectedIndex="{Binding 0}" 
                     ItemDisplayBinding="{Binding Value}"></Picker>
-            <Button Text="Add" Command="{Binding AddComment}" 
+                <Button Text="Add" Command="{Binding SendCommand}" 
                             VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="StartAndExpand"></Button>
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

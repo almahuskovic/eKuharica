@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="eKuharica.Mobile.Views.FeedbackPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="20">
+            <Label Text="Feedback"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Picker Title="Rating" ItemsSource="{Binding GradesList}" 
+                    SelectedItem="{Binding SelectedGrade}" 
+                    SelectedIndex="{Binding 0}" 
+                    ItemDisplayBinding="{Binding Value}"></Picker>
+          
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Comment"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+                    <Editor Text="{Binding Description}" HeightRequest="50" AutoSize="TextChanges"></Editor>
+                </StackLayout>
+            </ScrollView>
+            <Button Text="Submit" Command="{Binding SubmitCommand}" 
+                            VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

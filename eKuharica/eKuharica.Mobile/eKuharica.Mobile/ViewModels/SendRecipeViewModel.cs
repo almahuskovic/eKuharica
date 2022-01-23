@@ -1,5 +1,9 @@
-﻿using System;
+﻿using eKuharica.Mobile.Models;
+using eKuharica.Mobile.Views;
+using eKuharica.Model.Requests;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -10,9 +14,12 @@ namespace eKuharica.Mobile.ViewModels
     public class SendRecipeViewModel : BaseViewModel
     {
         private readonly APIService _recipeService = new APIService("Recipe");
+        private readonly APIService _userService = new APIService("User");
+     
         public SendRecipeViewModel()
         {
-            Send = new Command(async () => await SendRecipe());
+            InitCommand = new Command(async () => await Init());
+            SendCommand = new Command(async () => await Send());
         }
 
 
@@ -65,11 +72,97 @@ namespace eKuharica.Mobile.ViewModels
             set { SetProperty(ref _preparationTime, value); }
         }
 
-        public ICommand Send { get; set; }
+        public ObservableCollection<EnumItem> MealTypeList { get; set; } = new ObservableCollection<EnumItem>();
+        EnumItem _selectedMealType = null;
 
-        public async Task SendRecipe()
+        public ObservableCollection<EnumItem> WeightOfPreparationList { get; set; } = new ObservableCollection<EnumItem>();
+        EnumItem _selectedWeightOfPreparation = null;
+
+        public EnumItem SelectedMealType
         {
-            
+            get { return _selectedMealType; }
+            set
+            {
+                SetProperty(ref _selectedMealType, value);
+                if (value != null)
+                {
+                    InitCommand.Execute(null);
+                }
+            }
+        }
+        public EnumItem SelectedWeightOfPreparation
+        {
+            get { return _selectedWeightOfPreparation; }
+            set
+            {
+                SetProperty(ref _selectedWeightOfPreparation, value);
+                if (value != null)
+                {
+                    InitCommand.Execute(null);
+                }
+            }
+        }
+
+        public ICommand SendCommand { get; set; }
+        public ICommand InitCommand { get; set; }
+
+        public async Task Init()
+        {
+            if(MealTypeList.Count == 0 && WeightOfPreparationList.Count == 0)
+            {
+                var mealTypeList = Helpers.Helper.MealTypeToList();
+                var weightOfPreparationList = Helpers.Helper.WeightOfPreparationToList();
+
+                foreach (var mealType in mealTypeList)
+                {
+                    MealTypeList.Add(mealType);
+                }
+                foreach (var weightOfPreparation in weightOfPreparationList)
+                {
+                    WeightOfPreparationList.Add(weightOfPreparation);
+                }
+            }
+        }
+
+        public async Task Send()
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(PreparationTime) || SelectedMealType?.Index == null || SelectedWeightOfPreparation?.Index == null ||
+                    string.IsNullOrWhiteSpace(Ingredients) || string.IsNullOrWhiteSpace(Method) || string.IsNullOrWhiteSpace(Title) ||
+                    !int.TryParse(PreparationTime, out int n))
+                {
+                    throw new Exception();
+                }
+
+                var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+                var recipe = new RecipeUpsertRequest()
+                {
+                    Advice = Advice,
+                    Method = Method,
+                    Ingredients = Ingredients,
+                    Introduction = Introduction,
+                    IsSent = true,
+                    Serving = Serving,
+                    Title = Title,
+                    UserId = loggedUser.Id,
+                    WeightOfPreparation = SelectedWeightOfPreparation.Index,
+                    MealType = SelectedMealType.Index,
+                    PreparationTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, int.Parse(PreparationTime)/ 60, int.Parse(PreparationTime) % 60, 0) 
+                };
+
+                await _recipeService.Insert<RecipeUpsertRequest>(recipe);
+                await Application.Current.MainPage.DisplayAlert("Uspješno", "Recept uspješno spremljen", "OK");
+                //var newpage = new MainPage();
+                //await newpage.NavigateFromMenu(10);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                await Application.Current.MainPage.DisplayAlert("Greška", "Dogodila se greška prilikom slanja recepta", "OK");
+                return;
+            }
+           
         }
     }
 }

@@ -80,9 +80,7 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
             <StackLayout Orientation="Horizontal">
-                <Entry Text="{Binding Comment}" 
-                        VerticalOptions="CenterAndExpand" 
-                        HorizontalOptions="StartAndExpand"></Entry>
+                <Entry Text="{Binding Comment}" HorizontalOptions="FillAndExpand"></Entry>
                     <Button Text="Add" Command="{Binding AddComment}" 
                             VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="StartAndExpand"></Button>

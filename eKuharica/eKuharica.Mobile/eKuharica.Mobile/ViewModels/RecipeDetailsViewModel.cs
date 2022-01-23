@@ -19,7 +19,7 @@ namespace eKuharica.Mobile.ViewModels
         public RecipeDetailsViewModel()
         {
             InitCommand = new Command(async () => await Init());
-            AddComment = new Command(async () => await CommentAdd());
+            AddCommentCommand = new Command(async () => await AddComment());
         }
         public RecipeDto Recipe{ get; set; }
 
@@ -51,7 +51,7 @@ namespace eKuharica.Mobile.ViewModels
             set { SetProperty(ref _mealType, value); }
         }
         public ICommand InitCommand { get; set; }
-        public ICommand AddComment { get; set; }
+        public ICommand AddCommentCommand { get; set; }
         public async Task Init()
         {
             MealType = Enum.GetName(typeof(Enumerations.MealType), Recipe.MealType);
@@ -59,7 +59,7 @@ namespace eKuharica.Mobile.ViewModels
 
             Comments = Helpers.Helper.GenerateCommentsDisplayList(await _commentService.Get<List<CommentDto>>(new CommentSearchRequest() { RecipeId = Recipe.Id }));
         }
-        public async Task CommentAdd()
+        public async Task AddComment()
         {
             if (!string.IsNullOrWhiteSpace(Comment))
             {

@@ -45,7 +45,8 @@ namespace eKuharica.Mapping
             CreateMap<CommentDto, Comment>().ReverseMap();
             CreateMap<CommentUpsertRequest, Comment>();
 
-            CreateMap<Feedback, FeedbackDto>();
+            CreateMap<FeedbackDto, Feedback>().ReverseMap();
+            CreateMap<FeedbackUpsertRequest, Feedback>();
         }
     }
 }

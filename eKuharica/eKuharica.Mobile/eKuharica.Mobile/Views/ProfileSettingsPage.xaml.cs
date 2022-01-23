@@ -11,13 +11,13 @@ using Xamarin.Forms.Xaml;
 namespace eKuharica.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SendRecipePage : ContentPage
+    public partial class ProfileSettingsPage : ContentPage
     {
-        private SendRecipeViewModel model = null;
-        public SendRecipePage()
+        private ProfileSettingsViewModel model = null;
+        public ProfileSettingsPage()
         {
             InitializeComponent();
-            BindingContext = model = new SendRecipeViewModel();
+            BindingContext = model = new ProfileSettingsViewModel();
         }
         protected async override void OnAppearing()
         {

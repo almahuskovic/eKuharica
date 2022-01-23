@@ -15,10 +15,10 @@ namespace eKuharica.Mobile.Views
     public partial class MyRecipesPage : ContentPage
     {
         private MyRecipesViewModel model = null;
-        public MyRecipesPage()
+        public MyRecipesPage(bool displayFavourite = false)
         {
             InitializeComponent();
-            BindingContext = model = new MyRecipesViewModel();
+            BindingContext = model = new MyRecipesViewModel(displayFavourite);
         }
         protected override async void OnAppearing()
         {

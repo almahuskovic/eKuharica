@@ -43,7 +43,7 @@ namespace eKuharica.Mobile.Views
                         MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
                         break;
                     case (int)MenuItemType.FavouriteRecipes:
-                        MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
+                        MenuPages.Add(id, new NavigationPage(new MyRecipesPage(true)));
                         break;
                     case (int)MenuItemType.Followers:
                         MenuPages.Add(id, new NavigationPage(new FollowsPage(true)));
@@ -58,10 +58,10 @@ namespace eKuharica.Mobile.Views
                         MenuPages.Add(id, new NavigationPage(new SendRecipePage()));
                         break;
                     case (int)MenuItemType.Settings:
-                        MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
+                        MenuPages.Add(id, new NavigationPage(new ProfileSettingsPage()));
                         break;
                     case (int)MenuItemType.Feedbacks:
-                        MenuPages.Add(id, new NavigationPage(new ArticlesPage()));
+                        MenuPages.Add(id, new NavigationPage(new FeedbackPage()));
                         break;
                 }
             }

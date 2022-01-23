@@ -35,7 +35,7 @@
                                        LineBreakMode="NoWrap" 
                                        Style="{DynamicResource ListItemTextStyle}"
                                        FontSize="16"/>
-                                    <Label Text="{Binding CreatedAt}" 
+                                    <Label Text="{Binding CreatedAt, StringFormat='{0:dd/MM/yyyy}'}" 
                                        LineBreakMode="NoWrap" 
                                        Style="{DynamicResource ListItemTextStyle}"
                                        FontSize="16"/>
