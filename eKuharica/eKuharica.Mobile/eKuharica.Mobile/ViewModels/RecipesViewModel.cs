@@ -8,12 +8,16 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using eKuharica.Model.DTO;
+using eKuharica.Model.Requests;
+using System.Linq;
 
 namespace eKuharica.Mobile.ViewModels
 {
     public class RecipesViewModel : BaseViewModel
     {
         private readonly APIService _recipeService = new APIService("Recipe");
+        private readonly APIService _userService = new APIService("User");
+        private readonly APIService _userFavouriteRecipeService = new APIService("UserFavouriteRecipe");
         public RecipesViewModel()
         {
             InitCommand = new Command(async () => await Init());
@@ -107,8 +111,15 @@ namespace eKuharica.Mobile.ViewModels
 
                 var list = await _recipeService.Get<IEnumerable<RecipeDto>>(searchRequest);
                 RecipeList.Clear();
+
+                var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+
                 foreach (var recipe in list)
                 {
+                    var userFavSearchRequest = new UserFavouriteRecipeSearchRequest() { UserId = loggedUser.Id, RecipeId = recipe.Id };
+                    var exist = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(userFavSearchRequest)).FirstOrDefault();
+                    recipe.IsLiked = exist != null ? !exist.IsDeleted : false;
+
                     RecipeList.Add(recipe);
                 }
             }

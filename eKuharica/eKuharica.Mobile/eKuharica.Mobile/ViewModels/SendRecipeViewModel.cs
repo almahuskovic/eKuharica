@@ -154,8 +154,8 @@ namespace eKuharica.Mobile.ViewModels
                 await _recipeService.Insert<RecipeUpsertRequest>(recipe);
                 await Application.Current.MainPage.DisplayAlert("Uspješno", "Recept uspješno spremljen", "OK");
 
-                //Routing.RegisterRoute("feedbackPage", typeof(FeedbackPage));
-                //await Shell.Current.GoToAsync($"../views/feedbackPage");
+                Routing.RegisterRoute("feedbackPage", typeof(FeedbackPage));
+                await Shell.Current.GoToAsync($"../views/feedbackPage");
             }
             catch (Exception e)
             {

@@ -15,10 +15,10 @@ namespace eKuharica.Mobile.Converters
                 case true:
                     return Color.Red;
                 case false:
-                    return Color.Transparent;
+                    return Color.Gray;
             }
 
-            return Color.Gray;
+            return Color.Transparent;
         }
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {

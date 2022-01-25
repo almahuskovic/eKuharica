@@ -33,7 +33,7 @@ namespace eKuharica.Mobile.Views
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as RecipeDto;
-
+           
             await Navigation.PushAsync(new RecipesPreviewPage(item));
         }
     }

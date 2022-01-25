@@ -20,6 +20,7 @@ namespace eKuharica.Mobile.ViewModels
         private readonly APIService _userService = new APIService("User");
         private readonly APIService _recipeService = new APIService("Recipe");
         private readonly APIService _userFavouriteRecipeService = new APIService("UserFavouriteRecipe");
+        private readonly APIService _userRecipeRatingService = new APIService("UserRecipeRating");
         public RecipesPreviewViewModel()
         {
             InitCommand = new Command(async () => await Init());
@@ -34,19 +35,14 @@ namespace eKuharica.Mobile.ViewModels
         }
 
         public ObservableCollection<EnumItem> GradesList { get; set; } = new ObservableCollection<EnumItem>();
-        EnumItem _selectedGrade = null;
-        public EnumItem SelectedGrade
+
+        int _grade = 0;
+        public int Grade
         {
-            get { return _selectedGrade; }
-            set
-            {
-                SetProperty(ref _selectedGrade, value);
-                if (value != null)
-                {
-                    InitCommand.Execute(null);
-                }
-            }
+            get { return _grade; }
+            set { SetProperty(ref _grade, value); }
         }
+
         string _comment = string.Empty;
         public string Comment
         {
@@ -73,14 +69,18 @@ namespace eKuharica.Mobile.ViewModels
             get { return _mealType; }
             set { SetProperty(ref _mealType, value); }
         }
+
+        string _numberOfLikes = string.Empty;
+        public string NumberOfLikes
+        {
+            get { return _numberOfLikes; }
+            set { SetProperty(ref _numberOfLikes, value); }
+        }
         public ICommand InitCommand { get; set; }
         public ICommand AddCommentCommand { get; set; }
         public async Task Init()
         {
             var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
-            var userFavSearchRequest = new UserFavouriteRecipeSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
-            var exist = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(userFavSearchRequest)).FirstOrDefault();
-            Recipe.IsLiked = exist != null ? exist.IsDeleted : false;
 
             if (GradesList.Count == 0)
             {
@@ -88,8 +88,14 @@ namespace eKuharica.Mobile.ViewModels
                 {
                     GradesList.Add(new EnumItem() { Index = i, Value = i.ToString() });
                 }
+
+                var userRatingSearchRequest = new UserRecipeRatingSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
+                var exist = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(userRatingSearchRequest)).FirstOrDefault();
+
+                Grade = exist != null ? exist.Rating : 0;
             }
 
+            NumberOfLikes = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(new UserFavouriteRecipeSearchRequest() { RecipeId = _recipe.Id })).Count().ToString();
             MealType = Enum.GetName(typeof(Enumerations.MealType), Recipe.MealType);
             WeightOfPreparation = Enum.GetName(typeof(Enumerations.WeightOfPreparation), Recipe.WeightOfPreparation);
 
@@ -140,5 +146,32 @@ namespace eKuharica.Mobile.ViewModels
             }
 
         }
+        public async Task Rating()
+        {
+            var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+
+            var userRatingSearchRequest = new UserRecipeRatingSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
+            var exist = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(userRatingSearchRequest)).FirstOrDefault();
+
+            if (exist != null && exist.Rating != Grade)
+            {
+                exist.Rating = Grade;
+                await _userRecipeRatingService.Update<UserRecipeRatingUpsertRequest>(exist.Id, exist);
+            }
+            else if (exist == null)
+            {
+                var userRating = new UserRecipeRatingUpsertRequest()
+                {
+                    CreatedAt = DateTime.Now,
+                    IsDeleted = false,
+                    Rating = Grade,
+                    RecipeId = _recipe.Id,
+                    UserId = loggedUser.Id
+                };
+
+                await _userRecipeRatingService.Insert<UserRecipeRatingUpsertRequest>(userRating);
+            }
+        }
+
     }
 }

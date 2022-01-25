@@ -1,4 +1,5 @@
-﻿using eKuharica.Mobile.ViewModels;
+﻿using eKuharica.Mobile.Converters;
+using eKuharica.Mobile.ViewModels;
 using eKuharica.Model.DTO;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,18 @@ namespace eKuharica.Mobile.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
+            Button btn = (Button)sender;
+            if (btn.BackgroundColor.Equals(Color.Gray))
+                btn.BackgroundColor = Color.Red;
+            else
+                btn.BackgroundColor = Color.Gray;
+
             await model.Like();
+        }
+
+        private async void Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            await model.Rating();
         }
     }
 }
