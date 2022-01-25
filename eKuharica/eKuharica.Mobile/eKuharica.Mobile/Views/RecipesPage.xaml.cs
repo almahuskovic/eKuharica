@@ -1,5 +1,6 @@
 ﻿using eKuharica.Mobile.Models;
 using eKuharica.Mobile.ViewModels;
+using eKuharica.Model.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,9 +32,9 @@ namespace eKuharica.Mobile.Views
        
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as EnumItem;
+            var item = e.SelectedItem as RecipeDto;
 
-            //await Navigation.PushAsync(new ProizvodiDetailPage(item));
+            await Navigation.PushAsync(new RecipesPreviewPage(item));
         }
     }
 }

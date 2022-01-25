@@ -20,6 +20,7 @@ namespace eKuharica.Mobile.Views
 
             menuItems = new List<HomeMenuItem>
             {
+                new HomeMenuItem {Id = MenuItemType.Recipe, Title="About" },
                 new HomeMenuItem {Id = MenuItemType.Recipe, Title="Recipes" },
                 new HomeMenuItem {Id = MenuItemType.Articles, Title="Articles" },
                 new HomeMenuItem {Id = MenuItemType.FavouriteRecipes, Title="FavouriteRecipes" },

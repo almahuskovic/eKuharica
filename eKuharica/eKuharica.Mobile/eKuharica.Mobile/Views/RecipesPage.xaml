@@ -24,7 +24,7 @@
             <Picker Title="Meal type" ItemsSource="{Binding MealTypeList}" SelectedItem="{Binding SelectedMealType}" SelectedIndex="{Binding 0}" ItemDisplayBinding="{Binding Value}"></Picker>
             <Picker Title="Weight Of Preparation" ItemsSource="{Binding WeightOfPreparationList}" SelectedItem="{Binding SelectedWeightOfPreparation}" SelectedIndex="{Binding 0}" ItemDisplayBinding="{Binding Value}"></Picker>
             <Picker Title="Preparation Time" ItemsSource="{Binding PreparationTimeList}" SelectedItem="{Binding SelectedPreparationTime}" SelectedIndex="{Binding 0}" ItemDisplayBinding="{Binding Value}"></Picker>
-            <ListView ItemsSource="{Binding RecipeList}">
+            <ListView ItemsSource="{Binding RecipeList}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using eKuharica.Model.DTO;
 
 namespace eKuharica.Mobile.ViewModels
 {
@@ -19,7 +20,7 @@ namespace eKuharica.Mobile.ViewModels
             TitleCommand = new Command(async () => await Init());
         }
 
-        public ObservableCollection<Recipe> RecipeList { get; set; } = new ObservableCollection<Recipe>();
+        public ObservableCollection<RecipeDto> RecipeList { get; set; } = new ObservableCollection<RecipeDto>();
         public ObservableCollection<EnumItem> MealTypeList { get; set; } = new ObservableCollection<EnumItem>();
         EnumItem _selectedMealType = null;
 
@@ -104,7 +105,7 @@ namespace eKuharica.Mobile.ViewModels
                 searchRequest.PreparationTimeCategory = SelectedPreparationTime?.Index == 0 ? null : SelectedPreparationTime?.Index;
                 searchRequest.Title = Title;
 
-                var list = await _recipeService.Get<IEnumerable<Recipe>>(searchRequest);
+                var list = await _recipeService.Get<IEnumerable<RecipeDto>>(searchRequest);
                 RecipeList.Clear();
                 foreach (var recipe in list)
                 {
