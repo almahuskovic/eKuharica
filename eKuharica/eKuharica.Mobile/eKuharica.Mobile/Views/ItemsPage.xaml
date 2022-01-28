@@ -7,7 +7,7 @@
              x:Class="eKuharica.Mobile.Views.ItemsPage"
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
-
+    
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>

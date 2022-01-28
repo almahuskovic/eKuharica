@@ -11,13 +11,18 @@ using Xamarin.Forms.Xaml;
 namespace eKuharica.Mobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class IndexPage : ContentPage
     {
-        public LoginPage()
+        private IndexViewModel model = null;
+        public IndexPage()
         {
             InitializeComponent();
-            //BindingContext = new LoginViewModel(); //moze se bindati i na ovaj nacin
-            Application.Current.MainPage = new NavigationPage(new AboutPage());
+            BindingContext = model = new IndexViewModel() ;
+        }
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await model.ChangeLanguageBs();
         }
     }
 }

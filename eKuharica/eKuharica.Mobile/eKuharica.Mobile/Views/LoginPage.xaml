@@ -10,7 +10,7 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
-            <Label Text="Korisničko ime:"/>
+            <Label Text="Username:"/>
             <Entry Text="{Binding Username}"></Entry>
             <Label Text="Password:"/>
             <Entry Text="{Binding Password}" IsPassword="True"></Entry>

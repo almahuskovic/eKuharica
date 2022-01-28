@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resources="clr-namespace:eKuharica.Mobile.Resources" 
+             mc:Ignorable="d"
+             x:Class="eKuharica.Mobile.Views.IndexPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="bs.png" Command="{Binding ChangeLanguageBs}"></ToolbarItem>
+        <ToolbarItem IconImageSource="en.png" Command="{Binding ChangeLanguageToEn}"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding [Test], Source={x:Static resources:ResourceLoader.Instance}}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

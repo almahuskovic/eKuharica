@@ -142,4 +142,10 @@
       <Name>eKuharica.Mobile</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\en.png" />
+  </ItemGroup>
 </Project>
