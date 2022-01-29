@@ -1,4 +1,6 @@
 ﻿using eKuharica.Mobile.Resources;
+using eKuharica.Mobile.Views;
+using Plugin.Multilingual;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -14,22 +16,23 @@ namespace eKuharica.Mobile.ViewModels
     {
         public IndexViewModel()
         {
-            ChangeLanguageToBsCommand = new Command(async () => await ChangeLanguageBs());
+            ChangeLanguageToBsCommand = new Command(async () => await ChangeLanguageToBs());
             ChangeLanguageToEnCommand = new Command(async () => await ChangeLanguageToEn());
         }
         public ICommand ChangeLanguageToBsCommand { get; set; }
         public ICommand ChangeLanguageToEnCommand { get; set; }
 
-        StringResource stringResource = new StringResource("", "");
-        public async Task ChangeLanguageBs()
+        public async Task ChangeLanguageToBs()
         {
             var info = new CultureInfo("bs",false);
-            Thread.CurrentThread.CurrentCulture = info;
+            CrossMultilingual.Current.CurrentCultureInfo = Thread.CurrentThread.CurrentCulture = info;
+            (Application.Current).MainPage = new MainPage();
         }
         public async Task ChangeLanguageToEn()
         {
             var info = new CultureInfo("en", false);
-            Thread.CurrentThread.CurrentCulture = info;
+            CrossMultilingual.Current.CurrentCultureInfo = Thread.CurrentThread.CurrentCulture = info;
+            (Application.Current).MainPage = new MainPage();
         }
     }
 }

@@ -154,10 +154,7 @@ namespace eKuharica.Mobile.ViewModels
                 await _recipeService.Insert<RecipeUpsertRequest>(recipe);
                 await Application.Current.MainPage.DisplayAlert("Uspješno", "Recept uspješno spremljen", "OK");
 
-                await App.Current.MainPage.Navigation.PushAsync(new FeedbackPage());
-                //var page = new NavigationPage(new FeedbackPage());
-                //await Application.Current.MainPage.Navigation.PushAsync(page);
-                //await Shell.Current.CurrentItem.CurrentvigationItem.Navigation.PushAsync(new FeedbackPage());
+                await Application.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new FeedbackPage(true)));
             }
             catch (Exception e)
             {

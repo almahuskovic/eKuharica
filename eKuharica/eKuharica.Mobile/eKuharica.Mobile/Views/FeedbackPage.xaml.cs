@@ -14,14 +14,20 @@ namespace eKuharica.Mobile.Views
     public partial class FeedbackPage : ContentPage
     {
         private FeedbackViewModel model = null;
-        public FeedbackPage()
+        private bool isFromSendReicpe = false;
+        public FeedbackPage(bool fromSendRecipe=false)
         {
             InitializeComponent();
+            isFromSendReicpe = fromSendRecipe;
             BindingContext = model = new FeedbackViewModel();
         }
         protected async override void OnAppearing()
         {
             base.OnAppearing();
+
+            if (!isFromSendReicpe)
+                BackButton.IsVisible = false;
+
             await model.Init();
         }
     }

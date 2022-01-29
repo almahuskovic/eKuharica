@@ -6,6 +6,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using eKuharica.Mobile.Models;
+using System.Globalization;
+using System.Threading;
+using Plugin.Multilingual;
 
 namespace eKuharica.Mobile.Views
 {
@@ -35,7 +38,6 @@ namespace eKuharica.Mobile.Views
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
-                        Application.Current.MainPage = new AboutPage();
                         break;
                     case (int)MenuItemType.Recipe:
                         MenuPages.Add(id, new NavigationPage(new RecipesPage()));
@@ -78,6 +80,20 @@ namespace eKuharica.Mobile.Views
 
                 IsPresented = false;
             }
+        }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            var info = new CultureInfo("bs", false);
+            CrossMultilingual.Current.CurrentCultureInfo = Thread.CurrentThread.CurrentCulture = info;
+            Application.Current.MainPage = new MainPage();
+        }
+
+        private void ToolbarItem_Clicked_1(object sender, EventArgs e)
+        {
+            var info = new CultureInfo("en", false);
+            CrossMultilingual.Current.CurrentCultureInfo = Thread.CurrentThread.CurrentCulture = info;
+            Application.Current.MainPage = new MainPage();
         }
     }
 }

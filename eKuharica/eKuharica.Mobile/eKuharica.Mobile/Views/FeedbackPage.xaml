@@ -7,7 +7,10 @@
              x:Class="eKuharica.Mobile.Views.FeedbackPage">
 
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" Padding="20" Margin="50,50,0,0">
+        <StackLayout Orientation="Vertical" Padding="20">
+            <Button Text="Back" Command="{Binding BackCommand}" 
+                            VerticalOptions="Start" 
+                        HorizontalOptions="StartAndExpand" x:Name="BackButton"></Button>
             <Label Text="Feedback"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

@@ -6,10 +6,10 @@
              xmlns:resources="clr-namespace:eKuharica.Mobile.Resources" 
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.IndexPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="bs.png" Command="{Binding ChangeLanguageBs}"></ToolbarItem>
-        <ToolbarItem IconImageSource="en.png" Command="{Binding ChangeLanguageToEn}"/>
-    </ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="bs.png" Command="{Binding ChangeLanguageToBsCommand}"></ToolbarItem>
+        <ToolbarItem IconImageSource="en.png" Command="{Binding ChangeLanguageToEnCommand}"/>
+    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Content>
         <StackLayout>

@@ -3,6 +3,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using eKuharica.Mobile.Services;
 using eKuharica.Mobile.Views;
+using eKuharica.Mobile.Extensions;
+using System.Resources;
 
 namespace eKuharica.Mobile
 {

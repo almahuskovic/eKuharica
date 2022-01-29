@@ -117,13 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Articles" xml:space="preserve">
-    <value>Članci</value>
-  </data>
-  <data name="Recipes" xml:space="preserve">
+  <data name="Recepti" xml:space="preserve">
     <value>Recepti</value>
-  </data>
-  <data name="Test" xml:space="preserve">
-    <value>BAA</value>
   </data>
 </root>

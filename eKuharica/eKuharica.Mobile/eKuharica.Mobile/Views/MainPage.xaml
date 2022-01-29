@@ -7,6 +7,11 @@
             xmlns:views="clr-namespace:eKuharica.Mobile.Views"
             x:Class="eKuharica.Mobile.Views.MainPage">
 
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem IconImageSource="bs.png" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+        <ToolbarItem IconImageSource="en.png" Clicked="ToolbarItem_Clicked_1"/>
+    </MasterDetailPage.ToolbarItems>
+    
     <MasterDetailPage.Master>
         <views:MenuPage />
     </MasterDetailPage.Master>

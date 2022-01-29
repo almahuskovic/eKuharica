@@ -17,7 +17,6 @@ namespace eKuharica.Mobile.Views
         {
             InitializeComponent();
             //BindingContext = new LoginViewModel(); //moze se bindati i na ovaj nacin
-            Application.Current.MainPage = new NavigationPage(new AboutPage());
         }
     }
 }

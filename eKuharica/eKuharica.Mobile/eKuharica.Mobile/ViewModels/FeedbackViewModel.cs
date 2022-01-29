@@ -1,4 +1,5 @@
 ﻿using eKuharica.Mobile.Models;
+using eKuharica.Mobile.Views;
 using eKuharica.Model.Requests;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace eKuharica.Mobile.ViewModels
         {
             InitCommand = new Command(async () => await Init());
             SubmitCommand = new Command(async () => await Submit());
+            BackCommand = new Command(async () => await Back());
         }
         public ObservableCollection<EnumItem> GradesList { get; set; } = new ObservableCollection<EnumItem>();
         EnumItem _selectedGrade = null;
@@ -44,6 +46,7 @@ namespace eKuharica.Mobile.ViewModels
 
         public ICommand InitCommand { get; set; }
         public ICommand SubmitCommand { get; set; }
+        public ICommand BackCommand { get; set; }
         public async Task Init()
         {
             if (GradesList.Count == 0)
@@ -70,15 +73,16 @@ namespace eKuharica.Mobile.ViewModels
 
                 await _feedbackService.Insert<FeedbackUpsertRequest>(feedback);
                 await Application.Current.MainPage.DisplayAlert("Uspješno", "Hvala", "OK");
-                //await Application.Current.MainPage.Navigation.PopModalAsync();
-                //await Application.Current.MainPage.Navigation.PopAsync();
-                //await Application.Current.MainPage.Navigation.PopToRootAsync();
             }
             catch (Exception)
             {
                 await Application.Current.MainPage.DisplayAlert("Greška", "Dogodila se greška", "OK");
                 return;
             }
+        }
+        public async Task Back()
+        {
+            await Application.Current.MainPage.Navigation.PopModalAsync();
         }
     }
 }

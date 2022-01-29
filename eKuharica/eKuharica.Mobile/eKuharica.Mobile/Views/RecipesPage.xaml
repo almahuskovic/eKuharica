@@ -3,15 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModels="clr-namespace:eKuharica.Mobile.ViewModels" xmlns:b="clr-namespace:eKuharica.Mobile.Behaviours"
+             xmlns:viewModels="clr-namespace:eKuharica.Mobile.ViewModels" 
+             xmlns:b="clr-namespace:eKuharica.Mobile.Behaviours"
+             xmlns:i18n="clr-namespace:eKuharica.Mobile.Extensions"  
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.RecipesPage">
     <ContentPage.BindingContext>
         <viewModels:RecipesViewModel></viewModels:RecipesViewModel>
     </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Recepti"
+            <Label Text="{i18n:Translate Recepti}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Entry Text="{Binding Title}">

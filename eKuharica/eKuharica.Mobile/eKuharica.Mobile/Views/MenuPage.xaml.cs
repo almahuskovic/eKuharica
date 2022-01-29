@@ -1,7 +1,10 @@
-﻿using eKuharica.Mobile.Models;
+﻿using eKuharica.Mobile.Extensions;
+using eKuharica.Mobile.Models;
+using Plugin.Multilingual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Threading;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,8 +23,8 @@ namespace eKuharica.Mobile.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Recipe, Title="About" },
-                new HomeMenuItem {Id = MenuItemType.Recipe, Title="Recipes" },
+                new HomeMenuItem {Id = MenuItemType.About, Title = new TranslateExtension(){ Text="Recepti" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.Recipe, Title =  new TranslateExtension(){Text = "Recepti" }.ProvideValue().ToString() },
                 new HomeMenuItem {Id = MenuItemType.Articles, Title="Articles" },
                 new HomeMenuItem {Id = MenuItemType.FavouriteRecipes, Title="FavouriteRecipes" },
                 new HomeMenuItem {Id = MenuItemType.Followers, Title="Followers" },

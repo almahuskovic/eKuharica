@@ -19,10 +19,5 @@ namespace eKuharica.Mobile.Views
             InitializeComponent();
             BindingContext = model = new IndexViewModel() ;
         }
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
-            await model.ChangeLanguageBs();
-        }
     }
 }
