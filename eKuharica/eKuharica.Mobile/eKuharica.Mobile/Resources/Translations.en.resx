@@ -117,7 +117,166 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BrojLajkova" xml:space="preserve">
+    <value>Number of likes</value>
+  </data>
+  <data name="Desert" xml:space="preserve">
+    <value>Dessert</value>
+  </data>
+  <data name="Dodaj" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Dojam" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="HladnoPredjelo" xml:space="preserve">
+    <value>Cold Appetizer</value>
+  </data>
+  <data name="Ime" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="Izmedju1hI2h" xml:space="preserve">
+    <value>Between 1h and 2h</value>
+  </data>
+  <data name="Izmedju30minI1h" xml:space="preserve">
+    <value>Between 30min and 1h</value>
+  </data>
+  <data name="Jednostavno" xml:space="preserve">
+    <value>Easy</value>
+  </data>
+  <data name="Juha" xml:space="preserve">
+    <value>Soup</value>
+  </data>
+  <data name="Komentar" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Komentari" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="KorisničkoIme" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="KruhIPeciva" xml:space="preserve">
+    <value>Bread And Rolls</value>
+  </data>
+  <data name="Lozinka" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="ManjeOd30min" xml:space="preserve">
+    <value>Less than 30min</value>
+  </data>
+  <data name="MojiRecepti" xml:space="preserve">
+    <value>My recipes</value>
+  </data>
+  <data name="Naslov" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Nazad" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Ocjena" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="OmiljeniRecepti" xml:space="preserve">
+    <value>Favourite recipes</value>
+  </data>
+  <data name="OstaviDojam" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="Piće" xml:space="preserve">
+    <value>Drink</value>
+  </data>
+  <data name="Postavke" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Postupak" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="PotvrdiLozinku" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="Početna" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="PošaljiRecept" xml:space="preserve">
+    <value>Send recipe</value>
+  </data>
+  <data name="Prati" xml:space="preserve">
+    <value>Following</value>
+  </data>
+  <data name="Pratim" xml:space="preserve">
+    <value>Following</value>
+  </data>
+  <data name="Pratitelji" xml:space="preserve">
+    <value>Followers</value>
+  </data>
+  <data name="Prezime" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="PridružioSe" xml:space="preserve">
+    <value>Joined us</value>
+  </data>
+  <data name="PrijaviSe" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Prilozi" xml:space="preserve">
+    <value>Side Dish</value>
+  </data>
   <data name="Recepti" xml:space="preserve">
     <value>Recipes</value>
+  </data>
+  <data name="Salata" xml:space="preserve">
+    <value>Salad</value>
+  </data>
+  <data name="Sastojci" xml:space="preserve">
+    <value>Ingredients</value>
+  </data>
+  <data name="Savijet" xml:space="preserve">
+    <value>Advice</value>
+  </data>
+  <data name="Serviranje" xml:space="preserve">
+    <value>Serving</value>
+  </data>
+  <data name="Složeno" xml:space="preserve">
+    <value>Hard</value>
+  </data>
+  <data name="Sos" xml:space="preserve">
+    <value>Sauce</value>
+  </data>
+  <data name="Spremi" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Srednje" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="SviđaMiSe" xml:space="preserve">
+    <value>Like</value>
+  </data>
+  <data name="TežinaPripreme" xml:space="preserve">
+    <value>Weight of preparation</value>
+  </data>
+  <data name="ToploPredjelo" xml:space="preserve">
+    <value>Warm Appetizer</value>
+  </data>
+  <data name="Uvod" xml:space="preserve">
+    <value>Introduction</value>
+  </data>
+  <data name="ViseOd2h" xml:space="preserve">
+    <value>More than 2h</value>
+  </data>
+  <data name="VrijemePripreme" xml:space="preserve">
+    <value>Preparation time</value>
+  </data>
+  <data name="VrijemePripremeMin" xml:space="preserve">
+    <value>Preparation time (min)</value>
+  </data>
+  <data name="VrstaJela" xml:space="preserve">
+    <value>Meal type</value>
+  </data>
+  <data name="Članci" xml:space="preserve">
+    <value>Articles</value>
   </data>
 </root>

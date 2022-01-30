@@ -1,4 +1,5 @@
-﻿using eKuharica.Mobile.Models;
+﻿using eKuharica.Mobile.Extensions;
+using eKuharica.Mobile.Models;
 using eKuharica.Model.DTO;
 using eKuharica.Model.Requests;
 using System;
@@ -18,41 +19,38 @@ namespace eKuharica.Mobile.Helpers
         #region GetFilterLists
         public static List<EnumItem> MealTypeToList()
         {
-            var mealTypes = Enum.GetValues(typeof(MealType)).Cast<MealType>().ToList();
+            var mealTypes = Enum.GetValues(typeof(VrsteJela)).Cast<VrsteJela>().ToList();
             var mealTypesMappedList = mealTypes.Select(x => new EnumItem
             {
                 Index = (int)x,
-                Value = Enum.GetName(typeof(MealType), (int)x)
+                Value = new TranslateExtension() { Text = Enum.GetName(typeof(VrsteJela), (int)x) }.ProvideValue().ToString()
             }).ToList();
 
-            //mealTypesMappedList.Insert(0, new EnumItem() { Index = 0, Value = "Vrsta jela" });
             return mealTypesMappedList;
         }
 
         public static List<EnumItem> WeightOfPreparationToList()
         {
-            var weightOfPreparation = Enum.GetValues(typeof(WeightOfPreparation)).Cast<WeightOfPreparation>().ToList();
+            var weightOfPreparation = Enum.GetValues(typeof(TezinaPripreme)).Cast<TezinaPripreme>().ToList();
            
             var weightOfPreparationMappedList= weightOfPreparation.Select(x => new EnumItem
             {
                 Index = (int)x,
-                Value = Enum.GetName(typeof(WeightOfPreparation), (int)x)
+                Value = new TranslateExtension() { Text = Enum.GetName(typeof(TezinaPripreme), (int)x) }.ProvideValue().ToString()
             }).ToList();
 
-            //weightOfPreparationMappedList.Insert(0, new EnumItem() { Index = 0, Value = "Tezina pripreme" });
             return weightOfPreparationMappedList;
         }
 
         public static List<EnumItem> PreparationTimeCategoryToList()
         {
-            var preparationTimeCategory = Enum.GetValues(typeof(PreparationTimeCategory)).Cast<PreparationTimeCategory>().ToList();
+            var preparationTimeCategory = Enum.GetValues(typeof(VrijemePripremeKategorije)).Cast<VrijemePripremeKategorije>().ToList();
             var preparationTimeCategoryMappedList= preparationTimeCategory.Select(x => new EnumItem
             {
                 Index = (int)x,
-                Value = Enum.GetName(typeof(PreparationTimeCategory), (int)x)
+                Value = new TranslateExtension() { Text = Enum.GetName(typeof(VrijemePripremeKategorije), (int)x) }.ProvideValue().ToString()
             }).ToList();
 
-            //preparationTimeCategoryMappedList.Insert(0, new EnumItem() { Index = 0, Value = "Vrijeme pripreme" });
             return preparationTimeCategoryMappedList;
         }
         #endregion

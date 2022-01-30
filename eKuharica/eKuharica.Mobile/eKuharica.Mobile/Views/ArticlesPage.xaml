@@ -2,7 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:b="clr-namespace:eKuharica.Mobile.Behaviours" xmlns:converters="clr-namespace:eKuharica.Mobile.Converters"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:b="clr-namespace:eKuharica.Mobile.Behaviours" 
+             xmlns:converters="clr-namespace:eKuharica.Mobile.Converters"
+             xmlns:i18n="clr-namespace:eKuharica.Mobile.Extensions"
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.ArticlesPage">
     <ContentPage.Resources>
@@ -12,7 +15,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Articles"
+            <Label Text="{i18n:Translate Članci}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Entry Text="{Binding Title}">

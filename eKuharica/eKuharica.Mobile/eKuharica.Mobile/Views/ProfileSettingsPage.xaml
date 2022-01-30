@@ -3,45 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i18n="clr-namespace:eKuharica.Mobile.Extensions"
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.ProfileSettingsPage">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="20">
-            <Label Text="Settings"
+            <Label Text="{i18n:Translate Postavke}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <Label Text="First name"
+            <Label Text="{i18n:Translate Ime}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
             <Entry Text="{Binding User.FirstName}"  VerticalOptions="FillAndExpand"></Entry>
 
-            <Label Text="Last name"
+            <Label Text="{i18n:Translate Prezime}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
             <Entry Text="{Binding User.LastName}"  VerticalOptions="FillAndExpand"></Entry>
 
-            <Label Text="Email"
+            <Label Text="{i18n:Translate Email}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
             <Entry Text="{Binding User.Email}"  VerticalOptions="FillAndExpand"></Entry>
 
-            <Label Text="Password"
+            <Label Text="{i18n:Translate Lozinka}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
             <Entry Text="{Binding Password}" IsPassword="True" VerticalOptions="FillAndExpand"></Entry>
 
-            <Label Text="Confirm password"
+            <Label Text="{i18n:Translate PotvrdiLozinku}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
             <Entry Text="{Binding ConfirmPassword}" IsPassword="True" VerticalOptions="FillAndExpand"></Entry>
 
-            <Button Text="Submit" Command="{Binding SubmitCommand}" 
+            <Button Text="{i18n:Translate Spremi}" Command="{Binding SubmitCommand}" 
                             VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="StartAndExpand"></Button>
         </StackLayout>

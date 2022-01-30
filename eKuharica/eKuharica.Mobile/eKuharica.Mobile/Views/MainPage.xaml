@@ -10,6 +10,7 @@
     <MasterDetailPage.ToolbarItems>
         <ToolbarItem IconImageSource="bs.png" Clicked="ToolbarItem_Clicked"></ToolbarItem>
         <ToolbarItem IconImageSource="en.png" Clicked="ToolbarItem_Clicked_1"/>
+        <ToolbarItem IconImageSource="logout.png" Clicked="Logout_Clicked"></ToolbarItem>
     </MasterDetailPage.ToolbarItems>
     
     <MasterDetailPage.Master>

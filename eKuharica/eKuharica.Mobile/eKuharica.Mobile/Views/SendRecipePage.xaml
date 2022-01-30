@@ -3,17 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i18n="clr-namespace:eKuharica.Mobile.Extensions" 
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.SendRecipePage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Padding="20">
-                <Label Text="Title"
+                <Label Text="{i18n:Translate Naslov}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Entry Text="{Binding Title}"></Entry>
-                
-                <Label Text="Introduction"
+
+                <Label Text="{i18n:Translate Uvod}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <ScrollView>
@@ -21,8 +22,8 @@
                         <Editor Text="{Binding Introduction}" HeightRequest="50" AutoSize="TextChanges"></Editor>
                     </StackLayout>
                 </ScrollView>
-                
-                <Label Text="Ingredients"
+
+                <Label Text="{i18n:Translate Sastojci}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <ScrollView>
@@ -31,7 +32,7 @@
                     </StackLayout>
                 </ScrollView>
 
-                <Label Text="Method"
+                <Label Text="{i18n:Translate Postupak}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <ScrollView>
@@ -40,7 +41,7 @@
                     </StackLayout>
                 </ScrollView>
 
-                <Label Text="Serving"
+                <Label Text="{i18n:Translate Serviranje}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <ScrollView>
@@ -49,7 +50,7 @@
                     </StackLayout>
                 </ScrollView>
 
-                <Label Text="Advice"
+                <Label Text="{i18n:Translate Savijet}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <ScrollView>
@@ -57,21 +58,21 @@
                         <Editor Text="{Binding Advice}" HeightRequest="50" AutoSize="TextChanges"></Editor>
                     </StackLayout>
                 </ScrollView>
-                
-                <Label Text="PreparationTime (min)"
+
+                <Label Text="{i18n:Translate VrijemePripremeMin}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Entry Placeholder="60" Text="{Binding PreparationTime}"  VerticalOptions="FillAndExpand"></Entry>
-                
-                <Picker Title="Meal type" ItemsSource="{Binding MealTypeList}" 
+
+                <Picker Title="{i18n:Translate VrstaJela}" ItemsSource="{Binding MealTypeList}" 
                     SelectedItem="{Binding SelectedMealType}" 
                     SelectedIndex="{Binding 0}" 
                     ItemDisplayBinding="{Binding Value}"></Picker>
-                <Picker Title="Weight Of Preparation" ItemsSource="{Binding WeightOfPreparationList}" 
+                <Picker Title="{i18n:Translate TežinaPripreme}" ItemsSource="{Binding WeightOfPreparationList}" 
                     SelectedItem="{Binding SelectedWeightOfPreparation}" 
                     SelectedIndex="{Binding 0}" 
                     ItemDisplayBinding="{Binding Value}"></Picker>
-                <Button Text="Add" Command="{Binding SendCommand}" 
+                <Button Text="{i18n:Translate Dodaj}" Command="{Binding SendCommand}" 
                             VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="StartAndExpand"></Button>
             </StackLayout>

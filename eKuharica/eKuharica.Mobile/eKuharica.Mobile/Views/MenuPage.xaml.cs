@@ -23,17 +23,16 @@ namespace eKuharica.Mobile.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.About, Title = new TranslateExtension(){ Text="Recepti" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.Home, Title = new TranslateExtension(){ Text="Početna" }.ProvideValue().ToString() },
                 new HomeMenuItem {Id = MenuItemType.Recipe, Title =  new TranslateExtension(){Text = "Recepti" }.ProvideValue().ToString() },
-                new HomeMenuItem {Id = MenuItemType.Articles, Title="Articles" },
-                new HomeMenuItem {Id = MenuItemType.FavouriteRecipes, Title="FavouriteRecipes" },
-                new HomeMenuItem {Id = MenuItemType.Followers, Title="Followers" },
-                new HomeMenuItem {Id = MenuItemType.Following, Title="Following" },
-                new HomeMenuItem {Id = MenuItemType.SendRecipe, Title="SendRecipe" },
-                new HomeMenuItem {Id = MenuItemType.MyRecipes, Title="MyRecipes" },
-                new HomeMenuItem {Id = MenuItemType.Feedbacks, Title="Feedbacks" },
-                new HomeMenuItem {Id = MenuItemType.Settings, Title="Settings" },
-                new HomeMenuItem {Id = MenuItemType.LogOut, Title="LogOut" },
+                new HomeMenuItem {Id = MenuItemType.Articles, Title = new TranslateExtension(){Text = "Članci" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.FavouriteRecipes, Title = new TranslateExtension(){Text = "OmiljeniRecepti" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.Followers, Title = new TranslateExtension(){Text = "Pratitelji" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.Following, Title = new TranslateExtension(){Text = "Pratim" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.SendRecipe, Title = new TranslateExtension(){Text = "PošaljiRecept" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.MyRecipes, Title = new TranslateExtension(){Text = "MojiRecepti" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.Feedbacks, Title = new TranslateExtension(){Text = "OstaviDojam" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.Settings, Title = new TranslateExtension(){Text = "Postavke" }.ProvideValue().ToString() },
             };
 
             ListViewMenu.ItemsSource = menuItems;

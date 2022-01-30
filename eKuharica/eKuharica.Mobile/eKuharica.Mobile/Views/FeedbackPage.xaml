@@ -3,31 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i18n="clr-namespace:eKuharica.Mobile.Extensions"
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.FeedbackPage">
 
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="20">
-            <Button Text="Back" Command="{Binding BackCommand}" 
+            <Button Text="{i18n:Translate Nazad}" Command="{Binding BackCommand}" 
                             VerticalOptions="Start" 
                         HorizontalOptions="StartAndExpand" x:Name="BackButton"></Button>
-            <Label Text="Feedback"
+            <Label Text="{i18n:Translate Dojam}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Picker Title="Rating" ItemsSource="{Binding GradesList}" 
+            <Picker Title="{i18n:Translate Ocjena}" ItemsSource="{Binding GradesList}" 
                     SelectedItem="{Binding SelectedGrade}" 
                     SelectedIndex="{Binding 0}" 
                     ItemDisplayBinding="{Binding Value}"></Picker>
           
             <ScrollView>
                 <StackLayout>
-                    <Label Text="Comment"
+                    <Label Text="{i18n:Translate Komentar}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                     <Editor Text="{Binding Description}" HeightRequest="50" AutoSize="TextChanges"></Editor>
                 </StackLayout>
             </ScrollView>
-            <Button Text="Submit" Command="{Binding SubmitCommand}" 
+            <Button Text="{i18n:Translate Spremi}" Command="{Binding SubmitCommand}" 
                             VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="CenterAndExpand"></Button>
         </StackLayout>

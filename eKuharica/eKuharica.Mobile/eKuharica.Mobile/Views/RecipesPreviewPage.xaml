@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:converters="clr-namespace:eKuharica.Mobile.Converters"
+             xmlns:i18n="clr-namespace:eKuharica.Mobile.Extensions"  
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.RecipesPreviewPage">
     <ContentPage.Resources>
@@ -23,80 +24,80 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <Image WidthRequest="250" HeightRequest="200" Source="{Binding Recipe.Picture, Converter={StaticResource imgConv}}"></Image>
-                <Label Text="Number of likes"
+                <Label Text="{i18n:Translate BrojLajkova}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <Label Text="{Binding NumberOfLikes}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <StackLayout Orientation="Horizontal">
-                    <Button Text="Like"
+                    <Button Text="{i18n:Translate SviđaMiSe}"
                         BackgroundColor="{Binding Recipe.IsLiked, Converter={StaticResource bgConverter}}"
                         Clicked="Button_Clicked"
                             VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="CenterAndExpand">
                     </Button>
-                    <Picker Title="Rating" ItemsSource="{Binding GradesList, Mode=OneTime}" 
+                    <Picker Title="{i18n:Translate Ocjena}" ItemsSource="{Binding GradesList, Mode=OneTime}" 
                         SelectedIndexChanged="Picker_SelectedIndexChanged"
                     SelectedIndex="{Binding Grade}" 
                     ItemDisplayBinding="{Binding Value}"></Picker>
                 </StackLayout>
-                <Label Text="Introduction" 
+                <Label Text="{i18n:Translate Uvod}" 
                    FontAttributes="Bold"
                 HorizontalOptions="StartAndExpand" />
                 <Label Text="{Binding Recipe.Introduction}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-                <Label Text="Ingredients"
+                <Label Text="{i18n:Translate Sastojci}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Label Text="{Binding Recipe.Ingredients}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-                <Label Text="Method"
+                <Label Text="{i18n:Translate Postupak}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Label Text="{Binding Recipe.Method}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-                <Label Text="Serving"
+                <Label Text="{i18n:Translate Serviranje}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Label Text="{Binding Recipe.Serving}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-                <Label Text="Advice"
+                <Label Text="{i18n:Translate Savijet}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Label Text="{Binding Recipe.Advice}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-                <Label Text="WeightOfPreparation"
+                <Label Text="{i18n:Translate TežinaPripreme}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Label Text="{Binding WeightOfPreparation}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-                <Label Text="PreparationTime"
+                <Label Text="{i18n:Translate VrijemePripreme}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Label Text="{Binding Recipe.PreparationTime, StringFormat='{}{0:hh\\:mm}'}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-                <Label Text="MealType"
+                <Label Text="{i18n:Translate VrstaJela}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
                 <Label Text="{Binding MealType}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
-                <Label Text="Comments"
+                <Label Text="{i18n:Translate Komentari}"
                    FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="StartAndExpand" />
@@ -105,7 +106,7 @@
                 HorizontalOptions="StartAndExpand" />
                 <StackLayout Orientation="Horizontal">
                     <Entry Text="{Binding Comment}" HorizontalOptions="FillAndExpand"></Entry>
-                    <Button Text="Add" Command="{Binding AddCommentCommand}" 
+                    <Button Text="{i18n:Translate Dodaj}" Command="{Binding AddCommentCommand}" 
                             VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="StartAndExpand"></Button>
                 </StackLayout>

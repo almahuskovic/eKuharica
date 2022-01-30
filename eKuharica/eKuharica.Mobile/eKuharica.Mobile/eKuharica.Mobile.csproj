@@ -20,6 +20,7 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
+    <None Remove="MultilingualResources\eKuharica.Mobile.bs-Latn.xlf" />
     <None Remove="MultilingualResources\eKuharica.Mobile.en.xlf" />
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="MultilingualResources\eKuharica.Mobile.en.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MultilingualResources\eKuharica.Mobile.bs-Latn.xlf" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\Translations.Designer.cs">

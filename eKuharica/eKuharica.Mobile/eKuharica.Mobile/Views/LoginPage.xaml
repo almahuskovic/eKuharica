@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ViewModels="clr-namespace:eKuharica.Mobile.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ViewModels="clr-namespace:eKuharica.Mobile.ViewModels"
+             xmlns:i18n="clr-namespace:eKuharica.Mobile.Extensions"
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.LoginPage">
     <ContentPage.BindingContext>
@@ -10,11 +12,11 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
-            <Label Text="Username:"/>
+            <Label Text="{i18n:Translate KorisničkoIme}"/>
             <Entry Text="{Binding Username}"></Entry>
-            <Label Text="Password:"/>
+            <Label Text="{i18n:Translate Lozinka}"/>
             <Entry Text="{Binding Password}" IsPassword="True"></Entry>
-            <Button Text="Login" Command="{Binding LoginCommand}"></Button>
+            <Button Text="{i18n:Translate PrijaviSe}" Command="{Binding LoginCommand}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

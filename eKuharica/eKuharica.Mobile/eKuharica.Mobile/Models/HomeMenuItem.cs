@@ -6,6 +6,7 @@ namespace eKuharica.Mobile.Models
 {
     public enum MenuItemType
     {
+        Home,
         Browse,
         About,
         Recipe,
@@ -17,7 +18,6 @@ namespace eKuharica.Mobile.Models
         SendRecipe,
         MyRecipes,
         Feedbacks,
-        LogOut
     }
     public class HomeMenuItem
     {

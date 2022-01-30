@@ -146,6 +146,9 @@
     <BundleResource Include="Resources\bs.png" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
     <BundleResource Include="Resources\en.png" />
   </ItemGroup>
 </Project>

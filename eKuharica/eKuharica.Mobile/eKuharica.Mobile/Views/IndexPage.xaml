@@ -6,14 +6,10 @@
              xmlns:resources="clr-namespace:eKuharica.Mobile.Resources" 
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.IndexPage">
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="bs.png" Command="{Binding ChangeLanguageToBsCommand}"></ToolbarItem>
-        <ToolbarItem IconImageSource="en.png" Command="{Binding ChangeLanguageToEnCommand}"/>
-    </ContentPage.ToolbarItems>-->
 
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding [Test], Source={x:Static resources:ResourceLoader.Instance}}"
+            <Label Text=""
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

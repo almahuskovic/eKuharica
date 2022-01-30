@@ -39,6 +39,9 @@ namespace eKuharica.Mobile.Views
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
+                    case (int)MenuItemType.Home:
+                        MenuPages.Add(id, new NavigationPage(new IndexPage()));
+                        break;
                     case (int)MenuItemType.Recipe:
                         MenuPages.Add(id, new NavigationPage(new RecipesPage()));
                         break;
@@ -84,16 +87,24 @@ namespace eKuharica.Mobile.Views
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            var info = new CultureInfo("bs", false);
+            Application.Current.MainPage = new MainPage();
+            var info = new CultureInfo("bs-Latn", false);
             CrossMultilingual.Current.CurrentCultureInfo = Thread.CurrentThread.CurrentCulture = info;
             Application.Current.MainPage = new MainPage();
         }
 
         private void ToolbarItem_Clicked_1(object sender, EventArgs e)
         {
+            Application.Current.MainPage = new MainPage();
             var info = new CultureInfo("en", false);
             CrossMultilingual.Current.CurrentCultureInfo = Thread.CurrentThread.CurrentCulture = info;
             Application.Current.MainPage = new MainPage();
+        }
+
+        private void Logout_Clicked(object sender, EventArgs e)
+        {
+            APIService.Password = APIService.Username = "";
+            App.Current.MainPage = new LoginPage();
         }
     }
 }

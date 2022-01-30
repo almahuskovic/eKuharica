@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="bs-Latn-BA" target-language="bs-Latn" original="EKUHARICA.MOBILE/RESOURCES/TRANSLATIONS.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6921.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="EKUHARICA.MOBILE/RESOURCES/TRANSLATIONS.RESX" datatype="resx">
+        <trans-unit id="BrojLajkova" translate="yes" xml:space="preserve">
+          <source>Broj lajkova</source>
+          <target state="new">Broj lajkova</target>
+        </trans-unit>
+        <trans-unit id="Dodaj" translate="yes" xml:space="preserve">
+          <source>Dodaj</source>
+          <target state="new">Dodaj</target>
+        </trans-unit>
+        <trans-unit id="Dojam" translate="yes" xml:space="preserve">
+          <source>Dojam</source>
+          <target state="new">Dojam</target>
+        </trans-unit>
+        <trans-unit id="Email" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="new">Email</target>
+        </trans-unit>
+        <trans-unit id="Ime" translate="yes" xml:space="preserve">
+          <source>Ime</source>
+          <target state="new">Ime</target>
+        </trans-unit>
+        <trans-unit id="Komentar" translate="yes" xml:space="preserve">
+          <source>Komentar</source>
+          <target state="new">Komentar</target>
+        </trans-unit>
+        <trans-unit id="Komentari" translate="yes" xml:space="preserve">
+          <source>Komentari</source>
+          <target state="new">Komentari</target>
+        </trans-unit>
+        <trans-unit id="KorisničkoIme" translate="yes" xml:space="preserve">
+          <source>Korisničko ime</source>
+          <target state="new">Korisničko ime</target>
+        </trans-unit>
+        <trans-unit id="Lozinka" translate="yes" xml:space="preserve">
+          <source>Lozinka</source>
+          <target state="new">Lozinka</target>
+        </trans-unit>
+        <trans-unit id="MojiRecepti" translate="yes" xml:space="preserve">
+          <source>Moji recepti</source>
+          <target state="new">Moji recepti</target>
+        </trans-unit>
+        <trans-unit id="Naslov" translate="yes" xml:space="preserve">
+          <source>Naslov</source>
+          <target state="new">Naslov</target>
+        </trans-unit>
+        <trans-unit id="Nazad" translate="yes" xml:space="preserve">
+          <source>Nazad</source>
+          <target state="new">Nazad</target>
+        </trans-unit>
+        <trans-unit id="Ocjena" translate="yes" xml:space="preserve">
+          <source>Ocjena</source>
+          <target state="new">Ocjena</target>
+        </trans-unit>
+        <trans-unit id="OmiljeniRecepti" translate="yes" xml:space="preserve">
+          <source>Omiljeni recepti</source>
+          <target state="new">Omiljeni recepti</target>
+        </trans-unit>
+        <trans-unit id="OstaviDojam" translate="yes" xml:space="preserve">
+          <source>Ostavi dojam</source>
+          <target state="new">Ostavi dojam</target>
+        </trans-unit>
+        <trans-unit id="Postavke" translate="yes" xml:space="preserve">
+          <source>Postavke</source>
+          <target state="new">Postavke</target>
+        </trans-unit>
+        <trans-unit id="Postupak" translate="yes" xml:space="preserve">
+          <source>Postupak</source>
+          <target state="new">Postupak</target>
+        </trans-unit>
+        <trans-unit id="PotvrdiLozinku" translate="yes" xml:space="preserve">
+          <source>Potvrdi lozinku</source>
+          <target state="new">Potvrdi lozinku</target>
+        </trans-unit>
+        <trans-unit id="Početna" translate="yes" xml:space="preserve">
+          <source>Početna</source>
+          <target state="new">Početna</target>
+        </trans-unit>
+        <trans-unit id="PošaljiRecept" translate="yes" xml:space="preserve">
+          <source>Pošalji recept</source>
+          <target state="new">Pošalji recept</target>
+        </trans-unit>
+        <trans-unit id="Prati" translate="yes" xml:space="preserve">
+          <source>Prati</source>
+          <target state="new">Prati</target>
+        </trans-unit>
+        <trans-unit id="Pratim" translate="yes" xml:space="preserve">
+          <source>Pratim</source>
+          <target state="new">Pratim</target>
+        </trans-unit>
+        <trans-unit id="Pratitelji" translate="yes" xml:space="preserve">
+          <source>Pratitelji</source>
+          <target state="new">Pratitelji</target>
+        </trans-unit>
+        <trans-unit id="Prezime" translate="yes" xml:space="preserve">
+          <source>Prezime</source>
+          <target state="new">Prezime</target>
+        </trans-unit>
+        <trans-unit id="PridružioSe" translate="yes" xml:space="preserve">
+          <source>Pridružio se</source>
+          <target state="new">Pridružio se</target>
+        </trans-unit>
+        <trans-unit id="Recepti" translate="yes" xml:space="preserve">
+          <source>Recepti</source>
+          <target state="new">Recepti</target>
+        </trans-unit>
+        <trans-unit id="Sastojci" translate="yes" xml:space="preserve">
+          <source>Sastojci</source>
+          <target state="new">Sastojci</target>
+        </trans-unit>
+        <trans-unit id="Savijet" translate="yes" xml:space="preserve">
+          <source>Savijet</source>
+          <target state="new">Savijet</target>
+        </trans-unit>
+        <trans-unit id="Serviranje" translate="yes" xml:space="preserve">
+          <source>Serviranje</source>
+          <target state="new">Serviranje</target>
+        </trans-unit>
+        <trans-unit id="Spremi" translate="yes" xml:space="preserve">
+          <source>Spremi</source>
+          <target state="new">Spremi</target>
+        </trans-unit>
+        <trans-unit id="SviđaMiSe" translate="yes" xml:space="preserve">
+          <source>Sviđa mi se</source>
+          <target state="new">Sviđa mi se</target>
+        </trans-unit>
+        <trans-unit id="TežinaPripreme" translate="yes" xml:space="preserve">
+          <source>Težina pripreme</source>
+          <target state="new">Težina pripreme</target>
+        </trans-unit>
+        <trans-unit id="Uvod" translate="yes" xml:space="preserve">
+          <source>Uvod</source>
+          <target state="new">Uvod</target>
+        </trans-unit>
+        <trans-unit id="VrijemePripreme" translate="yes" xml:space="preserve">
+          <source>Vrijeme pripreme</source>
+          <target state="new">Vrijeme pripreme</target>
+        </trans-unit>
+        <trans-unit id="VrijemePripremeMin" translate="yes" xml:space="preserve">
+          <source>Vrijeme pripreme (min)</source>
+          <target state="new">Vrijeme pripreme (min)</target>
+        </trans-unit>
+        <trans-unit id="VrstaJela" translate="yes" xml:space="preserve">
+          <source>Vrsta jela</source>
+          <target state="new">Vrsta jela</target>
+        </trans-unit>
+        <trans-unit id="Članci" translate="yes" xml:space="preserve">
+          <source>Članci</source>
+          <target state="new">Članci</target>
+        </trans-unit>
+        <trans-unit id="Easy" translate="yes" xml:space="preserve">
+          <source>Jednostavno</source>
+          <target state="new">Jednostavno</target>
+        </trans-unit>
+        <trans-unit id="Hard" translate="yes" xml:space="preserve">
+          <source>Složeno</source>
+          <target state="new">Složeno</target>
+        </trans-unit>
+        <trans-unit id="Medium" translate="yes" xml:space="preserve">
+          <source>Srednje</source>
+          <target state="new">Srednje</target>
+        </trans-unit>
+        <!--<trans-unit id="PrijaviSe" translate="yes" xml:space="preserve">
+          <source>Prijavi se</source>
+          <target state="new">Prijavi se</target>
+        </trans-unit>-->
+      </group>
+    </body>
+  </file>
+</xliff>

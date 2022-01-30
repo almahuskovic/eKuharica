@@ -27,6 +27,9 @@ namespace eKuharica.Mobile.Extensions
             
             var ci = CrossMultilingual.Current.CurrentCultureInfo;
 
+            //if (ci.Name == "bs")
+            //    ci = new CultureInfo("bs-Latn", false);
+
             var translation = resmgr.Value.GetString(Text, ci);
 
             if (translation == null)

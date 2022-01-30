@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:converters="clr-namespace:eKuharica.Mobile.Converters"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:converters="clr-namespace:eKuharica.Mobile.Converters"
+             xmlns:i18n="clr-namespace:eKuharica.Mobile.Extensions"
              mc:Ignorable="d"
              x:Class="eKuharica.Mobile.Views.UserDetailsPage">
     <ContentPage.Resources>
@@ -21,7 +23,7 @@
                 </StackLayout>
                 <StackLayout Orientation="Vertical">
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Pratitelji:"
+                        <Label Text="{i18n:Translate Pratitelji}"
                                 VerticalOptions="CenterAndExpand" 
                                 HorizontalOptions="CenterAndExpand" />
                         <Label Text="{Binding Followers}" 
@@ -29,7 +31,7 @@
                                 FontSize="16"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Prati:"
+                        <Label Text="{i18n:Translate Prati}"
                                 VerticalOptions="CenterAndExpand" 
                                 HorizontalOptions="CenterAndExpand" />
                         <Label Text="{Binding Following}" 
@@ -37,7 +39,7 @@
                                        FontSize="16"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Pridružio se:"
+                        <Label Text="{i18n:Translate PridružioSe}"
                                 VerticalOptions="CenterAndExpand" 
                                 HorizontalOptions="CenterAndExpand" />
                         <Label Text="{Binding  User.CreatedAt, StringFormat='{0:dd/MM/yyyy}'}" 
