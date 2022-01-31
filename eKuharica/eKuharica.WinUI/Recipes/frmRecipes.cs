@@ -1,10 +1,10 @@
-﻿using eKuharica.Model.DTO;
+﻿using System;
+using eKuharica.Model.DTO;
 using eKuharica.Model.Entities;
 using eKuharica.Model.Enumerations;
 using eKuharica.Model.Models;
 using eKuharica.Model.Requests;
 using Microsoft.SqlServer.Management.Sdk.Sfc;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,6 +76,7 @@ namespace eKuharica.WinUI.Recipes
         }
         private async void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
             RecipeSearchObject request = new RecipeSearchObject()
             {
                 Title = txtSearch.Text,
@@ -83,7 +84,8 @@ namespace eKuharica.WinUI.Recipes
                 PreparationTimeCategory = cmbPreparationTime.SelectedIndex > 0 ? (int?)cmbPreparationTime.SelectedIndex : null,
                 WeightOfPreparation = cmbWeightOfPreparation.SelectedIndex > 0 ? (int?)cmbWeightOfPreparation.SelectedIndex : null,
                 MyRecipes = _myRecipes,
-                LoggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id
+                LoggedUserId = loggedUser.Id,
+                LoggedUserHasPermissions =  Helpers.Helper.IsAdminOrEmployee(loggedUser)
             };
 
             var data = await _recipeService.Get<List<RecipeDto>>(request);
@@ -92,18 +94,19 @@ namespace eKuharica.WinUI.Recipes
 
         private async void frmRecipes_Load(object sender, EventArgs e)
         {
-            var loggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id;
+            var loggedUser = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username));
 
             var data = new List<RecipeDto>();
             var searchObj = new RecipeSearchObject() {
-                LoggedUserId = loggedUserId, 
-                MyRecipes = _myRecipes 
+                LoggedUserId = loggedUser.Id, 
+                MyRecipes = _myRecipes ,
+                LoggedUserHasPermissions = Helpers.Helper.IsAdminOrEmployee(loggedUser)
             };
 
             if (_isFavouriteRecipeList)
             {
                 var searchRequest = new UserFavouriteRecipeSearchRequest() { 
-                    UserId = loggedUserId
+                    UserId = loggedUser.Id
                 };
 
                 searchObj.RecipeIds = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(searchRequest))

@@ -16,5 +16,7 @@ namespace eKuharica.Model.Models
         public bool ByUsers { get; set; }
         public bool MyRecipes { get; set; }
         public int LoggedUserId { get; set; }
+
+        public bool LoggedUserHasPermissions { get; set; }
     }
 }

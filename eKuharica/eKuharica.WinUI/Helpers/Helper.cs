@@ -233,6 +233,17 @@ namespace eKuharica.WinUI.Helpers
             return false;
         }
 
+        public static bool IsAdminOrEmployee(UserDto user)
+        {
+            for (int i = 0; i < user.UserRoles.Count(); i++)
+            {
+                if ((user.UserRoles as List<UserRoleDto>)[i].Role.Name == Enum.GetName(typeof(Roles), Roles.Administrator) ||
+                    (user.UserRoles as List<UserRoleDto>)[i].Role.Name == Enum.GetName(typeof(Roles), Roles.Employee))
+                    return true;
+            }
+            return false;
+        }
+
         #region Translation
 
         public static string TranslationForBtnBack()

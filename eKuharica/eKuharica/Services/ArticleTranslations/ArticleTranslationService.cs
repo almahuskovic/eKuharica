@@ -24,6 +24,10 @@ namespace eKuharica.Services.ArticleTranslations
             {
                 entity = entity.Where(x => x.ArticleId == search.ArticleId);
             }
+            if (search.ArticleIds != null && search.ArticleIds.Count > 0)
+            {
+                entity = entity.Where(x => search.ArticleIds.Contains(x.ArticleId));
+            }
 
             var list = entity.ToList();
             return _mapper.Map<List<ArticleTranslationDto>>(list);

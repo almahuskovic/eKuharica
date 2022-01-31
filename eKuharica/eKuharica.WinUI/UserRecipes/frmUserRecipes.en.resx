@@ -317,25 +317,25 @@
   <data name="bindingNavigatorPositionItem.ToolTipText" xml:space="preserve">
     <value>Current position</value>
   </data>
-  <data name="Delete.HeaderText" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="Edit.HeaderText" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="Title.HeaderText" xml:space="preserve">
-    <value>Title</value>
-  </data>
-  <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="Publish" xml:space="preserve">
-    <value>Publish</value>
-  </data>
   <data name="Approve.HeaderText" xml:space="preserve">
     <value>Approve</value>
+  </data>
+  <data name="Obriši.HeaderText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Odobri.HeaderText" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="Uredi.HeaderText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Obriši" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Odobri" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="Uredi" xml:space="preserve">
+    <value>Edit</value>
   </data>
 </root>

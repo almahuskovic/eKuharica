@@ -24,6 +24,9 @@ namespace eKuharica.Services.Articles
                 entity = entity.Where(x => x.Title.ToLower().Contains(search.Title.ToLower()));
             }
 
+            if (!search.LoggedUserHasPermissions)
+                entity = entity.Where(x => x.IsTranslated);
+
             var list = entity.ToList();
             var mappedList = _mapper.Map<List<ArticleDto>>(list);
             mappedList.ForEach(x => x.IsCreatedByLoggedUser = (x.CreateUserId == search.LoggedUserId));

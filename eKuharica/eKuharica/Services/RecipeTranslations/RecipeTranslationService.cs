@@ -24,6 +24,10 @@ namespace eKuharica.Services.RecipeTranslations
             {
                 entity = entity.Where(x => x.RecipeId == search.RecipeId);
             }
+            if (search.RecipeIds != null && search.RecipeIds.Count > 0)
+            {
+                entity = entity.Where(x => search.RecipeIds.Contains(x.RecipeId));
+            }
 
             var list = entity.ToList();
             return _mapper.Map<List<RecipeTranslationDto>>(list);

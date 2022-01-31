@@ -8,8 +8,8 @@
             x:Class="eKuharica.Mobile.Views.MainPage">
 
     <MasterDetailPage.ToolbarItems>
-        <ToolbarItem IconImageSource="bs.png" Clicked="ToolbarItem_Clicked"></ToolbarItem>
-        <ToolbarItem IconImageSource="en.png" Clicked="ToolbarItem_Clicked_1"/>
+        <ToolbarItem IconImageSource="bs.png" Clicked="Bosnian_Clicked"></ToolbarItem>
+        <ToolbarItem IconImageSource="en.png" Clicked="English_Clicked"/>
         <ToolbarItem IconImageSource="logout.png" Clicked="Logout_Clicked"></ToolbarItem>
     </MasterDetailPage.ToolbarItems>
     

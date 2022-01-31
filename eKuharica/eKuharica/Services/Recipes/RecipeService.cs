@@ -62,6 +62,9 @@ namespace eKuharica.Services.Recipes
                 entity = entity.Where(x => !x.IsApproved && x.IsSent);
             }
 
+            if (!search.LoggedUserHasPermissions)
+                entity = entity.Where(x => x.IsTranslated);
+
             var list = entity.ToList();
             var mappedList = _mapper.Map<List<RecipeDto>>(list);
             mappedList.ForEach(x => x.IsCreatedByLoggedUser = (x.UserId == search.LoggedUserId));

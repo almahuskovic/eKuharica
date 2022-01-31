@@ -40,7 +40,11 @@ namespace eKuharica.WinUI.Articles
         private async void frmArticles_Load(object sender, EventArgs e)
         {
             var user = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
-            var data = await _articleService.Get<List<ArticleDto>>(new ArticleSearchRequest() { LoggedUserId = user.Id });
+            var data = await _articleService.Get<List<ArticleDto>>(new ArticleSearchRequest() { 
+                LoggedUserId = user.Id, 
+                LoggedUserHasPermissions = Helpers.Helper.IsAdminOrEmployee(user) 
+            });
+
             LoadData(data);
         }
 
@@ -115,10 +119,12 @@ namespace eKuharica.WinUI.Articles
 
         private async void txtSearchArticle_TextChanged(object sender, EventArgs e)
         {
+            var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
             ArticleSearchRequest request = new ArticleSearchRequest()
             {
                 Title = txtSearchArticle.Text,
-                LoggedUserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id
+                LoggedUserId = loggedUser.Id,
+                LoggedUserHasPermissions = Helpers.Helper.IsAdminOrEmployee(loggedUser)
             };
 
             var data = await _articleService.Get<List<ArticleDto>>(request);

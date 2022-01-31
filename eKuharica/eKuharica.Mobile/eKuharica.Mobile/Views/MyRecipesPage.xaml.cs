@@ -15,9 +15,11 @@ namespace eKuharica.Mobile.Views
     public partial class MyRecipesPage : ContentPage
     {
         private MyRecipesViewModel model = null;
+        private bool _displayFavourite = false;
         public MyRecipesPage(bool displayFavourite = false)
         {
             InitializeComponent();
+            _displayFavourite = displayFavourite;
             BindingContext = model = new MyRecipesViewModel(displayFavourite);
         }
         protected override async void OnAppearing()
@@ -30,7 +32,13 @@ namespace eKuharica.Mobile.Views
         {
             var item = e.SelectedItem as RecipeDto;
 
-            Navigation.PushAsync(new RecipeDetailsPage(item));
+            if (_displayFavourite)
+            {
+                item.IsLiked = true;
+                Navigation.PushAsync(new RecipesPreviewPage(item));
+            }
+            else
+                Navigation.PushAsync(new RecipeDetailsPage(item));   
         }
     }
 }

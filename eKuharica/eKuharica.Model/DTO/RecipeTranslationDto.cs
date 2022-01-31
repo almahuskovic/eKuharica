@@ -13,7 +13,6 @@ namespace eKuharica.Model.DTO
         public string Method { get; set; }
         public string Serving { get; set; }
         public string Advice { get; set; }
-        public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public bool IsDeleted { get; set; }

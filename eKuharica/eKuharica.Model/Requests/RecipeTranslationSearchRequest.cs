@@ -8,5 +8,6 @@ namespace eKuharica.Model.Requests
     {
         public int Id { get; set; }
         public int RecipeId { get; set; }
+        public List<int> RecipeIds { get; set; }
     }
 }

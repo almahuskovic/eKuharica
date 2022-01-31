@@ -44,9 +44,9 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Approve = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Odobri = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Uredi = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Obriši = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbUserRecipes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -70,9 +70,9 @@
             this.sdgvUserRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sdgvUserRecipes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Title,
-            this.Approve,
-            this.Edit,
-            this.Delete});
+            this.Odobri,
+            this.Uredi,
+            this.Obriši});
             resources.ApplyResources(this.sdgvUserRecipes, "sdgvUserRecipes");
             this.sdgvUserRecipes.Name = "sdgvUserRecipes";
             this.sdgvUserRecipes.PageSize = 10;
@@ -161,29 +161,29 @@
             this.Title.Name = "Title";
             this.Title.ReadOnly = true;
             // 
-            // Approve
+            // Odobri
             // 
-            resources.ApplyResources(this.Approve, "Approve");
-            this.Approve.Name = "Approve";
-            this.Approve.ReadOnly = true;
-            this.Approve.Text = "Approve";
-            this.Approve.UseColumnTextForButtonValue = true;
+            resources.ApplyResources(this.Odobri, "Odobri");
+            this.Odobri.Name = "Odobri";
+            this.Odobri.ReadOnly = true;
+            this.Odobri.Text = "Odobri";
+            this.Odobri.UseColumnTextForButtonValue = true;
             // 
-            // Edit
+            // Uredi
             // 
-            resources.ApplyResources(this.Edit, "Edit");
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Text = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
+            resources.ApplyResources(this.Uredi, "Uredi");
+            this.Uredi.Name = "Uredi";
+            this.Uredi.ReadOnly = true;
+            this.Uredi.Text = "Uredi";
+            this.Uredi.UseColumnTextForButtonValue = true;
             // 
-            // Delete
+            // Obriši
             // 
-            resources.ApplyResources(this.Delete, "Delete");
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
+            resources.ApplyResources(this.Obriši, "Obriši");
+            this.Obriši.Name = "Obriši";
+            this.Obriši.ReadOnly = true;
+            this.Obriši.Text = "Obriši";
+            this.Obriši.UseColumnTextForButtonValue = true;
             // 
             // frmUserRecipes
             // 
@@ -221,8 +221,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewButtonColumn Approve;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewButtonColumn Odobri;
+        private System.Windows.Forms.DataGridViewButtonColumn Uredi;
+        private System.Windows.Forms.DataGridViewButtonColumn Obriši;
     }
 }

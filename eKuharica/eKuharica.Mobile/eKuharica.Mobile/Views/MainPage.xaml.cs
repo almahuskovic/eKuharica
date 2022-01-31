@@ -85,7 +85,7 @@ namespace eKuharica.Mobile.Views
             }
         }
 
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        private void Bosnian_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new MainPage();
             var info = new CultureInfo("bs-Latn", false);
@@ -93,7 +93,7 @@ namespace eKuharica.Mobile.Views
             Application.Current.MainPage = new MainPage();
         }
 
-        private void ToolbarItem_Clicked_1(object sender, EventArgs e)
+        private void English_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new MainPage();
             var info = new CultureInfo("en", false);

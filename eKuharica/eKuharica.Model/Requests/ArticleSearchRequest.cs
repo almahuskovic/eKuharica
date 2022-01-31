@@ -8,5 +8,6 @@ namespace eKuharica.Model.Requests
     {
         public string Title { get; set; }
         public int LoggedUserId { get; set; }
+        public bool LoggedUserHasPermissions { get; set; }
     }
 }

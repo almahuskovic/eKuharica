@@ -10,12 +10,14 @@ using Xamarin.Forms;
 using eKuharica.Model.DTO;
 using eKuharica.Model.Requests;
 using System.Linq;
+using Plugin.Multilingual;
 
 namespace eKuharica.Mobile.ViewModels
 {
     public class RecipesViewModel : BaseViewModel
     {
         private readonly APIService _recipeService = new APIService("Recipe");
+        private readonly APIService _recipeTranslationService = new APIService("RecipeTranslation");
         private readonly APIService _userService = new APIService("User");
         private readonly APIService _userFavouriteRecipeService = new APIService("UserFavouriteRecipe");
         public RecipesViewModel()
@@ -110,6 +112,25 @@ namespace eKuharica.Mobile.ViewModels
                 searchRequest.Title = Title;
 
                 var list = await _recipeService.Get<IEnumerable<RecipeDto>>(searchRequest);
+
+                if (CrossMultilingual.Current.CurrentCultureInfo.Name == "en")
+                {
+                    var recipeIds = list.Select(x => x.Id).ToList();
+                    var translationSearchRequest = new RecipeTranslationSearchRequest(){ RecipeIds = recipeIds };
+                    var recipeTranslations = await _recipeTranslationService.Get<List<RecipeTranslationDto>>(translationSearchRequest);
+                  
+                    list.ToList().ForEach(x =>
+                    {
+                        var temp = recipeTranslations.Where(t => t.RecipeId == x.Id).First();
+                        x.Ingredients = temp.Ingredients;
+                        x.Introduction = temp.Introduction;
+                        x.Serving = temp.Serving;
+                        x.Advice = temp.Advice;
+                        x.Method = temp.Method;
+                        x.Title = temp.Title;
+                    });
+                }
+
                 RecipeList.Clear();
 
                 var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);

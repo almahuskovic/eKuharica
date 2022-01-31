@@ -1,9 +1,11 @@
 ﻿using eKuharica.Model.DTO;
 using eKuharica.Model.Entities;
 using eKuharica.Model.Requests;
+using Plugin.Multilingual;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -14,6 +16,8 @@ namespace eKuharica.Mobile.ViewModels
     public class ArticlesViewModel : BaseViewModel
     {
         private readonly APIService _articleService = new APIService("Article");
+        APIService _articleTranslationService = new APIService("ArticleTranslation");
+
         public ArticlesViewModel()
         {
             InitCommand = new Command(async () => await Init());
@@ -40,6 +44,21 @@ namespace eKuharica.Mobile.ViewModels
                 searchRequest.Title = Title;
 
                 var list = await _articleService.Get<IEnumerable<ArticleDto>>(searchRequest);
+
+                if (CrossMultilingual.Current.CurrentCultureInfo.Name == "en")
+                {
+                    var articleIds = list.Select(x => x.Id).ToList();
+                    var translationSearchRequest = new ArticleTranslationSearchRequest() { ArticleIds = articleIds };
+                    var articleTranslations = await _articleTranslationService.Get<List<ArticleTranslationDto>>(translationSearchRequest);
+
+                    list.ToList().ForEach(x =>
+                    {
+                        var temp = articleTranslations.Where(t => t.ArticleId == x.Id).First();
+                        x.Title = temp.Title;
+                        x.Content = temp.Content;
+                        x.KeyWords = temp.KeyWords;
+                    });
+                }
                 ArticleList.Clear();
                 foreach (var article in list)
                 {

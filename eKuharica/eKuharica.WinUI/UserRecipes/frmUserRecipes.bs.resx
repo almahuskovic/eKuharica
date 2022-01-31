@@ -338,4 +338,22 @@
   <data name="Edit" xml:space="preserve">
     <value>Uredi</value>
   </data>
+  <data name="Obriši.HeaderText" xml:space="preserve">
+    <value>Obriši</value>
+  </data>
+  <data name="Odobri.HeaderText" xml:space="preserve">
+    <value>Odobri</value>
+  </data>
+  <data name="Uredi.HeaderText" xml:space="preserve">
+    <value>Uredi</value>
+  </data>
+  <data name="Obriši" xml:space="preserve">
+    <value>Obriši</value>
+  </data>
+  <data name="Odobri" xml:space="preserve">
+    <value>Odobri</value>
+  </data>
+  <data name="Uredi" xml:space="preserve">
+    <value>Uredi</value>
+  </data>
 </root>

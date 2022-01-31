@@ -20,6 +20,7 @@ namespace eKuharica.WinUI.UserRecipes
     public partial class frmUserRecipes : Form
     {
         APIService _recipeService = new APIService("Recipe");
+        APIService _userService = new APIService("User");
         public frmUserRecipes()
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Helpers.Helper.CurrentLanguage);
@@ -35,7 +36,9 @@ namespace eKuharica.WinUI.UserRecipes
 
         private async void LoadData()
         {
-            var request = new RecipeSearchObject() { ByUsers = true };
+            var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+
+            var request = new RecipeSearchObject() { ByUsers = true, LoggedUserHasPermissions= Helpers.Helper.IsAdminOrEmployee(loggedUser) };
             var data = await _recipeService.Get<List<RecipeDto>>(request);
 
             if (!data.Any())
