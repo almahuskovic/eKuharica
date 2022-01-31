@@ -233,7 +233,7 @@ namespace eKuharica.WinUI.Recipes
             Hide();
         }
 
-        private void lblBack_Click(object sender, EventArgs e)
+        private async void lblBack_Click(object sender, EventArgs e)
         {
             if (_send)
             {
@@ -243,6 +243,9 @@ namespace eKuharica.WinUI.Recipes
 
             if ((int)Enum.Parse(typeof(Enumerations.RecipeAddSource), _frmSource) == (int)Enumerations.RecipeAddSource.frmUserRecipe)//_recipe !=null &&  !_recipe.IsSent)
             {
+                _recipe.IsRead = true;
+                await _recipeService.Update<RecipeDto>(_recipe.Id, _recipe);
+
                 frmUserRecipes frmUserRecipes = new frmUserRecipes();
                 frmUserRecipes.MdiParent = MdiParent;
                 frmUserRecipes.WindowState = FormWindowState.Maximized;

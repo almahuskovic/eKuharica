@@ -212,7 +212,7 @@ namespace eKuharica.WinUI
                 "Sve što niste spasili bit će izgubljeno. Da li želite nastaviti?" :
                 "All you have not saved will be lost. Continue?";
 
-            DialogResult r = MessageBox.Show(message);
+            DialogResult r = MessageBox.Show(message, "Confirmation", MessageBoxButtons.OKCancel);
 
             if (r == DialogResult.OK)
             {

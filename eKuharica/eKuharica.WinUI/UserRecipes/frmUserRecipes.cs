@@ -46,17 +46,27 @@ namespace eKuharica.WinUI.UserRecipes
             else
             {
                 sdgvUserRecipes.DataSource = data;
-                sdgvUserRecipes.PageSize = 10;
-                DataTable dt = Helpers.Helper.ToDataTable(data);
-                sdgvUserRecipes.SetPagedDataSource(dt, bindingNavigator1);
+
+                foreach (DataGridViewRow row in sdgvUserRecipes.Rows)
+                {
+                    if (!(row.DataBoundItem as RecipeDto).IsRead)
+                        row.DefaultCellStyle.BackColor = Color.DarkGray;
+                }
+
+                //sdgvUserRecipes.PageSize = 10;
+                //DataTable dt = Helpers.Helper.ToDataTable(data);
+                //sdgvUserRecipes.SetPagedDataSource(dt, bindingNavigator1);
+
             }
         }
 
         private async void sdgvUserRecipes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
-            var elementIndex = (currentRow.Rows.Count / 10) <= 1 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
-            var selectedRow = Helpers.Helper.CreateItemFromRow<RecipeDto>(currentRow.Rows[elementIndex]);
+            //var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
+            //var elementIndex = (currentRow.Rows.Count / 10) <= 1 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
+            //var selectedRow = Helpers.Helper.CreateItemFromRow<RecipeDto>(currentRow.Rows[elementIndex]);
+
+            var selectedRow = sdgvUserRecipes.SelectedRows[0].DataBoundItem as RecipeDto;
 
             if (e.RowIndex >= 0)
             {

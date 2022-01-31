@@ -22,6 +22,8 @@ namespace eKuharica.WinUI
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+            (sender as Button).Enabled = false;
+
             if(!string.IsNullOrWhiteSpace(txtUsername.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 APIService.Username = txtUsername.Text;

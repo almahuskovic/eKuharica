@@ -1067,7 +1067,7 @@
     <value>28, 26</value>
   </data>
   <data name="lblBack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 17</value>
+    <value>41, 19</value>
   </data>
   <data name="lblBack.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>

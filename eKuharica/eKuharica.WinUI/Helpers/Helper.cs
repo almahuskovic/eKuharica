@@ -169,7 +169,7 @@ namespace eKuharica.WinUI.Helpers
         {
             var list = new List<int>();
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 1; i < 6; i++)
                 list.Add(i);
 
             return list;

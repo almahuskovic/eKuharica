@@ -129,7 +129,7 @@
     <value>3, 18</value>
   </data>
   <data name="pbPicture.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1341, 228</value>
+    <value>1341, 211</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pbPicture.TabIndex" type="System.Int32, mscorlib">
@@ -145,64 +145,37 @@
     <value>gbCover</value>
   </data>
   <data name="&gt;&gt;pbPicture.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="gbCover.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="rcAddFavourite.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btnLike.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="rcAddFavourite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1281, 21</value>
+  <data name="btnLike.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1249, 30</value>
   </data>
-  <data name="rcAddFavourite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 32</value>
+  <data name="btnLike.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="rcAddFavourite.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="btnLike.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
-  <data name="rcAddFavourite.Text" xml:space="preserve">
-    <value>rcAddFavourite</value>
+  <data name="btnLike.Text" xml:space="preserve">
+    <value>Like</value>
   </data>
-  <data name="&gt;&gt;rcAddFavourite.Name" xml:space="preserve">
-    <value>rcAddFavourite</value>
+  <data name="&gt;&gt;btnLike.Name" xml:space="preserve">
+    <value>btnLike</value>
   </data>
-  <data name="&gt;&gt;rcAddFavourite.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.RatingControl, Syncfusion.Tools.Windows, Version=19.3460.0.57, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  <data name="&gt;&gt;btnLike.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;rcAddFavourite.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnLike.Parent" xml:space="preserve">
     <value>gbCover</value>
   </data>
-  <data name="&gt;&gt;rcAddFavourite.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnLike.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="lblBack.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblBack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 36</value>
-  </data>
-  <data name="lblBack.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 17</value>
-  </data>
-  <data name="lblBack.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lblBack.Text" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;lblBack.Name" xml:space="preserve">
-    <value>lblBack</value>
-  </data>
-  <data name="&gt;&gt;lblBack.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblBack.Parent" xml:space="preserve">
-    <value>gbCover</value>
-  </data>
-  <data name="&gt;&gt;lblBack.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="lblTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -229,7 +202,7 @@
     <value>gbCover</value>
   </data>
   <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="lblAuthor.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -256,13 +229,13 @@
     <value>gbCover</value>
   </data>
   <data name="&gt;&gt;lblAuthor.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="gbCover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>12, 29</value>
   </data>
   <data name="gbCover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1350, 249</value>
+    <value>1350, 232</value>
   </data>
   <data name="gbCover.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -283,7 +256,7 @@
     <value>True</value>
   </data>
   <data name="lblLikesDisplay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 18</value>
+    <value>201, 17</value>
   </data>
   <data name="lblLikesDisplay.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 17</value>
@@ -406,7 +379,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbIngredients.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="gbMethod.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -511,7 +484,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbMethod.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="gbAdvice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -721,7 +694,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbServing.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblPrepTime.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -810,62 +783,41 @@
   <data name="&gt;&gt;lblWeightOfPrep.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="rcStar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="lblNumberOfLikes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="rcStar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1163, 278</value>
+  <data name="lblNumberOfLikes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="rcStar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 27</value>
+  <data name="lblNumberOfLikes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 18</value>
   </data>
-  <data name="rcStar.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="lblNumberOfLikes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 17</value>
   </data>
-  <data name="rcStar.Text" xml:space="preserve">
-    <value>ratingControl1</value>
+  <data name="lblNumberOfLikes.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;rcStar.Name" xml:space="preserve">
-    <value>rcStar</value>
+  <data name="lblNumberOfLikes.Text" xml:space="preserve">
+    <value>label2</value>
   </data>
-  <data name="&gt;&gt;rcStar.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.RatingControl, Syncfusion.Tools.Windows, Version=19.3460.0.57, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
+  <data name="&gt;&gt;lblNumberOfLikes.Name" xml:space="preserve">
+    <value>lblNumberOfLikes</value>
   </data>
-  <data name="&gt;&gt;rcStar.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lblNumberOfLikes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;rcStar.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="rcLike.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 11</value>
-  </data>
-  <data name="rcLike.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 27</value>
-  </data>
-  <data name="rcLike.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="rcLike.Text" xml:space="preserve">
-    <value>ratingControl2</value>
-  </data>
-  <data name="&gt;&gt;rcLike.Name" xml:space="preserve">
-    <value>rcLike</value>
-  </data>
-  <data name="&gt;&gt;rcLike.Type" xml:space="preserve">
-    <value>Syncfusion.Windows.Forms.Tools.RatingControl, Syncfusion.Tools.Windows, Version=19.3460.0.57, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89</value>
-  </data>
-  <data name="&gt;&gt;rcLike.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblNumberOfLikes.Parent" xml:space="preserve">
     <value>gbLike</value>
   </data>
-  <data name="&gt;&gt;rcLike.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblNumberOfLikes.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="gbLike.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 267</value>
   </data>
   <data name="gbLike.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 44</value>
+    <value>253, 44</value>
   </data>
   <data name="gbLike.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -880,10 +832,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbLike.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 1034</value>
+    <value>15, 12</value>
   </data>
   <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -904,7 +856,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="gbComments.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1006,6 +958,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbComments.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cmbRating.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1235, 281</value>
+  </data>
+  <data name="cmbRating.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 24</value>
+  </data>
+  <data name="cmbRating.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;cmbRating.Name" xml:space="preserve">
+    <value>cmbRating</value>
+  </data>
+  <data name="&gt;&gt;cmbRating.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbRating.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbRating.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -69,16 +69,16 @@ namespace eKuharica.WinUI.Feedbacks
 
         private void sdgvFeedbacks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == 3)
+            if (e.ColumnIndex == 3)
             {
                 var currentRow = bindingNavigator1.BindingSource.Current as DataTable;
                 var elementIndex = (currentRow.Rows.Count / 10) <= 1 ? e.RowIndex : (currentRow.Rows.Count / 10) * 10 + e.RowIndex;
                 var selectedRow = Helpers.Helper.CreateItemFromRow<FeedbackDto>(currentRow.Rows[elementIndex]);
 
                 frmFeedbackDetails frmFeedbackDetails = new frmFeedbackDetails(selectedRow);
-                frmFeedbackDetails.MdiParent = MdiParent;
+                frmFeedbackDetails.Owner = this;
+                Enabled = false;
                 frmFeedbackDetails.Show();
-                Hide();
             }
         }
     }

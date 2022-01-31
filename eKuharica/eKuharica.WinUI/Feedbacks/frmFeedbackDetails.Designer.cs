@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFeedbackDetails));
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection1 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton1 = new Syncfusion.Windows.Forms.Tools.ResetButton();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblCreatedTime = new System.Windows.Forms.Label();
-            this.ratingControl1 = new Syncfusion.Windows.Forms.Tools.RatingControl();
+            this.cmbRating = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtDescription
@@ -60,20 +58,17 @@
             resources.ApplyResources(this.lblCreatedTime, "lblCreatedTime");
             this.lblCreatedTime.Name = "lblCreatedTime";
             // 
-            // ratingControl1
+            // cmbRating
             // 
-            resources.ApplyResources(this.ratingControl1, "ratingControl1");
-            this.ratingControl1.Images = customImageCollection1;
-            this.ratingControl1.ItemSize = new System.Drawing.Size(20, 20);
-            this.ratingControl1.Name = "ratingControl1";
-            this.ratingControl1.ReadOnly = true;
-            this.ratingControl1.ResetButton = resetButton1;
+            this.cmbRating.FormattingEnabled = true;
+            resources.ApplyResources(this.cmbRating, "cmbRating");
+            this.cmbRating.Name = "cmbRating";
             // 
             // frmFeedbackDetails
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ratingControl1);
+            this.Controls.Add(this.cmbRating);
             this.Controls.Add(this.lblCreatedTime);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblUsername);
@@ -93,6 +88,6 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblCreatedTime;
-        private Syncfusion.Windows.Forms.Tools.RatingControl ratingControl1;
+        private System.Windows.Forms.ComboBox cmbRating;
     }
 }

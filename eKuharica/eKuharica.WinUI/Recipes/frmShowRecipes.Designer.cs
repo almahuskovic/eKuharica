@@ -29,16 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShowRecipes));
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection1 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton1 = new Syncfusion.Windows.Forms.Tools.ResetButton();
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection2 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton2 = new Syncfusion.Windows.Forms.Tools.ResetButton();
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection3 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton3 = new Syncfusion.Windows.Forms.Tools.ResetButton();
             this.pbPicture = new System.Windows.Forms.PictureBox();
             this.gbCover = new System.Windows.Forms.GroupBox();
-            this.rcAddFavourite = new Syncfusion.Windows.Forms.Tools.RatingControl();
-            this.lblBack = new System.Windows.Forms.Label();
+            this.btnLike = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
             this.lblLikesDisplay = new System.Windows.Forms.Label();
@@ -61,14 +54,14 @@
             this.lblPrepTime = new System.Windows.Forms.Label();
             this.lblMealType = new System.Windows.Forms.Label();
             this.lblWeightOfPrep = new System.Windows.Forms.Label();
-            this.rcStar = new Syncfusion.Windows.Forms.Tools.RatingControl();
-            this.rcLike = new Syncfusion.Windows.Forms.Tools.RatingControl();
             this.gbLike = new System.Windows.Forms.GroupBox();
+            this.lblNumberOfLikes = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbComments = new System.Windows.Forms.GroupBox();
             this.txtComment = new System.Windows.Forms.TextBox();
             this.btnAddComment = new System.Windows.Forms.Button();
             this.rtbComments = new System.Windows.Forms.RichTextBox();
+            this.cmbRating = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.gbCover.SuspendLayout();
             this.gbIngredients.SuspendLayout();
@@ -88,35 +81,19 @@
             // gbCover
             // 
             resources.ApplyResources(this.gbCover, "gbCover");
-            this.gbCover.Controls.Add(this.rcAddFavourite);
-            this.gbCover.Controls.Add(this.lblBack);
+            this.gbCover.Controls.Add(this.btnLike);
             this.gbCover.Controls.Add(this.lblTitle);
             this.gbCover.Controls.Add(this.lblAuthor);
             this.gbCover.Controls.Add(this.pbPicture);
             this.gbCover.Name = "gbCover";
             this.gbCover.TabStop = false;
             // 
-            // rcAddFavourite
+            // btnLike
             // 
-            resources.ApplyResources(this.rcAddFavourite, "rcAddFavourite");
-            this.rcAddFavourite.ApplyGradientColors = false;
-            this.rcAddFavourite.Images = customImageCollection1;
-            this.rcAddFavourite.ItemHighlightColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.rcAddFavourite.ItemHighlightEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.rcAddFavourite.ItemHighlightStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.rcAddFavourite.ItemsCount = 1;
-            this.rcAddFavourite.ItemSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
-            this.rcAddFavourite.ItemSelectionStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rcAddFavourite.ItemSize = new System.Drawing.Size(22, 22);
-            this.rcAddFavourite.Name = "rcAddFavourite";
-            this.rcAddFavourite.ResetButton = resetButton1;
-            this.rcAddFavourite.Shape = Syncfusion.Windows.Forms.Tools.Shapes.Heart;
-            this.rcAddFavourite.Click += new System.EventHandler(this.rcAddFavourite_Click);
-            // 
-            // lblBack
-            // 
-            resources.ApplyResources(this.lblBack, "lblBack");
-            this.lblBack.Name = "lblBack";
+            resources.ApplyResources(this.btnLike, "btnLike");
+            this.btnLike.Name = "btnLike";
+            this.btnLike.UseVisualStyleBackColor = true;
+            this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
             // 
             // lblTitle
             // 
@@ -250,40 +227,18 @@
             resources.ApplyResources(this.lblWeightOfPrep, "lblWeightOfPrep");
             this.lblWeightOfPrep.Name = "lblWeightOfPrep";
             // 
-            // rcStar
-            // 
-            resources.ApplyResources(this.rcStar, "rcStar");
-            this.rcStar.Images = customImageCollection2;
-            this.rcStar.ItemSize = new System.Drawing.Size(20, 20);
-            this.rcStar.Name = "rcStar";
-            this.rcStar.ResetButton = resetButton2;
-            this.rcStar.Click += new System.EventHandler(this.rcStar_Click);
-            // 
-            // rcLike
-            // 
-            this.rcLike.ApplyGradientColors = false;
-            this.rcLike.Images = customImageCollection3;
-            this.rcLike.ItemHighlightColor = System.Drawing.Color.DarkRed;
-            this.rcLike.ItemHighlightEndColor = System.Drawing.Color.Red;
-            this.rcLike.ItemHighlightStartColor = System.Drawing.Color.Red;
-            this.rcLike.ItemsCount = 1;
-            this.rcLike.ItemSelectionColor = System.Drawing.Color.Red;
-            this.rcLike.ItemSelectionStartColor = System.Drawing.Color.Red;
-            this.rcLike.ItemSize = new System.Drawing.Size(22, 22);
-            resources.ApplyResources(this.rcLike, "rcLike");
-            this.rcLike.Name = "rcLike";
-            this.rcLike.ReadOnly = true;
-            this.rcLike.ResetButton = resetButton3;
-            this.rcLike.Shape = Syncfusion.Windows.Forms.Tools.Shapes.Heart;
-            this.rcLike.Value = 1F;
-            // 
             // gbLike
             // 
-            this.gbLike.Controls.Add(this.rcLike);
+            this.gbLike.Controls.Add(this.lblNumberOfLikes);
             this.gbLike.Controls.Add(this.lblLikesDisplay);
             resources.ApplyResources(this.gbLike, "gbLike");
             this.gbLike.Name = "gbLike";
             this.gbLike.TabStop = false;
+            // 
+            // lblNumberOfLikes
+            // 
+            resources.ApplyResources(this.lblNumberOfLikes, "lblNumberOfLikes");
+            this.lblNumberOfLikes.Name = "lblNumberOfLikes";
             // 
             // btnClose
             // 
@@ -319,18 +274,25 @@
             this.rtbComments.Name = "rtbComments";
             this.rtbComments.ReadOnly = true;
             // 
+            // cmbRating
+            // 
+            resources.ApplyResources(this.cmbRating, "cmbRating");
+            this.cmbRating.FormattingEnabled = true;
+            this.cmbRating.Name = "cmbRating";
+            this.cmbRating.SelectedIndexChanged += new System.EventHandler(this.cmbRating_SelectedIndexChanged);
+            // 
             // frmShowRecipes
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
+            this.Controls.Add(this.cmbRating);
             this.Controls.Add(this.gbComments);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.gbIngredients);
             this.Controls.Add(this.gbMethod);
             this.Controls.Add(this.gbServing);
             this.Controls.Add(this.gbLike);
-            this.Controls.Add(this.rcStar);
             this.Controls.Add(this.lblPrepTime);
             this.Controls.Add(this.gbAdvice);
             this.Controls.Add(this.lblWeightOfPrep);
@@ -364,7 +326,6 @@
 
         private System.Windows.Forms.PictureBox pbPicture;
         private System.Windows.Forms.GroupBox gbCover;
-        private System.Windows.Forms.Label lblBack;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblAuthor;
         private System.Windows.Forms.Label lblLikesDisplay;
@@ -384,17 +345,17 @@
         private System.Windows.Forms.Label lblServing;
         private System.Windows.Forms.Label lblMealType;
         private System.Windows.Forms.Label lblWeightOfPrep;
-        private Syncfusion.Windows.Forms.Tools.RatingControl rcStar;
-        private Syncfusion.Windows.Forms.Tools.RatingControl rcLike;
         private System.Windows.Forms.GroupBox gbLike;
         private System.Windows.Forms.Button btnMethodMore;
         private System.Windows.Forms.Button btnAdviceMore;
         private System.Windows.Forms.Button btnServingMore;
-        private Syncfusion.Windows.Forms.Tools.RatingControl rcAddFavourite;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox gbComments;
         private System.Windows.Forms.TextBox txtComment;
         private System.Windows.Forms.Button btnAddComment;
         private System.Windows.Forms.RichTextBox rtbComments;
+        private System.Windows.Forms.Button btnLike;
+        private System.Windows.Forms.ComboBox cmbRating;
+        private System.Windows.Forms.Label lblNumberOfLikes;
     }
 }

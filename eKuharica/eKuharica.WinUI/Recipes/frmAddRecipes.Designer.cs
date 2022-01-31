@@ -239,6 +239,8 @@
             // lblBack
             // 
             resources.ApplyResources(this.lblBack, "lblBack");
+            this.lblBack.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblBack.Name = "lblBack";
             this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
             // 

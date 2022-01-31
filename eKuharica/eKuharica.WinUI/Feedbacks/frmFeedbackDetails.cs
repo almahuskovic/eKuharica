@@ -25,15 +25,19 @@ namespace eKuharica.WinUI.Feedbacks
         {
             if (_feedback != null)
             {
+                cmbRating.DataSource = Helpers.Helper.RatingSelectList();
+
                 txtDescription.Text = _feedback.Description;
                 lblCreatedTime.Text = _feedback.CreatedAt.ToShortDateString();
                 lblUsername.Text = _feedback.Username;
-                ratingControl1.Value = _feedback.Rating;
+                cmbRating.SelectedIndex = _feedback.Rating;
+                cmbRating.Enabled = false;
             }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            Owner.Enabled = true;
             Hide();
         }
     }

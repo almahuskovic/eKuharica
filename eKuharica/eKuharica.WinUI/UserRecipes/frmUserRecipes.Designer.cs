@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserRecipes));
             this.gbUserRecipes = new System.Windows.Forms.GroupBox();
-            this.sdgvUserRecipes = new eKuharica.WinUI.Helpers.SuperGrid();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -43,15 +42,16 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.sdgvUserRecipes = new eKuharica.WinUI.Helpers.SuperGrid();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Odobri = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Uredi = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Obriši = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Approve = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.gbUserRecipes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbUserRecipes
@@ -60,26 +60,6 @@
             this.gbUserRecipes.Controls.Add(this.sdgvUserRecipes);
             this.gbUserRecipes.Name = "gbUserRecipes";
             this.gbUserRecipes.TabStop = false;
-            // 
-            // sdgvUserRecipes
-            // 
-            this.sdgvUserRecipes.AllowUserToAddRows = false;
-            this.sdgvUserRecipes.AllowUserToDeleteRows = false;
-            this.sdgvUserRecipes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.sdgvUserRecipes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.sdgvUserRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sdgvUserRecipes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Title,
-            this.Odobri,
-            this.Uredi,
-            this.Obriši});
-            resources.ApplyResources(this.sdgvUserRecipes, "sdgvUserRecipes");
-            this.sdgvUserRecipes.Name = "sdgvUserRecipes";
-            this.sdgvUserRecipes.PageSize = 10;
-            this.sdgvUserRecipes.ReadOnly = true;
-            this.sdgvUserRecipes.RowTemplate.Height = 24;
-            this.sdgvUserRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.sdgvUserRecipes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUserRecipes_CellContentClick);
             // 
             // bindingNavigator1
             // 
@@ -154,6 +134,26 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             // 
+            // sdgvUserRecipes
+            // 
+            this.sdgvUserRecipes.AllowUserToAddRows = false;
+            this.sdgvUserRecipes.AllowUserToDeleteRows = false;
+            this.sdgvUserRecipes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.sdgvUserRecipes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.sdgvUserRecipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sdgvUserRecipes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Title,
+            this.Approve,
+            this.Edit,
+            this.Delete});
+            resources.ApplyResources(this.sdgvUserRecipes, "sdgvUserRecipes");
+            this.sdgvUserRecipes.Name = "sdgvUserRecipes";
+            this.sdgvUserRecipes.PageSize = 10;
+            this.sdgvUserRecipes.ReadOnly = true;
+            this.sdgvUserRecipes.RowTemplate.Height = 24;
+            this.sdgvUserRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.sdgvUserRecipes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUserRecipes_CellContentClick);
+            // 
             // Title
             // 
             this.Title.DataPropertyName = "Title";
@@ -161,29 +161,29 @@
             this.Title.Name = "Title";
             this.Title.ReadOnly = true;
             // 
-            // Odobri
+            // Approve
             // 
-            resources.ApplyResources(this.Odobri, "Odobri");
-            this.Odobri.Name = "Odobri";
-            this.Odobri.ReadOnly = true;
-            this.Odobri.Text = "Odobri";
-            this.Odobri.UseColumnTextForButtonValue = true;
+            resources.ApplyResources(this.Approve, "Approve");
+            this.Approve.Name = "Approve";
+            this.Approve.ReadOnly = true;
+            this.Approve.Text = "Approve";
+            this.Approve.UseColumnTextForButtonValue = true;
             // 
-            // Uredi
+            // Edit
             // 
-            resources.ApplyResources(this.Uredi, "Uredi");
-            this.Uredi.Name = "Uredi";
-            this.Uredi.ReadOnly = true;
-            this.Uredi.Text = "Uredi";
-            this.Uredi.UseColumnTextForButtonValue = true;
+            resources.ApplyResources(this.Edit, "Edit");
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Text = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
             // 
-            // Obriši
+            // Delete
             // 
-            resources.ApplyResources(this.Obriši, "Obriši");
-            this.Obriši.Name = "Obriši";
-            this.Obriši.ReadOnly = true;
-            this.Obriši.Text = "Obriši";
-            this.Obriši.UseColumnTextForButtonValue = true;
+            resources.ApplyResources(this.Delete, "Delete");
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // frmUserRecipes
             // 
@@ -195,11 +195,11 @@
             this.Name = "frmUserRecipes";
             this.Load += new System.EventHandler(this.frmUserRecipes_Load);
             this.gbUserRecipes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUserRecipes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,8 +221,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewButtonColumn Odobri;
-        private System.Windows.Forms.DataGridViewButtonColumn Uredi;
-        private System.Windows.Forms.DataGridViewButtonColumn Obriši;
+        private System.Windows.Forms.DataGridViewButtonColumn Approve;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
