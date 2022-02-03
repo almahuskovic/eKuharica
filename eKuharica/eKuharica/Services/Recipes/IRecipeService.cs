@@ -1,4 +1,5 @@
 ﻿using eKuharica.Model.DTO;
+using eKuharica.Model.Entities;
 using eKuharica.Model.Models;
 using eKuharica.Model.Requests;
 using eKuharica.Services.BaseCRUD;
@@ -12,5 +13,6 @@ namespace eKuharica.Services.Recipes
 {
     public interface IRecipeService:IBaseCRUDService<RecipeDto, RecipeSearchObject, RecipeUpsertRequest, RecipeUpsertRequest>
     {
+        public List<RecipeDto> Recommend(int id);
     }
 }

@@ -32,6 +32,7 @@ namespace eKuharica.Mobile.Views
                 new HomeMenuItem {Id = MenuItemType.SendRecipe, Title = new TranslateExtension(){Text = "PošaljiRecept" }.ProvideValue().ToString() },
                 new HomeMenuItem {Id = MenuItemType.MyRecipes, Title = new TranslateExtension(){Text = "MojiRecepti" }.ProvideValue().ToString() },
                 new HomeMenuItem {Id = MenuItemType.Feedbacks, Title = new TranslateExtension(){Text = "OstaviDojam" }.ProvideValue().ToString() },
+                new HomeMenuItem {Id = MenuItemType.Recommended, Title = new TranslateExtension(){Text = "Preporučeno" }.ProvideValue().ToString() },
                 new HomeMenuItem {Id = MenuItemType.Settings, Title = new TranslateExtension(){Text = "Postavke" }.ProvideValue().ToString() },
             };
 

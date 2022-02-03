@@ -18,5 +18,11 @@ namespace eKuharica.Controllers
             :base(recipeService)
         {
         }
+
+        [HttpGet("Recommend/{id}")]
+        public List<RecipeDto> Recommend(int id)
+        {
+            return (_service as IRecipeService).Recommend(id);
+        }
     }
 }

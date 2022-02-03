@@ -11,7 +11,7 @@
         <ViewModels:LoginViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
             <Label Text="{i18n:Translate KorisničkoIme}"/>
             <Entry Text="{Binding Username}"></Entry>
             <Label Text="{i18n:Translate Lozinka}"/>

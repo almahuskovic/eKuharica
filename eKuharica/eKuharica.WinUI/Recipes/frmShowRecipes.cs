@@ -87,12 +87,14 @@ namespace eKuharica.WinUI.Recipes
                 lblPrepTime.Text = _recipe.PreparationTime.ToShortTimeString();
                 lblMealType.Text = Enum.GetName(typeof(Enumerations.MealType), _recipe.MealType);
                 lblWeightOfPrep.Text = Enum.GetName(typeof(Enumerations.WeightOfPreparation), _recipe.WeightOfPreparation);
-                cmbRating.SelectedIndex = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(new UserRecipeRatingSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id })).FirstOrDefault().Rating;
                 rtbComments.Text = Helpers.Helper.GenerateCommentsDisplayList(await _commentService.Get<List<CommentDto>>(new CommentSearchRequest() { RecipeId = _recipe.Id }));
                 lblLikesDisplay.Text = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(new UserFavouriteRecipeSearchRequest() { RecipeId = _recipe.Id })).Count().ToString();
 
+                var rating = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(new UserRecipeRatingSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id }));
+                cmbRating.SelectedIndex = rating != null ? rating.FirstOrDefault().Rating : 0;
+
                 var isLiked = await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(new UserFavouriteRecipeSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id });
-                btnLike.BackColor = isLiked != null && !isLiked.First().IsDeleted ? Color.Red : Color.Gray;
+                btnLike.BackColor = isLiked.Any() && !isLiked.First().IsDeleted ? Color.Red : Color.Gray;
 
                 lblAuthor.Text = loggedUser.Username;
 
@@ -195,31 +197,34 @@ namespace eKuharica.WinUI.Recipes
                 btnLike.BackColor = Color.Red;
         }
 
-        private async void cmbRating_SelectedIndexChanged(object sender, EventArgs e)
+        private async void cmbRating_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
-            var rating = cmbRating.SelectedIndex;
-
-            var userRatingSearchRequest = new UserRecipeRatingSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
-            var exist = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(userRatingSearchRequest)).FirstOrDefault();
-
-            if (exist != null && exist.Rating != rating)
+            if (cmbRating.SelectedIndex > 0)
             {
-                exist.Rating = rating;
-                await _userRecipeRatingService.Update<UserRecipeRatingUpsertRequest>(exist.Id, exist);
-            }
-            else
-            {
-                var userRating = new UserRecipeRatingUpsertRequest()
+                var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
+                var rating = cmbRating.SelectedIndex;
+
+                var userRatingSearchRequest = new UserRecipeRatingSearchRequest() { UserId = loggedUser.Id, RecipeId = _recipe.Id };
+                var exist = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(userRatingSearchRequest)).FirstOrDefault();
+
+                if (exist != null && exist.Rating != rating)
                 {
-                    CreatedAt = DateTime.Now,
-                    IsDeleted = false,
-                    Rating = rating,
-                    RecipeId = _recipe.Id,
-                    UserId = loggedUser.Id
-                };
+                    exist.Rating = rating;
+                    await _userRecipeRatingService.Update<UserRecipeRatingUpsertRequest>(exist.Id, exist);
+                }
+                else
+                {
+                    var userRating = new UserRecipeRatingUpsertRequest()
+                    {
+                        CreatedAt = DateTime.Now,
+                        IsDeleted = false,
+                        Rating = rating,
+                        RecipeId = _recipe.Id,
+                        UserId = loggedUser.Id
+                    };
 
-                await _userRecipeRatingService.Insert<UserRecipeRatingUpsertRequest>(userRating);
+                    await _userRecipeRatingService.Insert<UserRecipeRatingUpsertRequest>(userRating);
+                }
             }
         }
     }

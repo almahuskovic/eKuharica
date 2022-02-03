@@ -11,7 +11,7 @@ namespace eKuharica
         public void Init(Context context)
         {
             //context.Database.Migrate();
-
+            //add new data or update data -->
            
         }
     }

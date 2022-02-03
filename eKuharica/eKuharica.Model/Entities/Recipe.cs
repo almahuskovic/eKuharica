@@ -32,5 +32,8 @@ namespace eKuharica.Model.Entities
         [ForeignKey(nameof(User))]
         public int UserId { get; set; }
         public virtual User User { get; set; }
+
+        public virtual ICollection<UserFavouriteRecipe> UserFavouriteRecipes { get; set; }
+        public virtual ICollection<UserRecipeRating> UserRecipeRatings { get; set; }
     }
 }

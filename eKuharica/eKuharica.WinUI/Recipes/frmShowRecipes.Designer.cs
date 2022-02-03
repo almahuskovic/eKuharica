@@ -279,7 +279,7 @@
             resources.ApplyResources(this.cmbRating, "cmbRating");
             this.cmbRating.FormattingEnabled = true;
             this.cmbRating.Name = "cmbRating";
-            this.cmbRating.SelectedIndexChanged += new System.EventHandler(this.cmbRating_SelectedIndexChanged);
+            this.cmbRating.SelectionChangeCommitted += new System.EventHandler(this.cmbRating_SelectionChangeCommitted);
             // 
             // frmShowRecipes
             // 

@@ -18,6 +18,7 @@ namespace eKuharica.Mobile.Models
         SendRecipe,
         MyRecipes,
         Feedbacks,
+        Recommended
     }
     public class HomeMenuItem
     {

@@ -5,6 +5,9 @@ using eKuharica.Model.Models;
 using eKuharica.Model.Requests;
 using eKuharica.Services.BaseCRUD;
 using eKuharica.Services.BaseRead;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.ML;
+using Microsoft.ML.Trainers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,5 +74,89 @@ namespace eKuharica.Services.Recipes
 
             return mappedList;
         }
+
+        private static MLContext mlContext = null;
+        private static ITransformer model = null;
+        public List<RecipeDto> Recommend(int id)
+        {
+            if (mlContext == null)
+            {
+                mlContext = new MLContext();
+                var tmpData = Context.UserRecipeRating.Where(x => x.UserId == id && x.Rating >= 3).ToList();
+                var data = new List<RecipeEntry>();
+
+                foreach (var x in tmpData)
+                {
+                    data.Add(new RecipeEntry()
+                    {
+                        userId = (uint)x.UserId,
+                        recipeId = (uint)x.RecipeId
+                    });
+                }
+
+                var traindata = mlContext.Data.LoadFromEnumerable(data);
+
+                var dataProcessingPipeline = mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: "userIdEncoded", inputColumnName: nameof(RecipeEntry.userId))
+                           .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName: "recipeIdEncoded", inputColumnName: nameof(RecipeEntry.recipeId)));
+
+                MatrixFactorizationTrainer.Options options = new MatrixFactorizationTrainer.Options();
+                options.MatrixColumnIndexColumnName = "userIdEncoded";
+                options.MatrixRowIndexColumnName = "recipeIdEncoded";
+                options.LabelColumnName = "Label";
+                options.NumberOfIterations = 20;
+                options.ApproximationRank = 100;
+
+                //STEP 4: Create the training pipeline
+                var trainingPipeLine = dataProcessingPipeline.Append(mlContext.Recommendation().Trainers.MatrixFactorization(options));
+
+               model = trainingPipeLine.Fit(traindata);
+            }
+
+            var allItems = Context.Recipe.Include("UserRecipeRatings");
+
+            var predictionResult = new List<Tuple<Recipe, float>>();
+
+            foreach (var item in allItems)
+            {
+                foreach (var itemR in item.UserRecipeRatings)
+                {
+                    if (itemR.UserId != id)
+                    {
+                        var predictionEngine =
+                        mlContext.Model.CreatePredictionEngine<RecipeEntry, RecipePrediction>(model);
+
+                        var prediction = predictionEngine.Predict(new RecipeEntry()
+                        {
+                            recipeId = item.Id,
+                            userId = id
+                        });
+                        predictionResult.Add(new Tuple<Recipe, float>(item, prediction.Score));
+                    }
+                }
+            }
+
+            var finalResult = predictionResult.OrderByDescending(x => x.Item2)
+              .Select(x => x.Item1).Take(3).ToList();
+
+            return _mapper.Map<List<RecipeDto>>(finalResult);
+        }
+    }
+
+    public class RecipeEntry
+    {
+        public float recipeId;
+
+        public float userId;
+
+        //public bool isLiked;
+
+        public float Label;//rating
+    }
+
+    class RecipePrediction
+    {
+        public float Label;
+
+        public float Score;
     }
 }

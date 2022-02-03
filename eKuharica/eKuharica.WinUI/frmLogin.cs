@@ -32,6 +32,7 @@ namespace eKuharica.WinUI
             else
             {
                 MessageBox.Show("Niste unijeli username ili password");
+                (sender as Button).Enabled = true;
                 return;
             }
 
@@ -47,6 +48,7 @@ namespace eKuharica.WinUI
             catch
             {
                 MessageBox.Show("Pogrešan username ili password");
+                (sender as Button).Enabled = true;
             }
         }
     }

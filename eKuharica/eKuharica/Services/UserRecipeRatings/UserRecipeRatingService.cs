@@ -20,18 +20,29 @@ namespace eKuharica.Services.UserRecipeRatings
             var entityRecipes = Context.Set<Recipe>().AsQueryable();
             var entity = Context.Set<UserRecipeRating>().AsQueryable();
 
-            if (search != null && search.GetTop3)
+            if (search != null)
             {
-                return entity.GroupBy(x => x.RecipeId).Select(
-                    g => new UserRecipeRatingDto()
-                    {
-                        RecipeId = g.Key,
-                        AvgRating = (decimal)g.Sum(s => s.Rating) / g.Count(),
-                        Recipe = entityRecipes.Where(r => r.Id == g.Key).FirstOrDefault().Title
-                    }
-                    ).OrderByDescending(x=>x.AvgRating).Take(3).AsEnumerable();
+                if (search.GetTop3)
+                {
+                    return entity.GroupBy(x => x.RecipeId).Select(
+                        g => new UserRecipeRatingDto()
+                        {
+                            RecipeId = g.Key,
+                            AvgRating = (decimal)g.Sum(s => s.Rating) / g.Count(),
+                            Recipe = entityRecipes.Where(r => r.Id == g.Key).FirstOrDefault().Title
+                        }
+                        ).OrderByDescending(x => x.AvgRating).Take(3).AsEnumerable();
+                }
+                if(search.UserId > 0)
+                {
+                    entity = entity.Where(x => x.UserId == search.UserId);
+                }
+                if (search.RecipeId > 0)
+                {
+                    entity = entity.Where(x => x.RecipeId == search.RecipeId);
+                }
             }
-            
+
             var list = entity.ToList();
 
             return _mapper.Map<List<UserRecipeRatingDto>>(list);

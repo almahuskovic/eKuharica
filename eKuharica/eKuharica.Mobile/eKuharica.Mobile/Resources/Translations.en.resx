@@ -213,6 +213,9 @@
   <data name="Pratitelji" xml:space="preserve">
     <value>Followers</value>
   </data>
+  <data name="Preporučeno" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
   <data name="Prezime" xml:space="preserve">
     <value>Last name</value>
   </data>

@@ -88,35 +88,41 @@
             // tsbRecipes
             // 
             resources.ApplyResources(this.tsbRecipes, "tsbRecipes");
+            this.tsbRecipes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbRecipes.Name = "tsbRecipes";
             this.tsbRecipes.Click += new System.EventHandler(this.tsbRecipes_Click);
             // 
             // tsbUserRecipes
             // 
+            this.tsbUserRecipes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             resources.ApplyResources(this.tsbUserRecipes, "tsbUserRecipes");
             this.tsbUserRecipes.Name = "tsbUserRecipes";
             this.tsbUserRecipes.Click += new System.EventHandler(this.tsbUserRecipes_Click);
             // 
             // tsbUsers
             // 
+            this.tsbUsers.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             resources.ApplyResources(this.tsbUsers, "tsbUsers");
             this.tsbUsers.Name = "tsbUsers";
             this.tsbUsers.Click += new System.EventHandler(this.tsbUsers_Click);
             // 
             // tsbArticles
             // 
+            this.tsbArticles.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             resources.ApplyResources(this.tsbArticles, "tsbArticles");
             this.tsbArticles.Name = "tsbArticles";
             this.tsbArticles.Click += new System.EventHandler(this.tsbArticles_Click);
             // 
             // tsbFeedbacks
             // 
+            this.tsbFeedbacks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             resources.ApplyResources(this.tsbFeedbacks, "tsbFeedbacks");
             this.tsbFeedbacks.Name = "tsbFeedbacks";
             this.tsbFeedbacks.Click += new System.EventHandler(this.tsbFeedbacks_Click);
             // 
             // tsdReports
             // 
+            this.tsdReports.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsdReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bestRankedRecipesToolStripMenuItem,
             this.mostLikedRecipesToolStripMenuItem,
@@ -151,6 +157,7 @@
             // 
             // tsbSettings
             // 
+            this.tsbSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsbSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.favouriteRecipeToolStripMenuItem,
             this.followingToolStripMenuItem,

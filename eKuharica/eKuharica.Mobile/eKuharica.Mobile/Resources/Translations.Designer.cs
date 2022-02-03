@@ -358,6 +358,15 @@ namespace eKuharica.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Preporučeno.
+        /// </summary>
+        internal static string Preporučeno {
+            get {
+                return ResourceManager.GetString("Preporučeno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Prezime.
         /// </summary>
         internal static string Prezime {

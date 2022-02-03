@@ -69,6 +69,9 @@ namespace eKuharica.Mobile.Views
                     case (int)MenuItemType.Feedbacks:
                         MenuPages.Add(id, new NavigationPage(new FeedbackPage()));
                         break;
+                    case (int)MenuItemType.Recommended:
+                        MenuPages.Add(id, new NavigationPage(new RecommendPage()));
+                        break;
                 }
             }
 

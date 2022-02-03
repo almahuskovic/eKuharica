@@ -59,5 +59,12 @@ namespace eKuharica.Mobile
             var result = await url.WithBasicAuth(Username, Password).DeleteAsync();
             return result.StatusCode == 200;
         }
+
+        public async Task<T> GetRecommended<T>(object id)
+        {
+            var url = $"{_apiUrl}/{_route}/Recommend/{id}";
+            var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+            return result;
+        }
     }
 }
