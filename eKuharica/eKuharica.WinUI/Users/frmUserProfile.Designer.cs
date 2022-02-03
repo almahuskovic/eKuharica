@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserProfile));
             this.pbPicture = new System.Windows.Forms.PictureBox();
             this.dgvRecipesSendByUser = new System.Windows.Forms.DataGridView();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Akcija = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblFollowing = new System.Windows.Forms.Label();
             this.lblFollowers = new System.Windows.Forms.Label();
@@ -38,8 +40,6 @@
             this.lblFollowingValue = new System.Windows.Forms.Label();
             this.lblUserNameValue = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Akcija = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecipesSendByUser)).BeginInit();
             this.SuspendLayout();
@@ -53,9 +53,9 @@
             // 
             // dgvRecipesSendByUser
             // 
+            resources.ApplyResources(this.dgvRecipesSendByUser, "dgvRecipesSendByUser");
             this.dgvRecipesSendByUser.AllowUserToAddRows = false;
             this.dgvRecipesSendByUser.AllowUserToDeleteRows = false;
-            resources.ApplyResources(this.dgvRecipesSendByUser, "dgvRecipesSendByUser");
             this.dgvRecipesSendByUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecipesSendByUser.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvRecipesSendByUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -67,6 +67,21 @@
             this.dgvRecipesSendByUser.RowTemplate.Height = 24;
             this.dgvRecipesSendByUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRecipesSendByUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecipesSendByUser_CellContentClick);
+            // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "Title";
+            resources.ApplyResources(this.Title, "Title");
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // Akcija
+            // 
+            resources.ApplyResources(this.Akcija, "Akcija");
+            this.Akcija.Name = "Akcija";
+            this.Akcija.ReadOnly = true;
+            this.Akcija.Text = "Prikazi";
+            this.Akcija.UseColumnTextForButtonValue = true;
             // 
             // lblUserName
             // 
@@ -104,21 +119,6 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // Title
-            // 
-            this.Title.DataPropertyName = "Title";
-            resources.ApplyResources(this.Title, "Title");
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            // 
-            // Akcija
-            // 
-            resources.ApplyResources(this.Akcija, "Akcija");
-            this.Akcija.Name = "Akcija";
-            this.Akcija.ReadOnly = true;
-            this.Akcija.Text = "Prikazi";
-            this.Akcija.UseColumnTextForButtonValue = true;
             // 
             // frmUserProfile
             // 

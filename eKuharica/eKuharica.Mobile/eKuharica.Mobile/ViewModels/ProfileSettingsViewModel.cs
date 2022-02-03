@@ -1,4 +1,5 @@
-﻿using eKuharica.Model.DTO;
+﻿using eKuharica.Mobile.Extensions;
+using eKuharica.Model.DTO;
 using eKuharica.Model.Requests;
 using System;
 using System.Collections.Generic;
@@ -66,11 +67,17 @@ namespace eKuharica.Mobile.ViewModels
                 };
 
                 await _userService.Update<UserUpdateRequest>(User.Id, updateUser);
-                await Application.Current.MainPage.DisplayAlert("Uspješno", "Recept uspješno spremljen", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                    new TranslateExtension() { Text = "Uspješno" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "PodaciProfilaUspješnoIzmjenjeni" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
             }
             catch (Exception)
             {
-                await Application.Current.MainPage.DisplayAlert("Greška", "Dogodila se greška prilikom slanja recepta", "OK");
+                await Application.Current.MainPage.DisplayAlert( 
+                    new TranslateExtension() { Text = "Greška" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "DogodilaSeGreškaPrilikomUređivanjaProfila" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
                 return;
             }
         }

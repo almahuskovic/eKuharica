@@ -1,4 +1,5 @@
-﻿using eKuharica.Mobile.Models;
+﻿using eKuharica.Mobile.Extensions;
+using eKuharica.Mobile.Models;
 using eKuharica.Mobile.Views;
 using eKuharica.Model.Requests;
 using System;
@@ -61,22 +62,34 @@ namespace eKuharica.Mobile.ViewModels
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(Description) && (SelectedGrade?.Index == null ||
+                   SelectedGrade.Index == 0))
+                {
+                    throw new Exception();
+                }
+
                 var loggedUser = await Helpers.Helper.GetLoggedUser(_userService, APIService.Username);
 
                 var feedback = new FeedbackUpsertRequest()
                 {
                     Description = Description,
                     CreatedAt = DateTime.Now,
-                    Rating = SelectedGrade.Index,
+                    Rating = SelectedGrade != null ? SelectedGrade.Index : 0,
                     UserId = loggedUser.Id
                 };
 
                 await _feedbackService.Insert<FeedbackUpsertRequest>(feedback);
-                await Application.Current.MainPage.DisplayAlert("Uspješno", "Hvala", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                    new TranslateExtension() { Text = "DojamUspješnospremljen" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "Hvala" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
             }
             catch (Exception)
             {
-                await Application.Current.MainPage.DisplayAlert("Greška", "Dogodila se greška", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                    new TranslateExtension() { Text = "Greška" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "DogodilaSeGreška" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
                 return;
             }
         }

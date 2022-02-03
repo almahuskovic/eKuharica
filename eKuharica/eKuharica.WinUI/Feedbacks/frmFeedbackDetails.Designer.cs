@@ -68,6 +68,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ControlBox = false;
             this.Controls.Add(this.cmbRating);
             this.Controls.Add(this.lblCreatedTime);
             this.Controls.Add(this.btnClose);

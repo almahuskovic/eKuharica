@@ -19,9 +19,9 @@ namespace eKuharica.WinUI.Recipes
         private string _text;
         public frmMoreToRead(string text)
         {
-            btnClose.Text = Helpers.Helper.TranslationForBtnBack();
-
             InitializeComponent();
+
+            btnClose.Text = Helpers.Helper.TranslationForBtnBack();
             _text = text;
         }
 

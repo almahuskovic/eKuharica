@@ -40,7 +40,7 @@ namespace eKuharica.Mobile.Views
 
         private async void Picker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            await model.Rating();
+             await model.Rating();
         }
     }
 }

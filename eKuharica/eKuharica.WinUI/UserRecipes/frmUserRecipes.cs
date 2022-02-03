@@ -2,6 +2,7 @@
 using eKuharica.Model.Enumerations;
 using eKuharica.Model.Models;
 using eKuharica.Model.Requests;
+using eKuharica.WinUI.Helpers;
 using eKuharica.WinUI.Recipes;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,8 @@ namespace eKuharica.WinUI.UserRecipes
             {
                 sdgvUserRecipes.DataSource = data;
 
+                Helpers.Helper.TranslationForDgvButtons(this, sdgvUserRecipes);
+
                 foreach (DataGridViewRow row in sdgvUserRecipes.Rows)
                 {
                     if (!(row.DataBoundItem as RecipeDto).IsRead)
@@ -56,7 +59,6 @@ namespace eKuharica.WinUI.UserRecipes
                 //sdgvUserRecipes.PageSize = 10;
                 //DataTable dt = Helpers.Helper.ToDataTable(data);
                 //sdgvUserRecipes.SetPagedDataSource(dt, bindingNavigator1);
-
             }
         }
 
@@ -78,7 +80,7 @@ namespace eKuharica.WinUI.UserRecipes
                 }
                 else if (e.ColumnIndex == 2)//uredi
                 {
-                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, null, false,false,Enumerations.RecipeAddSource.frmUserRecipe.ToString());
+                    frmAddRecipes frmEditRecipe = new frmAddRecipes(selectedRow, null, false, false, Enumerations.RecipeAddSource.frmUserRecipe.ToString());
                     frmEditRecipe.MdiParent = MdiParent;
                     frmEditRecipe.WindowState = FormWindowState.Maximized;
                     frmEditRecipe.Show();

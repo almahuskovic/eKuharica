@@ -338,4 +338,13 @@
   <data name="Title.HeaderText" xml:space="preserve">
     <value>Naslov</value>
   </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Odobri</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Obriši</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Uredi</value>
+  </data>
 </root>

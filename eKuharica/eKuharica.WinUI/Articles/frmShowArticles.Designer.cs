@@ -62,6 +62,7 @@
             // 
             resources.ApplyResources(this.rtbContent, "rtbContent");
             this.rtbContent.Name = "rtbContent";
+            this.rtbContent.ReadOnly = true;
             // 
             // lblKeyWords
             // 

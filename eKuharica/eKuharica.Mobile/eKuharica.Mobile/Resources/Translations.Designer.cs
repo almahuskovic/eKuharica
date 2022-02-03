@@ -97,11 +97,56 @@ namespace eKuharica.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dogodila se greška.
+        /// </summary>
+        internal static string DogodilaSeGreška {
+            get {
+                return ResourceManager.GetString("DogodilaSeGreška", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dogodila se greška prilikom dodavanja komentara.
+        /// </summary>
+        internal static string DogodilaSeGreškaPrilikomDodavanjaKomentara {
+            get {
+                return ResourceManager.GetString("DogodilaSeGreškaPrilikomDodavanjaKomentara", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dogodila se greška prilikom slanja recepta.
+        /// </summary>
+        internal static string DogodilaSeGreškaPrilikomSlanjaRecepta {
+            get {
+                return ResourceManager.GetString("DogodilaSeGreškaPrilikomSlanjaRecepta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dogodila se greška prilikom uređivanja profila.
+        /// </summary>
+        internal static string DogodilaSeGreškaPrilikomUređivanjaProfila {
+            get {
+                return ResourceManager.GetString("DogodilaSeGreškaPrilikomUređivanjaProfila", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dojam.
         /// </summary>
         internal static string Dojam {
             get {
                 return ResourceManager.GetString("Dojam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dojam uspješno spremljen.
+        /// </summary>
+        internal static string DojamUspješnospremljen {
+            get {
+                return ResourceManager.GetString("DojamUspješnospremljen", resourceCulture);
             }
         }
         
@@ -115,11 +160,29 @@ namespace eKuharica.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Greška.
+        /// </summary>
+        internal static string Greška {
+            get {
+                return ResourceManager.GetString("Greška", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hladno predjelo.
         /// </summary>
         internal static string HladnoPredjelo {
             get {
                 return ResourceManager.GetString("HladnoPredjelo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hvala.
+        /// </summary>
+        internal static string Hvala {
+            get {
+                return ResourceManager.GetString("Hvala", resourceCulture);
             }
         }
         
@@ -187,6 +250,15 @@ namespace eKuharica.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Komentar uspješno spašen.
+        /// </summary>
+        internal static string KomentarUspješnoSpašen {
+            get {
+                return ResourceManager.GetString("KomentarUspješnoSpašen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Korisničko ime.
         /// </summary>
         internal static string KorisničkoIme {
@@ -250,11 +322,38 @@ namespace eKuharica.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Niste unijeli korisničko ime ili lozinku.
+        /// </summary>
+        internal static string NisteUnijeliKorisničkoImeIliLozinku {
+            get {
+                return ResourceManager.GetString("NisteUnijeliKorisničkoImeIliLozinku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ocjena.
         /// </summary>
         internal static string Ocjena {
             get {
                 return ResourceManager.GetString("Ocjena", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocjena uspješno spašena.
+        /// </summary>
+        internal static string OcjenaUspješnoSpašena {
+            get {
+                return ResourceManager.GetString("OcjenaUspješnoSpašena", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string OK {
+            get {
+                return ResourceManager.GetString("OK", resourceCulture);
             }
         }
         
@@ -291,6 +390,24 @@ namespace eKuharica.Mobile.Resources {
         internal static string Početna {
             get {
                 return ResourceManager.GetString("Početna", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podaci profila uspješno izmjenjeni.
+        /// </summary>
+        internal static string PodaciProfilaUspješnoIzmjenjeni {
+            get {
+                return ResourceManager.GetString("PodaciProfilaUspješnoIzmjenjeni", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pogrešno korisničko ime ili lozinka.
+        /// </summary>
+        internal static string PogrešnoKorisničkoImeIliLozinka {
+            get {
+                return ResourceManager.GetString("PogrešnoKorisničkoImeIliLozinka", resourceCulture);
             }
         }
         
@@ -412,6 +529,15 @@ namespace eKuharica.Mobile.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Recept uspješno spremljen.
+        /// </summary>
+        internal static string ReceptUspješnoSpremljen {
+            get {
+                return ResourceManager.GetString("ReceptUspješnoSpremljen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Salata.
         /// </summary>
         internal static string Salata {
@@ -507,6 +633,24 @@ namespace eKuharica.Mobile.Resources {
         internal static string ToploPredjelo {
             get {
                 return ResourceManager.GetString("ToploPredjelo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uspješno.
+        /// </summary>
+        internal static string Uspješno {
+            get {
+                return ResourceManager.GetString("Uspješno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uspješno ste promijenili jezik aplikacije.
+        /// </summary>
+        internal static string UspješnoStePromijeniliJezikAplikacije {
+            get {
+                return ResourceManager.GetString("UspješnoStePromijeniliJezikAplikacije", resourceCulture);
             }
         }
         

@@ -1,4 +1,5 @@
-﻿using eKuharica.Mobile.Models;
+﻿using eKuharica.Mobile.Extensions;
+using eKuharica.Mobile.Models;
 using eKuharica.Mobile.Views;
 using eKuharica.Model.Requests;
 using System;
@@ -152,14 +153,20 @@ namespace eKuharica.Mobile.ViewModels
                 };
 
                 await _recipeService.Insert<RecipeUpsertRequest>(recipe);
-                await Application.Current.MainPage.DisplayAlert("Uspješno", "Recept uspješno spremljen", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                    new TranslateExtension() { Text = "Uspješno" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "ReceptUspješnoSpremljen" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
 
                 await Application.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new FeedbackPage(true)));
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                await Application.Current.MainPage.DisplayAlert("Greška", "Dogodila se greška prilikom slanja recepta", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                    new TranslateExtension() { Text = "Greška" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "DogodilaSeGreškaPrilikomSlanjaRecepta" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
                 return;
             }
            

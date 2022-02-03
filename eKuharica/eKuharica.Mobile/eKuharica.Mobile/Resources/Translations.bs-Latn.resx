@@ -126,14 +126,35 @@
   <data name="Dodaj" xml:space="preserve">
     <value>Dodaj</value>
   </data>
+  <data name="DogodilaSeGreška" xml:space="preserve">
+    <value>Dogodila se greška</value>
+  </data>
+  <data name="DogodilaSeGreškaPrilikomDodavanjaKomentara" xml:space="preserve">
+    <value>Dogodila se greška prilikom dodavanja komentara</value>
+  </data>
+  <data name="DogodilaSeGreškaPrilikomSlanjaRecepta" xml:space="preserve">
+    <value>Dogodila se greška prilikom slanja recepta</value>
+  </data>
+  <data name="DogodilaSeGreškaPrilikomUređivanjaProfila" xml:space="preserve">
+    <value>Dogodila se greška prilikom uređivanja profila</value>
+  </data>
   <data name="Dojam" xml:space="preserve">
     <value>Dojam</value>
+  </data>
+  <data name="DojamUspješnospremljen" xml:space="preserve">
+    <value>Dojam uspješno spremljen</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="Greška" xml:space="preserve">
+    <value>Greška</value>
+  </data>
   <data name="HladnoPredjelo" xml:space="preserve">
     <value>Hladno predjelo</value>
+  </data>
+  <data name="Hvala" xml:space="preserve">
+    <value>Hvala</value>
   </data>
   <data name="Ime" xml:space="preserve">
     <value>Ime</value>
@@ -156,6 +177,9 @@
   <data name="Komentari" xml:space="preserve">
     <value>Komentari</value>
   </data>
+  <data name="KomentarUspješnoSpašen" xml:space="preserve">
+    <value>Komentar uspješno spašen</value>
+  </data>
   <data name="KorisničkoIme" xml:space="preserve">
     <value>Korisničko ime</value>
   </data>
@@ -177,8 +201,17 @@
   <data name="Nazad" xml:space="preserve">
     <value>Nazad</value>
   </data>
+  <data name="NisteUnijeliKorisničkoImeIliLozinku" xml:space="preserve">
+    <value>Niste unijeli korisničko ime ili lozinku</value>
+  </data>
   <data name="Ocjena" xml:space="preserve">
     <value>Ocjena</value>
+  </data>
+  <data name="OcjenaUspješnoSpašena" xml:space="preserve">
+    <value>Ocjena uspješno spašena</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="OmiljeniRecepti" xml:space="preserve">
     <value>Omiljeni recepti</value>
@@ -188,6 +221,12 @@
   </data>
   <data name="Piće" xml:space="preserve">
     <value>Piće</value>
+  </data>
+  <data name="PodaciProfilaUspješnoIzmjenjeni" xml:space="preserve">
+    <value>Podaci profila uspješno izmjenjeni</value>
+  </data>
+  <data name="PogrešnoKorisničkoImeIliLozinka" xml:space="preserve">
+    <value>Pogrešno korisničko ime ili lozinka</value>
   </data>
   <data name="Postavke" xml:space="preserve">
     <value>Postavke</value>
@@ -231,6 +270,9 @@
   <data name="Recepti" xml:space="preserve">
     <value>Recepti</value>
   </data>
+  <data name="ReceptUspješnoSpremljen" xml:space="preserve">
+    <value>Recept uspješno spremljen</value>
+  </data>
   <data name="Salata" xml:space="preserve">
     <value>Salata</value>
   </data>
@@ -263,6 +305,12 @@
   </data>
   <data name="ToploPredjelo" xml:space="preserve">
     <value>Toplo predjelo</value>
+  </data>
+  <data name="Uspješno" xml:space="preserve">
+    <value>Uspješno</value>
+  </data>
+  <data name="UspješnoStePromijeniliJezikAplikacije" xml:space="preserve">
+    <value>Uspješno ste promijenili jezik aplikacije</value>
   </data>
   <data name="Uvod" xml:space="preserve">
     <value>Uvod</value>

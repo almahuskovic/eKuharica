@@ -1,4 +1,5 @@
-﻿using eKuharica.Model.DTO;
+﻿using eKuharica.Mobile.Extensions;
+using eKuharica.Model.DTO;
 using eKuharica.Model.Entities;
 using eKuharica.Model.Enumerations;
 using eKuharica.Model.Requests;
@@ -72,11 +73,17 @@ namespace eKuharica.Mobile.ViewModels
                     UserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id
                 };
                 await _commentService.Insert<CommentUpsertRequest>(myComment);
-                await Application.Current.MainPage.DisplayAlert("Uspješno", "Komentar uspješno spašen", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                    new TranslateExtension() { Text = "Uspješno" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "KomentarUspješnoSpašen" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Greška", "Dogodila se greška prilikom dodavanja komentara", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                    new TranslateExtension() { Text = "Greška" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "DogodilaSeGreškaPrilikomDodavanjaKomentara" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
                 return;
             }
         }

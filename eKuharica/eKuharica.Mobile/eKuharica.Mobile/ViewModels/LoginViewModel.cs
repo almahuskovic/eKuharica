@@ -1,4 +1,5 @@
-﻿using eKuharica.Mobile.Views;
+﻿using eKuharica.Mobile.Extensions;
+using eKuharica.Mobile.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -43,7 +44,10 @@ namespace eKuharica.Mobile.ViewModels
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Greška", "Niste unijeli username ili password", "OK");
+                    await Application.Current.MainPage.DisplayAlert(
+                        new TranslateExtension() { Text = "Greška" }.ProvideValue().ToString(),
+                        new TranslateExtension() { Text = "NisteUnijeliKorisničkoImeIliLozinku" }.ProvideValue().ToString(),
+                        new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
                     return;
                 }
 
@@ -52,7 +56,10 @@ namespace eKuharica.Mobile.ViewModels
             }
             catch (Exception e)
             {
-                await Application.Current.MainPage.DisplayAlert("Greška", "Pogrešan username ili password", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                        new TranslateExtension() { Text = "Greška" }.ProvideValue().ToString(),
+                        new TranslateExtension() { Text = "PogrešnoKorisničkoImeIliLozinka" }.ProvideValue().ToString(),
+                        new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
                 return;
             }
         }

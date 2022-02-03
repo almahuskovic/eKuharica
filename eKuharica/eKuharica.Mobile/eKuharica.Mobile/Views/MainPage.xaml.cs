@@ -9,6 +9,7 @@ using eKuharica.Mobile.Models;
 using System.Globalization;
 using System.Threading;
 using Plugin.Multilingual;
+using eKuharica.Mobile.Extensions;
 
 namespace eKuharica.Mobile.Views
 {
@@ -88,19 +89,31 @@ namespace eKuharica.Mobile.Views
             }
         }
 
-        private void Bosnian_Clicked(object sender, EventArgs e)
+        private async void Bosnian_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new MainPage();
             var info = new CultureInfo("bs-Latn", false);
             CrossMultilingual.Current.CurrentCultureInfo = Thread.CurrentThread.CurrentCulture = info;
+
+            await Application.Current.MainPage.DisplayAlert(
+                 new TranslateExtension() { Text = "Uspješno" }.ProvideValue().ToString(),
+                 new TranslateExtension() { Text = "UspješnoStePromijeniliJezikAplikacije" }.ProvideValue().ToString(),
+                 new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
+
             Application.Current.MainPage = new MainPage();
         }
 
-        private void English_Clicked(object sender, EventArgs e)
+        private async void English_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new MainPage();
             var info = new CultureInfo("en", false);
             CrossMultilingual.Current.CurrentCultureInfo = Thread.CurrentThread.CurrentCulture = info;
+
+            await Application.Current.MainPage.DisplayAlert(
+                 new TranslateExtension() { Text = "Uspješno" }.ProvideValue().ToString(),
+                 new TranslateExtension() { Text = "UspješnoStePromijeniliJezikAplikacije" }.ProvideValue().ToString(),
+                 new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
+
             Application.Current.MainPage = new MainPage();
         }
 

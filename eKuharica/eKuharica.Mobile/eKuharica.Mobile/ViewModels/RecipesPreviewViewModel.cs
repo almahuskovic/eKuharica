@@ -1,4 +1,5 @@
-﻿using eKuharica.Mobile.Models;
+﻿using eKuharica.Mobile.Extensions;
+using eKuharica.Mobile.Models;
 using eKuharica.Model.DTO;
 using eKuharica.Model.Entities;
 using eKuharica.Model.Enumerations;
@@ -114,11 +115,17 @@ namespace eKuharica.Mobile.ViewModels
                     UserId = (await Helpers.Helper.GetLoggedUser(_userService, APIService.Username)).Id
                 };
                 await _commentService.Insert<CommentUpsertRequest>(myComment);
-                await Application.Current.MainPage.DisplayAlert("Uspješno", "Komentar uspješno spašen", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                    new TranslateExtension() { Text = "Uspješno" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "KomentarUspješnoSpašen" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Greška", "Dogodila se greška prilikom dodavanja komentara", "OK");
+                await Application.Current.MainPage.DisplayAlert(
+                    new TranslateExtension() { Text = "Greška" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "DogodilaSeGreškaPrilikomDodavanjaKomentara" }.ProvideValue().ToString(),
+                    new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
                 return;
             }
         }
@@ -144,7 +151,6 @@ namespace eKuharica.Mobile.ViewModels
                 };
                 await _userFavouriteRecipeService.Insert<UserFavouriteRecipeUpsertRequest>(userFavourite);
             }
-
         }
         public async Task Rating()
         {
@@ -157,6 +163,11 @@ namespace eKuharica.Mobile.ViewModels
             {
                 exist.Rating = Grade;
                 await _userRecipeRatingService.Update<UserRecipeRatingUpsertRequest>(exist.Id, exist);
+
+                await Application.Current.MainPage.DisplayAlert(
+                  new TranslateExtension() { Text = "Uspješno" }.ProvideValue().ToString(),
+                  new TranslateExtension() { Text = "OcjenaUspješnoSpašena" }.ProvideValue().ToString(),
+                  new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
             }
             else if (exist == null)
             {
@@ -170,6 +181,11 @@ namespace eKuharica.Mobile.ViewModels
                 };
 
                 await _userRecipeRatingService.Insert<UserRecipeRatingUpsertRequest>(userRating);
+
+                await Application.Current.MainPage.DisplayAlert(
+                   new TranslateExtension() { Text = "Uspješno" }.ProvideValue().ToString(),
+                   new TranslateExtension() { Text = "OcjenaUspješnoSpašena" }.ProvideValue().ToString(),
+                   new TranslateExtension() { Text = "OK" }.ProvideValue().ToString());
             }
         }
 

@@ -62,128 +62,82 @@
             // txtFirstName
             // 
             resources.ApplyResources(this.txtFirstName, "txtFirstName");
-            this.errorProvider1.SetError(this.txtFirstName, resources.GetString("txtFirstName.Error"));
-            this.errorProvider1.SetIconAlignment(this.txtFirstName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtFirstName.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.txtFirstName, ((int)(resources.GetObject("txtFirstName.IconPadding"))));
             this.txtFirstName.Name = "txtFirstName";
             // 
             // lblFirstName
             // 
             resources.ApplyResources(this.lblFirstName, "lblFirstName");
-            this.errorProvider1.SetError(this.lblFirstName, resources.GetString("lblFirstName.Error"));
-            this.errorProvider1.SetIconAlignment(this.lblFirstName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblFirstName.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.lblFirstName, ((int)(resources.GetObject("lblFirstName.IconPadding"))));
             this.lblFirstName.Name = "lblFirstName";
             // 
             // lblLastName
             // 
             resources.ApplyResources(this.lblLastName, "lblLastName");
-            this.errorProvider1.SetError(this.lblLastName, resources.GetString("lblLastName.Error"));
-            this.errorProvider1.SetIconAlignment(this.lblLastName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblLastName.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.lblLastName, ((int)(resources.GetObject("lblLastName.IconPadding"))));
             this.lblLastName.Name = "lblLastName";
             // 
             // txtLastName
             // 
             resources.ApplyResources(this.txtLastName, "txtLastName");
-            this.errorProvider1.SetError(this.txtLastName, resources.GetString("txtLastName.Error"));
-            this.errorProvider1.SetIconAlignment(this.txtLastName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtLastName.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.txtLastName, ((int)(resources.GetObject("txtLastName.IconPadding"))));
             this.txtLastName.Name = "txtLastName";
             // 
             // lblEmail
             // 
             resources.ApplyResources(this.lblEmail, "lblEmail");
-            this.errorProvider1.SetError(this.lblEmail, resources.GetString("lblEmail.Error"));
-            this.errorProvider1.SetIconAlignment(this.lblEmail, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblEmail.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.lblEmail, ((int)(resources.GetObject("lblEmail.IconPadding"))));
             this.lblEmail.Name = "lblEmail";
             // 
             // txtEmail
             // 
             resources.ApplyResources(this.txtEmail, "txtEmail");
-            this.errorProvider1.SetError(this.txtEmail, resources.GetString("txtEmail.Error"));
-            this.errorProvider1.SetIconAlignment(this.txtEmail, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtEmail.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.txtEmail, ((int)(resources.GetObject("txtEmail.IconPadding"))));
             this.txtEmail.Name = "txtEmail";
             // 
             // lblUsername
             // 
             resources.ApplyResources(this.lblUsername, "lblUsername");
-            this.errorProvider1.SetError(this.lblUsername, resources.GetString("lblUsername.Error"));
-            this.errorProvider1.SetIconAlignment(this.lblUsername, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblUsername.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.lblUsername, ((int)(resources.GetObject("lblUsername.IconPadding"))));
             this.lblUsername.Name = "lblUsername";
             // 
             // txtUserName
             // 
             resources.ApplyResources(this.txtUserName, "txtUserName");
-            this.errorProvider1.SetError(this.txtUserName, resources.GetString("txtUserName.Error"));
-            this.errorProvider1.SetIconAlignment(this.txtUserName, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtUserName.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.txtUserName, ((int)(resources.GetObject("txtUserName.IconPadding"))));
             this.txtUserName.Name = "txtUserName";
             // 
             // lblPassword
             // 
             resources.ApplyResources(this.lblPassword, "lblPassword");
-            this.errorProvider1.SetError(this.lblPassword, resources.GetString("lblPassword.Error"));
-            this.errorProvider1.SetIconAlignment(this.lblPassword, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblPassword.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.lblPassword, ((int)(resources.GetObject("lblPassword.IconPadding"))));
             this.lblPassword.Name = "lblPassword";
             // 
             // txtPassword
             // 
             resources.ApplyResources(this.txtPassword, "txtPassword");
-            this.errorProvider1.SetError(this.txtPassword, resources.GetString("txtPassword.Error"));
-            this.errorProvider1.SetIconAlignment(this.txtPassword, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtPassword.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.txtPassword, ((int)(resources.GetObject("txtPassword.IconPadding"))));
             this.txtPassword.Name = "txtPassword";
             // 
             // lblConfirmPassword
             // 
             resources.ApplyResources(this.lblConfirmPassword, "lblConfirmPassword");
-            this.errorProvider1.SetError(this.lblConfirmPassword, resources.GetString("lblConfirmPassword.Error"));
-            this.errorProvider1.SetIconAlignment(this.lblConfirmPassword, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblConfirmPassword.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.lblConfirmPassword, ((int)(resources.GetObject("lblConfirmPassword.IconPadding"))));
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             // 
             // txtConfirmPassword
             // 
             resources.ApplyResources(this.txtConfirmPassword, "txtConfirmPassword");
-            this.errorProvider1.SetError(this.txtConfirmPassword, resources.GetString("txtConfirmPassword.Error"));
-            this.errorProvider1.SetIconAlignment(this.txtConfirmPassword, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtConfirmPassword.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.txtConfirmPassword, ((int)(resources.GetObject("txtConfirmPassword.IconPadding"))));
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             // 
             // lblRoles
             // 
             resources.ApplyResources(this.lblRoles, "lblRoles");
-            this.errorProvider1.SetError(this.lblRoles, resources.GetString("lblRoles.Error"));
-            this.errorProvider1.SetIconAlignment(this.lblRoles, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblRoles.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.lblRoles, ((int)(resources.GetObject("lblRoles.IconPadding"))));
             this.lblRoles.Name = "lblRoles";
             // 
             // clbRoles
             // 
-            resources.ApplyResources(this.clbRoles, "clbRoles");
-            this.errorProvider1.SetError(this.clbRoles, resources.GetString("clbRoles.Error"));
             this.clbRoles.FormattingEnabled = true;
-            this.errorProvider1.SetIconAlignment(this.clbRoles, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("clbRoles.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.clbRoles, ((int)(resources.GetObject("clbRoles.IconPadding"))));
+            resources.ApplyResources(this.clbRoles, "clbRoles");
             this.clbRoles.Name = "clbRoles";
             // 
             // ofdPicture
             // 
             this.ofdPicture.FileName = "openFileDialog1";
-            resources.ApplyResources(this.ofdPicture, "ofdPicture");
             // 
             // pbPicture
             // 
             resources.ApplyResources(this.pbPicture, "pbPicture");
             this.pbPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.errorProvider1.SetError(this.pbPicture, resources.GetString("pbPicture.Error"));
-            this.errorProvider1.SetIconAlignment(this.pbPicture, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("pbPicture.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.pbPicture, ((int)(resources.GetObject("pbPicture.IconPadding"))));
             this.pbPicture.Name = "pbPicture";
             this.pbPicture.TabStop = false;
             this.pbPicture.Click += new System.EventHandler(this.pbPicture_Click);
@@ -191,25 +145,16 @@
             // lblPhoneNumber
             // 
             resources.ApplyResources(this.lblPhoneNumber, "lblPhoneNumber");
-            this.errorProvider1.SetError(this.lblPhoneNumber, resources.GetString("lblPhoneNumber.Error"));
-            this.errorProvider1.SetIconAlignment(this.lblPhoneNumber, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblPhoneNumber.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.lblPhoneNumber, ((int)(resources.GetObject("lblPhoneNumber.IconPadding"))));
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             // 
             // txtPhoneNumber
             // 
             resources.ApplyResources(this.txtPhoneNumber, "txtPhoneNumber");
-            this.errorProvider1.SetError(this.txtPhoneNumber, resources.GetString("txtPhoneNumber.Error"));
-            this.errorProvider1.SetIconAlignment(this.txtPhoneNumber, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("txtPhoneNumber.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.txtPhoneNumber, ((int)(resources.GetObject("txtPhoneNumber.IconPadding"))));
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             // 
             // btnSave
             // 
             resources.ApplyResources(this.btnSave, "btnSave");
-            this.errorProvider1.SetError(this.btnSave, resources.GetString("btnSave.Error"));
-            this.errorProvider1.SetIconAlignment(this.btnSave, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnSave.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.btnSave, ((int)(resources.GetObject("btnSave.IconPadding"))));
             this.btnSave.Name = "btnSave";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -217,9 +162,6 @@
             // btnClose
             // 
             resources.ApplyResources(this.btnClose, "btnClose");
-            this.errorProvider1.SetError(this.btnClose, resources.GetString("btnClose.Error"));
-            this.errorProvider1.SetIconAlignment(this.btnClose, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnClose.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.btnClose, ((int)(resources.GetObject("btnClose.IconPadding"))));
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -229,29 +171,22 @@
             resources.ApplyResources(this.gbRoles, "gbRoles");
             this.gbRoles.Controls.Add(this.lblRoles);
             this.gbRoles.Controls.Add(this.clbRoles);
-            this.errorProvider1.SetError(this.gbRoles, resources.GetString("gbRoles.Error"));
-            this.errorProvider1.SetIconAlignment(this.gbRoles, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("gbRoles.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.gbRoles, ((int)(resources.GetObject("gbRoles.IconPadding"))));
             this.gbRoles.Name = "gbRoles";
             this.gbRoles.TabStop = false;
             // 
             // gbPassword
             // 
-            resources.ApplyResources(this.gbPassword, "gbPassword");
             this.gbPassword.Controls.Add(this.lblPassword);
             this.gbPassword.Controls.Add(this.txtPassword);
             this.gbPassword.Controls.Add(this.txtConfirmPassword);
             this.gbPassword.Controls.Add(this.lblConfirmPassword);
-            this.errorProvider1.SetError(this.gbPassword, resources.GetString("gbPassword.Error"));
-            this.errorProvider1.SetIconAlignment(this.gbPassword, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("gbPassword.IconAlignment"))));
-            this.errorProvider1.SetIconPadding(this.gbPassword, ((int)(resources.GetObject("gbPassword.IconPadding"))));
+            resources.ApplyResources(this.gbPassword, "gbPassword");
             this.gbPassword.Name = "gbPassword";
             this.gbPassword.TabStop = false;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // frmAddUsers
             // 

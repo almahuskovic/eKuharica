@@ -91,7 +91,7 @@ namespace eKuharica.WinUI.Recipes
                 lblLikesDisplay.Text = (await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(new UserFavouriteRecipeSearchRequest() { RecipeId = _recipe.Id })).Count().ToString();
 
                 var rating = (await _userRecipeRatingService.Get<List<UserRecipeRatingDto>>(new UserRecipeRatingSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id }));
-                cmbRating.SelectedIndex = rating != null ? rating.FirstOrDefault().Rating : 0;
+                cmbRating.SelectedIndex = rating.Any() ? rating.FirstOrDefault().Rating : 0;
 
                 var isLiked = await _userFavouriteRecipeService.Get<List<UserFavouriteRecipeDto>>(new UserFavouriteRecipeSearchRequest() { RecipeId = _recipe.Id, UserId = loggedUser.Id });
                 btnLike.BackColor = isLiked.Any() && !isLiked.First().IsDeleted ? Color.Red : Color.Gray;
