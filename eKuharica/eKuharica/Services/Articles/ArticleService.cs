@@ -23,6 +23,10 @@ namespace eKuharica.Services.Articles
             {
                 entity = entity.Where(x => x.Title.ToLower().Contains(search.Title.ToLower()));
             }
+            if (search.ArticleIds != null && search.ArticleIds.Any())
+            {
+                entity = entity.Where(x => search.ArticleIds.Contains(x.Id));
+            }
 
             if (!search.LoggedUserHasPermissions)
                 entity = entity.Where(x => x.IsTranslated);

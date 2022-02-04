@@ -15,7 +15,6 @@ namespace eKuharica.Model.Entities
         public string Method { get; set; }
         public string Serving { get; set; }
         public string Advice { get; set; }
-        public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public bool IsDeleted { get; set; }
@@ -23,5 +22,6 @@ namespace eKuharica.Model.Entities
         [ForeignKey(nameof(Recipe))]
         public int RecipeId { get; set; }
         public virtual Recipe Recipe { get; set; }
+
     }
 }

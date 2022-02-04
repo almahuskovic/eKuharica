@@ -23,11 +23,9 @@ namespace eKuharica
         public DbSet<Comment> Comment { get; set; }
         public DbSet<Feedback> Feedback { get; set; }
         public DbSet<Follow> Follow { get; set; }
-        public DbSet<Language> Language { get; set; }
         public DbSet<Recipe> Recipe { get; set; }
         public DbSet<RecipeTranslation> RecipeTranslation { get; set; }
         public DbSet<Role> Role { get; set; }
-        public DbSet<Translation> Translation { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<UserFavouriteRecipe> UserFavouriteRecipe { get; set; }
         public DbSet<UserRole> UserRole { get; set; }

@@ -47,13 +47,15 @@ namespace eKuharica.Mobile.ViewModels
 
                 if (CrossMultilingual.Current.CurrentCultureInfo.Name == "en")
                 {
-                    var articleIds = list.Select(x => x.Id).ToList();
-                    var translationSearchRequest = new ArticleTranslationSearchRequest() { ArticleIds = articleIds };
-                    var articleTranslations = await _articleTranslationService.Get<List<ArticleTranslationDto>>(translationSearchRequest);
+                    var translatedArticles = await _articleTranslationService.Get<List<ArticleTranslationDto>>(new RecipeTranslationSearchRequest() { Title = Title });
+                    searchRequest.Title = "";
+                    searchRequest.ArticleIds = translatedArticles.Select(x => x.Id).ToList();
+
+                    list = await _articleService.Get<IEnumerable<ArticleDto>>(searchRequest);
 
                     list.ToList().ForEach(x =>
                     {
-                        var temp = articleTranslations.Where(t => t.ArticleId == x.Id).First();
+                        var temp = translatedArticles.Where(t => t.ArticleId == x.Id).First();
                         x.Title = temp.Title;
                         x.Content = temp.Content;
                         x.KeyWords = temp.KeyWords;

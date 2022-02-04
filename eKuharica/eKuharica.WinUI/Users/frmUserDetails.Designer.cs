@@ -43,8 +43,8 @@
             // 
             // pbUserProfilePicture
             // 
-            resources.ApplyResources(this.pbUserProfilePicture, "pbUserProfilePicture");
             this.pbUserProfilePicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pbUserProfilePicture, "pbUserProfilePicture");
             this.pbUserProfilePicture.Name = "pbUserProfilePicture";
             this.pbUserProfilePicture.TabStop = false;
             // 

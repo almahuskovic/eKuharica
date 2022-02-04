@@ -115,13 +115,15 @@ namespace eKuharica.Mobile.ViewModels
 
                 if (CrossMultilingual.Current.CurrentCultureInfo.Name == "en")
                 {
-                    var recipeIds = list.Select(x => x.Id).ToList();
-                    var translationSearchRequest = new RecipeTranslationSearchRequest(){ RecipeIds = recipeIds };
-                    var recipeTranslations = await _recipeTranslationService.Get<List<RecipeTranslationDto>>(translationSearchRequest);
-                  
+                    var translatedRecipes = await _recipeTranslationService.Get<List<RecipeTranslationDto>>(new RecipeTranslationSearchRequest() { Title=Title});
+                    searchRequest.Title = "";
+                    searchRequest.RecipeIds = translatedRecipes.Select(x => x.Id).ToList();
+
+                    list = await _recipeService.Get<IEnumerable<RecipeDto>>(searchRequest);
+
                     list.ToList().ForEach(x =>
                     {
-                        var temp = recipeTranslations.Where(t => t.RecipeId == x.Id).First();
+                        var temp = translatedRecipes.Where(t => t.RecipeId == x.Id).First();
                         x.Ingredients = temp.Ingredients;
                         x.Introduction = temp.Introduction;
                         x.Serving = temp.Serving;
