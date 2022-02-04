@@ -79,6 +79,7 @@
             this.sdgvUserRecipes.ReadOnly = true;
             this.sdgvUserRecipes.RowTemplate.Height = 24;
             this.sdgvUserRecipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.sdgvUserRecipes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUserRecipes_CellContentClick);
             // 
             // Title
             // 

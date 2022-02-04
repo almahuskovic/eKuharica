@@ -121,7 +121,7 @@ namespace eKuharica.Mobile.ViewModels
 
                     list = await _recipeService.Get<IEnumerable<RecipeDto>>(searchRequest);
 
-                    list.ToList().ForEach(x =>
+                    list?.ToList().ForEach(x =>
                     {
                         var temp = translatedRecipes.Where(t => t.RecipeId == x.Id).First();
                         x.Ingredients = temp.Ingredients;

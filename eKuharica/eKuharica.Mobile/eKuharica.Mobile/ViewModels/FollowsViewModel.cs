@@ -38,10 +38,15 @@ namespace eKuharica.Mobile.ViewModels
                 searchRequest.UserId = loggedUser.Id;
 
             var list = await _followService.Get<IEnumerable<FollowDto>>(searchRequest);
-
+           
             FollowList.Clear();
             foreach (var user in list)
             {
+                if (_getFollowers)
+                {
+                    user.FollowerName = user.UserName;                
+                }
+
                 FollowList.Add(user);
             }
 

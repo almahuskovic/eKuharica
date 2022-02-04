@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsers));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.sdgvUsers = new eKuharica.WinUI.Helpers.SuperGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -46,14 +45,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sdgvUsers = new eKuharica.WinUI.Helpers.SuperGrid();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prikaži = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -62,24 +62,6 @@
             this.groupBox1.Controls.Add(this.sdgvUsers);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
-            // 
-            // sdgvUsers
-            // 
-            this.sdgvUsers.AllowUserToAddRows = false;
-            this.sdgvUsers.AllowUserToDeleteRows = false;
-            this.sdgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.sdgvUsers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.sdgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sdgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.User,
-            this.Prikaži});
-            resources.ApplyResources(this.sdgvUsers, "sdgvUsers");
-            this.sdgvUsers.Name = "sdgvUsers";
-            this.sdgvUsers.PageSize = 10;
-            this.sdgvUsers.ReadOnly = true;
-            this.sdgvUsers.RowTemplate.Height = 24;
-            this.sdgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.sdgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUsers_CellContentClick);
             // 
             // groupBox2
             // 
@@ -175,9 +157,27 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
             // 
+            // sdgvUsers
+            // 
+            this.sdgvUsers.AllowUserToAddRows = false;
+            this.sdgvUsers.AllowUserToDeleteRows = false;
+            this.sdgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.sdgvUsers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.sdgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sdgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.User,
+            this.Prikaži});
+            resources.ApplyResources(this.sdgvUsers, "sdgvUsers");
+            this.sdgvUsers.Name = "sdgvUsers";
+            this.sdgvUsers.PageSize = 10;
+            this.sdgvUsers.ReadOnly = true;
+            this.sdgvUsers.RowTemplate.Height = 24;
+            this.sdgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.sdgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sdgvUsers_CellContentClick);
+            // 
             // User
             // 
-            this.User.DataPropertyName = "FullName";
+            this.User.DataPropertyName = "Username";
             resources.ApplyResources(this.User, "User");
             this.User.Name = "User";
             this.User.ReadOnly = true;
@@ -201,13 +201,13 @@
             this.Name = "frmUsers";
             this.Load += new System.EventHandler(this.frmUsers_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sdgvUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

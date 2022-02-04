@@ -33,14 +33,14 @@ namespace eKuharica.WinUI.Users
             var loggedUser = (await Helpers.Helper.GetLoggedUser(_serviceUsers, APIService.Username));
             var data = new List<UserDto>();
 
-            if (!Helpers.Helper.IsAdministrator(loggedUser))
+            if (!Helpers.Helper.IsAdministrator(loggedUser) || _following || _followers)
                btnAddUser.Visible = false;
 
             if (_following)//koga prati ovaj korisnik
             {
                 data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { UserId = loggedUser.Id })).Select(x => new UserDto
                 {
-                    FullName = x.FollowerName,
+                    Username = x.FollowerName,
                     Id = x.UserId
                 }).ToList();
 
@@ -49,7 +49,7 @@ namespace eKuharica.WinUI.Users
             {
                 data = (await _followService.Get<List<FollowDto>>(new FollowSearchRequest() { FollowerId = loggedUser.Id })).Select(x => new UserDto
                 {
-                    FullName = x.UserName,
+                    Username = x.UserName,
                     Id = x.UserId
                 }).ToList();
             }

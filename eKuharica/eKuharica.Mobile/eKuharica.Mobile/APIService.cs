@@ -14,7 +14,7 @@ namespace eKuharica.Mobile
         public static string Username { get; set; }
         public static string Password { get; set; }
 #if DEBUG
-        private string _apiUrl = "http://localhost:5000";
+        private string _apiUrl = "http://localhost:5010";
 #endif
 #if RELEASE
 #endif
