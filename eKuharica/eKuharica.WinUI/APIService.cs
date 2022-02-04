@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Flurl.Http;
 using Flurl;
 using eKuharica.Model.Extensions;
+using eKuharica.WinUI.Properties;
 
 namespace eKuharica.WinUI
 {
@@ -22,7 +23,7 @@ namespace eKuharica.WinUI
         }
         public async Task<T> Get<T>(object searchRequest = null)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}/{_route}";
+            var url = $"{Resources.ApiUrl}/{_route}";
             
             if (searchRequest != null)
             {
@@ -35,25 +36,25 @@ namespace eKuharica.WinUI
         }
         public async Task<T> GetById<T>(object id)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}/{_route}/{id}";
+            var url = $"{Resources.ApiUrl}/{_route}/{id}";
             var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
             return result;
         }
         public async Task<T> Insert<T>(object request)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}/{_route}";
+            var url = $"{Resources.ApiUrl}/{_route}";
             var result = await url.WithBasicAuth(Username, Password).PostJsonAsync(request).ReceiveJson<T>();
             return result;
         }
         public async Task<T> Update<T>(object id, object request)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}/{_route}/{id}";
+            var url = $"{Resources.ApiUrl}/{_route}/{id}";
             var result = await url.WithBasicAuth(Username, Password).PutJsonAsync(request).ReceiveJson<T>();
             return result;
         }
         public async Task<bool> Delete<T>(object id)
         {
-            var url = $"{Properties.Settings.Default.ApiURL}/{_route}/{id}";
+            var url = $"{Resources.ApiUrl}/{_route}/{id}";
             var result = await url.WithBasicAuth(Username, Password).DeleteAsync();
             return result.StatusCode==200;
         }

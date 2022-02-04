@@ -59,5 +59,14 @@ namespace eKuharica.WinUI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://localhost:5010.
+        /// </summary>
+        internal static string ApiUrl {
+            get {
+                return ResourceManager.GetString("ApiUrl", resourceCulture);
+            }
+        }
     }
 }

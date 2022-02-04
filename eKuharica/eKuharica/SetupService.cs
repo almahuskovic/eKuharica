@@ -37,7 +37,7 @@ namespace eKuharica
             var zaposlenikUlogaId = context.Role.First(x => x.Name == "Zaposlenik").Id;
             var korisnikUlogaId = context.Role.First(x => x.Name == "Korisnik").Id;
 
-            if (!context.User.Any(x => x.Username == "Administrator"))
+            if (!context.User.Any(x => x.Username == "admin"))
             {
                 context.User.Add(new User
                 {
@@ -50,7 +50,7 @@ namespace eKuharica
                     PasswordSalt = "BhgJV01VzZl89bY5MNRGAg=="
                 });
             }
-            if (!context.User.Any(x => x.Username == "Zaposlenik"))
+            if (!context.User.Any(x => x.Username == "zaposlenik"))
             {
                 context.User.Add(new User
                 {
@@ -63,7 +63,7 @@ namespace eKuharica
                     PasswordSalt = "4bgl7Tmio32Xo8EWI5V9rg=="
                 });
             }
-            if (!context.User.Any(x => x.Username == "Korisnik"))
+            if (!context.User.Any(x => x.Username == "korisnik"))
             {
                 context.User.Add(new User
                 {
@@ -76,7 +76,7 @@ namespace eKuharica
                     PasswordSalt = "4GUgnJtIdixLA35nRIuajQ=="
                 });
             }
-            if (!context.User.Any(x => x.Username == "KorisnikTest"))
+            if (!context.User.Any(x => x.Username == "korisniktest"))
             {
                 context.User.Add(new User
                 {
@@ -84,7 +84,7 @@ namespace eKuharica
                     LastName = "KorisnikTest",
                     Email = "korisnikTest@gmail.com",
                     PhoneNumber = "060-000-000",
-                    Username = "klijenttest",
+                    Username = "korisniktest",
                     PasswordHash = "B12FHS/6dFsyUYamekEanf5aUMQ=",
                     PasswordSalt = "FLwIerOCNwMX/P0GuTKhWA=="
                 });
@@ -95,10 +95,10 @@ namespace eKuharica
 
             #region USERROLES
 
-            var adminId = context.User.First(x => x.Username == "Administrator").Id;
-            var zaposlenikId = context.User.First(x => x.Username == "Zaposlenik").Id;
-            var korisnikId = context.User.First(x => x.Username == "Korisnik").Id;
-            var korisnikTestId = context.User.First(x => x.Username == "KorisnikTest").Id;
+            var adminId = context.User.First(x => x.Username == "admin").Id;
+            var zaposlenikId = context.User.First(x => x.Username == "zaposlenik").Id;
+            var korisnikId = context.User.First(x => x.Username == "korisnik").Id;
+            var korisnikTestId = context.User.First(x => x.Username == "korisniktest").Id;
 
             if (!context.UserRole.Any(x => x.UserId == adminId && x.RoleId == adminUlogaId))
             {

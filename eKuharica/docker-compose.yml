@@ -9,7 +9,7 @@ services:
       - SA_PASSWORD=Z_m03RES
       - MSSQL_PID=Developer
     ports:
-      - 1401:1433
+      - 1433:1433
     networks:
       - ekuharicanet
 

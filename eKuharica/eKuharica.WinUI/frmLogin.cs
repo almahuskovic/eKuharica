@@ -45,7 +45,7 @@ namespace eKuharica.WinUI
                 frm.Show();
                 Hide();
             }
-            catch
+            catch(Exception x)
             {
                 MessageBox.Show("Pogrešan username ili password");
                 (sender as Button).Enabled = true;
