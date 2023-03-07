@@ -19,5 +19,7 @@ Desktop:
 
 Mobilna:
 
-  username: korisnik
-  password: korisnik
+  Korisnik:
+
+    username: korisnik
+    password: korisnik
